@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": ";ACCA,4BAA4B;AACJ,gBAAgB;AACjB,eAAe;AAEtC,kEAAkE",
+    "sources": [
+        "fe-commons.scss",
+        "responsive.scss"
+    ],
+    "names": [],
+    "file": "fe-commons.css"
+}
