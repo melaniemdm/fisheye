@@ -1,2 +1,15 @@
 @import "./responsive.scss";
 
+// couleurs primary
+$colorPrimaryStatic:#901c1c;
+
+//color secondaire
+$colorSecondFocus:#d3573c;
+$colorSecondGrey:#525252;
+
+
+.modal{
+    background-color:$colorSecondFocus ;
+}
+
+
