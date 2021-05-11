@@ -3,7 +3,17 @@
 /*vue tablette*/
 /*vue desktop*/
 /*création des variables media queries utilisant les breakpoints*/
-.modal {
+.formulaire {
   background-color: #d3573c;
+  width: 500px;
+  height: 400px;
+  visibility: hidden;
+}
+
+.modalFin {
+  visibility: hidden;
+  background-color: blue;
+  width: 500px;
+  height: 400px;
 }
 /*# sourceMappingURL=fe-style-commons.css.map */

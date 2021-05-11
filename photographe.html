@@ -40,7 +40,7 @@
                 </div>
           
 </header>    
-<button> Contactez-moi </button>
+<button class="btn-contact" id="btn-contact"> Contactez-moi </button>
 <div class="photo_photographe"> <img src="https://res.cloudinary.com/dst61tkcz/image/upload/v1620673894/FishEye/MimiKeel_s1wf2c_vjyxfr_cjyw8r_jmqkxh.webp"
     alt="ID de MimiKeel">
 </div>
@@ -120,9 +120,56 @@
     <div class="heart_close" aria-label="likes"><i class="far fa-heart"></i></div>
     </div>
     </div> 
- 
+
+    
 </div>
-    <script src="js/fe-js-commons.js"></script>
+
+<div class="formulaire"  id="formulaire">
+    <div id="close close_modal">
+    <div class="close"><i class="fas fa-times"></i></div>
+    <title> Contactez-moi</title>
+
+    <div class="data">
+    <div class="prenom">
+        <label for="surname">Prémom</label> <br>
+        <input type="text" id="prenom"/> 
+        <div class="textErreur" id="erreurPrenom"> Veuillez entrer 2 caractères ou plus pour le champ du Prénom.</div>
+    </div></div>
+
+<div class="data">    
+<div class="nom">
+    <label for="name">Nom</label> <br>
+    <input type="text" id="nom"/> 
+    <div class="textErreur" id="erreurNom"> Veuillez entrer 2 caractères ou plus pour le champ du Nom.</div>
+</div></div>
+
+<div class="data">
+<div class="email">
+    <label for="email">Email</label> <br>
+    <input type="text" id="email"/> 
+    <div class="textErreur" id="erreurEmail"> Veuillez entrer une adresse mail correcte.</div>
+</div></div>
+
+<div class="message">
+    <label for="message">Message</label> <br>
+    <input type="text" id="message"/> 
+</div>
+<button class="btn-valide" id="envoyer"> Envoyer </button>
+</div>
+
+</div>    
+
+<section class="modalFin " id="modalFin">
+    <div class="btn-closeFin" ><i class="fas fa-times"></i></div>
+    <div class="messageFin"> Merci ! <br /> Votre message a été transmis. </div>
+    <button class="btn-closeFin " id="btn-Closefin"> Close </button>
+
+
+</section>
+
+
+<script src="js/fe-js-modal.js"></script>
+<script src="js/fe-js-commons.js"></script>
 </body>
 
 </html>
