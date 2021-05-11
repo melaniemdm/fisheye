@@ -1,0 +1,23 @@
+@charset "UTF-8";
+/*création des breakpoints*/
+/*vue tablette*/
+/*vue desktop*/
+/*création des variables media queries utilisant les breakpoints*/
+/*création des breakpoints*/
+/*vue tablette*/
+/*vue desktop*/
+/*création des variables media queries utilisant les breakpoints*/
+.formulaire {
+  background-color: #d3573c;
+  width: 500px;
+  height: 400px;
+  visibility: hidden;
+}
+
+.modalFin {
+  visibility: hidden;
+  background-color: #ff00b3;
+  width: 500px;
+  height: 400px;
+}
+/*# sourceMappingURL=fe-style-modal.css.map */
