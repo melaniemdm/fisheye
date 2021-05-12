@@ -1,4 +1,21 @@
 
+//charge l'URL du fichier JSON
+var requestURL = "http://127.0.0.1:5500/json/FishEyeData.json"
+//créer une requête
+var request = new XMLHttpRequest();
+//ouvrir une nouvelle requête
+request.open('GET', requestURL);
+//attribution de la valeur 'json'
+request.responseType = 'json';
+request.send();
+//réponse du serveur et son traitement
+request.onload = function() {
+var informationsphotographers = request.response;
+console.log(informationsphotographers);
+  }
+  var mydata = JSON.parse(data);
+  alert(mydata[0].name);
+
 function photographers(name, id, city, country, tags,tagline, price,portrait ){
     this.name = name;
     this.id = id;

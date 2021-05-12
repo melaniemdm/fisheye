@@ -10,7 +10,6 @@ request.send();
 //réponse du serveur et son traitement
 request.onload = function() {
 var informationsmedia = request.response;
-
 console.log(informationsmedia);
   }
 
