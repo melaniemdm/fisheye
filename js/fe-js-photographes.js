@@ -1,4 +1,5 @@
 
+function getContenuJson(){
 //charge l'URL du fichier JSON
 var requestURL = "http://127.0.0.1:5500/json/FishEyeData.json"
 //créer une requête
@@ -9,16 +10,31 @@ request.open('GET', requestURL);
 request.responseType = 'json';
 request.send();
 //réponse du serveur et son traitement
-var mydata = "";
-request.onload = function() {
+let contenuJson = JSON.parse("{}");
+let photographes = ["toto"];
+
+request.onload = function () {
+ 
 var informationsphotographers = request.response;
-console.log(informationsphotographers);
-mydata=informationsphotographers;
-console.log(mydata.photographers[0].name);// pour verifier que ca fonctionne
+console.log(informationsphotographers); // test
+contenuJson=JSON.parse(JSON.stringify(informationsphotographers));
+console.log(contenuJson.photographers[1].name);// pour verifier que ca fonctionne
+for (let i =0; i < Object.keys(contenuJson.photographers).length;i++){
+monPhotographes = new photographers(contenuJson.photographers[i].name, contenuJson.photographers[i].id, contenuJson.photographers[i].city, contenuJson.photographers[i].country,contenuJson.photographers[i].tags, contenuJson.photographers[i].tagline, contenuJson.photographers[i].price, contenuJson.photographers[i].portrait)
+photographes.push(monPhotographes)
+ 
+} 
+}
+console.log(photographes)
+return photographes
 }
 
- 
-function photographers(name, id, city, country, tags,tagline, price,portrait ){
+let contenuJson = getContenuJson();
+console.log(contenuJson)
+
+
+class photographers {
+  constructor(name, id, city, country, tags, tagline, price, portrait) {
     this.name = name;
     this.id = id;
     this.city = city;
@@ -26,10 +42,18 @@ function photographers(name, id, city, country, tags,tagline, price,portrait ){
     this.tags = tags;
     this.tagline = tagline;
     this.price = price;
-    this.portrait = portrait
-  };
+    this.portrait = portrait;
+  }
+};
   
- // boucles 
- for (let i =0; i<mydata.photographers.length;i++){
-photographes[i] = new photographers(mydata.photographes[i].name, mydata.photographes[i].id, mydata.photographers[i].city, mydata.photographers[i].country,mydata.photographers[i].tags, mydata.photographers[i].tagline, mydata.photographers[i].price, mydata.photographers[i].portrait);
-} 
+
+ 
+
+
+
+
+// var compteur = 0;
+
+// contenuJson.photographers.forEach(infoPhotographe => { photographes[compteur] = new photographers(contenuJson.infoPhotographe.name, contenuJson.infoPhotographe.id, contenuJson.infoPhotographe.city, contenuJson.infoPhotographe.country,contenuJson.infoPhotographe.tags, contenuJson.infoPhotographe.tagline, contenuJson.infoPhotographe.price, contenuJson.infoPhotographe.portrait);
+// compteur++  
+// });
