@@ -1,36 +1,42 @@
 
-function getContenuJson(){
-//charge l'URL du fichier JSON
-var requestURL = "http://127.0.0.1:5500/json/FishEyeData.json"
-//créer une requête
-var request = new XMLHttpRequest();
-//ouvrir une nouvelle requête
-request.open('GET', requestURL);
-//attribution de la valeur 'json'
-request.responseType = 'json';
-request.send();
-//réponse du serveur et son traitement
-let contenuJson = JSON.parse("{}");
-let photographes = ["toto"];
 
-request.onload = function () {
+async function getJSON(url, numero){
+  let rep = await fetch(url, { method: 'GET' });
+  let reponse = await rep.json();
  
-var informationsphotographers = request.response;
-console.log(informationsphotographers); // test
-contenuJson=JSON.parse(JSON.stringify(informationsphotographers));
-console.log(contenuJson.photographers[1].name);// pour verifier que ca fonctionne
-for (let i =0; i < Object.keys(contenuJson.photographers).length;i++){
-monPhotographes = new photographers(contenuJson.photographers[i].name, contenuJson.photographers[i].id, contenuJson.photographers[i].city, contenuJson.photographers[i].country,contenuJson.photographers[i].tags, contenuJson.photographers[i].tagline, contenuJson.photographers[i].price, contenuJson.photographers[i].portrait)
-photographes.push(monPhotographes)
- 
-} 
+let toto = '';
+toto = toto + '<div class="card_photographe"> '
+toto = toto + '           <div class="photo_photographe">' + '<img src= " photos/sample%20Photos/Photographers%20ID%20Photos/' + reponse["photographers"][numero].portrait + '"/>' 
+             
+toto = toto + '           </a> '
+toto = toto + '            </div> '
+toto = toto + '           <h2 id="nom"> ' + reponse["photographers"][numero].name+ '</h2> '
+
+toto = toto + '          <div class="info_photographe"> '
+toto = toto + '          <div id="ville" >' + reponse["photographers"][numero].city + '</div> '
+toto = toto + '          <div id="country">'+reponse["photographers"][numero].country + '</div>'
+toto = toto + '          <div id="tagline">' + reponse["photographers"][numero].tagline + '</div> '
+toto = toto + '           <div id="price">' + reponse["photographers"][numero].price + " €/jour" + '</div> '
+toto = toto + '<div class ="listeTags">'
+for(j = 0; j<reponse["photographers"][numero]. tags.length;j++){
+  toto = toto + ' <div class="tags">' + "#" + reponse["photographers"][numero].tags [j]+ ' </div>' 
 }
-console.log(photographes)
-return photographes
+ toto= toto + '</div>'
+toto = toto + '           </div> '
+toto = toto + '       </div> '
+
+document.querySelector("#toto").innerHTML = document.querySelector("#toto").innerHTML  + toto; 
+
+  return reponse;
+}
+   
+
+
+for(i=0;i<6;i++){
+  getJSON('http://127.0.0.1:5500/json/FishEyeData.json', i)
 }
 
-let contenuJson = getContenuJson();
-console.log(contenuJson)
+
 
 
 class photographers {
@@ -49,11 +55,3 @@ class photographers {
 
  
 
-
-
-
-// var compteur = 0;
-
-// contenuJson.photographers.forEach(infoPhotographe => { photographes[compteur] = new photographers(contenuJson.infoPhotographe.name, contenuJson.infoPhotographe.id, contenuJson.infoPhotographe.city, contenuJson.infoPhotographe.country,contenuJson.infoPhotographe.tags, contenuJson.infoPhotographe.tagline, contenuJson.infoPhotographe.price, contenuJson.infoPhotographe.portrait);
-// compteur++  
-// });
