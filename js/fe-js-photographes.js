@@ -5,7 +5,7 @@ async function getJSON(url, numero){
   let reponse = await rep.json();
  
 let presentationPhotographes = '';
-presentationPhotographes = presentationPhotographes + '<div class="card_photographe"> '
+presentationPhotographes = presentationPhotographes + '<div class="card_photographe"><a href="photographe.html?id=' + reponse["photographers"][numero].id + '">'
 presentationPhotographes = presentationPhotographes + '<div class="photo_photographe">' + '<img src= " photos/sample%20Photos/Photographers%20ID%20Photos/' + reponse["photographers"][numero].portrait + '"/>' 
 presentationPhotographes = presentationPhotographes + '</a> '
 presentationPhotographes = presentationPhotographes + '</div> '
@@ -22,6 +22,7 @@ for(j = 0; j<reponse["photographers"][numero]. tags.length;j++){
 }
 presentationPhotographes= presentationPhotographes + '</div>'
 presentationPhotographes = presentationPhotographes + '</div> '
+presentationPhotographes = presentationPhotographes + '</a> '
 presentationPhotographes = presentationPhotographes + '</div> '
 
 document.querySelector("#presentationPhotographes").innerHTML = document.querySelector("#presentationPhotographes").innerHTML  + presentationPhotographes; 
