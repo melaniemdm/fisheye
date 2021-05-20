@@ -46,7 +46,7 @@ for(i=0;i<6;i++){
       if(reponse["photographers"][k].id == monIdPhotographe ){
         numeroArtiste = k
     }}
-let str = reponse["photographers"][numeroArtiste].name;
+let str = reponse["photographers"][numeroArtiste].name; 
 let nomDossier = str.split(' ')[0]
 if(monIdPhotographe == reponse["media"][numero].photographerId){
 
