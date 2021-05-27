@@ -13,6 +13,8 @@
     <script src="https://kit.fontawesome.com/08a19f859e.js" crossorigin="anonymous">
     </script>
 
+
+
     <!--pour inspection-->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -27,7 +29,8 @@
 
 <header>
 <!-- presentation du photographe  -->
- <div id="presentationDuPhotographe"></div> 
+<div id="listeDesPhotographes"></div> 
+
  
 </header> 
 <br>
@@ -44,9 +47,9 @@
 <br>
 
 
-    <!-- Expo photo du photographe  -->
- <div id="photoDuPhotographe"></div> 
-
+    <!-- Medias du photographe  -->
+    <div id="listeDesMediasDuPhotographe"></div> 
+    
 
 
 <div class="formulaire"  id="formulaire">
@@ -94,7 +97,18 @@
 
 
 <script src="js/fe-js-modal.js"></script>
-<script src="js/fe-js-media.js"></script>
+<script src="js/fe-js-gestion-des-medias-des-photographes.js"></script>
+<script src="js/fe-js-gestion-des-photographes.js"></script> 
+<script> var urlcourante = document.location.href;
+
+var numeroPhotographeUrlCourante = urlcourante.split("?")[1]
+console.log(numeroPhotographeUrlCourante) 
+
+let idPhotographe = numeroPhotographeUrlCourante.split("=")[1]
+console.log(idPhotographe) 
+
+ajoutComposantDansIndex(idPhotographe)
+ajoutComposantDansMediasPhotographes(idPhotographe) </script>
 
 </body>
 
