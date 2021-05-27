@@ -80,8 +80,9 @@ async function recupereJsonMedia(){
   let rep = await fetch(url, { method: 'GET' });
 let reponse = await rep.json();
 var tabloMedias = reponse["media"]
-
-return tabloMedias
+console.log(tabloMedias)
+var tabloMediaTrie = await sortByProperty(tabloMedias, "title", 1) // tri par titre
+return tabloMediaTrie
 }
 
 //fonction qui recupere l'élément média, permet de creer le media
@@ -116,8 +117,27 @@ console.log( nomSplit)
       }
   return listeDesMedias
 }
-
-
+//fonction de tri 
+async function sortByProperty(objArray, prop, direction){
+  if (arguments.length<2) throw new Error("ARRAY, AND OBJECT PROPERTY MINIMUM ARGUMENTS, OPTIONAL DIRECTION");
+  if (!Array.isArray(objArray)) throw new Error("FIRST ARGUMENT NOT AN ARRAY");
+  const clone = objArray.slice(0);
+  const direct = arguments.length>2 ? arguments[2] : 1; //Default to ascending
+  const propPath = (prop.constructor===Array) ? prop : prop.split(".");
+  clone.sort(function(a,b){
+      for (let p in propPath){
+              if (a[propPath[p]] && b[propPath[p]]){
+                  a = a[propPath[p]];
+                  b = b[propPath[p]];
+              }
+      }
+      //convert numeric strings to integers
+      a = a.match(/^\d+$/) ? +a : a;
+      b = b.match(/^\d+$/) ? +b : b;
+      return ( (a < b) ? -1*direct : ((a > b) ? 1*direct : 0) );
+  });
+  return clone;
+}
 
 
 
