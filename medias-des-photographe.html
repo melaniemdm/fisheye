@@ -37,15 +37,15 @@
 <button class="btn-contact" id="btn-contact"> Contactez-moi </button>
 <br>
 
+
 <label for="filtre">Trier par </label>
 <select name="filtre" id="filtre"> 
     <option value="">--Filtre--</option>
-    <option value="Popularite">Popularité</option>
+    <option value="likes">Popularité</option>
     <option value="date">Date</option>
-    <option value="titre">Titre</option>
+    <option value="title">Titre</option>
     </select>
 <br>
-
 
     <!-- Medias du photographe  -->
     <div id="listeDesMediasDuPhotographe"></div> 
@@ -99,16 +99,16 @@
 <script src="js/fe-js-modal.js"></script>
 <script src="js/fe-js-gestion-des-medias-des-photographes.js"></script>
 <script src="js/fe-js-gestion-des-photographes.js"></script> 
+ <!-- commande qui permet de recuperer l'URL  -->
 <script> var urlcourante = document.location.href;
 
 var numeroPhotographeUrlCourante = urlcourante.split("?")[1]
-console.log(numeroPhotographeUrlCourante) 
 
 let idPhotographe = numeroPhotographeUrlCourante.split("=")[1]
-console.log(idPhotographe) 
+//console.log(idPhotographe) 
 
-ajoutComposantDansIndex(idPhotographe)
-ajoutComposantDansMediasPhotographes(idPhotographe) </script>
+ajoutUnSeulPhotographe(idPhotographe)
+ajoutMediaDuPhotographe(idPhotographe, "title") </script>
 
 </body>
 
