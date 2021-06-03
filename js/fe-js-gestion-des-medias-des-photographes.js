@@ -63,11 +63,11 @@ class MediaFactory {
 
 
 //fonction qui ajoute le composant et le contenu dans la page html
-function ajoutComposantDansMediasPhotographes(media) {
-  var listeMedias = document.querySelector("#listeDesMediasDuPhotographe");
+function afficheMediasDesPhotographes(media) {
+  var noeudListeDesMedias = document.querySelector("#listeDesMediasDuPhotographe");
   var composantMedia =  creationComposantMediaPhotographe(media)
  
-    listeMedias.innerHTML = listeMedias.innerHTML + composantMedia;
+    noeudListeDesMedias.innerHTML = noeudListeDesMedias.innerHTML + composantMedia;
   }
 
 //fonction qui permet de creer le composant html
@@ -100,7 +100,7 @@ ajoutMediaDuPhotographe(idPhotographe, trieMedia.value)
 
 
 //fonction qui recupere l'élément média, permet de creer le media
-function recuperationElementMedia(numMedia) {
+function recupereElementMedia(numMedia) {
   let lesMedias = new MediaFactory();
   let nomSplit = document.querySelector(".nomDuPhotographe").innerHTML.split(" ")[0]
   var choixMedia 
@@ -129,9 +129,9 @@ async function ajoutMediaDuPhotographe(id, trie) {
   console.log('here')
   //boucle
   for (i = 0; i < tabloMedias.length; i++) {
-    var media =     recuperationElementMedia(tabloMedias[i])    
+    var media =     recupereElementMedia(tabloMedias[i])    
     if (tabloMedias[i].photographerId == id){
-    ajoutComposantDansMediasPhotographes(media)
+    afficheMediasDesPhotographes(media)
   }}
  }
 
