@@ -66,39 +66,36 @@ class MediaFactory {
 function afficheMediasDesPhotographes(media) {
   var noeudListeDesMedias = document.querySelector("#listeDesMediasDuPhotographe");
   var composantMedia =  creationComposantMediaPhotographe(media)
- 
-    noeudListeDesMedias.innerHTML = noeudListeDesMedias.innerHTML + composantMedia;
+  noeudListeDesMedias.innerHTML = noeudListeDesMedias.innerHTML + composantMedia;
   }
+//evenement sur le noeud
+ var noeudTri = document.querySelector("#filtre")
+ noeudTri.addEventListener("change", changeOrdrePhoto )
 
+//fonction qui recupere la valeur du tri
+  function changeOrdrePhoto() {
+    var tri = noeudTri.value
+    var id = idPhotographe
+document.querySelector("#listeDesMediasDuPhotographe").innerHTML = "" // pour vider et recréer
+ajoutMediaDuPhotographe(id, tri)
+    }
+    
 //fonction qui permet de creer le composant html
 function creationComposantMediaPhotographe(media) {
    var composantElementMedia = media.creatComposant()
         return composantElementMedia;
 }
 // fonction qui recupere le json
-async function recupereJsonMedia(trie) {
+async function recupereJsonMedia(tri) {
   let url = "http://127.0.0.1:5501/json/FishEyeData.json";
   let rep = await fetch(url, { method: "GET" });
   let reponse = await rep.json();
   var tabloMedias = reponse["media"];
-
- 
-
-  var tabloMediaTrie = await sortByProperty(tabloMedias, trie, 1); // appel de la fonction tri
-  return tabloMediaTrie;
+// appel de la fonction de tri
+  var tabloMediaTri = await sortByProperty(tabloMedias, tri, 1); // appel de la fonction tri
+  return tabloMediaTri;
 }
-
- var trieMedia = document.querySelector("#filtre")
-  trieMedia.addEventListener("change", change_valeur )
-//fonction qui recupere la valeur du trie
-  function change_valeur() {
-console.log(trieMedia.value)
-document.querySelector("#listeDesMediasDuPhotographe").innerHTML = ""
-ajoutMediaDuPhotographe(idPhotographe, trieMedia.value)
-    }
-  
-
-
+ 
 //fonction qui recupere l'élément média, permet de creer le media
 function recupereElementMedia(numMedia) {
   let lesMedias = new MediaFactory();
@@ -119,23 +116,19 @@ choixMedia = "courtmetrage"
         numMedia.title,
         numMedia.likes
       )
-
     }
 
-
 // fonction qui affiche tous les medias
-async function ajoutMediaDuPhotographe(id, trie) {
-  var tabloMedias = await recupereJsonMedia(trie);
-  console.log('here')
+async function ajoutMediaDuPhotographe(id, tri) {
+  var tabloMedias = await recupereJsonMedia(tri);
   //boucle
   for (i = 0; i < tabloMedias.length; i++) {
-    var media =     recupereElementMedia(tabloMedias[i])    
+    var media =recupereElementMedia(tabloMedias[i])    
     if (tabloMedias[i].photographerId == id){
     afficheMediasDesPhotographes(media)
   }}
  }
-
-
+ 
 //fonction de tri
 async function sortByProperty(objArray, prop, direction) {
   if (arguments.length < 2)

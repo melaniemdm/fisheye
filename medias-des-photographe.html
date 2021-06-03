@@ -29,7 +29,7 @@
 
 <header>
 <!-- presentation du photographe  -->
-<div id="listeDesPhotographes"></div> 
+<div id="lePhotographe"></div> 
 
  
 </header> 
@@ -97,17 +97,16 @@
 
 
 <script src="js/fe-js-modal.js"></script>
-<script src="js/fe-js-gestion-des-medias-des-photographes.js"></script>
+<script src="js/fe-js-gestion-des-medias.js"></script>
 <script src="js/fe-js-gestion-des-photographes.js"></script> 
  <!-- commande qui permet de recuperer l'URL  -->
 <script> var urlcourante = document.location.href;
 
 var numeroPhotographeUrlCourante = urlcourante.split("?")[1]
-
 let idPhotographe = numeroPhotographeUrlCourante.split("=")[1]
-//console.log(idPhotographe) 
 
-ajoutUnSeulPhotographe(idPhotographe)
+
+afficheLePhotographes(idPhotographe)
 ajoutMediaDuPhotographe(idPhotographe, "title") </script>
 
 </body>

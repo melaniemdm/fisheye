@@ -9,7 +9,7 @@ class ArtistesFactory {
   //permet de creer la fabrique des Artistes
   constructor() {
     //fonction avec les paramètre de la création d'un artiste
-    this.createArtistes = function (
+    this.creatArtistes = function (
       type,
       photo,
       id,
@@ -77,76 +77,38 @@ class ArtistesFactory {
   }
 }
 
-
-//fonction qui ajoute le composant et le contenu dans la page html
-function ajoutComposantDansIndex(idPhotographe) {
-  var listePhotographes = document.querySelector("#listeDesPhotographes");
-  var composant = creationComposantPhotographe(idPhotographe);
-  listePhotographes.innerHTML = listePhotographes.innerHTML + composant;
-}
-
-//fonction qui permet de creer le composant html
-function creationComposantPhotographe(idPhotographe) {
-  var elementsDuPhotographe =  recuperationDonneesPhotographe(
-    idPhotographe
-  );
-  var composantPhotographe = elementsDuPhotographe.createComposant();
-  return composantPhotographe;
-}
 // fonction qui recupere le json
-async function recupereJson() {
+async function recupereJsonPhotographes() {
   let url = "http://127.0.0.1:5501/json/FishEyeData.json";
   let rep = await fetch(url, { method: "GET" });
   let reponse = await rep.json();
-  var tabloPhotographes = reponse["photographers"];
-  console.log(tabloPhotographes.length);
-  return tabloPhotographes;
+  let tabloPhotographes = reponse["photographers"];
+
+return tabloPhotographes}
+
+//fonction affiche les photographes
+async function afficheLesPhotographes (){
+  var tabloPhotographesRecuperer = await recupereJsonPhotographes()
+  for (i = 0; i < tabloPhotographesRecuperer .length; i++) { 
+var noeudListePhotographes = document.querySelector("#listeDesPhotographes")
+var objetPhotographe = await recupereElementPhotographe(tabloPhotographesRecuperer[i])
+noeudListePhotographes.innerHTML = noeudListePhotographes.innerHTML + objetPhotographe.createComposant()
+  }
 }
 
-//fonction qui recupere les éléments de l'artiste
-function recuperationDonneesPhotographe(photographe) {
-  const factoryArtiste = new ArtistesFactory();
-  return factoryArtiste.createArtistes(
-    "photographe",
-        "photos/sample%20Photos/Photographers%20ID%20Photos/" +
-        photographe.portrait,
-        photographe.id,
-        photographe.name,
-        photographe.city,
-        photographe.country,
-        photographe.tagline,
-        photographe.price + "€/jour",
-        photographe.tags
-  )
+//fonction affiche UN photographe dans la page Media
+async function afficheLePhotographes (id){
+  var tabloPhotographesRecuperer = await recupereJsonPhotographes()
+  for (i = 0; i < tabloPhotographesRecuperer .length; i++) { 
+    if (tabloPhotographesRecuperer[i].id == id){
+var noeudListePhotographes = document.querySelector("#lePhotographe")
+var objetPhotographe = await recupereElementPhotographe(tabloPhotographesRecuperer[i])
+noeudListePhotographes.innerHTML = noeudListePhotographes.innerHTML + objetPhotographe.createComposant()
+  }
+}}
 
-    }
-  
-
-// fonction qui permet d'afficher tous les photographes
-async function ajoutTousLesPhotographes (){
-  var tabloPhotographes =  await recupereJson()
-  console.log(tabloPhotographes);
-//Boucle pour afficher tous les photographes
-for(i=0;i<tabloPhotographes.length;i++){
-  ajoutComposantDansIndex(tabloPhotographes[i])
-}
-
-}
-
-//fonction affiche un seul photographe
-async function ajoutUnSeulPhotographe(id){
-  var tabloPhotographes =  await recupereJson()
-  console.log(tabloPhotographes);
-//Boucle pour afficher tous les photographes
-for(i=0;i<tabloPhotographes.length;i++){
-  if(tabloPhotographes[i].id == id){
-  ajoutComposantDansIndex(tabloPhotographes[i])
-}
-}
-
-}
-
-
-
-
+//fonction recupere les elements
+async function recupereElementPhotographe(photographe){
+  var lesPhotographes = new ArtistesFactory();
+  return lesPhotographes.creatArtistes("photographe", "photos/sample%20Photos/Photographers%20ID%20Photos/" + photographe.portrait, photographe.id, photographe.name, photographe.city, photographe.country, photographe.tagline, photographe.price+ "€/jour", photographe.tags)}
 
