@@ -97,11 +97,25 @@ noeudListePhotographes.innerHTML = noeudListePhotographes.innerHTML + objetPhoto
 }
 
 //fonction affiche UN photographe dans la page Media
-async function afficheLePhotographes (id){
+async function afficheLePhotographe (id){
   var tabloPhotographesRecuperer = await recupereJsonPhotographes()
   for (i = 0; i < tabloPhotographesRecuperer .length; i++) { 
     if (tabloPhotographesRecuperer[i].id == id){
 var noeudListePhotographes = document.querySelector("#lePhotographe")
+var objetPhotographe = await recupereElementPhotographe(tabloPhotographesRecuperer[i])
+noeudListePhotographes.innerHTML = noeudListePhotographes.innerHTML + objetPhotographe.createComposant()
+  }
+}}
+//fonction affiche les photographes en fonction du tag
+async function afficheLesPhotographesTagues (tag){
+  
+  var tabloPhotographesRecuperer = await recupereJsonPhotographes()
+  var noeudListePhotographes = document.querySelector("#listeDesPhotographes")
+noeudListePhotographes.innerHTML = "" // pour vider et recréer
+  for (i = 0; i < tabloPhotographesRecuperer .length; i++) { 
+   
+    //verifie si le tableau contient une sous chaine de caractere, renvoie true s'il existe
+    if (tabloPhotographesRecuperer[i].tags.includes(tag) == true){
 var objetPhotographe = await recupereElementPhotographe(tabloPhotographesRecuperer[i])
 noeudListePhotographes.innerHTML = noeudListePhotographes.innerHTML + objetPhotographe.createComposant()
   }
