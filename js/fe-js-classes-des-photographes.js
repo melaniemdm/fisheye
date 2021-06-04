@@ -61,15 +61,14 @@ class Photographe {
             artiste.tagline +
             `</div>
     <div class="priceDuPhotographe">` +
-            artiste.price +
-            `</div>`;
-          ('<div class ="tagsDuPhotographe">');
+            artiste.price + `</div>`;
+            strComposant =strComposant +'<div class ="tagsDuPhotographe">';
           //  boucle qui permet de mettre le #
           artiste.tag.forEach((element) => {
             strComposant =
-              strComposant + ' <div class="tags">' + "#" + element + " </div>";
+              strComposant + ' <div class="tags">'  + "#" + element + " </div>";
           });
-          strComposant = strComposant + `</a>` + `</div> </div>`;
+          strComposant = strComposant +`</div> </a>` + `</div> </div>`;
   
           return strComposant;
         };

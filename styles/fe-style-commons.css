@@ -92,4 +92,14 @@
           justify-content: center;
   background-color: #da8979;
 }
+
+.tagsDuPhotographe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tags {
+  margin-right: 5px;
+}
 /*# sourceMappingURL=fe-style-commons.css.map */

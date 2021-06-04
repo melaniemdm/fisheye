@@ -45,7 +45,7 @@ class Photo {
   <div class="photoIdPhotographes">` + baliseMedia +
             media.medias +
             fermetureBaliseMedia + `</div>
-  <div class="title"> ` +
+  <div class="title_media"> ` +
             media.title +
             `</div>
   <div class="likes"> ` +
