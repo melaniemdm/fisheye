@@ -27,13 +27,11 @@ $colorSecondGrey:#525252;
 
 .banner{
     font-size: 12px;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
- 
-}
-.navigation{
-    margin-left: 10%;
-}
+     }
+
 .navigation a{
     text-decoration: none;
     color:$colorPrimaryStatic;
@@ -44,9 +42,10 @@ $colorSecondGrey:#525252;
 .title{
     font-size: 27px;
     color:$colorPrimaryStatic;
-    position: relative;
-    left: 70%;
-    top: -5.5rem;
+    display: flex;
+    justify-content:flex-end;
+    width: 100%;
+    margin-top: -90px;
 }
 #listeDesPhotographes div{
 text-decoration: none;

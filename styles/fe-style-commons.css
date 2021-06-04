@@ -30,16 +30,13 @@
 
 .banner {
   font-size: 12px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.navigation {
-  margin-left: 10%;
 }
 
 .navigation a {
@@ -53,9 +50,14 @@
 .title {
   font-size: 27px;
   color: #901c1c;
-  position: relative;
-  left: 70%;
-  top: -5.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+  margin-top: -90px;
 }
 
 #listeDesPhotographes div {
