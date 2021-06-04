@@ -11,3 +11,64 @@ $colorSecondGrey:#525252;
 .listeTags{
     display: flex;
 }
+.bouton{
+    display: flex;
+    justify-content: center;
+}
+.boutonContenu{
+    width: 174px;
+    background-color:$colorSecondFocus ;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 15px;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.banner{
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+ 
+}
+.navigation{
+    margin-left: 10%;
+}
+.navigation a{
+    text-decoration: none;
+    color:$colorPrimaryStatic;
+    border: solid grey 1px;
+    padding: 3px;
+    border-radius: 15px;
+}
+.title{
+    font-size: 27px;
+    color:$colorPrimaryStatic;
+    position: relative;
+    left: 70%;
+    top: -5.5rem;
+}
+#listeDesPhotographes div{
+text-decoration: none;
+}
+.infoDuPhotographe a{
+    text-decoration: none;
+    color:$colorPrimaryStatic;
+    background-color: #901c1c;
+}
+.nomDuPhotographe{
+    font-size: 27px;
+    align-items: center;
+   }
+ 
+.contenairPhotographe{
+background-color: #d6abab;
+width: 260px ; 
+margin: 5%;
+}
+#listeDesPhotographes{
+    display: flex;
+    flex-wrap:wrap ;
+    justify-content: center;
+    background-color: #da8979; 
+}

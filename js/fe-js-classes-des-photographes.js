@@ -48,6 +48,7 @@ class Photographe {
             artiste.photo +
             `">
     </div>
+    <div class="infoDuPhotographe">
     <div class="nomDuPhotographe">` +
             artiste.nom +
             ` </div>
@@ -68,7 +69,7 @@ class Photographe {
             strComposant =
               strComposant + ' <div class="tags">' + "#" + element + " </div>";
           });
-          strComposant = strComposant + `</a>` + `</div>`;
+          strComposant = strComposant + `</a>` + `</div> </div>`;
   
           return strComposant;
         };
