@@ -91,7 +91,7 @@ display: flex;
     align-items: center;
     border-radius: 15px;
     font-size: 15px;
-   &:hover{
+    &:hover{
         background-color: $colorSecondFocus;
         color: black;  
     }
@@ -101,7 +101,12 @@ display: flex;
     @extend .btn;
     
 } 
-
+.topBorderRadius{
+border-radius:10px 10px 0 0;
+}
+.bottomBorderRadius{
+    border-radius: 0 0 10px 10px;  
+}
 #filtre ul {
     padding: 0px;
     margin: 0;
@@ -122,39 +127,59 @@ font-weight: bolder;
     padding: 0;
     margin: 0;
     list-style: none;
+    background-color: $colorPrimaryStatic;
+    
     }
 
 #filtre li {
 /* on place les liens du menu horizontalement */
     display: inline-block;
-    text-align: center;
-   
+    border-radius: 10px;
+    &:hover{
+        background-color: $colorSecondFocus;
+        @extend .bottomBorderRadius;
+        color: black;
+        width: 130px;
+    }
 }
 #filtre ul li {
 /* on enlève ce comportement pour les liens du sous menu */
     display: inherit;
-     
-}
+    }
+   
+
 #filtre a {
     text-decoration: none;
     display: block;
-	@extend .btn;
-  } 
+	color: white;
+        }
+ 
 
 
 #filtre ul {
     position: absolute;
 /* on cache les sous menus complètement sur la gauche */
     left: -999em;
-    text-align: left;
     z-index: 1000;
-    
+     
+}
+.separator { /* trait de séparation sous chaque item du menu déroulant */
+ background-color: white; 
+ margin-left: 10px;
+     width: 110px;
+    height: 1px;
+}
+.choix{
+    background-color: $colorPrimaryStatic;
+    width: 130px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
    
 }
-#filtre li ul li{ /* trait de séparation sous chaque item du menu déroulant */
-    border-top:dotted 2px white;}
 
 #filtre li:hover ul {
 /* Au survol des li du menu on replace les sous menus */
     left: auto;
+   
 }
