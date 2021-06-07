@@ -39,7 +39,7 @@
           align-items: center;
 }
 
-.navigation a {
+.navigation a, .tags {
   text-decoration: none;
   color: #901c1c;
   border: solid grey 1px;
