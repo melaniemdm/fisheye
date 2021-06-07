@@ -1,17 +1,5 @@
-// creation des types de classes specifiques aux medias
-class Photo {
-    constructor() {
-      this._type = "photo";
-    }
-  }
-  class Courtmetrage {
-    constructor() {
-      this._type = "courtmetrage";
-    }
-  }
-  
-  //création factory method qui permet de fabriquer le composant générique
-  class MediaFactory {
+//création factory method qui permet de fabriquer le composant générique
+class MediaFactory {
     //permet de creer la fabrique des medias
     constructor() {
       //fonction avec les paramètre de la création d'un media

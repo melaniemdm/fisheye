@@ -1,11 +1,5 @@
-// creation des types de classes specifiques aux artistes (dans le cas ou ils y auraient d'autres artistes autres que des photographes)
-class Photographe {
-    constructor() {
-      this._type = "photographe";
-    }
-  }
-  //création factory method qui permet de fabriquer le composant générique
-  class ArtistesFactory {
+//création factory method qui permet de fabriquer le composant générique
+class ArtistesFactory {
     //permet de creer la fabrique des Artistes
     constructor() {
       //fonction avec les paramètre de la création d'un artiste
