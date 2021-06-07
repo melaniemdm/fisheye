@@ -50,20 +50,23 @@ $colorSecondGrey:#525252;
 #listeDesPhotographes div{
 text-decoration: none;
 }
-.infoDuPhotographe a{
-    text-decoration: none;
-    color:$colorPrimaryStatic;
-    background-color: #901c1c;
-}
-.nomDuPhotographe{
-    font-size: 27px;
-    align-items: center;
-   }
- 
+
 .contenairPhotographe{
 background-color: #d6abab;
 width: 260px ; 
 margin: 5%;
+
+& .infoDuPhotographe a{
+    text-decoration: none;
+    color:$colorPrimaryStatic;
+    background-color: #901c1c;
+}
+& .nomDuPhotographe{
+    font-size: 27px;
+    align-items: center;
+   }
+ 
+
 }
 #listeDesPhotographes{
     display: flex;
@@ -76,4 +79,84 @@ display: flex;
 }
 .tags{
     margin-right: 5px;
+}
+//style commun des boutons
+.btn{
+    background-color: $colorPrimaryStatic;
+    color: white;
+    width: 170px;
+    padding: 27px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    font-size: 15px;
+   &:hover{
+        background-color: $colorSecondFocus;
+        color: black;  
+    }
+}
+
+.btn-contact{
+    @extend .btn
+    
+} 
+
+#filtre ul {
+    padding: 0px;
+    margin: 0;
+    list-style: none;
+}
+.trier{
+    display: flex;
+   & a{
+    text-decoration: none;
+    padding-right: 5px;
+    padding: 20px;
+} 
+}
+
+#filtre {
+/* on centre le menu dans la page */
+font-weight: bolder;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    
+}
+
+#filtre li {
+/* on place les liens du menu horizontalement */
+    display: inline-block;
+    text-align: center;
+   
+}
+#filtre ul li {
+/* on enlève ce comportement pour les liens du sous menu */
+    display: inherit;
+     
+}
+#filtre a {
+    text-decoration: none;
+    display: block;
+	@extend .btn;
+  } 
+
+
+#filtre ul {
+    position: absolute;
+/* on cache les sous menus complètement sur la gauche */
+    left: -999em;
+    text-align: left;
+    z-index: 1000;
+    background-color: #901c1c;
+    border-radius: 15px; 
+   
+}
+#filtre li ul li{ /* trait de séparation sous chaque item du menu déroulant */
+    border-top:dotted 2px white;}
+
+#filtre li:hover ul {
+/* Au survol des li du menu on replace les sous menus */
+    left: auto;
 }

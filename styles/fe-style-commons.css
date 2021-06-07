@@ -64,23 +64,23 @@
   text-decoration: none;
 }
 
-.infoDuPhotographe a {
+.contenairPhotographe {
+  background-color: #d6abab;
+  width: 260px;
+  margin: 5%;
+}
+
+.contenairPhotographe .infoDuPhotographe a {
   text-decoration: none;
   color: #901c1c;
   background-color: #901c1c;
 }
 
-.nomDuPhotographe {
+.contenairPhotographe .nomDuPhotographe {
   font-size: 27px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.contenairPhotographe {
-  background-color: #d6abab;
-  width: 260px;
-  margin: 5%;
 }
 
 #listeDesPhotographes {
@@ -103,5 +103,90 @@
 
 .tags {
   margin-right: 5px;
+}
+
+.btn, .btn-contact, #filtre a {
+  background-color: #901c1c;
+  color: white;
+  width: 170px;
+  padding: 27px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 15px;
+  font-size: 15px;
+}
+
+.btn:hover, .btn-contact:hover, #filtre a:hover {
+  background-color: #d3573c;
+  color: black;
+}
+
+#filtre ul {
+  padding: 0px;
+  margin: 0;
+  list-style: none;
+}
+
+.trier {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.trier a {
+  text-decoration: none;
+  padding-right: 5px;
+  padding: 20px;
+}
+
+#filtre {
+  /* on centre le menu dans la page */
+  font-weight: bolder;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+#filtre li {
+  /* on place les liens du menu horizontalement */
+  display: inline-block;
+  text-align: center;
+}
+
+#filtre ul li {
+  /* on enlève ce comportement pour les liens du sous menu */
+  display: inherit;
+}
+
+#filtre a {
+  text-decoration: none;
+  display: block;
+}
+
+#filtre ul {
+  position: absolute;
+  /* on cache les sous menus complètement sur la gauche */
+  left: -999em;
+  text-align: left;
+  z-index: 1000;
+  background-color: #901c1c;
+  border-radius: 15px;
+}
+
+#filtre li ul li {
+  /* trait de séparation sous chaque item du menu déroulant */
+  border-top: dotted 2px white;
+}
+
+#filtre li:hover ul {
+  /* Au survol des li du menu on replace les sous menus */
+  left: auto;
 }
 /*# sourceMappingURL=fe-style-commons.css.map */

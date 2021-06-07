@@ -13,6 +13,102 @@
   display: flex;
 }
 
+.bouton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.boutonContenu {
+  width: 174px;
+  background-color: #d3573c;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 15px;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.banner {
+  font-size: 12px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navigation a, .tags {
+  text-decoration: none;
+  color: #901c1c;
+  border: solid grey 1px;
+  padding: 3px;
+  border-radius: 15px;
+}
+
+.title {
+  font-size: 27px;
+  color: #901c1c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+  margin-top: -90px;
+}
+
+#listeDesPhotographes div {
+  text-decoration: none;
+}
+
+.infoDuPhotographe a {
+  text-decoration: none;
+  color: #901c1c;
+  background-color: #901c1c;
+}
+
+.nomDuPhotographe {
+  font-size: 27px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contenairPhotographe {
+  background-color: #d6abab;
+  width: 260px;
+  margin: 5%;
+}
+
+#listeDesPhotographes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #da8979;
+}
+
+.tagsDuPhotographe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tags {
+  margin-right: 5px;
+}
+
 .formulaire {
   background-color: #d3573c;
   width: 500px;

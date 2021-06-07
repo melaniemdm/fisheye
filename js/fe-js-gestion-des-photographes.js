@@ -26,7 +26,7 @@ async function afficheLePhotographe (id){
     if (tabloPhotographesRecuperer[i].id == id){
 var noeudListePhotographes = document.querySelector("#lePhotographe")
 var objetPhotographe = await recupereElementPhotographe(tabloPhotographesRecuperer[i])
-noeudListePhotographes.innerHTML = noeudListePhotographes.innerHTML + objetPhotographe.createComposant()
+noeudListePhotographes.innerHTML = noeudListePhotographes.innerHTML + objetPhotographe.createComposantLarge()
   }
 }}
 //fonction affiche les photographes en fonction du tag
