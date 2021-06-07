@@ -38,12 +38,12 @@
 
 <div class="trier"><a href="#"  >Trier par</a>
 <div ><ul id="filtre">
-<li><a href="#" name="likes"> Popularité <i class="fas fa-chevron-up"></i></a> 
+<li><a href="#" title="likes"> Popularité <i class="fas fa-chevron-up"></i></a> 
 		<ul class="choix">
             <li class="separator"	></li>	
-			<li><a href="#" name="date">Date</a></li>
+			<li title="date"><a title="date">Date</a></li>
             <li class="separator"	></li>
-			<li><a href="#" name="title">Titre</a></li>
+			<li title="title"><a title="title">Titre</a></li>
 		</ul></li></ul>
 </div></div>
 
@@ -107,8 +107,8 @@ var numeroPhotographeUrlCourante = urlcourante.split("?")[1]
 let idPhotographe = numeroPhotographeUrlCourante.split("=")[1]
 
 
-afficheLePhotographe(idPhotographe)
-ajoutMediaDuPhotographe(idPhotographe, "title") </script>
+displayOnePhotographer(idPhotographe)
+addPhotographersMedias(idPhotographe, "title") </script>
 
 </body>
 

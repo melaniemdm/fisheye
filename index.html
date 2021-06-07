@@ -30,14 +30,15 @@
         </div>
         <div class="navigation" aria-label="photographer categories">
             <div class="navigation_tag">
-                <a  onclick="afficheLesPhotographesTagues('portrait')" href="#portrait">#Portrait</a>
-                <a  onclick="afficheLesPhotographesTagues('art')" href="#art">#Art</a>
-                <a  onclick="afficheLesPhotographesTagues('fashion')" href="#fashion">#Fashion</a>
-                <a  onclick="afficheLesPhotographesTagues('architecture')" href="#architecture">#Architecture</a>
-                <a  onclick="afficheLesPhotographesTagues('travel')" href="#travel">#Travel</a>
-                <a  onclick="afficheLesPhotographesTagues('sport')" href="#sport">#Sport</a>
-                <a  onclick="afficheLesPhotographesTagues('animals')" href="#animals">#Animals</a>
-                <a  onclick="afficheLesPhotographesTagues('events')" href="#events">#Events</a>
+                <!--appel de function displayAPT avec le onclick avec passage de parametre du tag -->
+                <a  onclick="displayAllPhotographersTagues('portrait')" href="#portrait">#Portrait</a>
+                <a  onclick="displayAllPhotographersTagues('art')" href="#art">#Art</a>
+                <a  onclick="displayAllPhotographersTagues('fashion')" href="#fashion">#Fashion</a>
+                <a  onclick="displayAllPhotographersTagues('architecture')" href="#architecture">#Architecture</a>
+                <a  onclick="displayAllPhotographersTagues('travel')" href="#travel">#Travel</a>
+                <a  onclick="displayAllPhotographersTagues('sport')" href="#sport">#Sport</a>
+                <a  onclick="displayAllPhotographersTagues('animals')" href="#animals">#Animals</a>
+                <a  onclick="displayAllPhotographersTagues('events')" href="#events">#Events</a>
             </div>
         </div>
     </header>
@@ -55,7 +56,7 @@
 </section>
 <script src="js/fe-js-classes-des-photographes.js"></script> 
 <script src="js/fe-js-gestion-des-photographes.js"></script> 
-<script>  afficheLesPhotographes ()   </script> 
+<script>  displayAllPhotographers ()   </script> 
 
 
 </body>    

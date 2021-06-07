@@ -83,6 +83,12 @@
           align-items: center;
 }
 
+.contenairPhotographeLarge a {
+  text-decoration: none;
+  color: #901c1c;
+  background-color: #901c1c;
+}
+
 #listeDesPhotographes {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -92,7 +98,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #da8979;
+  background-color: #e93a17;
 }
 
 .tagsDuPhotographe {
@@ -106,7 +112,7 @@
 }
 
 .btn, .btn-contact {
-  background-color: #901c1c;
+  background-color: red;
   color: white;
   width: 170px;
   padding: 27px;
@@ -128,11 +134,11 @@
   color: black;
 }
 
-.topBorderRadius {
+.topBorderRadius, #filtre {
   border-radius: 10px 10px 0 0;
 }
 
-.bottomBorderRadius, #filtre li:hover {
+.bottomBorderRadius, .choix {
   border-radius: 0 0 10px 10px;
 }
 
@@ -160,7 +166,11 @@
   padding: 0;
   margin: 0;
   list-style: none;
-  background-color: #901c1c;
+  background-color: #00ff62;
+}
+
+#filtre:hover {
+  background-color: aqua;
 }
 
 #filtre li {
@@ -169,15 +179,15 @@
   border-radius: 10px;
 }
 
-#filtre li:hover {
-  background-color: #d3573c;
-  color: black;
-  width: 130px;
-}
-
 #filtre ul li {
   /* on enlève ce comportement pour les liens du sous menu */
   display: inherit;
+  cursor: pointer;
+}
+
+#filtre ul li:hover {
+  background-color: #5aa8a8;
+  border-radius: 0;
 }
 
 #filtre a {
@@ -202,7 +212,8 @@
 }
 
 .choix {
-  background-color: #901c1c;
+  background-color: blue;
+  overflow: hidden;
   width: 130px;
   display: -webkit-box;
   display: -ms-flexbox;

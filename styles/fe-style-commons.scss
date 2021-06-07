@@ -65,14 +65,19 @@ margin: 5%;
     font-size: 27px;
     align-items: center;
    }
- 
+ }
 
-}
+ .contenairPhotographeLarge a{
+     text-decoration: none;
+     color:$colorPrimaryStatic;
+    background-color: #901c1c;
+ }
+
 #listeDesPhotographes{
     display: flex;
     flex-wrap:wrap ;
     justify-content: center;
-    background-color: #da8979; 
+    background-color: #e93a17; 
 }
 .tagsDuPhotographe{
 display: flex;
@@ -82,7 +87,7 @@ display: flex;
 }
 //style commun des boutons
 .btn{
-    background-color: $colorPrimaryStatic;
+    background-color: red;
     color: white;
     width: 170px;
     padding: 27px;
@@ -100,7 +105,9 @@ display: flex;
 .btn-contact{
     @extend .btn;
     
-} 
+}  
+
+
 .topBorderRadius{
 border-radius:10px 10px 0 0;
 }
@@ -127,24 +134,27 @@ font-weight: bolder;
     padding: 0;
     margin: 0;
     list-style: none;
-    background-color: $colorPrimaryStatic;
-    
+    background-color: rgb(0, 255, 98);
+    @extend .topBorderRadius;
+    &:hover{
+        background-color: aqua;
+    }
     }
 
 #filtre li {
 /* on place les liens du menu horizontalement */
     display: inline-block;
     border-radius: 10px;
-    &:hover{
-        background-color: $colorSecondFocus;
-        @extend .bottomBorderRadius;
-        color: black;
-        width: 130px;
-    }
+    
 }
 #filtre ul li {
 /* on enlève ce comportement pour les liens du sous menu */
     display: inherit;
+    cursor: pointer;
+    &:hover{
+        background-color: rgb(90, 168, 168);
+        border-radius: 0;
+    }
     }
    
 
@@ -170,13 +180,14 @@ font-weight: bolder;
     height: 1px;
 }
 .choix{
-    background-color: $colorPrimaryStatic;
+    background-color: blue;
+    overflow: hidden;
     width: 130px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-   
-}
+   @extend .bottomBorderRadius;
+   }
 
 #filtre li:hover ul {
 /* Au survol des li du menu on replace les sous menus */

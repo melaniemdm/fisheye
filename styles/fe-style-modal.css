@@ -109,8 +109,8 @@
   margin-right: 5px;
 }
 
-.btn, .btn-contact {
-  background-color: #901c1c;
+.btn {
+  background-color: red;
   color: white;
   width: 170px;
   padding: 27px;
@@ -127,7 +127,7 @@
   font-size: 15px;
 }
 
-.btn:hover, .btn-contact:hover {
+.btn:hover {
   background-color: #d3573c;
   color: black;
 }
@@ -136,7 +136,7 @@
   border-radius: 10px 10px 0 0;
 }
 
-.bottomBorderRadius, #filtre li:hover {
+.bottomBorderRadius {
   border-radius: 0 0 10px 10px;
 }
 
@@ -164,19 +164,13 @@
   padding: 0;
   margin: 0;
   list-style: none;
-  background-color: #901c1c;
+  background-color: yellow;
 }
 
 #filtre li {
   /* on place les liens du menu horizontalement */
   display: inline-block;
   border-radius: 10px;
-}
-
-#filtre li:hover {
-  background-color: #d3573c;
-  color: black;
-  width: 130px;
 }
 
 #filtre ul li {
@@ -206,7 +200,7 @@
 }
 
 .choix {
-  background-color: #901c1c;
+  background-color: blue;
   width: 130px;
   display: -webkit-box;
   display: -ms-flexbox;
