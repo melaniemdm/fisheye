@@ -1,11 +1,17 @@
+
+//chargement de l'event modal
+function loadModalEvent(){
 const btnContact= document.querySelector("#btn-contact")
 btnContact.addEventListener("click", chargeForm);
 
+}
 const formCharge= document.querySelector("#formulaire")
 
-function chargeForm(){
+function chargeForm(event){
+    //affiche la modal en stoppant le refresh
+    event.preventDefault()
     formCharge.style.visibility="visible"
-}
+  }
 
 const close= document.querySelectorAll(".close")
 close.forEach((btn) => btn.addEventListener("click", fermModal))

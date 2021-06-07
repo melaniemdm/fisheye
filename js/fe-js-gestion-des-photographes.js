@@ -28,7 +28,10 @@ var noeudListePhotographes = document.querySelector("#lePhotographe")
 var objetPhotographe = await recupereElementPhotographe(tabloPhotographesRecuperer[i])
 noeudListePhotographes.innerHTML = noeudListePhotographes.innerHTML + objetPhotographe.createComposantLarge()
   }
-}}
+}
+//function qui met un event sur btn contact
+loadModalEvent()}
+
 //fonction affiche les photographes en fonction du tag
 async function afficheLesPhotographesTagues (tag){
   

@@ -6,11 +6,12 @@ function afficheMediasDesPhotographes(media) {
   }
 //evenement sur le noeud
  var noeudTri = document.querySelector("#filtre")
- noeudTri.addEventListener("change", changeOrdrePhoto )
+ noeudTri.addEventListener("click", changeOrdrePhoto )
 
 //fonction qui recupere la valeur du tri
-  function changeOrdrePhoto() {
-    var tri = noeudTri.value
+  function changeOrdrePhoto(event) {
+    console.log(event.target.name)
+    var tri = event.target.name
     var id = idPhotographe
 document.querySelector("#listeDesMediasDuPhotographe").innerHTML = "" // pour vider et recréer
 ajoutMediaDuPhotographe(id, tri)
