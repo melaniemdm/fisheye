@@ -1,5 +1,7 @@
 import { MediaFactory } from './fe-js-classe-Media-Factory.mjs'
 
+//variable globale
+var idPhotographe = 0;
 
 //Affiche le media en ajoutant le composant et le contenu dans la page html
 function displaysPhotographersMedias(media) {
@@ -60,6 +62,7 @@ choixMedia = "courtmetrage"
 
 // fonction qui affiche tous les medias
 export async function addPhotographersMedias(id, sort) {
+  idPhotographe=id
   var arrayMedias = await getMediaFromJson(sort);
   //boucle
   for (let i = 0; i < arrayMedias.length; i++) {
