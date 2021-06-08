@@ -1,3 +1,5 @@
+import { Photographe } from './fe-js-classe-des-photographes.mjs';
+
 //création factory method qui permet de fabriquer le composant générique
 class ArtistesFactory {
     //permet de creer la fabrique des Artistes
@@ -105,3 +107,4 @@ class ArtistesFactory {
       };
     }
   }
+  export { ArtistesFactory };

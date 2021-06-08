@@ -1,4 +1,4 @@
-
+import { ArtistesFactory } from './fe-js-classe-Artistes-Factory.mjs'
 
 // fonction qui recupere le json
 async function getPhotographersFromJson() {
@@ -10,9 +10,9 @@ async function getPhotographersFromJson() {
 return arrayPhotographers}
 
 //Affiche tous les photographes
-async function displayAllPhotographers (){
+export async function displayAllPhotographers (){
   var arrayPhotographersFromJson = await getPhotographersFromJson()
-  for (i = 0; i < arrayPhotographersFromJson .length; i++) { 
+  for (let i = 0; i < arrayPhotographersFromJson .length; i++) { 
 var nodePhotographersList = document.querySelector("#listeDesPhotographes")
 var objetPhotographe = await getPhotographerObjectFromFactory(arrayPhotographersFromJson[i])
 nodePhotographersList.innerHTML = nodePhotographersList.innerHTML + objetPhotographe.createComposant()
@@ -20,9 +20,9 @@ nodePhotographersList.innerHTML = nodePhotographersList.innerHTML + objetPhotogr
 }
 
 //fonction affiche UN photographe dans la page Media
-async function displayOnePhotographer (id){
+export async function displayOnePhotographer (id){
   var arrayPhotographersFromJson = await getPhotographersFromJson()
-  for (i = 0; i < arrayPhotographersFromJson .length; i++) { 
+  for (let i = 0; i < arrayPhotographersFromJson .length; i++) { 
     if (arrayPhotographersFromJson[i].id == id){
 var nodePhotographersList = document.querySelector("#lePhotographe")
 //demande a recuperer l'object grace a la factory avec les infos recuperé dans le json

@@ -1,3 +1,6 @@
+import { Photo } from './fe-js-classe-des-photos.mjs';
+import { Courtmetrage } from './fe-js-classe-courtmetrage.mjs';
+
 //création factory method qui permet de fabriquer le composant générique
 class MediaFactory {
     //permet de creer la fabrique des medias
@@ -49,3 +52,4 @@ class MediaFactory {
     }
   }
   
+  export { MediaFactory }

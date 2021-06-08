@@ -29,18 +29,18 @@
 
 <header>
 <!-- presentation du photographe  -->
-<div id="lePhotographe"></div> 
+<div id="lePhotographe"></div>
 
- 
-</header> 
+
+</header>
 
 
 
 <div class="trier"><a href="#"  >Trier par</a>
 <div ><ul id="filtre">
-<li><a href="#" title="likes"> Popularité <i class="fas fa-chevron-up"></i></a> 
+<li><a href="#" title="likes"> Popularité <i class="fas fa-chevron-up"></i></a>
 		<ul class="choix">
-            <li class="separator"	></li>	
+            <li class="separator"	></li>
 			<li title="date"><a title="date">Date</a></li>
             <li class="separator"	></li>
 			<li title="title"><a title="title">Titre</a></li>
@@ -48,8 +48,8 @@
 </div></div>
 
     <!-- Medias du photographe  -->
-    <div id="listeDesMediasDuPhotographe"></div> 
-    
+    <div id="listeDesMediasDuPhotographe"></div>
+
 
 
 <div class="formulaire"  id="formulaire">
@@ -60,32 +60,32 @@
     <div class="data">
     <div class="prenom">
         <label for="surname">Prémom</label> <br>
-        <input type="text" id="prenom"/> 
+        <input type="text" id="prenom"/>
         <div class="textErreur" id="erreurPrenom"> Veuillez entrer 2 caractères ou plus pour le champ du Prénom.</div>
     </div></div>
 
-<div class="data">    
+<div class="data">
 <div class="nom">
     <label for="name">Nom</label> <br>
-    <input type="text" id="nom"/> 
+    <input type="text" id="nom"/>
     <div class="textErreur" id="erreurNom"> Veuillez entrer 2 caractères ou plus pour le champ du Nom.</div>
 </div></div>
 
 <div class="data">
 <div class="email">
     <label for="email">Email</label> <br>
-    <input type="text" id="email"/> 
+    <input type="text" id="email"/>
     <div class="textErreur" id="erreurEmail"> Veuillez entrer une adresse mail correcte.</div>
 </div></div>
 
 <div class="message">
     <label for="message">Message</label> <br>
-    <input type="text" id="message"/> 
+    <input type="text" id="message"/>
 </div>
 <button class="btn-valide" id="envoyer"> Envoyer </button>
 </div>
 
-</div>    
+</div>
 
 <section class="modalFin " id="modalFin">
     <div class="btn-closeFin" ><i class="fas fa-times"></i></div>
@@ -94,28 +94,23 @@
 </section>
 
 
-<script src="js/fe-js-classe-courmetrage.js"></script>
-<script src="js/fe-js-classe-des-medias.js"></script>
-<script src="js/fe-js-classe-Media-Factory.js"></script>
-<script src="js/fe-js-gestion-des-medias.js"></script>
-
-<script src="js/fe-js-classe-des-photographes.js"></script>
-<script src="js/fe-js-classe-Artistes-Factory.js"></script>
-<script src="js/fe-js-gestion-des-photographes.js"></script>
 
 
 
-<script src="js/fe-js-modal.js"></script>
+
  <!-- commande qui permet de recuperer l'URL  -->
-<script> var urlcourante = document.location.href;
+<script type = "module">
+import { displayOnePhotographer } from "./js/fe-js-gestion-des-photographes.js" ;
+import { addPhotographersMedias } from "./js/fe-js-gestion-des-medias.js" ;
+console.log("coucou")
 
+var urlcourante = document.location.href;
 var numeroPhotographeUrlCourante = urlcourante.split("?")[1]
 let idPhotographe = numeroPhotographeUrlCourante.split("=")[1]
-
-
 displayOnePhotographer(idPhotographe)
 addPhotographersMedias(idPhotographe, "title") </script>
 
+<script src="js/fe-js-modal.js"></script>
 </body>
 
 </html>

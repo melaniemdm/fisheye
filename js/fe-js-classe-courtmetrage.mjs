@@ -3,3 +3,5 @@ class Courtmetrage {
       this._type = "courtmetrage";
     }
   }
+
+export { Courtmetrage };
