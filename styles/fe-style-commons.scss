@@ -60,6 +60,7 @@ margin: 5%;
     text-decoration: none;
     color:$colorPrimaryStatic;
     background-color: #901c1c;
+    text-align: center;
 }
 & .nomDuPhotographe{
     font-size: 27px;
@@ -69,9 +70,7 @@ margin: 5%;
 
  .contenairPhotographeLarge a{
      text-decoration: none;
-     color:$colorPrimaryStatic;
-    background-color: #901c1c;
- }
+     }
 
 #listeDesPhotographes{
     display: flex;
@@ -81,6 +80,8 @@ margin: 5%;
 }
 .tagsDuPhotographe{
 display: flex;
+justify-content: center;
+
 }
 .tags{
     margin-right: 5px;
@@ -101,13 +102,13 @@ display: flex;
         color: black;  
     }
 }
-
+//btn contact
 .btn-contact{
     @extend .btn;
     
 }  
 
-
+//tri
 .topBorderRadius{
 border-radius:10px 10px 0 0;
 }
@@ -193,4 +194,40 @@ font-weight: bolder;
 /* Au survol des li du menu on replace les sous menus */
     left: auto;
    
+}
+
+//contenair large mise en page
+.contenairPhotographeLarge{
+background-color: #cfc9c9;    
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 1fr;
+
+}
+.localisation{
+    display: flex;
+}
+.photoIdDuPhotographe{
+    order:3;
+}
+.contact{
+    order:2;
+}
+.infoDuPhotographe{
+    order:1;
+}
+.infoPhoto{
+    display: grid;
+   grid-template-columns:1fr 1fr ;
+    width: 200px;
+}
+
+//infos sous la photos
+.likes{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 2px;
+}
+.heart{
+    padding-left: 5px;
 }

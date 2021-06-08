@@ -36,14 +36,16 @@ class MediaFactory {
   <div class="photoIdPhotographes">` + baliseMedia +
             media.medias +
             fermetureBaliseMedia + `</div>
+            <div class="infoPhoto">
   <div class="title_media"> ` +
             media.title +
             `</div>
+            
   <div class="likes"> ` +
             media.like +
-            `</div>
-  <div class="heart"> <i class="fas fa-heart"></i></div>
-  </div>`;
+            `
+  <div class="heart"> <i class="fas fa-heart"></i></div></div>
+  </div></div>`;
   
           return composantElementMedia;
         };

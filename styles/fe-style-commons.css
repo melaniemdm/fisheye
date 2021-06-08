@@ -74,6 +74,7 @@
   text-decoration: none;
   color: #901c1c;
   background-color: #901c1c;
+  text-align: center;
 }
 
 .contenairPhotographe .nomDuPhotographe {
@@ -85,8 +86,6 @@
 
 .contenairPhotographeLarge a {
   text-decoration: none;
-  color: #901c1c;
-  background-color: #901c1c;
 }
 
 #listeDesPhotographes {
@@ -105,6 +104,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .tags {
@@ -229,5 +231,61 @@
 #filtre li:hover ul {
   /* Au survol des li du menu on replace les sous menus */
   left: auto;
+}
+
+.contenairPhotographeLarge {
+  background-color: #cfc9c9;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+}
+
+.localisation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.photoIdDuPhotographe {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+}
+
+.contact {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.infoDuPhotographe {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.infoPhoto {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  width: 200px;
+}
+
+.likes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-right: 2px;
+}
+
+.heart {
+  padding-left: 5px;
 }
 /*# sourceMappingURL=fe-style-commons.css.map */
