@@ -97,7 +97,7 @@ class ArtistesFactory {
   <div class="taglineDuPhotographe"> ` +
           artiste.tagline +
           `</div>`;
-          strComposant =strComposant +'<div class ="tagsDuPhotographe">';
+          strComposant =strComposant +'<div class ="tagsDuPhotographeLarge">';
         //  boucle qui permet de mettre le #
         artiste.tag.forEach((element) => {
           strComposant =

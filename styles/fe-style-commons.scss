@@ -203,7 +203,9 @@ background-color: #cfc9c9;
 display: grid;
 grid-template-columns: 1fr 1fr 1fr;
 grid-template-rows: 1fr;
-
+}
+.tagsDuPhotographeLarge{
+    display: flex;
 }
 .localisation{
     display: flex;
@@ -229,6 +231,7 @@ grid-template-rows: 1fr;
     justify-content: flex-end;
     padding-right: 2px;
 }
+
 .heart{
     padding-left: 5px;
 }

@@ -244,6 +244,12 @@
       grid-template-rows: 1fr;
 }
 
+.tagsDuPhotographeLarge {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .localisation {
   display: -webkit-box;
   display: -ms-flexbox;
