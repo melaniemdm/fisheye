@@ -34,12 +34,12 @@ nodePhotographersList.innerHTML = nodePhotographersList.innerHTML + objetPhotogr
 loadModalEvent()}
 
 //fonction affiche les photographes en fonction du tag
-async function displayAllPhotographersTagues (tag){
+export async function displayAllPhotographersTagues (tag){
   
   var arrayPhotographersFromJson = await getPhotographersFromJson()
   var nodePhotographersList = document.querySelector("#listeDesPhotographes")
 nodePhotographersList.innerHTML = "" // pour vider et recréer
-  for (i = 0; i < arrayPhotographersFromJson .length; i++) { 
+  for (let i = 0; i < arrayPhotographersFromJson .length; i++) { 
    
     //verifie si le tableau contient une sous chaine de caractere, renvoie true s'il existe
     if (arrayPhotographersFromJson[i].tags.includes(tag) == true){

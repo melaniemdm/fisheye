@@ -56,9 +56,16 @@
 </section>
 
 <script type= "module">  
-import { displayAllPhotographers } from "./js/fe-js-gestion-des-photographes.js" ;
-displayAllPhotographers ()   </script> 
 
+import { displayAllPhotographers } from "./js/fe-js-gestion-des-photographes.js" ;
+displayAllPhotographers ()
+</script> 
+
+<script type="module">
+ import { displayAllPhotographersTagues } from "./js/fe-js-gestion-des-photographes.js" ;
+ // permet de referencer l'existance de la function dans toute la fenetre
+ window.displayAllPhotographersTagues = displayAllPhotographersTagues;
+ </script>
 
 </body>    
 </html>
