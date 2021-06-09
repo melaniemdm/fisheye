@@ -1,9 +1,3 @@
-/*---------------------------------test systematique au load--------------------------*/
-if (sessionStorage.getItem("formulaireTermine")) {
-  launchModalFin(); 
-}
-
-
 
 /*---------------------------------chargement de l'event modal--------------------------*/
 function loadModalEvent(){
@@ -13,7 +7,7 @@ btnContact.addEventListener("click", chargeForm);
 //page du formulaire
 const formCharge= document.querySelector("#formulaire")
 
-function chargeForm(event){
+ function chargeForm(event){
     //affiche la modal en stoppant le refresh
     event.preventDefault()
     formCharge.style.visibility="visible"
@@ -147,16 +141,14 @@ function testInput(textID, errorId){
   /*-----------------------------------------Validation du formulaire-----------------------*/
   function submitValid() {
     console.log("coucou")
-    // Enregistrement donneesSauvees dans la session storage
-    sessionStorage.setItem("donneesSauvees", true);
+    
   
     let formValid = true;
   
     /*-----------------Déclaration de la variable saisieSurname------------------*/
     var saisieSurname = document.getElementById("surname").value;
   
-    // permet d'enregistrer les éléments ecrits par l'utilisateur
-    sessionStorage.setItem("saisieSurname", saisieSurname);
+    
   
     // appel de la function testSurname
     if (testSurname() === false) {
@@ -166,16 +158,11 @@ function testInput(textID, errorId){
 /*-----------------Déclaration de la variable saisieMessage------------------*/
     var saisieMessage = document.getElementById("message").value;
   
-    // permet d'enregistrer les éléments ecrits par l'utilisateur
-    sessionStorage.setItem("saisieMessage", saisieMessage);
-
-
+    
     /*---------------Déclaration de la variable saisieName------------------------ */
     var saisieName = document.getElementById("name").value;
   
-    // permet d'enregistrer les éléments ecrits par l'utilisateur
-    sessionStorage.setItem("saisieName", saisieName);
-  
+     
     // appel de la function testName
     if (testName() === false) {
       formValid = false;
@@ -183,17 +170,14 @@ function testInput(textID, errorId){
   
     /*-----------------validation de l'adresse e-mail-------------------------------*/
     var saisieEmail = document.getElementById("email").value;
-    // permet d'enregistrer les éléments ecrits par l'utilisateur
-    sessionStorage.setItem("saisieEmail", saisieEmail);
-    // appel de la function testMail
+        // appel de la function testMail
     if (testMail() === false) {
       formValid = false;
     }
    
   //si pas d'erreur enregistre
   if (formValid === true) {
-  sessionStorage.setItem("formulaireTermine", true);
-  launchModalFin()
+    launchModalFin()
 }
   
     }
@@ -204,40 +188,20 @@ function displayModal() {
   
     /*-------------------------------donneesSauvees storage----------------------------------*/
   
-    // si donneesSauvees est recuperé dans session storage
-    if (sessionStorage.getItem("donneesSauvees")) {
-      //remplir le champs prénom avec la valeur de "saisiePrenom" enregistrée dans sessionStorage
-      document.querySelector("#surname").value = sessionStorage.getItem(
-        "saisieSurname"
-      );
-      //remplir le champs nom avec la valeur de "saisieNom" enregistrée dans sessionStorage
-      document.querySelector("#name").value = sessionStorage.getItem("saisieName");
-      //remplir le champs email avec la valeur de "email" enregistrée dans sessionStorage
-      document.querySelector("#email").value = sessionStorage.getItem(  "saisieEmail"
-      );
-      //remplir le champs message avec la valeur de "saisieMessage" enregistrée dans sessionStorage
-      document.querySelector("#message").value = sessionStorage.getItem("saisieMessage");
-
-      //appels des fonctions tests pour tester la validité et affiche le message d'erreur si invalide
-       testSurname();
-       testName();
-      testMail();
-      
     }
-  }
   /*-------------------------------chargement des infos et envoi par email ---------*/
   function launchModalFin() {
     //recupere les informations dans le sessionstorage & envoie le mail des infos saisies
-    let fullName = sessionStorage.getItem("saisieSurname");
-    let userEmail = sessionStorage.getItem("saisieEmail");
+    let fullName = document.querySelector("#surname").value;
+    let userEmail = document.querySelector("#email").value;
   
     let userMessage =
       "launchModalFin:" +
-      sessionStorage.getItem("saisieName") +
+      document.querySelector("#name").value +
       "/" +
-      sessionStorage.getItem("saisieSurname") +
+      document.querySelector("#surname").value +
       "/"+
-      sessionStorage.getItem("saisieMessage") +
+      document.querySelector("#message").value +
       "/"
       ;
       
@@ -251,14 +215,13 @@ function displayModal() {
     emailjs.init("user_7tR9LJzR8U8F0vQka347x");
 
   //permet d'envoyer le mail
-      emailjs.send("service_ahy6xbq", "template_ylvldvg", contactParams)
-
-
-    //supprime la session storage
-    sessionStorage.clear();
+  console.log(contactParams)
+      //emailjs.send("service_ahy6xbq", "template_ylvldvg", contactParams)
     
     //affiche la modal de fin
     const modalFin = document.querySelector("#modalFin");
-    modalFin.style.display = "flex";
+    console.log(modalFin)
+    modalFin.style.visibility = "visible";
+    closeModal()
   }
   
