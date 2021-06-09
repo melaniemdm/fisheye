@@ -12,11 +12,17 @@
     <!--lien vers les icones font awesome-->
     <script src="https://kit.fontawesome.com/08a19f859e.js" crossorigin="anonymous">
     </script>
-
-
-
     <!--pour inspection-->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+¨   <!--JS MAIL-->
+    <script  src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script >
+    (function() {
+     emailjs.init("user_7tR9LJzR8U8F0vQka347x");
+     })();
+     </script>
+
 
     <title>FishEye | Photographe</title>
     <!--titre de l'onglet-->
@@ -68,7 +74,7 @@
 <div class="nom">
     <label for="name">Nom</label> <br>
     <input type="text" id="name"/>
-    <div class="textError" id="erreurName"> Veuillez entrer 2 caractères ou plus pour le champ du Nom.</div>
+    <div class="textError" id="errorName"> Veuillez entrer 2 caractères ou plus pour le champ du Nom.</div>
 </div></div>
 
 <div class="data">

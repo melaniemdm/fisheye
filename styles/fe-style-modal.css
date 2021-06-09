@@ -78,6 +78,7 @@
   text-decoration: none;
   color: #901c1c;
   background-color: #901c1c;
+  text-align: center;
 }
 
 .contenairPhotographe .nomDuPhotographe {
@@ -85,6 +86,10 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.contenairPhotographeLarge a {
+  text-decoration: none;
 }
 
 #listeDesPhotographes {
@@ -96,20 +101,23 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #da8979;
+  background-color: #e93a17;
 }
 
 .tagsDuPhotographe {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .tags {
   margin-right: 5px;
 }
 
-.btn {
+.btn, .btn-contact {
   background-color: red;
   color: white;
   width: 170px;
@@ -127,16 +135,16 @@
   font-size: 15px;
 }
 
-.btn:hover {
+.btn:hover, .btn-contact:hover {
   background-color: #d3573c;
   color: black;
 }
 
-.topBorderRadius {
+.topBorderRadius, #filtre {
   border-radius: 10px 10px 0 0;
 }
 
-.bottomBorderRadius {
+.bottomBorderRadius, .choix {
   border-radius: 0 0 10px 10px;
 }
 
@@ -164,7 +172,11 @@
   padding: 0;
   margin: 0;
   list-style: none;
-  background-color: yellow;
+  background-color: #00ff62;
+}
+
+#filtre:hover {
+  background-color: aqua;
 }
 
 #filtre li {
@@ -176,12 +188,19 @@
 #filtre ul li {
   /* on enlève ce comportement pour les liens du sous menu */
   display: inherit;
+  cursor: pointer;
+}
+
+#filtre ul li:hover {
+  background-color: #5aa8a8;
+  border-radius: 0;
 }
 
 #filtre a {
   text-decoration: none;
   display: block;
   color: white;
+  cursor: pointer;
 }
 
 #filtre ul {
@@ -201,6 +220,7 @@
 
 .choix {
   background-color: blue;
+  overflow: hidden;
   width: 130px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -216,6 +236,69 @@
 #filtre li:hover ul {
   /* Au survol des li du menu on replace les sous menus */
   left: auto;
+}
+
+.contenairPhotographeLarge {
+  background-color: #cfc9c9;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+}
+
+.tagsDuPhotographeLarge {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.localisation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.photoIdDuPhotographe {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+}
+
+.contact {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.infoDuPhotographe {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.infoPhoto {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  width: 200px;
+}
+
+.likes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-right: 2px;
+}
+
+.heart {
+  padding-left: 5px;
+  color: #901c1c;
 }
 
 .formulaire {

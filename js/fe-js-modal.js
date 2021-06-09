@@ -1,10 +1,16 @@
+/*---------------------------------test systematique au load--------------------------*/
+if (sessionStorage.getItem("formulaireTermine")) {
+  launchModalFin(); 
+}
+
+
 
 /*---------------------------------chargement de l'event modal--------------------------*/
 function loadModalEvent(){
 const btnContact= document.querySelector("#btn-contact")
 btnContact.addEventListener("click", chargeForm);
-
 }
+//page du formulaire
 const formCharge= document.querySelector("#formulaire")
 
 function chargeForm(event){
@@ -21,7 +27,7 @@ function closeModal(){
 }
 /*---------------------------------envoie du formulaire-------------------------------*/
 const envoiForm=document.querySelector(".btn-valide")
-envoiForm.addEventListener("click", launchModalFin )
+envoiForm.addEventListener("click", submitValid )
 
 const modalEndMessage = document.querySelector(".modalFin")
 
@@ -38,6 +44,17 @@ formData.forEach((form) => {
   );
 });
 
+/*-----------------------------------keyCode------------------------------*/
+document.addEventListener("keyup", function (e) {
+  if (e.keyCode == 27) {
+    closeModal();
+    modalEndMessage();
+  }
+  if (e.keyCode == 13) {
+    submitValid();
+    modalEndMessage();
+  }
+});
 /*---------------------------------Event sur l'evenement "change"---------------------*/
 
 const inputSurname = document.querySelector("#surname");
@@ -129,6 +146,7 @@ function testInput(textID, errorId){
 
   /*-----------------------------------------Validation du formulaire-----------------------*/
   function submitValid() {
+    console.log("coucou")
     // Enregistrement donneesSauvees dans la session storage
     sessionStorage.setItem("donneesSauvees", true);
   
@@ -145,6 +163,13 @@ function testInput(textID, errorId){
       formValid = false;
     }
   
+/*-----------------Déclaration de la variable saisieMessage------------------*/
+    var saisieMessage = document.getElementById("message").value;
+  
+    // permet d'enregistrer les éléments ecrits par l'utilisateur
+    sessionStorage.setItem("saisieMessage", saisieMessage);
+
+
     /*---------------Déclaration de la variable saisieName------------------------ */
     var saisieName = document.getElementById("name").value;
   
@@ -164,6 +189,13 @@ function testInput(textID, errorId){
     if (testMail() === false) {
       formValid = false;
     }
+   
+  //si pas d'erreur enregistre
+  if (formValid === true) {
+  sessionStorage.setItem("formulaireTermine", true);
+  launchModalFin()
+}
+  
     }
     
 /*------Affiche le formulaire & recupere les informations a mettre dans le formulaire--------*/
@@ -181,15 +213,52 @@ function displayModal() {
       //remplir le champs nom avec la valeur de "saisieNom" enregistrée dans sessionStorage
       document.querySelector("#name").value = sessionStorage.getItem("saisieName");
       //remplir le champs email avec la valeur de "email" enregistrée dans sessionStorage
-      document.querySelector("#email").value = sessionStorage.getItem(
-        "saisieEmail"
+      document.querySelector("#email").value = sessionStorage.getItem(  "saisieEmail"
       );
-     
+      //remplir le champs message avec la valeur de "saisieMessage" enregistrée dans sessionStorage
+      document.querySelector("#message").value = sessionStorage.getItem("saisieMessage");
+
       //appels des fonctions tests pour tester la validité et affiche le message d'erreur si invalide
-      testPrenom();
-      testNom();
+       testSurname();
+       testName();
       testMail();
       
     }
+  }
+  /*-------------------------------chargement des infos et envoi par email ---------*/
+  function launchModalFin() {
+    //recupere les informations dans le sessionstorage & envoie le mail des infos saisies
+    let fullName = sessionStorage.getItem("saisieSurname");
+    let userEmail = sessionStorage.getItem("saisieEmail");
+  
+    let userMessage =
+      "launchModalFin:" +
+      sessionStorage.getItem("saisieName") +
+      "/" +
+      sessionStorage.getItem("saisieSurname") +
+      "/"+
+      sessionStorage.getItem("saisieMessage") +
+      "/"
+      ;
+      
+  
+    var contactParams = {
+      from_name: fullName,
+      reply_to: userEmail,
+      message: userMessage,
+    };
+  
+    emailjs.init("user_7tR9LJzR8U8F0vQka347x");
+
+  //permet d'envoyer le mail
+      emailjs.send("service_ahy6xbq", "template_ylvldvg", contactParams)
+
+
+    //supprime la session storage
+    sessionStorage.clear();
+    
+    //affiche la modal de fin
+    const modalFin = document.querySelector("#modalFin");
+    modalFin.style.display = "flex";
   }
   
