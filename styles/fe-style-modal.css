@@ -301,6 +301,14 @@
   color: #901c1c;
 }
 
+.photoIdPhotographes {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 350px;
+  height: 300px;
+  border-radius: 5px;
+}
+
 .formulaire {
   background-color: #d3573c;
   width: 500px;

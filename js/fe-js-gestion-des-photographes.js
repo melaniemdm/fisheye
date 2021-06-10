@@ -28,10 +28,14 @@ var nodePhotographersList = document.querySelector("#lePhotographe")
 //demande a recuperer l'object grace a la factory avec les infos recuperé dans le json
 var objetPhotographe = await getPhotographerObjectFromFactory(arrayPhotographersFromJson[i])
 nodePhotographersList.innerHTML = nodePhotographersList.innerHTML + objetPhotographe.createComposantLarge()
-  }
-}
+  } 
+ }
+ 
 //function qui met un event sur btn contact
-loadModalEvent()}
+loadModalEvent()
+return 0
+}
+
 
 //fonction affiche les photographes en fonction du tag
 export async function displayAllPhotographersTagues (tag){

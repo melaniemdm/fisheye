@@ -5,7 +5,7 @@ var idPhotographe = 0;
 
 //Affiche le media en ajoutant le composant et le contenu dans la page html
 function displaysPhotographersMedias(media) {
-  var nodeMediaList = document.querySelector("#listeDesMediasDuPhotographe");
+  var nodeMediaList = document.querySelector("#lightgallery");
   var mediaComponent =  createPhotographersMedia(media)
   nodeMediaList.innerHTML = nodeMediaList.innerHTML + mediaComponent;
   }
@@ -18,7 +18,7 @@ function displaysPhotographersMedias(media) {
     console.log(event.target.title)
     var sort = event.target.title
     var id = idPhotographe
-document.querySelector("#listeDesMediasDuPhotographe").innerHTML = "" // pour vider et recréer
+document.querySelector("#lightgallery").innerHTML = "" // pour vider et recréer
 addPhotographersMedias(id, sort)
     }
     
@@ -70,6 +70,7 @@ export async function addPhotographersMedias(id, sort) {
     if (arrayMedias[i].photographerId == id){
     displaysPhotographersMedias(media)
   }}
+  return 0
  }
  
 //fonction de sort

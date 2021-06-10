@@ -22,6 +22,8 @@
      emailjs.init("user_7tR9LJzR8U8F0vQka347x");
      })();
      </script>
+    <!--lightGalery-->    
+    <link type="text/css" rel="stylesheet" href="node_modules/lightgallery/css/lightgallery-bundle.css" />
 
 
     <title>FishEye | Photographe</title>
@@ -54,7 +56,7 @@
 </div></div>
 
 <!-- Medias du photographe  -->
-    <div id="listeDesMediasDuPhotographe"></div>
+    <div id="lightgallery"></div>
 
 
 
@@ -99,24 +101,45 @@
     <button class="btn-closeFin " id="btn-Closefin"> Close </button>
 </section>
 
+<div  id = "video1" >  
+    <video class = "lg-video-object lg-html5 video-js vjs-default-skin" contrôle preload = "none" > 
+        <source src = "./photos/Sample Photos/Mimi/Animals_Wild_Horses_in_the_mountains.mp4" type = "vidéo/mp4" >  
+ </video>         
+</div>  
 
 
 
 
+ 
+<!-- fichier js de la modal---->
+<script src="js/fe-js-modal.js"></script>
 
- <!-- commande qui permet de recuperer l'URL  -->
+<!-- lightgallery plugins -->
+<script src="node_modules/lightgallery/lightgallery.umd.js"></script>
+<script src="node_modules/lightgallery/plugins/thumbnail/lg-thumbnail.umd.js"></script>
+<script src="node_modules/lightgallery/plugins/zoom/lg-zoom.umd.js"></script>  
+<script src="node_modules/lightgallery/plugins/video/lg-video.min.js"></script>     
+<!-- chargement photographes, medias et galerie  -->
 <script type = "module">
 import { displayOnePhotographer } from "./js/fe-js-gestion-des-photographes.js" ;
 import { addPhotographersMedias } from "./js/fe-js-gestion-des-medias.js" ;
-console.log("coucou")
-
+//url
 var urlcourante = document.location.href;
+//recuperation id du photographe
 var numeroPhotographeUrlCourante = urlcourante.split("?")[1]
 let idPhotographe = numeroPhotographeUrlCourante.split("=")[1]
-displayOnePhotographer(idPhotographe)
-addPhotographersMedias(idPhotographe, "title") </script>
+//affiche le photographe
+let addPhotographer = await displayOnePhotographer(idPhotographe)
+//ajout medias dans la galery
+let addMedia = await addPhotographersMedias(idPhotographe, "title")
+//chargement de la galery 
+lightGallery(document.getElementById('lightgallery'), {
+        plugins: [lgZoom, lgThumbnail, lgVideo],
+        speed: 500,
+        addClass : 'fe-galery',
+        videojs: true });
+        </script>
 
-<script src="js/fe-js-modal.js"></script>
 </body>
 
 </html>
