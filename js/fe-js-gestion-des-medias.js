@@ -50,11 +50,8 @@ choixMedia = "courtmetrage"
   }
   return lesMedias.createMedia(
   // stock le retour de la fonction dans la variable
-          choixMedia,
-        "photos/sample%20Photos/" + nomSplit + "/" + 
-        numMedia.image,
-        "photos/sample%20Photos/" + nomSplit + "/" + 
-        numMedia.video,
+          choixMedia,"photos/sample%20Photos/" + nomSplit + "/" ,  numMedia.image,
+               numMedia.video,
         numMedia.title,
         numMedia.likes
       )

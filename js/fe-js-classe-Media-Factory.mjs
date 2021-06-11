@@ -6,7 +6,7 @@ class MediaFactory {
     //permet de creer la fabrique des medias
     constructor() {
       //fonction avec les paramètre de la création d'un media
-      this.createMedia = function (type, image, video, title, like, heart) {
+      this.createMedia = function (type, url, image, video, title, like, heart) {
         let media;
   
         //conditions qui permetent de gerer la création des medias specifiques
@@ -38,8 +38,8 @@ class MediaFactory {
           if (type == "photo"){
           var composantElementMedia =
           ` 
-    <a href="` + media.medias + `" class="light-link">`+
-    baliseMedia+ media.medias + `" alt="`+media.title+ fermetureBaliseMedia+
+    <a href="` +url+`galeryGrdeTaille/` + media.medias + `" class="light-link">`+
+    baliseMedia+ url + media.medias + `" alt="`+media.title+ fermetureBaliseMedia+
     `<div class="likes"> ` +
    media.like +  `  <div class="heart"> <i class="fas fa-heart"></i></div></div></a>   `
           }
@@ -47,11 +47,11 @@ class MediaFactory {
           var composantElementMedia = 
           `  <a
           data-lg-size="1280-720"
-          data-video='{"source": [{"src":"/`+media.medias + `", "type":"video/mp4"}], "attributes": {"preload": false, "controls": true}}'
+          data-video='{"source": [{"src":"/`+ url +media.medias + `", "type":"video/mp4"}], "attributes": {"preload": false, "controls": true}}'
           data-poster="/images/demo/youtube-video-poster.jpg"
           data-sub-html="<h4>`+media.title +`</h4>"
       >`+
-      baliseMedia + media.medias + `" alt="`+ media.title + fermetureBaliseMedia+
+      baliseMedia + url +media.medias + `" alt="`+ media.title + fermetureBaliseMedia+
       `</a>
        `
           }
