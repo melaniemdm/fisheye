@@ -14,6 +14,7 @@
 *.pptx
 *.doc
 *.docx
+*.excalidraw
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
