@@ -40,8 +40,8 @@ class MediaFactory {
                 if (type === "photo"){
                     composantElementMedia =
           ` 
-    <a href="` +url+`galeryGrdeTaille/` + media.medias + `" class="light-link">`+
-    baliseMedia+ url + media.medias + `" alt="`+media.title+ fermetureBaliseMedia+
+    <a href="` +url+`galeryGrdeTaille/` + media.medias + `" class="light-link" data-sub-html="<h4>`+ media.title + `</h4>">`+
+    baliseMedia+ url + media.medias + `" alt="`+ media.title+ fermetureBaliseMedia+
     `<div class="likes"> ` +
    media.like +  `  <div class="heart"> <i class="fas fa-heart"></i></div></div></a>   `;
                 }
