@@ -1,7 +1,7 @@
 class Courtmetrage {
     constructor() {
-      this._type = "courtmetrage";
+        this._type = "courtmetrage";
     }
-  }
+}
 
 export { Courtmetrage };

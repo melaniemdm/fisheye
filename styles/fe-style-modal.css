@@ -301,12 +301,53 @@
   color: #901c1c;
 }
 
-.photoIdPhotographes {
-  -o-object-fit: cover;
-     object-fit: cover;
+#lightgallery a img, #lightgallery a video {
+  position: absolute;
+  top: -9999px;
+  bottom: -9999px;
+  left: -9999px;
+  right: -9999px;
+  margin: auto;
+}
+
+#lightgallery a video, #lightgallery a img {
   width: 350px;
   height: 300px;
   border-radius: 5px;
+}
+
+#lightgallery a video {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: grey;
+}
+
+#lightgallery a {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  width: 500px;
+  height: 500px;
+}
+
+#lightgallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: yellow;
 }
 
 .formulaire {
