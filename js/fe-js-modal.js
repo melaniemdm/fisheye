@@ -1,4 +1,4 @@
-
+let emailjs = window.emailjs;
 /*---------------------------------chargement de l'event modal--------------------------*/
 export function loadModalEvent(){
     const btnContact= document.querySelector("#btn-contact");
@@ -199,8 +199,8 @@ function launchModalFin() {
         reply_to: userEmail,
         message: userMessage,
     };
-  
-    //emailjs.init("user_7tR9LJzR8U8F0vQka347x");
+
+    emailjs.init("user_7tR9LJzR8U8F0vQka347x");
 
     //permet d'envoyer le mail
     console.log(contactParams);
