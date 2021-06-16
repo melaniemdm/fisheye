@@ -230,6 +230,16 @@ grid-template-rows: 1fr;
     display: flex;
     justify-content: flex-end;
     padding-right: 2px;
+    }
+.titleMedias{
+    margin-top: -1px;
+  }
+.infoContenair{
+    display:flex;
+ justify-content: space-between;
+    margin-top: 400px;
+    margin-left: 80px;
+    width: 350px;
 }
 
 .heart{
@@ -246,14 +256,6 @@ grid-template-rows: 1fr;
 
 }
 #lightgallery a video, #lightgallery a img{
-//object-fit: fill; // adapter l'image a son contenu
-// background-size: contain;
-// background-position: 0px, center;
-//background-repeat: no-repeat;
-//background-size: cover;
-//     background-repeat: no-repeat;
-//     background-position: auto;
-// text-align: center;
 width: 350px;
 height: 300px;
 border-radius: 5px;

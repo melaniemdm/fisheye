@@ -292,6 +292,22 @@
   padding-right: 2px;
 }
 
+.titleMedias {
+  margin-top: -1px;
+}
+
+.infoContenair {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 400px;
+  margin-left: 80px;
+  width: 350px;
+}
+
 .heart {
   padding-left: 5px;
   color: #901c1c;
