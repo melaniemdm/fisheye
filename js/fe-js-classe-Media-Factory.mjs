@@ -8,26 +8,13 @@ class MediaFactory {
         //fonction avec les paramètre de la création d'un media
         this.createMedia = function (type, url, image, video, title, like) {
             let media;
-            let baliseMedia;
-            let fermetureBaliseMedia;
             let composantElementMedia;
             //conditions qui permetent de gerer la création des medias specifiques
             if (type === "courtmetrage") {
-                media = new Courtmetrage();
-                baliseMedia = ` <video controls width="250">
-          <source src="`; 
-                fermetureBaliseMedia = `"</source></video>`;
-                media.medias = video;
-           
- 
+                media = new Courtmetrage(video);
             }
             if (type === "photo") {
-                media = new Photo();
-                baliseMedia = `<img src="`;
-                fermetureBaliseMedia = `"/>`;
-                media.medias = image;
-          
-   
+                media = new Photo(image);
             }
             //ajout des caracteristiques des medias
        
@@ -41,7 +28,7 @@ class MediaFactory {
                     composantElementMedia =
           ` 
     <a href="` +url+`galeryGrdeTaille/` + media.medias + `" onclick="return false;" class="light-link" data-sub-html="<h4>`+ media.title + `</h4>">`+
-    baliseMedia+ url + media.medias + `" alt="`+ media.title+ fermetureBaliseMedia+
+    media.baliseMedia+ url + media.medias + `" alt="`+ media.title+ media.fermetureBaliseMedia+
     `<div class="likes"> ` +
    media.like +  `  <div class="heart"> <i class="fas fa-heart"></i></div></div></a>   `;
                 }
@@ -53,7 +40,7 @@ class MediaFactory {
           data-poster="/images/demo/youtube-video-poster.jpg"
           data-sub-html="<h4>`+media.title +`</h4>"
       >`+
-      baliseMedia + url +media.medias + `" alt="`+ media.title + fermetureBaliseMedia+
+      media.baliseMedia + url +media.medias + `" alt="`+ media.title + media.fermetureBaliseMedia+
       `</a>
        `;
                 }
