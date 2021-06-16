@@ -12,10 +12,13 @@ async function getPhotographersFromJson() {
 //Affiche tous les photographes
 export async function displayAllPhotographers (){
     var arrayPhotographersFromJson = await getPhotographersFromJson();
+    console.log("etape1:", arrayPhotographersFromJson);
     for (let i = 0; i < arrayPhotographersFromJson .length; i++) { 
-        var nodePhotographersList = document.querySelector("#listeDesPhotographes");
         var objetPhotographe = await getPhotographerObjectFromFactory(arrayPhotographersFromJson[i]);
+        console.log("etape2:", objetPhotographe);
+        var nodePhotographersList = document.querySelector("#listeDesPhotographes");
         nodePhotographersList.innerHTML = nodePhotographersList.innerHTML + objetPhotographe.createComposant();
+        console.log("etape3:", objetPhotographe.createComposant());
     }
 }
 
