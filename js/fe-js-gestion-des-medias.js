@@ -64,7 +64,7 @@ export async function addPhotographersMedias(id, sort) {
     //boucle
     for (let i = 0; i < arrayMedias.length; i++) {
         var media =getMediaObjectFromFactory(arrayMedias[i]);    
-        if (arrayMedias[i].photographerId === id){
+        if (arrayMedias[i].photographerId === parseInt(id)){
             displaysPhotographersMedias(media);
         }}
     return 0;
