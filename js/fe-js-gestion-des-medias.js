@@ -34,7 +34,13 @@ async function getMediaFromJson(sort) {
     let reponse = await rep.json();
     var arrayMedias = reponse["media"];
     // appel de la fonction de tri
-    var arrayMediasSort = await sortByProperty(arrayMedias, sort, 1); // appel de la fonction sort
+    //ordre croissant
+    let direction = 1;
+    //ordre décroissant
+    if(sort === "likes"){
+        direction = -1; // sens inverse
+    }
+    var arrayMediasSort = await sortByProperty(arrayMedias, sort, direction); // appel de la fonction sort
     return arrayMediasSort;
 }
  
@@ -78,7 +84,7 @@ async function sortByProperty(objArray, prop, direction) {
         );
     if (!Array.isArray(objArray)) throw new Error("FIRST ARGUMENT NOT AN ARRAY");
     const clone = objArray.slice(0);
-    const direct = arguments.length > 2 ? arguments[2] : 1; //Default to ascending
+    const direct = arguments.length > 2 ? arguments[2] : direction; //Default to ascending
     const propPath = prop.constructor === Array ? prop : prop.split(".");
     clone.sort(function (a, b) {
         for (let p in propPath) {
