@@ -17,50 +17,37 @@ class MediaFactory {
                 media = new Photo(image);
             }
             //ajout des caracteristiques des medias
-       
             media.title = title;
             media.like = like;
-        
-  
             //fonction qui crait le composant média
             media.creatComposant = function () {
                 if (type === "photo"){
                     composantElementMedia =
           ` 
-    <a href="` +url+`galeryGrdeTaille/` + media.medias + `" onclick="return false;" class="light-link" data-sub-html="<h4>`+ media.title + `</h4>">`+
-    media.baliseMedia+ url + media.medias + `" alt="`+ media.title+ media.fermetureBaliseMedia+
-    `<div class="likes"> ` +
-   media.like +  `  <div class="heart"> <i class="fas fa-heart"></i></div></div></a>   `;
+    <a href="` +url+`galeryGrdeTaille/` + media.medias + `" onclick="return false;" class="light-link" data-sub-html="<h4>`+ media.title + 
+    `</h4>">`+ media.baliseMedia+ url + media.medias + `" alt="`+ media.title+ media.fermetureBaliseMedia+  `<div class="infoContenair"><div class="titleMedias"> `+ media.title+`</div><div class="likes"> ` +   media.like + 
+     `<div class="heart"> 
+         <i class="fas fa-heart"></i>
+    </div>
+    </div>
+    </div>
+    </a>   `;
                 }
                 if (type === "courtmetrage"){
                     composantElementMedia = 
-          `  <a
+             ` <a
           data-lg-size="1280-720"
           data-video='{"source": [{"src":"/`+ url +media.medias + `", "type":"video/mp4"}], "attributes": {"preload": false, "controls": true}}'
-          data-poster="/images/demo/youtube-video-poster.jpg"
-          data-sub-html="<h4>`+media.title +`</h4>"
-      >`+
-      media.baliseMedia + url +media.medias + `" alt="`+ media.title + media.fermetureBaliseMedia+
-      `</a>
-       `;
+          data-poster="/images/demo/youtube-video-poster.jpg" data-sub-html="<h4>`+media.title +`</h4>" >`+
+      media.baliseMedia + url +media.medias + `" alt="`+ media.title + media.fermetureBaliseMedia+ `<div class="infoContenair"><div class="titleMedias"> `+media.title + `</div><div class="likes"> ` + media.like + `  
+      <div class="heart"> <i class="fas fa-heart"></i>
+      </div>
+      </div>
+      </div>
+      </a>   `;
+                
                 }
-
-
-                //           `<div class="contenairMedia">
-                // <div class="photoIdPhotographes">` + baliseMedia +
-                //           media.medias +
-                //           fermetureBaliseMedia + `</div>
-                //           <div class="infoPhoto">
-                // <div class="title_media"> ` +
-                //           media.title +
-                //           `</div>
-            
-                // <div class="likes"> ` +
-                //           media.like +
-                //           `
-                // <div class="heart"> <i class="fas fa-heart"></i></div></div>
-                // </div></div>`;
-  
+ 
                 return composantElementMedia;
             };
             return media;
