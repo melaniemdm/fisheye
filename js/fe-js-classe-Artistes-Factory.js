@@ -28,33 +28,19 @@ class ArtistesFactory {
             artiste.createComposant = function () {
                 var strComposant =
             `<div class="contenairPhotographe">
-    <a href="medias-des-photographe.html?idPhotographe=` +
-            artiste.id +
-            `">
-    <div class="photoIdDuPhotographe">
-        <img src=" ` +
-            artiste.photo +
-            `">
-    </div>
-    <div class="infoDuPhotographe">
-    <div class="nomDuPhotographe">` +
-            artiste.nom +
-            ` </div>
-    <div class="cityDuPhotographe">` +
-            artiste.city +
-            ` </div> <div class="countryDuPhotographes">` +
-            artiste.country +
-            ` </div>
-    <div class="taglineDuPhotographe"> ` +
-            artiste.tagline +
-            `</div>
-    <div class="priceDuPhotographe">` +
-            artiste.price + `</div>`;
+                <a href="medias-des-photographe.html?idPhotographe=` + artiste.id + `">
+            <div class="photoIdDuPhotographe">
+                <img src=" ` + artiste.photo +`"></div>
+            <div class="infoDuPhotographe">
+            <div class="nomDuPhotographe">` + artiste.nom + ` </div>
+            <div class="cityDuPhotographe">` +  artiste.city + ` </div> <div class="countryDuPhotographes">` + artiste.country + ` </div>
+            <div class="taglineDuPhotographe"> ` + artiste.tagline + `</div>
+            <div class="priceDuPhotographe">` + artiste.price + `</div>`;
+                
                 strComposant =strComposant +'<div class ="tagsDuPhotographe">';
                 //  boucle qui permet de mettre le #
                 artiste.tag.forEach((element) => {
-                    strComposant =
-              strComposant + ' <div class="tags">'  + "#" + element + " </div>";
+                    strComposant = strComposant + ' <div class="tags">'  + "#" + element + " </div>";
                 });
                 strComposant = strComposant +`</div> </a>` + `</div> </div>`;
   
@@ -63,39 +49,31 @@ class ArtistesFactory {
             //fonction qui creait le composant Artiste vue Large
             artiste.createComposantLarge = function () {
                 var strComposant =
-        `<a href="medias-des-photographe.html?idPhotographe=` +
-          artiste.id +
-          `"></a>
-          <div class="contenairPhotographeLarge">
+            `<a href="medias-des-photographe.html?idPhotographe=` + artiste.id + `"></a>
+        <div class="contenairPhotographeLarge">
   
-  <div class="photoIdDuPhotographe">
-      <img src=" ` +
-          artiste.photo +
-          `">
-  </div>
-  <div class="contact">
-  <div class="btn-contact" id="btn-contact"> Contactez-moi </div>
-  </div>
-  <div class="infoDuPhotographe">
-  <div class="nomDuPhotographe">` +
-          artiste.nom +
-          ` </div>
-  <div class="localisation">        
-  <div class="cityDuPhotographe">` +
-          artiste.city + ", "+
-          ` </div> <div class="countryDuPhotographes">` +
-          artiste.country +
-          ` </div></div>
-  <div class="taglineDuPhotographe"> ` +
-          artiste.tagline +
-          `</div>`;
+        <div class="photoIdDuPhotographe">
+            <img src=" ` + artiste.photo + `">
+        </div>
+        <div class="contact">
+        <div class="btn-contact" id="btn-contact"> Contactez-moi </div>
+        </div>
+        <div class="infoDuPhotographe">
+        <div class="nomDuPhotographe">` + artiste.nom + ` </div>
+        <div class="localisation">        
+        <div class="cityDuPhotographe">` + artiste.city + ", "+ ` </div> 
+        <div class="countryDuPhotographes">` + artiste.country +` </div> 
+        </div>
+        <div class="taglineDuPhotographe"> ` + artiste.tagline +  `</div>`;
                 strComposant =strComposant +'<div class ="tagsDuPhotographeLarge">';
                 //  boucle qui permet de mettre le #
                 artiste.tag.forEach((element) => {
-                    strComposant =
-            strComposant + ' <div class="tags">'  + "#" + element + " </div>";
+                    strComposant =  strComposant + ' <div class="tags">'  + "#" + element + " </div>";
                 });
-                strComposant = strComposant +`</div>  </div> </div> </a> `;
+                strComposant = strComposant +`</div>  
+        </div> 
+        </div> 
+            </a> `;
 
                 return strComposant;
             };
