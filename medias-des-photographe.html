@@ -140,12 +140,7 @@ let addPhotographer = await displayOnePhotographer(idPhotographe)
 loadModalEvent();
 //ajout medias dans la galery
 let addMedia = await addPhotographersMedias(idPhotographe, "title")
-//chargement de la galery 
-lightGallery(document.getElementById('lightgallery'), {
-        plugins: [lgZoom, lgThumbnail, lgVideo],
-        speed: 500,
-        addClass:".fe-galery",
-        videojs: true });
+
         </script>
 
 </body>

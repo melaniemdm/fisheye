@@ -1,5 +1,6 @@
 import { MediaFactory } from './fe-js-classe-Media-Factory.mjs';
 
+
 //variable globale
 var idPhotographe = 0;
 
@@ -73,6 +74,14 @@ export async function addPhotographersMedias(id, sort) {
         if (arrayMedias[i].photographerId === parseInt(id)){
             displaysPhotographersMedias(media);
         }}
+    //chargement de la galery 
+    window.lightGallery(document.getElementById('lightgallery'), {
+        plugins: [window.lgZoom, window.lgThumbnail, window.lgVideo],
+        speed: 500,
+        addClass:".fe-galery",
+        videojs: true });
+
+
     return 0;
 }
  
