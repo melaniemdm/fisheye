@@ -7,9 +7,14 @@ var idPhotographe = 0;
 //Affiche le media en ajoutant le composant et le contenu dans la page html
 function displaysPhotographersMedias(media) {
     var nodeMediaList = document.querySelector("#lightgallery");
-    var mediaComponent =  createPhotographersMedia(media);
+    var mediaComponent = createPhotographersMedia(media);
     nodeMediaList.innerHTML = nodeMediaList.innerHTML + mediaComponent;
+   
+    return 0;
 }
+
+
+
 //evenement sur le noeud
 var nodeSort = document.querySelector("#filtre");
 nodeSort.addEventListener("click", changePhotoOrder );
@@ -57,11 +62,7 @@ function getMediaObjectFromFactory(numMedia) {
     }
     return lesMedias.createMedia(
         // stock le retour de la fonction dans la variable
-        choixMedia,"photos/sample%20Photos/" + nomSplit + "/" ,  numMedia.image,
-        numMedia.video,
-        numMedia.title,
-        numMedia.likes
-    );
+        choixMedia,"photos/sample%20Photos/" + nomSplit + "/" ,numMedia.image, numMedia.video,  numMedia.title, numMedia.likes, numMedia.id);
 }
 
 // fonction qui affiche tous les medias
@@ -73,7 +74,12 @@ export async function addPhotographersMedias(id, sort) {
         var media =getMediaObjectFromFactory(arrayMedias[i]);    
         if (arrayMedias[i].photographerId === parseInt(id)){
             displaysPhotographersMedias(media);
+        
         }}
+    //click du heart
+    var nodeHearts = document.querySelectorAll(".heart");
+    nodeHearts.forEach(nodeheart => nodeheart.addEventListener("click", addOneLike));
+     
     //chargement de la galery 
     window.lightGallery(document.getElementById('lightgallery'), {
         plugins: [window.lgZoom, window.lgThumbnail, window.lgVideo],
@@ -84,7 +90,18 @@ export async function addPhotographersMedias(id, sort) {
 
     return 0;
 }
- 
+//premet au likes d'être cliquable
+function addOneLike(event){
+    console.log(event.target.title);
+    //recupere l'id
+    var nodeLikesId = event.target.title;
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    //recupere le noeud de l'id 
+    let nodeLikes = document.querySelector("#" + nodeLikesId);
+    //agremente de compteur des likes
+    nodeLikes.innerHTML =  parseInt(nodeLikes.innerHTML) +1;
+}
 //fonction de sort
 async function sortByProperty(objArray, prop, direction) {
     if (arguments.length < 2)

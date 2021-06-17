@@ -6,7 +6,7 @@ class MediaFactory {
     //permet de creer la fabrique des medias
     constructor() {
         //fonction avec les paramètre de la création d'un media
-        this.createMedia = function (type, url, image, video, title, like) {
+        this.createMedia = function (type, url, image, video, title, like, id) {
             let media;
             let composantElementMedia;
             //conditions qui permetent de gerer la création des medias specifiques
@@ -19,33 +19,34 @@ class MediaFactory {
             //ajout des caracteristiques des medias
             media.title = title;
             media.like = like;
+            media.id = id;
             //fonction qui crait le composant média
             media.creatComposant = function () {
                 if (type === "photo"){
                     composantElementMedia =
           ` 
     <a href="` +url+`galeryGrdeTaille/` + media.medias + `" onclick="return false;" class="light-link" data-sub-html="<h4>`+ media.title + 
-    `</h4>">`+ media.baliseMedia+ url + media.medias + `" alt="`+ media.title+ media.fermetureBaliseMedia+  `<div class="infoContenair"><div class="titleMedias"> `+ media.title+`</div><div class="likes"> ` +   media.like + 
-     `<div class="heart"> 
-         <i class="fas fa-heart"></i>
+    `</h4>">`+ media.baliseMedia+ url + media.medias + `" alt="`+ media.title+ media.fermetureBaliseMedia+  `<div class="infoContenair"><div class="titleMedias"> `+ media.title+`</div><div class="likes"><div id="likes_`+ media.id +`"> ` +   media.like + `</div>
+          <div class="heart" "> 
+         <i class="fas fa-heart" title="likes_`+ media.id +`"></i>
     </div>
     </div>
     </div>
-    </a>   `;
-                }
+    </a>   `;}
+
                 if (type === "courtmetrage"){
                     composantElementMedia = 
              ` <a
           data-lg-size="1280-720"
           data-video='{"source": [{"src":"/`+ url +media.medias + `", "type":"video/mp4"}], "attributes": {"preload": false, "controls": true}}'
           data-poster="/images/demo/youtube-video-poster.jpg" data-sub-html="<h4>`+media.title +`</h4>" >`+
-      media.baliseMedia + url +media.medias + `" alt="`+ media.title + media.fermetureBaliseMedia+ `<div class="infoContenair"><div class="titleMedias"> `+media.title + `</div><div class="likes"> ` + media.like + `  
-      <div class="heart"> <i class="fas fa-heart"></i>
+      media.baliseMedia + url +media.medias + `" alt="`+ media.title + media.fermetureBaliseMedia+ `<div class="infoContenair"><div class="titleMedias"> `+media.title + `</div><div class="likes"> <div id="likes_`+ media.id +`"> ` + media.like + `  </div>
+      <div class="heart "> <i class="fas fa-heart" title="likes_`+ media.id +`"></i>
       </div>
       </div>
       </div>
       </a>   `;
-                
+
                 }
  
                 return composantElementMedia;
