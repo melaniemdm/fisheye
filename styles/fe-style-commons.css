@@ -3,6 +3,26 @@
 /*vue tablette*/
 /*vue desktop*/
 /*création des variables media queries utilisant les breakpoints*/
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+  font-family: 'Libre Franklin', 'Arial Narrow', Arial, sans-serif;
+}
+
+.nomDuPhotographe {
+  color: #d3573c;
+  font-size: 46px;
+  font-weight: bold;
+}
+
+.taglineDuPhotographe {
+  color: #525252;
+}
+
+.localisation, .tags {
+  color: #901c1c;
+  font-weight: bold;
+}
+
 .listeTags {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -20,7 +40,6 @@
 
 .boutonContenu {
   width: 174px;
-  background-color: #d3573c;
   text-align: center;
   font-weight: bolder;
   font-size: 15px;
@@ -53,6 +72,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -65,7 +86,6 @@
 }
 
 .contenairPhotographe {
-  background-color: #d6abab;
   width: 260px;
   margin: 5%;
 }
@@ -73,7 +93,6 @@
 .contenairPhotographe .infoDuPhotographe a {
   text-decoration: none;
   color: #901c1c;
-  background-color: #901c1c;
   text-align: center;
 }
 
@@ -136,6 +155,11 @@
   color: black;
 }
 
+.btn-contact {
+  margin-left: 30px;
+  font-weight: bold;
+}
+
 .topBorderRadius, #filtre {
   border-radius: 10px 10px 0 0;
 }
@@ -168,11 +192,11 @@
   padding: 0;
   margin: 0;
   list-style: none;
-  background-color: #00ff62;
+  background-color: #901c1c;
 }
 
 #filtre:hover {
-  background-color: aqua;
+  background-color: #d3573c;
 }
 
 #filtre li {
@@ -188,7 +212,7 @@
 }
 
 #filtre ul li:hover {
-  background-color: #5aa8a8;
+  background-color: #d3573c;
   border-radius: 0;
 }
 
@@ -197,6 +221,7 @@
   display: block;
   color: white;
   cursor: pointer;
+  width: 128px;
 }
 
 #filtre ul {
@@ -215,9 +240,8 @@
 }
 
 .choix {
-  background-color: blue;
+  background-color: #901c1c;
   overflow: hidden;
-  width: 130px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -234,14 +258,16 @@
   left: auto;
 }
 
+/*------------------------------------contenair large mise en page---------------------*/
 .contenairPhotographeLarge {
-  background-color: #cfc9c9;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
+  margin-top: 30px;
+  margin-left: 20px;
 }
 
 .tagsDuPhotographeLarge {
@@ -260,18 +286,24 @@
   -webkit-box-ordinal-group: 4;
       -ms-flex-order: 3;
           order: 3;
+  margin-top: -10px;
+  margin-left: 15px;
 }
 
 .contact {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin-top: 15px;
 }
 
 .infoDuPhotographe {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
+  margin-top: 15px;
 }
 
 .infoPhoto {
@@ -338,7 +370,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: grey;
 }
 
 #lightgallery a {
@@ -359,6 +390,5 @@
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  background-color: yellow;
 }
 /*# sourceMappingURL=fe-style-commons.css.map */

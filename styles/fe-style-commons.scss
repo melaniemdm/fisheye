@@ -1,15 +1,30 @@
 @import "./responsive.scss";
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+body{
+    font-family: 'Libre Franklin', 'Arial Narrow', Arial, sans-serif;
+}
 // couleurs primary
 $colorPrimaryStatic:#901c1c;
-
 //color secondaire
 $colorSecondFocus:#d3573c;
 $colorSecondGrey:#525252;
 
-
+.nomDuPhotographe{
+    color:$colorSecondFocus ;
+     font-size: 46px;
+     font-weight: bold;
+}
+.taglineDuPhotographe{
+   color: $colorSecondGrey; 
+}
+.localisation, .tags{
+color:$colorPrimaryStatic ;
+font-weight: bold;
+}
 .listeTags{
     display: flex;
+   
 }
 .bouton{
     display: flex;
@@ -17,7 +32,7 @@ $colorSecondGrey:#525252;
 }
 .boutonContenu{
     width: 174px;
-    background-color:$colorSecondFocus ;
+    //background-color:$colorSecondFocus ;
     text-align: center;
     font-weight: bolder;
     font-size: 15px;
@@ -43,6 +58,7 @@ $colorSecondGrey:#525252;
     font-size: 27px;
     color:$colorPrimaryStatic;
     display: flex;
+    flex-wrap: nowrap;
     justify-content:flex-end;
     width: 100%;
     margin-top: -90px;
@@ -52,14 +68,12 @@ text-decoration: none;
 }
 
 .contenairPhotographe{
-background-color: #d6abab;
 width: 260px ; 
 margin: 5%;
 
 & .infoDuPhotographe a{
     text-decoration: none;
     color:$colorPrimaryStatic;
-    background-color: #901c1c;
     text-align: center;
 }
 & .nomDuPhotographe{
@@ -105,7 +119,8 @@ justify-content: center;
 //btn contact
 .btn-contact{
     @extend .btn;
-    
+    margin-left: 30px;
+    font-weight: bold;
 }  
 
 //tri
@@ -135,10 +150,10 @@ font-weight: bolder;
     padding: 0;
     margin: 0;
     list-style: none;
-    background-color: rgb(0, 255, 98);
+    background-color: $colorPrimaryStatic;
     @extend .topBorderRadius;
     &:hover{
-        background-color: aqua;
+        background-color: $colorSecondFocus;
     }
     }
 
@@ -146,15 +161,16 @@ font-weight: bolder;
 /* on place les liens du menu horizontalement */
     display: inline-block;
     border-radius: 10px;
-  
+
 }
 #filtre ul li {
 /* on enlève ce comportement pour les liens du sous menu */
     display: inherit;
     cursor: pointer;
-    &:hover{
-        background-color: rgb(90, 168, 168);
+       &:hover{
+        background-color: $colorSecondFocus;
         border-radius: 0;
+        
     }
     }
    
@@ -164,6 +180,7 @@ font-weight: bolder;
     display: block;
 	color: white;
     cursor: pointer;
+    width: 128px;
         }
  
 
@@ -182,9 +199,8 @@ font-weight: bolder;
     height: 1px;
 }
 .choix{
-    background-color: blue;
+    background-color: $colorPrimaryStatic;
     overflow: hidden;
-    width: 130px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -197,12 +213,13 @@ font-weight: bolder;
    
 }
 
-//contenair large mise en page
-.contenairPhotographeLarge{
-background-color: #cfc9c9;    
+/*------------------------------------contenair large mise en page---------------------*/
+.contenairPhotographeLarge{  
 display: grid;
 grid-template-columns: 1fr 1fr 1fr;
 grid-template-rows: 1fr;
+margin-top: 30px;
+margin-left: 20px;
 }
 .tagsDuPhotographeLarge{
     display: flex;
@@ -212,12 +229,17 @@ grid-template-rows: 1fr;
 }
 .photoIdDuPhotographe{
     order:3;
+    margin-top: -10px;
+    margin-left: 15px;
 }
 .contact{
     order:2;
+    align-content: center;
+    margin-top: 15px
 }
 .infoDuPhotographe{
     order:1;
+    margin-top: 15px
 }
 .infoPhoto{
     display: grid;
@@ -264,7 +286,7 @@ border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: grey;
+    
 }
 
 #lightgallery a{
@@ -280,6 +302,5 @@ height: 500px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    background-color: yellow;
-    
+       
 }
