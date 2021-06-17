@@ -120,7 +120,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #e93a17;
 }
 
 .tagsDuPhotographe {
@@ -137,7 +136,7 @@ body {
 }
 
 .btn, .btn-contact {
-  background-color: red;
+  background-color: #901c1c;
   color: white;
   width: 170px;
   padding: 27px;
