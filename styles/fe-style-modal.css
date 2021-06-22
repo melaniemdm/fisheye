@@ -14,17 +14,28 @@ body {
 
 .nomDuPhotographe {
   color: #d3573c;
-  font-size: 46px;
-  font-weight: bold;
+  font-size: 45px;
+  margin-top: 48px;
+  margin-bottom: 15px;
+}
+
+.localisation {
+  font-size: 20px;
+  margin-bottom: 25px;
 }
 
 .taglineDuPhotographe {
+  font-size: 14px;
   color: #525252;
+  margin-bottom: 21px;
+}
+
+.tags {
+  font-size: 13px;
 }
 
 .localisation, .tags {
   color: #901c1c;
-  font-weight: bold;
 }
 
 .listeTags {
@@ -49,6 +60,9 @@ body {
   font-size: 15px;
   padding: 8px;
   border-radius: 5px;
+  border: solid #d3573c 1px;
+  background-color: #d3573c;
+  margin-bottom: 20px;
 }
 
 .banner {
@@ -68,6 +82,11 @@ body {
   border: solid grey 1px;
   padding: 3px;
   border-radius: 15px;
+}
+
+.navigation_tag {
+  margin-left: -100px;
+  font-size: 13px;
 }
 
 .title {
@@ -161,6 +180,7 @@ body {
 .btn-contact {
   margin-left: 30px;
   font-weight: bold;
+  margin-top: 48px;
 }
 
 .topBorderRadius, #filtre {
@@ -171,22 +191,31 @@ body {
   border-radius: 0 0 10px 10px;
 }
 
-#filtre ul {
-  padding: 0px;
-  margin: 0;
-  list-style: none;
-}
-
 .trier {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 10px;
+  margin-left: 10px;
+  font-size: 13px;
 }
 
 .trier a {
   text-decoration: none;
   padding-right: 5px;
   padding: 20px;
+}
+
+.trierPar {
+  margin-top: 20px;
+  margin-left: 40px;
+  font-weight: bold;
+}
+
+#filtre ul {
+  padding: 0px;
+  margin: 0;
+  list-style: none;
 }
 
 #filtre {
@@ -270,7 +299,11 @@ body {
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
   margin-top: 30px;
-  margin-left: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+  background-color: #fafafa;
+  margin-bottom: 10px;
+  height: 313px;
 }
 
 .tagsDuPhotographeLarge {
@@ -285,12 +318,18 @@ body {
   display: flex;
 }
 
+/*------------------------------------contenair large mise en page---------------------*/
 .photoIdDuPhotographe {
   -webkit-box-ordinal-group: 4;
       -ms-flex-order: 3;
           order: 3;
-  margin-top: -10px;
-  margin-left: 15px;
+  text-align: right;
+}
+
+.photoIdDuPhotographe img {
+  width: 220px;
+  margin-top: 65px;
+  margin-right: 50px;
 }
 
 .contact {
@@ -307,80 +346,25 @@ body {
       -ms-flex-order: 1;
           order: 1;
   margin-top: 15px;
+  margin-left: 50px;
+  width: 400px;
 }
 
 .infoPhoto {
-  display: -ms-grid;
-  display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   width: 200px;
 }
 
-.likes {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  padding-right: 2px;
-}
-
-.titleMedias {
-  margin-top: -1px;
-}
-
 .infoContenair {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   margin-top: 400px;
-  margin-left: 80px;
+  margin-left: 40px;
   width: 350px;
 }
 
 .heart {
   padding-left: 5px;
   color: #901c1c;
-}
-
-#lightgallery a img, #lightgallery a video {
-  position: absolute;
-  top: -9999px;
-  bottom: -9999px;
-  left: -9999px;
-  right: -9999px;
-  margin: auto;
-}
-
-#lightgallery a video, #lightgallery a img {
-  width: 350px;
-  height: 300px;
-  border-radius: 5px;
-}
-
-#lightgallery a video {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#lightgallery a {
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  width: 500px;
-  height: 500px;
 }
 
 #lightgallery {
@@ -393,6 +377,37 @@ body {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+#lightgallery a img, #lightgallery a video {
+  position: absolute;
+  top: -9999px;
+  bottom: -9999px;
+  left: -9999px;
+  right: -9999px;
+  margin: auto;
+  width: 350px;
+  height: 300px;
+  border-radius: 5px;
+  background-color: #525252;
+}
+
+#lightgallery a video {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#lightgallery a {
+  width: 430px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  color: black;
 }
 
 .formulaire {

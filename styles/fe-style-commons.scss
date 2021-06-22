@@ -13,20 +13,30 @@ $colorSecondGrey:#525252;
 
 .nomDuPhotographe{
     color:$colorSecondFocus ;
-     font-size: 46px;
-     font-weight: bold;
+     font-size: 45px;
+     margin-top: 48px;
+     margin-bottom: 15px;
 }
+.localisation{
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
 .taglineDuPhotographe{
+    font-size: 14px;
    color: $colorSecondGrey; 
+   margin-bottom: 21px;
 }
+.tags{
+    font-size: 13px;  
+}
+
 .localisation, .tags{
 color:$colorPrimaryStatic ;
-font-weight: bold;
 }
 .listeTags{
     display: flex;
-   
-}
+   }
 .bouton{
     display: flex;
     justify-content: center;
@@ -129,6 +139,7 @@ justify-content: center;
     @extend .btn;
     margin-left: 30px;
     font-weight: bold;
+    margin-top: 48px;
 }  
 
 //tri
@@ -138,20 +149,31 @@ border-radius:10px 10px 0 0;
 .bottomBorderRadius{
     border-radius: 0 0 10px 10px;  
 }
+
+
+.trier{
+    
+    display: flex;
+    gap: 10px;
+    margin-left: 10px;
+    font-size: 13px;
+   & a{
+    text-decoration: none;
+    padding-right: 5px;
+    padding: 20px;
+    } 
+}
+.trierPar{
+    
+    margin-top: 20px;
+    margin-left: 40px;
+font-weight: bold;}
+
 #filtre ul {
     padding: 0px;
     margin: 0;
     list-style: none;
     }
-.trier{
-    display: flex;
-   & a{
-    text-decoration: none;
-    padding-right: 5px;
-    padding: 20px;
-} 
-}
-
 #filtre {
 /* on centre le menu dans la page */
 font-weight: bolder;
@@ -227,9 +249,12 @@ display: grid;
 grid-template-columns: 1fr 1fr 1fr;
 grid-template-rows: 1fr;
 margin-top: 30px;
-margin-left: 20px;
+margin-left: 50px;
+margin-right: 50px;
 background-color: #fafafa;
 margin-bottom: 10px;
+height: 313px;
+
 }
 .tagsDuPhotographeLarge{
     display: flex;
@@ -237,10 +262,17 @@ margin-bottom: 10px;
 .localisation{
     display: flex;
 }
+/*------------------------------------contenair large mise en page---------------------*/
 .photoIdDuPhotographe{
     order:3;
-    margin-top: -15px;
-    margin-left: 15px;
+    text-align: right;
+     
+}
+.photoIdDuPhotographe img{
+    width: 220px;
+    margin-top: 65px;
+    margin-right: 50px;
+
 }
 .contact{
     order:2;
@@ -249,36 +281,45 @@ margin-bottom: 10px;
 }
 .infoDuPhotographe{
     order:1;
-    margin-top: 15px
+    margin-top: 15px;
+    margin-left: 50px;
+    width: 400px;
 }
 .infoPhoto{
-    display: grid;
+    //display: grid;
    grid-template-columns:1fr 1fr ;
     width: 200px;
 }
 
-//infos sous la photos
-.likes{
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 2px;
-    }
-.titleMedias{
-    margin-top: -1px;
-    
-  }
+
 .infoContenair{
-    display:flex;
- justify-content: space-between;
-    margin-top: 400px;
-    margin-left: 80px;
-    width: 350px;
+margin-top: 400px;
+margin-left: 40px;
+width: 350px;
 }
+// //infos sous la photos
+// .likes{
+//     display: flex;
+//    // justify-content: flex-end;
+//     padding-right: 2px;
+//     }
+// .titleMedias{
+//    // margin-top: -1px;
+//    width: 50px; 
+//   }
+
 
 .heart{
     padding-left: 5px;
     color: $colorPrimaryStatic;
 }
+#lightgallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+     }
+
 #lightgallery a img, #lightgallery a video {
     position: absolute;
     top: -9999px;
@@ -286,34 +327,22 @@ margin-bottom: 10px;
     left: -9999px;
     right: -9999px;
     margin: auto;
+    width: 350px;
+    height: 300px;
+    border-radius: 5px;
+    background-color: $colorSecondGrey;
+}
 
-}
-#lightgallery a video, #lightgallery a img{
-width: 350px;
-height: 300px;
-border-radius: 5px;
-background-color: $colorSecondGrey;
-}
 #lightgallery a video{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    
 }
 
 #lightgallery a{
+    width: 430px;
     text-align: center;
   position: relative;
 overflow: hidden;  
-    width: 500px;
-height: 500px;
 text-decoration: none;
 color: black;
 }
 
-#lightgallery {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-      margin-left: 150px; 
-}
