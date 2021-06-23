@@ -180,7 +180,7 @@ body {
 .trier {
   display: flex;
   gap: 10px;
-  margin-left: 10px;
+  margin-left: 60px;
   font-size: 13px;
 }
 .trier a {
@@ -272,8 +272,9 @@ body {
   grid-template-rows: 1fr;
   margin-top: 30px;
   margin-left: 100px;
-  margin-right: 100px;
+  margin-right: 70px;
   background-color: #fafafa;
+  border-radius: 5px;
   margin-bottom: 10px;
   height: 320px;
 }
