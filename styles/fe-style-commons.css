@@ -146,7 +146,7 @@ body {
 }
 
 /*----------------------------------------------boutons----------------------*/
-.btn, .btn-contact {
+.btn {
   background-color: #901c1c;
   color: white;
   width: 170px;
@@ -157,15 +157,32 @@ body {
   border-radius: 15px;
   font-size: 15px;
 }
-.btn:hover, .btn-contact:hover {
+.btn:hover {
   background-color: #d3573c;
   color: black;
 }
 
+.contact {
+  order: 2;
+  align-content: center;
+}
+
 .btn-contact {
-  margin-left: 30px;
+  background-color: #901c1c;
+  color: white;
+  width: 170px;
+  padding: 27px;
+  display: flex;
+  justify-content: center;
+  border-radius: 15px;
+  font-size: 15px;
   font-weight: bold;
-  margin-top: 48px;
+  margin-top: 60px;
+  margin-left: 40px;
+}
+.btn-contact:hover {
+  background-color: #d3573c;
+  color: black;
 }
 
 .topBorderRadius, #filtre {
@@ -296,12 +313,6 @@ body {
   margin-right: 15px;
 }
 
-.contact {
-  order: 2;
-  align-content: center;
-  margin-top: 15px;
-}
-
 .infoDuPhotographeLarge {
   order: 1;
   margin-top: 15px;
@@ -309,10 +320,11 @@ body {
 }
 
 .nomDuPhotographeLarge {
-  font-size: 48px;
+  width: 110%;
+  font-size: 40px;
   color: #d3573c;
   padding-top: 45px;
-  padding-bottom: 26px;
+  padding-bottom: 23px;
 }
 
 .localisationLarge {
