@@ -54,7 +54,7 @@ async function getMediaFromJson(sort) {
 //fonction qui recupere un media ojbect grace à la function de creation de la factory
 function getMediaObjectFromFactory(numMedia) {
     let lesMedias = new MediaFactory();
-    let nomSplit = document.querySelector(".nomDuPhotographe").innerHTML.split(" ")[0];
+    let nomSplit = document.querySelector(".nomDuPhotographeLarge").innerHTML.split(" ")[0];
     var choixMedia; 
     if(numMedia.image){
         choixMedia = "photo";

@@ -60,12 +60,12 @@ class ArtistesFactory {
         <div class="contact">
         <div class="btn-contact" id="btn-contact"> Contactez-moi </div>
         </div>
-        <div class="infoDuPhotographe">
-        <div class="nomDuPhotographe">` + artiste.nom + ` </div>
+        <div class="infoDuPhotographeLarge">
+        <div class="nomDuPhotographeLarge">` + artiste.nom + ` </div>
         <div class="localisationLarge">        
-        <div class="cityDuPhotographe">` + artiste.city + ", "+ ` </div> <div class="countryDuPhotographes">` + artiste.country +` </div> 
+        <div class="cityDuPhotographeLarge">` + artiste.city + ", "+ ` </div> <div class="countryDuPhotographesLarge">` + artiste.country +` </div> 
         </div>
-        <div class="taglineDuPhotographe"> ` + artiste.tagline +  `</div>`;
+        <div class="taglineDuPhotographeLarge"> ` + artiste.tagline +  `</div>`;
                 strComposant =strComposant +'<div class ="tagsDuPhotographeLarge">';
                 //  boucle qui permet de mettre le #
                 artiste.tag.forEach((element) => {

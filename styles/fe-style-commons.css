@@ -266,33 +266,119 @@ body {
 
 /*------------------------------------contenair large mise en page---------------------*/
 /*---------------------page medias--------------------*/
-.localisationLarge {
-  color: #901c1c;
-}
-
-.localisationLarge {
-  font-size: 20px;
-  margin-bottom: 25px;
-}
-
 .contenairPhotographeLarge {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   margin-top: 30px;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
   background-color: #fafafa;
   margin-bottom: 10px;
-  height: 313px;
+  height: 320px;
+}
+
+.contenairPhotographeLarge a {
+  text-decoration: none;
+}
+
+/*------order de la card ----*/
+.photoIdDuPhotographeLarge {
+  order: 3;
+  text-align: right;
+}
+
+.photoIdDuPhotographeLarge img {
+  width: 260px;
+  margin-top: 45px;
+  margin-right: 15px;
+}
+
+.contact {
+  order: 2;
+  align-content: center;
+  margin-top: 15px;
+}
+
+.infoDuPhotographeLarge {
+  order: 1;
+  margin-top: 15px;
+  margin-left: 69px;
+}
+
+.nomDuPhotographeLarge {
+  font-size: 50px;
+  color: #d3573c;
+  padding-top: 45px;
+  padding-bottom: 26px;
+}
+
+.localisationLarge {
+  color: #901c1c;
+  font-size: 20px;
+  display: flex;
+  padding-bottom: 20px;
+}
+
+.taglineDuPhotographeLarge {
+  font-size: 15px;
+  padding-bottom: 15px;
 }
 
 .tagsDuPhotographeLarge {
   display: flex;
 }
 
-.contenairPhotographeLarge a {
-  text-decoration: none;
+.tagsDuPhotographeLarge div {
+  color: #901c1c;
+  font-weight: bold;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin: 2px;
+}
+
+.tags {
+  border: lightgrey 1px solid;
+  font-size: 12px;
+  border-radius: 15px;
+}
+
+/*---------- les medias------*/
+.infoContenair {
+  height: 350px;
+  width: 380px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+.likes {
+  color: #901c1c;
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 330px;
+  font-size: 18px;
+}
+
+.heart {
+  color: #901c1c;
+  padding-left: 5px;
+  font-size: 18px;
+}
+
+.titleMedias {
+  color: #901c1c;
+  font-weight: 400;
+  font-size: 18px;
+  display: flex;
+  justify-content: flex-start;
+  right: 0;
+  padding-top: 330px;
+  padding-right: 35px;
+  margin-right: 40px;
+  margin-left: 30px;
 }
 
 /*-----------------------------------------------------------------------------------------------------------------*/
@@ -302,6 +388,7 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: left;
+  margin-left: 65px;
 }
 
 #lightgallery a img, #lightgallery a video {
@@ -322,7 +409,7 @@ body {
 }
 
 #lightgallery a {
-  width: 430px;
+  width: 410px;
   text-align: center;
   position: relative;
   overflow: hidden;
