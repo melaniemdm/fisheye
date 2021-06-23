@@ -405,6 +405,20 @@ body {
   background-color: #525252;
 }
 
+.lg {
+  background-color: white;
+  color: black;
+}
+
+#lg-actual-size-1, #lg-close-1, #lg-next-1, #lg-prev-1, #lg-download-1 {
+  color: #901c1c;
+  font-size: 35px;
+}
+
+#lg-next-1, #lg-prev-1 {
+  background-color: white;
+}
+
 #lightgallery a {
   width: 410px;
   text-align: center;
