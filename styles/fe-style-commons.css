@@ -164,6 +164,7 @@ body {
 
 .btn-contact {
   margin-left: 30px;
+  font-weight: bold;
   margin-top: 48px;
 }
 
@@ -308,7 +309,7 @@ body {
 }
 
 .nomDuPhotographeLarge {
-  font-size: 50px;
+  font-size: 48px;
   color: #d3573c;
   padding-top: 45px;
   padding-bottom: 26px;
@@ -378,7 +379,6 @@ body {
   right: 0;
   padding-top: 330px;
   padding-right: 35px;
-  margin-right: 40px;
   margin-left: 30px;
 }
 
@@ -403,10 +403,6 @@ body {
   height: 300px;
   border-radius: 5px;
   background-color: #525252;
-}
-
-#lightgallery a video {
-  display: flex;
 }
 
 #lightgallery a {

@@ -169,7 +169,7 @@ justify-content: center;
 .btn-contact{
     @extend .btn;
     margin-left: 30px;
-    //font-weight: bold;
+    font-weight: bold;
     margin-top: 48px;
 }  
 
@@ -183,7 +183,6 @@ border-radius:10px 10px 0 0;
 /*-----------------------------------------------------------------------------*/
 /*------ menu trier page medias-----------*/
 .trier{
-    
     display: flex;
     gap: 10px;
     margin-left: 60px;
@@ -313,7 +312,7 @@ height: 320px;
    
 }
 .nomDuPhotographeLarge{
-    font-size: 50px;
+    font-size: 48px;
     color: $colorSecondFocus;
     padding-top: 45px;
     padding-bottom: 26px;
@@ -361,8 +360,7 @@ height: 320px;
   padding-bottom: 10px;
 }
 .likes{
-    
-    color: $colorPrimaryStatic;
+color: $colorPrimaryStatic;
  display: flex;
 justify-content: flex-start;
 padding-top: 330px;
@@ -375,7 +373,6 @@ font-size:18px ;
        font-size:18px ;
        }
 .titleMedias{
-    
     color:$colorPrimaryStatic ;
     font-weight: 400;
     font-size:18px ;
@@ -384,7 +381,6 @@ font-size:18px ;
     right: 0;
     padding-top: 330px;
     padding-right: 35px;
-    margin-right: 40px;
     margin-left: 30px;
 
 }
@@ -411,9 +407,9 @@ font-size:18px ;
     background-color: $colorSecondGrey;
 }
 
-#lightgallery a video{
-    display: flex;
-}
+//#lightgallery a video{
+   // display: flex;
+//}
 
 #lightgallery a{
     width: 410px;
