@@ -1,6 +1,11 @@
 let emailjs = window.emailjs;
 /*---------------------------------chargement de l'event modal--------------------------*/
 export function loadModalEvent(){
+    //affiche le nom dans la modal
+    const nomPhotographeForm = document.querySelector("#nomPhotographeForm");
+    const nomDuPhotographeLarge = document.querySelector(".nomDuPhotographeLarge");
+    nomPhotographeForm.innerHTML = nomDuPhotographeLarge.innerHTML;
+//event sur le btn contactez moi
     const btnContact= document.querySelector("#btn-contact");
     btnContact.addEventListener("click", chargeForm);
 }

@@ -182,7 +182,6 @@ justify-content: center;
     justify-content: center;
     border-radius: 15px;
     font-size: 15px;
-    //margin-left: 30px;
     font-weight: bold;
     margin-top: 60px;
     margin-left: 40px;
@@ -298,12 +297,12 @@ display: grid;
 grid-template-columns: 1fr 1fr 1fr;
 grid-template-rows: 1fr;
 margin-top: 30px;
-margin-left: 100px;
+margin-left: 70px;
 margin-right: 70px;
 background-color: #fafafa;
 border-radius: 5px;
 margin-bottom: 10px;
-height: 320px;
+height: 2;
 
 }
 .contenairPhotographeLarge a{
@@ -410,7 +409,7 @@ font-size:18px ;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: left;
-    margin-left: 65px;
+    margin-left: 50px;
      }
 
 #lightgallery a img, #lightgallery a video {
