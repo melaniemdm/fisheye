@@ -405,8 +405,11 @@ body {
   background-color: #525252;
 }
 
-.lg {
+#lg-content-1 {
   background-color: white;
+}
+
+.titleInGallery {
   color: black;
 }
 

@@ -407,9 +407,11 @@ font-size:18px ;
     background-color: $colorSecondGrey;
 }
 //designe gallery
-.lg{
-    background-color: white;
-    color: black;
+#lg-content-1{
+background-color: white;
+}
+.titleInGallery{
+       color: black;
 }
 #lg-actual-size-1, #lg-close-1, #lg-next-1, #lg-prev-1, #lg-download-1{ 
    color: $colorPrimaryStatic;
@@ -418,6 +420,7 @@ font-size:18px ;
 #lg-next-1, #lg-prev-1{
     background-color: white;
 }
+
 //#lightgallery a video{
    // display: flex;
 //}
