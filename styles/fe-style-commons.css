@@ -5,48 +5,132 @@
 /*création des variables media queries utilisant les breakpoints*/
 @import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 body {
-  font-family: 'Libre Franklin', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Libre Franklin", Arial, sans-serif;
+}
+
+/*------------------------------------index.html--------------------------------------------*/
+.logo {
+  padding-left: 50px;
+  margin-right: 60px;
+}
+
+/*------------------------------------------banner- navTag - title----------------*/
+.banner {
+  font-size: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+}
+
+.navigation_tag {
+  font-size: 13px;
+  margin-left: -70px;
+  width: 550px;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #901c1c;
+  border: solid #525252 1px;
+  border-radius: 15px;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin: 3px;
+}
+
+.title h1 {
+  font-size: 30px;
+  font-weight: 400;
+  color: #901c1c;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-top: -68px;
+  padding-top: 20px;
+  padding-right: 100px;
+}
+
+/*----------------------------------card du photographes page index------------------------------------------*/
+#listeDesPhotographes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 80px;
+  padding-top: 80px;
+}
+
+#listeDesPhotographes div {
+  text-decoration: none;
+}
+
+.contenairPhotographe {
+  width: 350px;
+}
+
+.photoIdDuPhotographe {
+  display: flex;
+  justify-content: center;
+}
+
+.infoDuPhotographe {
+  text-align: center;
+}
+
+.infoDuPhotographe a {
+  text-decoration: none;
+  color: #901c1c;
 }
 
 .nomDuPhotographe {
   color: #d3573c;
-  font-size: 45px;
-  margin-top: 48px;
-  margin-bottom: 15px;
+  font-size: 25px;
+  margin-bottom: 10px;
 }
 
 .localisation {
-  font-size: 20px;
-  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 3px;
 }
 
 .taglineDuPhotographe {
-  font-size: 14px;
+  color: black;
+  font-size: 12px;
+  margin-bottom: 3px;
+}
+
+.priceDuPhotographe {
   color: #525252;
-  margin-bottom: 21px;
+  font-size: 12px;
+  margin-bottom: 3px;
+}
+
+.tagsDuPhotographe {
+  display: flex;
+  justify-content: center;
+}
+
+.tagsDuPhotographe div {
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  margin: 3px;
 }
 
 .tags {
-  font-size: 13px;
+  border: #525252 1px solid;
+  font-size: 12px;
+  border-radius: 15px;
 }
 
-.localisation, .tags {
-  color: #901c1c;
-}
-
-.listeTags {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
+/*-----*/
 .bouton {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 .boutonContenu {
@@ -61,113 +145,18 @@ body {
   margin-bottom: 20px;
 }
 
-.banner {
-  font-size: 12px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.navigation a, .tags {
-  text-decoration: none;
-  color: #901c1c;
-  border: solid grey 1px;
-  padding: 3px;
-  border-radius: 15px;
-}
-
-.navigation_tag {
-  margin-left: -100px;
-  font-size: 13px;
-}
-
-.title {
-  font-size: 27px;
-  color: #901c1c;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  width: 100%;
-  margin-top: -90px;
-}
-
-#listeDesPhotographes div {
-  text-decoration: none;
-}
-
-.contenairPhotographe {
-  width: 260px;
-  margin: 5%;
-}
-
-.contenairPhotographe .infoDuPhotographe a {
-  text-decoration: none;
-  color: #901c1c;
-  text-align: center;
-}
-
-.contenairPhotographe .nomDuPhotographe {
-  font-size: 27px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.contenairPhotographeLarge a {
-  text-decoration: none;
-}
-
-#listeDesPhotographes {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.tagsDuPhotographe {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.tags {
-  margin-right: 5px;
-}
-
+/*----------------------------------------------boutons----------------------*/
 .btn, .btn-contact {
   background-color: #901c1c;
   color: white;
   width: 170px;
   padding: 27px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   border-radius: 15px;
   font-size: 15px;
 }
-
 .btn:hover, .btn-contact:hover {
   background-color: #d3573c;
   color: black;
@@ -175,7 +164,6 @@ body {
 
 .btn-contact {
   margin-left: 30px;
-  font-weight: bold;
   margin-top: 48px;
 }
 
@@ -187,15 +175,14 @@ body {
   border-radius: 0 0 10px 10px;
 }
 
+/*-----------------------------------------------------------------------------*/
+/*------ menu trier page medias-----------*/
 .trier {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 10px;
   margin-left: 10px;
   font-size: 13px;
 }
-
 .trier a {
   text-decoration: none;
   padding-right: 5px;
@@ -216,13 +203,11 @@ body {
 
 #filtre {
   /* on centre le menu dans la page */
-  font-weight: bolder;
   padding: 0;
   margin: 0;
   list-style: none;
   background-color: #901c1c;
 }
-
 #filtre:hover {
   background-color: #d3573c;
 }
@@ -238,7 +223,6 @@ body {
   display: inherit;
   cursor: pointer;
 }
-
 #filtre ul li:hover {
   background-color: #d3573c;
   border-radius: 0;
@@ -270,15 +254,9 @@ body {
 .choix {
   background-color: #901c1c;
   overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  flex-direction: column;
+  flex-wrap: nowrap;
 }
 
 #filtre li:hover ul {
@@ -287,13 +265,20 @@ body {
 }
 
 /*------------------------------------contenair large mise en page---------------------*/
+/*---------------------page medias--------------------*/
+.localisationLarge {
+  color: #901c1c;
+}
+
+.localisationLarge {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
 .contenairPhotographeLarge {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
   margin-top: 30px;
   margin-left: 50px;
   margin-right: 50px;
@@ -303,79 +288,20 @@ body {
 }
 
 .tagsDuPhotographeLarge {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
-.localisation {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.contenairPhotographeLarge a {
+  text-decoration: none;
 }
 
-/*------------------------------------contenair large mise en page---------------------*/
-.photoIdDuPhotographe {
-  -webkit-box-ordinal-group: 4;
-      -ms-flex-order: 3;
-          order: 3;
-  text-align: right;
-}
-
-.photoIdDuPhotographe img {
-  width: 220px;
-  margin-top: 65px;
-  margin-right: 50px;
-}
-
-.contact {
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  margin-top: 15px;
-}
-
-.infoDuPhotographe {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
-  margin-top: 15px;
-  margin-left: 50px;
-  width: 400px;
-}
-
-.infoPhoto {
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  width: 200px;
-}
-
-.infoContenair {
-  margin-top: 400px;
-  margin-left: 40px;
-  width: 350px;
-}
-
-.heart {
-  padding-left: 5px;
-  color: #901c1c;
-}
-
+/*-----------------------------------------------------------------------------------------------------------------*/
+/*------------------------gestion de la gallery--------------*/
 #lightgallery {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: left;
 }
 
 #lightgallery a img, #lightgallery a video {
@@ -392,8 +318,6 @@ body {
 }
 
 #lightgallery a video {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -405,4 +329,18 @@ body {
   text-decoration: none;
   color: black;
 }
-/*# sourceMappingURL=fe-style-commons.css.map */
+
+/*---------------------modal-----------------------------*/
+.formulaire {
+  background-color: #d3573c;
+  width: 500px;
+  height: 400px;
+  visibility: hidden;
+}
+
+.modalFin {
+  visibility: hidden;
+  background-color: #00ffea;
+  width: 500px;
+  height: 400px;
+}/*# sourceMappingURL=fe-style-commons.css.map */

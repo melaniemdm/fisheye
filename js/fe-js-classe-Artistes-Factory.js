@@ -33,7 +33,9 @@ class ArtistesFactory {
                 <img src=" ` + artiste.photo +`"></div>
             <div class="infoDuPhotographe">
             <div class="nomDuPhotographe">` + artiste.nom + ` </div>
-            <div class="cityDuPhotographe">` +  artiste.city + ` </div> <div class="countryDuPhotographes">` + artiste.country + ` </div>
+            <div class="localisation"> 
+            <div class="cityDuPhotographe">` +  artiste.city + ", "+ ` </div> <div class="countryDuPhotographes">` + artiste.country + ` </div>
+            </div>
             <div class="taglineDuPhotographe"> ` + artiste.tagline + `</div>
             <div class="priceDuPhotographe">` + artiste.price + `</div>`;
                 
@@ -52,7 +54,7 @@ class ArtistesFactory {
             `<a href="medias-des-photographe.html?idPhotographe=` + artiste.id + `"></a>
         <div class="contenairPhotographeLarge">
   
-        <div class="photoIdDuPhotographe">
+        <div class="photoIdDuPhotographeLarge">
             <img src=" ` + artiste.photo + `">
         </div>
         <div class="contact">
@@ -60,9 +62,8 @@ class ArtistesFactory {
         </div>
         <div class="infoDuPhotographe">
         <div class="nomDuPhotographe">` + artiste.nom + ` </div>
-        <div class="localisation">        
-        <div class="cityDuPhotographe">` + artiste.city + ", "+ ` </div> 
-        <div class="countryDuPhotographes">` + artiste.country +` </div> 
+        <div class="localisationLarge">        
+        <div class="cityDuPhotographe">` + artiste.city + ", "+ ` </div> <div class="countryDuPhotographes">` + artiste.country +` </div> 
         </div>
         <div class="taglineDuPhotographe"> ` + artiste.tagline +  `</div>`;
                 strComposant =strComposant +'<div class ="tagsDuPhotographeLarge">';

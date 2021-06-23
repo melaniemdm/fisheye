@@ -2,8 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 body{
-    font-family: 'Libre Franklin', 'Arial Narrow', Arial, sans-serif;
-    
+    font-family: 'Libre Franklin', Arial, sans-serif;
 }
 // couleurs primary
 $colorPrimaryStatic:#901c1c;
@@ -11,32 +10,125 @@ $colorPrimaryStatic:#901c1c;
 $colorSecondFocus:#d3573c;
 $colorSecondGrey:#525252;
 
+/*------------------------------------index.html--------------------------------------------*/
+.logo{
+    padding-left: 50px;
+    margin-right: 60px;
+}
+
+/*------------------------------------------banner- navTag - title----------------*/
+.banner{
+    font-size: 12px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+     }
+.navigation_tag{
+        font-size: 13px;
+        margin-left: -70px;
+        width: 550px;
+ }
+
+.navigation a{
+    
+    text-decoration: none;
+    color:$colorPrimaryStatic;
+    border: solid #525252 1px;
+    border-radius: 15px;
+    padding-left: 3px;
+    padding-right: 3px;
+    margin: 3px;
+}
+.title h1{ //nos photographes
+    font-size: 30px;
+    font-weight: 400;
+    color:$colorPrimaryStatic;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:flex-end;
+    margin-top: -68px;
+    padding-top: 20px;
+    padding-right: 100px;
+    //background-color: rgb(0, 225, 255);
+}
+
+
+/*----------------------------------card du photographes page index------------------------------------------*/
+#listeDesPhotographes{
+    display: flex;
+    flex-wrap:wrap ;
+    justify-content: center;
+    gap: 80px;
+    padding-top: 80px;
+}
+#listeDesPhotographes div{
+    text-decoration: none;
+    }
+.contenairPhotographe{
+  width: 350px;  
+ }
+.photoIdDuPhotographe {
+ //   border: black 2px solid;
+//background-color: chocolate;
+display: flex;
+justify-content: center;
+
+}
+
+.infoDuPhotographe{
+    //border: black 2px solid;
+    //background-color: rgb(235, 31, 201);
+    text-align: center;
+    
+    }
+  .infoDuPhotographe a{
+    text-decoration: none;
+    color:$colorPrimaryStatic;
+}   
 .nomDuPhotographe{
     color:$colorSecondFocus ;
-     font-size: 45px;
-     margin-top: 48px;
-     margin-bottom: 15px;
-}
-.localisation{
-    font-size: 20px;
-    margin-bottom: 25px;
-}
-
-.taglineDuPhotographe{
-    font-size: 14px;
-   color: $colorSecondGrey; 
-   margin-bottom: 21px;
-}
-.tags{
-    font-size: 13px;  
-}
-
-.localisation, .tags{
-color:$colorPrimaryStatic ;
-}
-.listeTags{
-    display: flex;
+     font-size: 25px;
+     margin-bottom: 10px;
    }
+   .localisation{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 14px; 
+    margin-bottom: 3px;
+}
+.taglineDuPhotographe{
+   color:  black; 
+   font-size: 12px; 
+   margin-bottom: 3px;
+}
+.priceDuPhotographe{
+    color: #525252; 
+   font-size: 12px; 
+   margin-bottom: 3px;
+}
+.tagsDuPhotographe{
+    display: flex;
+    justify-content: center;
+     }
+     .tagsDuPhotographe div{
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        margin: 3px; 
+     }
+
+.tags{
+    border: #525252 1px solid;
+    font-size: 12px;
+    border-radius: 15px;
+   
+}
+
+/*-----*/
+
 .bouton{
     display: flex;
     justify-content: center;
@@ -54,70 +146,8 @@ color:$colorPrimaryStatic ;
     margin-bottom: 20px;
 }
 
-.banner{
-    font-size: 12px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
-     }
 
-.navigation a, .tags{
-    text-decoration: none;
-    color:$colorPrimaryStatic;
-    border: solid grey 1px;
-    padding: 3px;
-    border-radius: 15px;
-}
-.navigation_tag{
-    margin-left: -100px;
-    font-size: 13px;
-}
-.title{
-    font-size: 27px;
-    color:$colorPrimaryStatic;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content:flex-end;
-    width: 100%;
-    margin-top: -90px;
-}
-#listeDesPhotographes div{
-text-decoration: none;
-}
-
-.contenairPhotographe{
-width: 260px ; 
-margin: 5%;
-
-& .infoDuPhotographe a{
-    text-decoration: none;
-    color:$colorPrimaryStatic;
-    text-align: center;
-}
-& .nomDuPhotographe{
-    font-size: 27px;
-    align-items: center;
-   }
- }
-
- .contenairPhotographeLarge a{
-     text-decoration: none;
-     }
-
-#listeDesPhotographes{
-    display: flex;
-    flex-wrap:wrap ;
-    justify-content: center;
-     
-}
-.tagsDuPhotographe{
-display: flex;
-justify-content: center;
-
-}
-.tags{
-    margin-right: 5px;
-}
+/*----------------------------------------------boutons----------------------*/
 //style commun des boutons
 .btn{
     background-color: $colorPrimaryStatic;
@@ -134,11 +164,12 @@ justify-content: center;
         color: black;  
     }
 }
+
 //btn contact
 .btn-contact{
     @extend .btn;
     margin-left: 30px;
-    font-weight: bold;
+    //font-weight: bold;
     margin-top: 48px;
 }  
 
@@ -149,8 +180,8 @@ border-radius:10px 10px 0 0;
 .bottomBorderRadius{
     border-radius: 0 0 10px 10px;  
 }
-
-
+/*-----------------------------------------------------------------------------*/
+/*------ menu trier page medias-----------*/
 .trier{
     
     display: flex;
@@ -167,7 +198,8 @@ border-radius:10px 10px 0 0;
     
     margin-top: 20px;
     margin-left: 40px;
-font-weight: bold;}
+font-weight: bold;
+}
 
 #filtre ul {
     padding: 0px;
@@ -176,7 +208,7 @@ font-weight: bold;}
     }
 #filtre {
 /* on centre le menu dans la page */
-font-weight: bolder;
+//font-weight: bolder;
     padding: 0;
     margin: 0;
     list-style: none;
@@ -200,10 +232,8 @@ font-weight: bolder;
        &:hover{
         background-color: $colorSecondFocus;
         border-radius: 0;
-        
     }
     }
-   
 
 #filtre a {
     text-decoration: none;
@@ -212,16 +242,13 @@ font-weight: bolder;
     cursor: pointer;
     width: 128px;
         }
- 
-
 
 #filtre ul {
     position: absolute;
 /* on cache les sous menus complètement sur la gauche */
     left: -999em;
     z-index: 1000;
-     
-}
+     }
 .separator { /* trait de séparation sous chaque item du menu déroulant */
  background-color: white; 
  margin-left: 10px;
@@ -244,6 +271,18 @@ font-weight: bolder;
 }
 
 /*------------------------------------contenair large mise en page---------------------*/
+/*---------------------page medias--------------------*/    
+.localisationLarge{
+    color:$colorPrimaryStatic ;
+    }
+       
+    .localisationLarge{
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+
+ 
+
 .contenairPhotographeLarge{  
 display: grid;
 grid-template-columns: 1fr 1fr 1fr;
@@ -259,60 +298,58 @@ height: 313px;
 .tagsDuPhotographeLarge{
     display: flex;
 }
-.localisation{
-    display: flex;
-}
-/*------------------------------------contenair large mise en page---------------------*/
-.photoIdDuPhotographe{
-    order:3;
-    text-align: right;
+.contenairPhotographeLarge a{
+     text-decoration: none;
+     }
+// /*------------------------------------contenair large mise en page---------------------*/
+// .photoIdDuPhotographeLarge{
+//     order:3;
+//     text-align: right;
      
-}
-.photoIdDuPhotographe img{
-    width: 220px;
-    margin-top: 65px;
-    margin-right: 50px;
+// }
+// .photoIdDuPhotographeLarge img{
+//     width: 230px;
+//     margin-top: 65px;
+//     margin-right: 50px;
 
-}
-.contact{
-    order:2;
-    align-content: center;
-    margin-top: 15px
-}
-.infoDuPhotographe{
-    order:1;
-    margin-top: 15px;
-    margin-left: 50px;
-    width: 400px;
-}
-.infoPhoto{
-    //display: grid;
-   grid-template-columns:1fr 1fr ;
-    width: 200px;
-}
+// }
+// .contact{
+//     order:2;
+//     align-content: center;
+//     margin-top: 15px
+// }
+// .infoDuPhotographe{
+//     order:1;
+//     margin-top: 15px;
+//     margin-left: -80px;
+//     width: 400px;
+// }
 
 
-.infoContenair{
-margin-top: 400px;
-margin-left: 40px;
-width: 350px;
-}
 // //infos sous la photos
+// .infoContenair{
+//     background-color: sandybrown;
+//    color: $colorPrimaryStatic;
+// font-size: 20px;
+// }
+
+
 // .likes{
-//     display: flex;
-//    // justify-content: flex-end;
+//    display: flex;
+//     justify-content: flex-start;
+//     margin-top: -40px;
+//     padding-left: 15px;
 //     padding-right: 2px;
 //     }
-// .titleMedias{
-//    // margin-top: -1px;
-//    width: 50px; 
-//   }
 
 
-.heart{
-    padding-left: 5px;
-    color: $colorPrimaryStatic;
-}
+// .heart{
+//     padding-left: 5px;
+//     color: $colorPrimaryStatic;
+// }
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+/*------------------------gestion de la gallery--------------*/
 #lightgallery {
     display: flex;
     flex-direction: row;
@@ -346,3 +383,17 @@ text-decoration: none;
 color: black;
 }
 
+/*---------------------modal-----------------------------*/
+
+.formulaire{
+    background-color:$colorSecondFocus ;
+    width: 500px;
+    height: 400px;
+    visibility: hidden;
+    }
+.modalFin{
+    visibility: hidden;
+    background-color: rgb(0, 255, 234);
+    width: 500px;
+    height: 400px;
+}
