@@ -22,7 +22,6 @@ nodeSort.addEventListener("click", changePhotoOrder );
 //fonction qui recupere la valeur du tri
 function changePhotoOrder(event) {
     console.log(event.target.title);
-    alert("toto");
     var sort = event.target.title;
     var id = idPhotographe;
     document.querySelector("#lightgallery").innerHTML = ""; // pour vider et recréer
