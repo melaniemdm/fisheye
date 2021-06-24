@@ -73,7 +73,8 @@ function closeModalFin(){
 }
 const closeFormFin=document.querySelectorAll(".btn-closeFin");
 closeFormFin.forEach((btn) => btn.addEventListener("click", closeModalFin ));
-
+const closeFormFin2=document.querySelectorAll(".closeModalFin");
+closeFormFin2.forEach((btn) => btn.addEventListener("click", closeModalFin ));
 /*----------------------------Fonctions - gestion tests------------------------------*/
 
 //color error

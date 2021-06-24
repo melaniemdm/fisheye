@@ -445,7 +445,7 @@ body {
 
 /*---------------------modal-----------------------------*/
 #formulaire {
-  margin-top: -135%;
+  margin-top: -1800px;
   position: relative;
   background-color: #d3573c;
   width: 375px;
@@ -531,7 +531,7 @@ body {
 
 /*----------------------------------------------------------modal de fin-------------------------*/
 #modalFin {
-  margin-top: -55%;
+  margin-top: -750px;
   margin-left: 35%;
   visibility: "visible";
   position: relative;
