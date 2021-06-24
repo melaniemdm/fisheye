@@ -3,7 +3,7 @@
 
 body{
     font-family: 'Libre Franklin', Arial, sans-serif;
-}
+   }
 // couleurs primary
 $colorPrimaryStatic:#901c1c;
 //color secondaire
@@ -512,6 +512,7 @@ margin-top: -45px;
     font-size: 12px;
     margin-left: 7px;
     color: white;
+    visibility: hidden;
 }
 .btn-valide{
     margin-left: 5px;  
@@ -567,7 +568,7 @@ margin-top: -45px;
    
     }
 }
-.closeModalFin{
+.crossCloseModalFin{
     margin-top: -360px;
     margin-right: -300px;
     font-size: 40px;

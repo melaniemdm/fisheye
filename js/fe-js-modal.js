@@ -23,6 +23,10 @@ close.forEach((btn) => btn.addEventListener("click", closeModal));
 
 function closeModal(){
     formCharge.style.visibility="hidden";  
+    //supprime les errors au close
+    supprimeError("#errorSurname");
+    supprimeError("#errorName");
+    supprimeError("#errorEmail");
 }
 /*---------------------------------envoie du formulaire-------------------------------*/
 const envoiForm=document.querySelector(".btn-valide");
@@ -70,9 +74,9 @@ inputMail.addEventListener("change", testMail);
 
 function closeModalFin(){
     modalEndMessage.style.visibility="hidden";
+   
 }
-const closeFormFin=document.querySelectorAll(".btn-closeFin");
-closeFormFin.forEach((btn) => btn.addEventListener("click", closeModalFin ));
+
 const closeFormFin2=document.querySelectorAll(".closeModalFin");
 closeFormFin2.forEach((btn) => btn.addEventListener("click", closeModalFin ));
 /*----------------------------Fonctions - gestion tests------------------------------*/
