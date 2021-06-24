@@ -27,7 +27,7 @@ class MediaFactory {
           ` 
     <a href="` +url+`galeryGrdeTaille/` + media.medias + `" onclick="return false;" class="light-link" data-sub-html=" <h4 class='titleInGallery'>`+ media.title +  `</h4>">`+ media.baliseMedia+ url + media.medias + `" alt="`+ media.title+ media.fermetureBaliseMedia+  `<div class="infoContenair"><div class="titleMedias"> `+ media.title+`</div><div class="likes"><div id="likes_`+ media.id +`"> ` +   media.like + `</div>
           <div class="heart" "> 
-         <i class="fas fa-heart" title="likes_`+ media.id +`"></i>
+         <i class="fas fa-heart" aria-label="likes" title="likes_`+ media.id +`"></i>
     </div>
     </div>
     </div>
@@ -41,7 +41,7 @@ class MediaFactory {
           data-video='{"source": [{"src":"`+ url + media.medias + `", "type":"video/mp4"}], "attributes": {"preload": false, "controls": true}}'
           data-poster="` + url +media.medias + `.webp" data-sub-html="<h4 class='titleInGallery'>`+media.title +`</h4>" >`+
       media.baliseMedia + url + media.medias + `.webp" alt="`+ media.title + media.fermetureBaliseMedia+ `<div class="infoContenair"><div class="titleMedias"> `+media.title + `</div><div class="likes"> <div id="likes_`+ media.id +`"> ` + media.like + `  </div>
-      <div class="heart "> <i class="fas fa-heart" title="likes_`+ media.id +`"></i>
+      <div class="heart "> <i class="fas fa-heart" aria-label="likes" title="likes_`+ media.id +`"></i>
       </div>
       </div>
       </div>
