@@ -30,7 +30,7 @@ class ArtistesFactory {
             `<div class="contenairPhotographe">
                 <a href="medias-des-photographe.html?idPhotographe=` + artiste.id + `">
             <div class="photoIdDuPhotographe">
-                <img src=" ` + artiste.photo +`"></div>
+                <img src=" ` + artiste.photo +`" alt="`+artiste.nom+`"></div>
             <div class="infoDuPhotographe">
             <div class="nomDuPhotographe">` + artiste.nom + ` </div>
             <div class="localisation"> 
@@ -51,11 +51,11 @@ class ArtistesFactory {
             //fonction qui creait le composant Artiste vue Large
             artiste.createComposantLarge = function () {
                 var strComposant =
-            `<a href="medias-des-photographe.html?idPhotographe=` + artiste.id + `"></a>
+            `<a href="medias-des-photographe.html?idPhotographe=` + artiste.id + `" ></a>
         <div class="contenairPhotographeLarge">
   
         <div class="photoIdDuPhotographeLarge">
-            <img src=" ` + artiste.photo + `">
+            <img src=" ` + artiste.photo + `" alt="`+artiste.nom+`">
         </div>
         <div class="contact">
         <div class="btn-contact" id="btn-contact"> Contactez-moi </div>
