@@ -5,7 +5,7 @@ export function loadModalEvent(){
     const nomPhotographeForm = document.querySelector("#nomPhotographeForm");
     const nomDuPhotographeLarge = document.querySelector(".nomDuPhotographeLarge");
     nomPhotographeForm.innerHTML = nomDuPhotographeLarge.innerHTML;
-//event sur le btn contactez moi
+    //event sur le btn contactez moi
     const btnContact= document.querySelector("#btn-contact");
     btnContact.addEventListener("click", chargeForm);
 }

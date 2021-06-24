@@ -444,16 +444,136 @@ body {
 }
 
 /*---------------------modal-----------------------------*/
-.formulaire {
+#formulaire {
+  margin-top: -135%;
+  position: relative;
   background-color: #d3573c;
-  width: 500px;
-  height: 400px;
-  visibility: hidden;
+  width: 375px;
+  height: 750px;
+  font-size: 17px;
+  border-radius: 5px;
+  margin-left: 35%;
 }
 
-.modalFin {
-  visibility: hidden;
-  background-color: #00ffea;
-  width: 500px;
-  height: 400px;
+.headerForm {
+  margin-left: 15px;
+  font-weight: 400;
+  height: 70px;
+}
+
+.close {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 10px;
+  padding-top: 15px;
+  font-size: 40px;
+  font-weight: 300;
+  color: white;
+  cursor: pointer;
+}
+
+.titleForm {
+  font-size: 40px;
+  margin-top: -45px;
+}
+
+#nomPhotographeForm {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.data input {
+  height: 30px;
+  width: 335px;
+  border-radius: 5px;
+}
+
+.message input {
+  height: 184px;
+  width: 335px;
+  border-radius: 5px;
+}
+
+.nom, .email, .message {
+  font-size: 15;
+  font-weight: 400;
+  margin-top: 15px;
+}
+
+.prenom {
+  font-size: 15;
+  font-weight: 400;
+}
+
+.textError {
+  font-size: 12px;
+  margin-left: 7px;
+  color: white;
+}
+
+.btn-valide {
+  margin-left: 5px;
+  padding: 5px;
+  border-radius: 15px;
+  border: #901c1c 1px solid;
+  padding: 20px;
+  text-align: center;
+  margin-top: 50px;
+  margin-left: 50px;
+  width: 200px;
+  background-color: #901c1c;
+  color: white;
+}
+.btn-valide:hover {
+  background-color: #d3573c;
+  color: black;
+}
+
+/*----------------------------------------------------------modal de fin-------------------------*/
+#modalFin {
+  margin-top: -55%;
+  margin-left: 35%;
+  visibility: "visible";
+  position: relative;
+  background-color: #d3573c;
+  width: 375px;
+  height: 750px;
+  font-size: 30px;
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-closeFin {
+  margin-left: 5px;
+  padding: 5px;
+  border-radius: 15px;
+  border: #901c1c 1px solid;
+  padding: 20px;
+  text-align: center;
+  margin-top: 50px;
+  margin-left: 10px;
+  width: 200px;
+  background-color: #901c1c;
+  color: white;
+}
+.btn-closeFin:hover {
+  background-color: #d3573c;
+  color: black;
+}
+
+.closeModalFin {
+  margin-top: -360px;
+  margin-right: -300px;
+  font-size: 40px;
+  font-weight: 300;
+  color: white;
+  cursor: pointer;
+}
+
+.messageFin {
+  padding-top: 100px;
 }/*# sourceMappingURL=fe-style-commons.css.map */
