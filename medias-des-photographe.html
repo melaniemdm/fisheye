@@ -3,17 +3,19 @@
 <!--indique au navigateur que la page est en français-->
 
 <head>
-     <!--pour l'encodage, caracteres speciaux-->
+    <!--pour l'encodage, caracteres speciaux-->
     <meta charset="utf-8" />
-   <!--lien vers le fichier css-->
+    <!--lien vers le fichier css-->
     <link rel="stylesheet" href="styles/fe-style-commons.css" />
     <!-- <link rel="stylesheet" href="styles/fe-style-modal.css" /> -->
     <!--lien vers les icones google-->
-    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet"/>
-    
+    <link
+        href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+        rel="stylesheet" />
+
     <!--pour inspection-->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!--lightGalery-->    
+    <!--lightGalery-->
     <link type="text/css" rel="stylesheet" href="node_modules/lightgallery/css/lightgallery-bundle.css" />
 
     <title>FishEye - Photographe</title>
@@ -21,132 +23,143 @@
 </head>
 
 <body>
-<div class="logo"><a href="index.html" class="retour" >
-        <img alt="logo FishEye et retour index" src="photos/logo2.png" /></a>
+    <div class="logo">
+        <a href="index.html" class="retour">
+            <img alt="logo" src="photos/logo2.png" />
+        </a>
     </div>
 
-<header>
-<!-- presentation du photographe  -->
-<div id="lePhotographe"></div>
+    <header>
+        <!-- presentation du photographe  -->
+        <div id="lePhotographe"></div>
 
 
-</header>
+    </header>
 
 
-<!-- tri  -->
-<div class="trier">
-<div class="trierPar">Trier par</div>
-<div><ul id="filtre">
-<li><a title="likes"> Popularité <i class="fas fa-chevron-up"></i></a>
-		<ul class="choix">
-            <li class="separator"	></li>
-			<li title="date"><a title="date">Date</a></li>
-            <li class="separator"	></li>
-			<li title="title"><a title="title">Titre</a></li>
-		</ul></li></ul>
-    </div></div>
+    <!-- tri  -->
+    <div class="trier">
+        <div class="trierPar">Trier par</div>
+        <div>
+            <ul id="filtre">
+                <li><a title="likes"> Popularité <i class="fas fa-chevron-up"></i></a>
+                    <ul class="choix">
+                        <li class="separator"></li>
+                        <li title="date"><a title="date">Date</a></li>
+                        <li class="separator"></li>
+                        <li title="title"><a title="title">Titre</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
 
-<!-- Medias du photographe  -->
+    <!-- Medias du photographe  -->
     <div id="lightgallery"></div>
 
 
 
-<div class="formulaire"  id="formulaire">
-   <div class="headerForm" id="headerForm">
-        <div id="close">
-        <div class="close">
+    <div class="formulaire" id="formulaire">
+        <div class="headerForm" id="headerForm">
+            <div id="close">
+                <div class="close">
+                    <i class="material-icons-outlined">
+                        close
+                    </i>
+
+                </div>
+
+                <div class="titleForm"> Contactez-moi</div>
+                <div id="nomPhotographeForm"></div>
+
+            </div>
+
+
+            <div class="data">
+                <div class="prenom">
+                    <label for="surname">Prémom</label> <br>
+                    <input type="text" id="surname" />
+                    <div class="textError" id="errorSurname"> Veuillez entrer 2 caractères ou plus pour le champ du
+                        Prénom.</div>
+                </div>
+            </div>
+
+            <div class="data">
+                <div class="nom">
+                    <label for="name">Nom</label> <br>
+                    <input type="text" id="name" />
+                    <div class="textError" id="errorName"> Veuillez entrer 2 caractères ou plus pour le champ du Nom.
+                    </div>
+                </div>
+            </div>
+
+            <div class="data">
+                <div class="email">
+                    <label for="email">Email</label> <br>
+                    <input type="text" id="email" />
+                    <div class="textError" id="errorEmail"> Veuillez entrer une adresse mail correcte.</div>
+                </div>
+            </div>
+
+            <div class="message">
+                <label for="message">Message</label> <br>
+                <input type="text" id="message" />
+            </div>
+            <div class="btn-valide" id="envoyer"> Envoyer </div>
+        </div>
+
+    </div>
+
+    <div class="modalFin " id="modalFin">
+        <div class="closeModalFin crossCloseModalFin">
             <i class="material-icons-outlined">
                 close
             </i>
-            
+
         </div>
-
-    <div class="titleForm"> Contactez-moi</div>
-    <div id="nomPhotographeForm"></div>
-    
-   </div> 
-    
-
-    <div class="data">
-    <div class="prenom">
-        <label for="surname">Prémom</label> <br>
-        <input type="text" id="surname"/>
-        <div class="textError" id="errorSurname"> Veuillez entrer 2 caractères ou plus pour le champ du Prénom.</div>
-    </div></div>
-
-<div class="data">
-<div class="nom">
-    <label for="name">Nom</label> <br>
-    <input type="text" id="name"/>
-    <div class="textError" id="errorName"> Veuillez entrer 2 caractères ou plus pour le champ du Nom.</div>
-</div></div>
-
-<div class="data">
-<div class="email">
-    <label for="email">Email</label> <br>
-    <input type="text" id="email"/>
-    <div class="textError" id="errorEmail"> Veuillez entrer une adresse mail correcte.</div>
-</div></div>
-
-<div class="message">
-    <label for="message">Message</label> <br>
-    <input type="text" id="message"/>
-</div>
-<div class="btn-valide" id="envoyer"> Envoyer </div>
-</div>
-
-</div>
-
-<div class="modalFin " id="modalFin">
-    <div class="closeModalFin crossCloseModalFin">
-        <i class="material-icons-outlined">
-            close
-        </i>
-       
-   </div>
-    <div class="messageFin"> Merci ! <br /> Votre message a été transmis. </div>
-    <div class="btn-closeFin closeModalFin" id="btn-Closefin"> Close </div>
-</div>
+        <div class="messageFin"> Merci ! <br /> Votre message a été transmis. </div>
+        <div class="btn-closeFin closeModalFin" id="btn-Closefin"> Close </div>
+    </div>
 
 
- 
-<!-- fichier js de la modal---->
-<script type ="module" src="js/fe-js-modal.js"></script>
 
-<!-- lightgallery plugins -->
-<script src="node_modules/lightgallery/lightgallery.umd.js"></script>
-<script src="node_modules/lightgallery/plugins/thumbnail/lg-thumbnail.umd.js"></script>
-<script src="node_modules/lightgallery/plugins/zoom/lg-zoom.umd.js"></script>  
-<script src="node_modules/lightgallery/plugins/video/lg-video.min.js"></script>
-<script src="node_modules/emailjs-com/dist/email.min.js"></script>
-<script>(function() {
-    emailjs.init("user_7tR9LJzR8U8F0vQka347x");
-    
-})();
+    <!-- fichier js de la modal---->
+    <script type="module" src="js/fe-js-modal.js"></script>
 
-</script>
+    <!-- lightgallery plugins -->
+    <script src="node_modules/lightgallery/lightgallery.umd.js"></script>
+    <script src="node_modules/lightgallery/plugins/thumbnail/lg-thumbnail.umd.js"></script>
+    <script src="node_modules/lightgallery/plugins/zoom/lg-zoom.umd.js"></script>
+    <script src="node_modules/lightgallery/plugins/video/lg-video.min.js"></script>
+    <script src="node_modules/emailjs-com/dist/email.min.js"></script>
+    <script>(function () {
+            emailjs.init("user_7tR9LJzR8U8F0vQka347x");
 
-<!-- chargement photographes, medias et galerie  -->
-<script type = "module">
-import { displayOnePhotographer } from "./js/fe-js-gestion-des-photographes.js" ;
-import { addPhotographersMedias } from "./js/fe-js-gestion-des-medias.js" ;
-import { loadModalEvent } from "./js/fe-js-modal.js" 
-//url
-var urlcourante = document.location.href;
+        })();
 
-//recuperation id du photographe
-var numeroPhotographeUrlCourante = urlcourante.split("?")[1]
-let idPhotographe = numeroPhotographeUrlCourante.split("=")[1]
+    </script>
 
-//affiche le photographe
-let addPhotographer = await displayOnePhotographer(idPhotographe)
+    <!-- chargement photographes, medias et galerie  -->
+    <script type="module">
+        import { displayOnePhotographer } from "./js/fe-js-gestion-des-photographes.js";
+        import { addPhotographersMedias } from "./js/fe-js-gestion-des-medias.js";
+        import { loadModalEvent } from "./js/fe-js-modal.js"
+        //url
+        var urlcourante = document.location.href;
 
-//function qui met un event sur btn contact
-loadModalEvent();
-//ajout medias dans la galery
-let addMedia = await addPhotographersMedias(idPhotographe, "title")
+        //recuperation id du photographe
+        var numeroPhotographeUrlCourante = urlcourante.split("?")[1]
+        let idPhotographe = numeroPhotographeUrlCourante.split("=")[1]
 
-</script>
+        //affiche le photographe
+        let addPhotographer = await displayOnePhotographer(idPhotographe)
+
+        //function qui met un event sur btn contact
+        loadModalEvent();
+        //ajout medias dans la galery
+        let addMedia = await addPhotographersMedias(idPhotographe, "title")
+
+    </script>
 
 </body>
 
