@@ -2,4 +2,49 @@
 /*création des breakpoints*/
 /*vue tablette*/
 /*vue desktop*/
-/*création des variables media queries utilisant les breakpoints*//*# sourceMappingURL=responsive.css.map */
+/*création des variables media queries utilisant les breakpoints*/
+@media only screen and (max-width: 768px) {
+  body {
+    margin-top: 40px;
+    margin-left: -35px;
+    margin-right: 20px;
+  }
+
+  .banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    margin-left: -80px;
+  }
+
+  .title h1 {
+    font-size: 14px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -100px;
+    width: 100%;
+  }
+
+  .navigation {
+    align-items: center;
+  }
+
+  .navigation_tag {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 340px;
+    margin-left: 50px;
+  }
+
+  .boutonContenu {
+    position: fixed;
+    top: 550px;
+  }
+}/*# sourceMappingURL=responsive.css.map */
