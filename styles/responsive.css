@@ -37,10 +37,17 @@
     flex-wrap: wrap;
   }
 
+  .bouton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+
   .boutonContenu {
     position: fixed;
     display: flex;
-    top: 550px;
+    top: 560px;
   }
 
   /*---------------------------media---------------------------------------*/
