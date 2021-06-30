@@ -48,6 +48,7 @@
     position: fixed;
     display: flex;
     top: 560px;
+    visibility: hidden;
   }
 
   /*---------------------------media---------------------------------------*/

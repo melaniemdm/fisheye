@@ -53,6 +53,7 @@ $large-down: "only screen and (max-width: #{$large})";
     position: fixed;
     display: flex;
     top: 560px;
+    visibility: hidden;
   }
 
   /*---------------------------media---------------------------------------*/
