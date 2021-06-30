@@ -35,7 +35,7 @@ function createPhotographersMedia(media) {
 }
 // fonction qui recupere le json
 async function getMediaFromJson(sort) {
-    let url = "http://127.0.0.1:5501/json/FishEyeData.json";
+    let url = "https://melaniemdm.github.io/fisheye/json/FishEyeData.json";
     let rep = await fetch(url, { method: "GET" });
     let reponse = await rep.json();
     var arrayMedias = reponse["media"];

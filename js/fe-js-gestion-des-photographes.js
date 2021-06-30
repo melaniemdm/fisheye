@@ -2,7 +2,7 @@ import { ArtistesFactory } from './fe-js-classe-Artistes-Factory.js';
 
 // fonction qui recupere le json
 async function getPhotographersFromJson() {
-    let url = "http://127.0.0.1:5501/json/FishEyeData.json";
+    let url = "https://melaniemdm.github.io/fisheye/json/FishEyeData.json";
     let rep = await fetch(url, { method: "GET" });
     let reponse = await rep.json();
     let arrayPhotographers = reponse["photographers"];
