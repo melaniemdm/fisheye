@@ -76,6 +76,9 @@ class ArtistesFactory {
                 strComposant = strComposant +`</div>  
         </div> 
         </div> 
+        <div id="likePriceFooter">
+        <div class="likePriceFooter"> 297 081 <span  aria-label="likes"class="material-icons-outlined title="likes_">favorite
+        </span> `+artiste.price +` </div></div>
             </a> `;
 
                 return strComposant;

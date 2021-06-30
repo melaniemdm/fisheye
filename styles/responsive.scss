@@ -1,7 +1,6 @@
-
 /*création des breakpoints*/
-$medium:768px !default; /*vue tablette*/
-$large:1024px !default;/*vue desktop*/
+$medium: 768px !default; /*vue tablette*/
+$large: 1024px !default; /*vue desktop*/
 
 /*création des variables media queries utilisant les breakpoints*/
 $medium-up: "only screen and (min-width: #{$medium})";
@@ -11,146 +10,145 @@ $large-down: "only screen and (max-width: #{$large})";
 
 //logo
 @media #{$large-down} {
-    .logo{
-     margin-left: 0px;
-     display: flex;
-     justify-content: flex-start;
-     width: 100%;
-    }
+  .logo {
+    margin-left: 0px;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+  }
 }
 
-//index
+/*-----------------------------index------------------------------*/
 @media #{$large-down} {
-        .banner{
-         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-     
-    .title h1{
-      
-        font-size:14px ;
-        display: flex;
-        justify-content: flex-end;
-        margin-top: -80px;
-        width: 100%;
-    }
+  .banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 
-.navigation_tag{
+  .title h1 {
+    font-size: 14px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -80px;
+    width: 100%;
+  }
+
+  .navigation_tag {
     width: 370px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-
-}
-.boutonContenu{
+  }
+  .boutonContenu {
     position: fixed;
     display: flex;
     top: 550px;
-}
-// .contact{
-//     position: fixed;
-//     z-index: 1;
-//     height: 100px;
-//     width: 100%;
-//     display:inline-flex;
-//     justify-content: center;
-//     align-items: center;
-   
-//     top: 450px;
-//    border: tomato 2px solid;
-// }
+  }
 
-//media
-@media #{$large-down} {
-    .toto{
-        
-        width: 100%;
-      display: flex;
-     justify-content: center;
-     align-items: center;
-     text-align: center;
-         
-     }
-     .btn-contact{
-         position: fixed;
-         z-index: 1;
-         height: 30px;
-         border-radius: 10px;
-         padding: 8px;
-         font-size: 13px;
-         font-weight: 400;
-         top: 495px;
-           
-     }
-        
-     }
-    .contenairPhotographeLarge{
-       // background-color: tomato;
-        display: inline-block;
-       // flex-direction: column;
-        margin-left: 1px;
-        margin-right: 1px;
-        width:100%;
-        //border: red 2px solid;
-    }
-    .infoDuPhotographeLarge {
-        //background-color: turquoise;
-        max-width: 100%;
-    }
-    .photoIdDuPhotographeLarge{
-     //   background-color: yellow;
-        width: 100%;
-    }
-    .photoIdDuPhotographeLarge img{
-      //  background-color: yellowgreen;
-        width: 140px;
-        margin-top: -40px;
-    }
-    .nomDuPhotographeLarge{
-        //background-color: violet;
-        width: 100%;
-        font-size: 23px;
-        margin-top: -150px;
-         margin-bottom: 0px;
-         margin-left: -45px;
-       }
-       .localisationLarge{
-        font-size: 15px; 
-        margin-bottom: -10px;
-        margin-left: -45px;
-    }
-    .taglineDuPhotographeLarge{
-       color:  black; 
-       font-size: 11px; 
-       margin-bottom: -10px;
-       margin-left: -45px;
-    }
-    
-    .tagsDuPhotographeLarge   {
-        margin-left: -50px;
-    }
-    .tags{
+  /*---------------------------media---------------------------------------*/
+  #likePriceFooter{
+      visibility: hidden;
+  }
+  .toto {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .btn-contact {
+    position: fixed;
+    z-index: 1;
+    height: 30px;
+    border-radius: 10px;
+    padding: 8px;
+    font-size: 13px;
+    font-weight: 400;
+    top: 495px;
+  }
+
+  .contenairPhotographeLarge {
+    display: inline-block;
+    margin-left: 1px;
+    margin-right: 1px;
+    width: 100%;
+  }
+  .infoDuPhotographeLarge {
+    max-width: 100%;
+  }
+  .photoIdDuPhotographeLarge {
+    width: 100%;
+  }
+  .photoIdDuPhotographeLarge img {
+    width: 140px;
+    margin-top: -40px;
+  }
+  .nomDuPhotographeLarge {
+    width: 100%;
+    font-size: 23px;
+    margin-top: -150px;
+    margin-bottom: 0px;
+    margin-left: -45px;
+  }
+  .localisationLarge {
+    font-size: 15px;
+    margin-bottom: -10px;
+    margin-left: -45px;
+  }
+  .taglineDuPhotographeLarge {
+    color: black;
+    font-size: 11px;
+    margin-bottom: -10px;
+    margin-left: -45px;
+  }
+
+  .tagsDuPhotographeLarge {
+    margin-left: -50px;
+  }
+  .tags {
     font-size: 12px;
-   
-                  }
-.trier{
+  }
+  .trier {
     visibility: hidden;
+  }
+
+  
 }
-}
-//lightgallery
+/*------------------lightgallery--------------------------*/
 @media #{$large-down} {
-    #lightgallery{
-        align-items: center;
-margin-top: -150px;
-    }
-    .infoContenair div {
-        font-size: 15px;
-    }
-    .heart span{
-        font-size: 20px;
-    }
+  #lightgallery {
+    align-items: center;
+    margin-top: -150px;
+  }
+  .infoContenair div {
+    font-size: 15px;
+  }
+  .heart span {
+    font-size: 20px;
+  }
 }
+/*----------------------------------modal-----------------------*/
+@media #{$large-down} {
+    #formulaire, #modalFin{
+margin-top: -4100px;
+
+    }
+.titleForm, #nomPhotographeForm{
+    font-size: 35px;
+}
+#nomPhotographeForm{
+
+margin-bottom:0px;
+}
+.nom, .email, .message{
+   
+    margin-top: 8px;
+}
+
+}
+/*----------------------------------------------------------modal de fin-------------------------*/
+

@@ -11,6 +11,7 @@
     width: 100%;
   }
 }
+/*-----------------------------index------------------------------*/
 @media only screen and (max-width: 1024px) {
   .banner {
     display: flex;
@@ -41,8 +42,12 @@
     display: flex;
     top: 550px;
   }
-}
-@media only screen and (max-width: 1024px) and (max-width: 1024px) {
+
+  /*---------------------------media---------------------------------------*/
+  #likePriceFooter {
+    visibility: hidden;
+  }
+
   .toto {
     width: 100%;
     display: flex;
@@ -61,32 +66,27 @@
     font-weight: 400;
     top: 495px;
   }
-}
-@media only screen and (max-width: 1024px) {
+
   .contenairPhotographeLarge {
     display: inline-block;
     margin-left: 1px;
     margin-right: 1px;
     width: 100%;
   }
-}
-@media only screen and (max-width: 1024px) {
+
   .infoDuPhotographeLarge {
     max-width: 100%;
   }
-}
-@media only screen and (max-width: 1024px) {
+
   .photoIdDuPhotographeLarge {
     width: 100%;
   }
-}
-@media only screen and (max-width: 1024px) {
+
   .photoIdDuPhotographeLarge img {
     width: 140px;
     margin-top: -40px;
   }
-}
-@media only screen and (max-width: 1024px) {
+
   .nomDuPhotographeLarge {
     width: 100%;
     font-size: 23px;
@@ -94,37 +94,33 @@
     margin-bottom: 0px;
     margin-left: -45px;
   }
-}
-@media only screen and (max-width: 1024px) {
+
   .localisationLarge {
     font-size: 15px;
     margin-bottom: -10px;
     margin-left: -45px;
   }
-}
-@media only screen and (max-width: 1024px) {
+
   .taglineDuPhotographeLarge {
     color: black;
     font-size: 11px;
     margin-bottom: -10px;
     margin-left: -45px;
   }
-}
-@media only screen and (max-width: 1024px) {
+
   .tagsDuPhotographeLarge {
     margin-left: -50px;
   }
-}
-@media only screen and (max-width: 1024px) {
+
   .tags {
     font-size: 12px;
   }
-}
-@media only screen and (max-width: 1024px) {
+
   .trier {
     visibility: hidden;
   }
 }
+/*------------------lightgallery--------------------------*/
 @media only screen and (max-width: 1024px) {
   #lightgallery {
     align-items: center;
@@ -138,4 +134,23 @@
   .heart span {
     font-size: 20px;
   }
-}/*# sourceMappingURL=responsive.css.map */
+}
+/*----------------------------------modal-----------------------*/
+@media only screen and (max-width: 1024px) {
+  #formulaire, #modalFin {
+    margin-top: -4100px;
+  }
+
+  .titleForm, #nomPhotographeForm {
+    font-size: 35px;
+  }
+
+  #nomPhotographeForm {
+    margin-bottom: 0px;
+  }
+
+  .nom, .email, .message {
+    margin-top: 8px;
+  }
+}
+/*----------------------------------------------------------modal de fin-------------------------*//*# sourceMappingURL=responsive.css.map */

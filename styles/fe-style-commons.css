@@ -284,6 +284,25 @@ body {
 
 /*------------------------------------contenair large mise en page---------------------*/
 /*---------------------page medias--------------------*/
+#likePriceFooter {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.likePriceFooter {
+  background-color: #d3573c;
+  bottom: 0;
+  position: fixed;
+  z-index: 1;
+  width: 270px;
+  height: 55px;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .contenairPhotographeLarge {
   margin-left: 100px;
   margin-right: 100px;
@@ -434,15 +453,23 @@ body {
 }
 
 /*---------------------modal-----------------------------*/
+.formul1 {
+  display: flex;
+  justify-content: center;
+}
+
+.titleForm {
+  padding-top: 5px;
+}
+
 #formulaire {
-  margin-top: -1800px;
-  position: relative;
+  margin-top: -1920px;
+  z-index: 1;
   background-color: #d3573c;
-  width: 375px;
-  height: 750px;
+  width: 365px;
+  height: 650px;
   font-size: 17px;
   border-radius: 5px;
-  margin-left: 35%;
   visibility: hidden;
 }
 
@@ -475,13 +502,13 @@ body {
 
 .data input {
   height: 30px;
-  width: 335px;
+  width: 310px;
   border-radius: 5px;
 }
 
 .message input {
   height: 184px;
-  width: 335px;
+  width: 310px;
   border-radius: 5px;
 }
 
@@ -508,9 +535,9 @@ body {
   padding: 5px;
   border-radius: 15px;
   border: #901c1c 1px solid;
-  padding: 20px;
+  padding: 15px;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 10px;
   margin-left: 50px;
   width: 200px;
   background-color: #901c1c;
@@ -522,31 +549,35 @@ body {
 }
 
 /*----------------------------------------------------------modal de fin-------------------------*/
+.formulFin {
+  display: flex;
+  justify-content: center;
+}
+
 #modalFin {
-  margin-top: -750px;
-  margin-left: 35%;
-  visibility: hidden;
-  position: relative;
+  margin-top: -1920px;
+  visibility: visible;
+  position: fixed;
   background-color: #d3573c;
-  width: 375px;
-  height: 750px;
-  font-size: 30px;
+  width: 365px;
+  height: 450px;
+  font-size: 20px;
   border-radius: 5px;
   text-align: center;
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
 
 .btn-closeFin {
   margin-left: 5px;
-  padding: 5px;
+  padding: 3px;
   border-radius: 15px;
   border: #901c1c 1px solid;
   padding: 20px;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 30px;
   margin-left: 10px;
   width: 200px;
   background-color: #901c1c;
@@ -558,7 +589,7 @@ body {
 }
 
 .crossCloseModalFin {
-  margin-top: -360px;
+  margin-top: -160px;
   margin-right: -300px;
   font-size: 40px;
   font-weight: 300;

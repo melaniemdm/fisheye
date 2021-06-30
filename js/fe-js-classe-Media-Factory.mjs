@@ -32,7 +32,8 @@ class MediaFactory {
              </div>
     </div>
     </div>
-    </a>   `;}
+    </a> 
+      `;}
 
                 if (type === "courtmetrage"){
                     composantElementMedia = 
