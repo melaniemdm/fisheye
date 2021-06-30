@@ -62,7 +62,7 @@ function getMediaObjectFromFactory(numMedia) {
     }
     return lesMedias.createMedia(
         // stock le retour de la fonction dans la variable
-        choixMedia,"photos/sample%20Photos/" + nomSplit + "/" ,numMedia.image, numMedia.video,  numMedia.title, numMedia.likes, numMedia.id);
+        choixMedia,"photos/sample_Photos/" + nomSplit + "/" ,numMedia.image, numMedia.video,  numMedia.title, numMedia.likes, numMedia.id);
 }
 
 // fonction qui affiche tous les medias
