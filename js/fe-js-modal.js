@@ -147,9 +147,7 @@ function supprimeError(errorId) {
 
 /*-----------------------------------------Validation du formulaire-----------------------*/
 function submitValid() {
-    console.log("coucou");
-    
-  
+   
     let formValid = true;
   
         
