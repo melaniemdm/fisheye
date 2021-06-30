@@ -63,5 +63,5 @@ async function getPhotographerObjectFromFactory(photographe){
    
     var lesPhotographes = new ArtistesFactory();
     
-    return lesPhotographes.creatArtistes("photographe", "photos/sample_Photos/Photographers_ID_Photos/" + photographe.portrait, photographe.id, photographe.name, photographe.city, photographe.country, photographe.tagline, photographe.price+ "€/jour", photographe.tags);}
+    return lesPhotographes.creatArtistes("photographe", "photos/Sample_Photos/Photographers_ID_Photos/" + photographe.portrait, photographe.id, photographe.name, photographe.city, photographe.country, photographe.tagline, photographe.price+ "€/jour", photographe.tags);}
 
