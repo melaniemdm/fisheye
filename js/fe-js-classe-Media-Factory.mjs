@@ -27,8 +27,9 @@ class MediaFactory {
           ` 
     <a href="` +url+`galeryGrdeTaille/` + media.medias + `" onclick="return false;" class="light-link" data-sub-html=" <h4 class='titleInGallery'>`+ media.title +  `</h4>">`+ media.baliseMedia+ url + media.medias + `" alt="`+ media.title+ media.fermetureBaliseMedia+  `<div class="infoContenair"><div class="titleMedias"> `+ media.title+`</div><div class="likes"><div id="likes_`+ media.id +`"> ` +   media.like + `</div>
           <div class="heart" "> 
-         <i class="fas fa-heart" aria-label="likes" title="likes_`+ media.id +`"></i>
-    </div>
+          <span  aria-label="likes"class="material-icons-outlined title="likes_`+ media.id + `">favorite
+</span>
+             </div>
     </div>
     </div>
     </a>   `;}

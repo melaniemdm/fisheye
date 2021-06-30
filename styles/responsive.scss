@@ -9,13 +9,18 @@ $medium-down: "only screen and (max-width: #{$medium})";
 $large-up: "only screen and (min-width: #{$large})";
 $large-down: "only screen and (max-width: #{$large})";
 
-// header
-@media #{$medium-down} {
-    body{
-        margin-top: 40px;
-        margin-left: -35px; 
-        margin-right: 20px;  
-       }
+//logo
+@media #{$large-down} {
+    .logo{
+     margin-left: 0px;
+     display: flex;
+     justify-content: flex-start;
+     width: 100%;
+    }
+}
+
+//index
+@media #{$large-down} {
         .banner{
         display: flex;
         flex-direction: column;
@@ -23,29 +28,124 @@ $large-down: "only screen and (max-width: #{$large})";
         align-items: center;
         flex-wrap: wrap;
     }
-     .logo{
-         margin-left: -80px;
-     }
+     
     .title h1{
         font-size:14px ;
         display: flex;
         justify-content: flex-end;
-        margin-top: -100px;
+        margin-top: -80px;
         width: 100%;
     }
-    .navigation{
-        align-items: center;
-    }
+
 .navigation_tag{
-        display: flex;
-    flex-wrap: wrap;
+    width: 370px;
+    display: flex;
     align-items: center;
     justify-content: center;
-width: 340px;
-margin-left:50px;
-}  
+    flex-wrap: wrap;
+
+}
 .boutonContenu{
     position: fixed;
+    display: flex;
     top: 550px;
 }
+// .contact{
+//     position: fixed;
+//     z-index: 1;
+//     height: 100px;
+//     width: 100%;
+//     display:inline-flex;
+//     justify-content: center;
+//     align-items: center;
+   
+//     top: 450px;
+//    border: tomato 2px solid;
+// }
+.toto{
+   border: rgb(71, 203, 255) 2px solid;
+   //position: fixed;
+   z-index: 1;
+   
+
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+    
+}
+.btn-contact{
+    position: fixed;
+   //width: 100%;
+   height: 30px;
+    border-radius: 10px;
+    padding: 3px;
+    font-size: 13px;
+    font-weight: 400;
+ 
+}
+   
+}
+//media
+@media #{$large-down} {
+    
+    .contenairPhotographeLarge{
+        display: inline-block;
+       // flex-direction: column;
+        margin-left: 1px;
+        margin-right: 1px;
+        width:100%;
+        //border: red 2px solid;
+    }
+    .infoDuPhotographeLarge {
+        max-width: 50%;
+    }
+    .photoIdDuPhotographeLarge{
+        width: 100%;
+    }
+    .photoIdDuPhotographeLarge img{
+        width: 140px;
+        margin-top: -40px;
+    }
+    .nomDuPhotographeLarge{
+        font-size: 23px;
+        margin-top: -150px;
+         margin-bottom: 0px;
+         margin-left: -45px;
+       }
+       .localisationLarge{
+        font-size: 15px; 
+        margin-bottom: -10px;
+        margin-left: -45px;
+    }
+    .taglineDuPhotographeLarge{
+       color:  black; 
+       font-size: 11px; 
+       margin-bottom: -10px;
+       margin-left: -45px;
+    }
+    
+    .tagsDuPhotographeLarge   {
+        margin-left: -50px;
+    }
+    .tags{
+    font-size: 12px;
+   
+                  }
+.trier{
+    visibility: hidden;
+}
+}
+//lightgallery
+@media #{$large-down} {
+    #lightgallery{
+        align-items: center;
+margin-top: -150px;
+    }
+    .infoContenair div {
+        font-size: 15px;
+    }
+    .heart span{
+        font-size: 20px;
+    }
 }

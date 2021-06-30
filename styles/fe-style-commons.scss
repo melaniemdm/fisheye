@@ -1,9 +1,7 @@
 //@import "./responsive.scss";
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-body{
-    font-family: 'Libre Franklin', Arial, sans-serif;
-   }
+
 // couleurs primary
 $colorPrimaryStatic:#901c1c;
 //color secondaire
@@ -11,11 +9,13 @@ $colorSecondFocus:#d3573c;
 $colorSecondGrey:#525252;
 
 /*------------------------------------index.html--------------------------------------------*/
-.logo{
-    padding-left: 50px;
-    margin-right: 60px;
+body{
+ font-family: 'Libre Franklin', Arial, sans-serif;    
+//background-color: rgb(228, 228, 158);
 }
-
+.logo{
+    margin-left: 100px;
+}
 /*------------------------------------------banner- navTag - title----------------*/
 .banner{
     font-size: 12px;
@@ -25,12 +25,10 @@ $colorSecondGrey:#525252;
      }
 .navigation_tag{
         font-size: 13px;
-        margin-left: -70px;
         width: 550px;
  }
 
 .navigation a{
-    
     text-decoration: none;
     color:$colorPrimaryStatic;
     border: solid #525252 1px;
@@ -40,17 +38,16 @@ $colorSecondGrey:#525252;
     margin: 3px;
 }
 .title h1{ //nos photographes
+    position: relative;
     font-size: 30px;
     font-weight: 400;
     color:$colorPrimaryStatic;
     display: flex;
-    flex-wrap: wrap;
     justify-content:flex-end;
-    margin-top: -68px;
-    padding-top: 20px;
-    padding-right: 100px;
-    //background-color: rgb(0, 225, 255);
-}
+    flex-wrap: wrap;
+    margin-top: -55px;
+   
+  }
 
 
 /*----------------------------------card du photographes page index------------------------------------------*/
@@ -72,6 +69,7 @@ $colorSecondGrey:#525252;
 //background-color: chocolate;
 display: flex;
 justify-content: center;
+align-items: center;
 
 }
 
@@ -132,10 +130,12 @@ justify-content: center;
 .bouton{
     display: flex;
     justify-content: center;
+align-items: center;
 }
 .boutonContenu{
-    width: 174px;
+   //width: 175px;
     //background-color:$colorSecondFocus ;
+  
     text-align: center;
     font-weight: bolder;
     font-size: 15px;
@@ -169,22 +169,24 @@ justify-content: center;
 .contact{
     order:2;
     align-content: center;
-   
-   
+
 }
 //btn contact
 .btn-contact{
     background-color: $colorPrimaryStatic;
     color: white;
     width: 170px;
-    padding: 27px;
+    height: 64px;
     display: flex;
+    align-items: center;
     justify-content: center;
     border-radius: 15px;
-    font-size: 15px;
-    font-weight: bold;
-    margin-top: 60px;
-    margin-left: 40px;
+    font-size: 17px;
+    font-weight: 400;
+    margin-top: 35px;
+      
+   
+
     &:hover{
         background-color: $colorSecondFocus;
         color: black;  
@@ -202,33 +204,30 @@ border-radius:10px 10px 0 0;
 /*-----------------------------------------------------------------------------*/
 /*------ menu trier page medias-----------*/
 .trier{
+    font-size: 20px;
     display: flex;
     gap: 10px;
-    margin-left: 60px;
-    font-size: 13px;
+    margin-left: 5.5%;
+    
    & a{
     text-decoration: none;
     padding-right: 5px;
     padding: 20px;
     } 
 }
-.trierPar{
-    
-    margin-top: 20px;
-    margin-left: 40px;
-font-weight: bold;
-}
 
-#filtre ul {
-    padding: 0px;
-    margin: 0;
-    list-style: none;
-    }
+ .trierPar{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+    margin-left: 22px;
+    margin-right: 2px;
+}
 #filtre {
 /* on centre le menu dans la page */
-//font-weight: bolder;
+
     padding: 0;
-    margin: 0;
+    margin-top: 10px;
     list-style: none;
     background-color: $colorPrimaryStatic;
     @extend .topBorderRadius;
@@ -236,6 +235,12 @@ font-weight: bold;
         background-color: $colorSecondFocus;
     }
     }
+#filtre ul {
+    padding: 0px;
+    margin: 0;
+    list-style: none;
+    }
+
 
 #filtre li {
 /* on place les liens du menu horizontalement */
@@ -245,6 +250,7 @@ font-weight: bold;
 }
 #filtre ul li {
 /* on enlève ce comportement pour les liens du sous menu */
+
     display: inherit;
     cursor: pointer;
        &:hover{
@@ -293,15 +299,14 @@ font-weight: bold;
 
 
 .contenairPhotographeLarge{  
+margin-left: 100px;
+margin-right: 100px;
+margin-top: 40px;
 display: grid;
 grid-template-columns: 1fr 1fr 1fr;
 grid-template-rows: 1fr;
-margin-top: 30px;
-margin-left: 70px;
-margin-right: 70px;
 background-color: #fafafa;
 border-radius: 5px;
-margin-bottom: 10px;
 height: 2;
 
 }
@@ -313,50 +318,43 @@ height: 2;
     order:3;
     text-align: right;
  }
-.photoIdDuPhotographeLarge img{
-    width: 260px;
-    margin-top: 45px;
-    margin-right: 15px;
-}
+
  
 //btn
 
 .infoDuPhotographeLarge{
     order:1;
-    margin-top: 15px;
-    margin-left: 69px;
-   
-}
-.nomDuPhotographeLarge{
-    width: 110%;
-    font-size: 40px;
-    color: $colorSecondFocus;
-    padding-top: 45px;
-    padding-bottom: 23px;
+    margin-left: 50px;
     
 }
+.nomDuPhotographeLarge{
+    font-size: 45px;
+    color: $colorSecondFocus;
+     padding-top: 10%;
+    padding-bottom: 15px;
+    width: 150%;
+   padding-right: 250px;
+    }
 
 .localisationLarge{
     color:$colorPrimaryStatic;
-    font-size: 20px;
+    font-size: 25px;
     display: flex;
-    padding-bottom: 20px;
+    padding-bottom: 25px;
     }
 .taglineDuPhotographeLarge{
   font-size: 15px;
-  padding-bottom: 15px;  
+  padding-bottom: 20px;  
 }       
 .tagsDuPhotographeLarge{
     display: flex;
-    
+    font-size: 11px;
+    padding-bottom: 50px;
      }
      .tagsDuPhotographeLarge div{
         color:$colorPrimaryStatic;
         font-weight: bold;
-        padding-left: 3px;
-        padding-right: 3px;
-        padding-top: 3px;
-        padding-bottom: 3px;
+        padding: 3px;
         margin: 2px; 
      }
      .tags{
@@ -372,7 +370,7 @@ height: 2;
 //cadre sous le media
 .infoContenair{
       height: 350px;
-   width: 380px;
+   width: 370px;
    display: flex;
   justify-content: space-between;
   padding-bottom: 10px;
@@ -382,35 +380,45 @@ color: $colorPrimaryStatic;
  display: flex;
 justify-content: flex-start;
 padding-top: 330px;
-font-size:18px ;
+
+font-size:16px ;
 
       }
 .heart{
        color: $colorPrimaryStatic;
-       padding-left: 5px;
-       font-size:18px ;
+       padding-left: 10px;
+       margin-right: 10px;
+       font-size:16px ;
        }
 .titleMedias{
     color:$colorPrimaryStatic ;
     font-weight: 400;
-    font-size:18px ;
+    font-size:16px ;
     display: flex;
     justify-content: flex-start;
     right: 0;
     padding-top: 330px;
-    padding-right: 35px;
-    margin-left: 30px;
+    margin-left: 10px;
 
 }
 /*-----------------------------------------------------------------------------------------------------------------*/
 /*------------------------gestion de la gallery--------------*/
 #lightgallery {
+   // width: 1240px;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: left;
-    margin-left: 50px;
+   justify-content: center;
+   flex-wrap: wrap;
+   // background-color: aqua;
+  // gap: 5%;
+    margin-left: 85px;
+   margin-right: 70px;
      }
+     #lightgallery a{
+position: relative;
+text-decoration: none;
+color: black;
+
+}
 
 #lightgallery a img, #lightgallery a video {
     position: absolute;
@@ -439,18 +447,8 @@ background-color: white;
     background-color: white;
 }
 
-//#lightgallery a video{
-   // display: flex;
-//}
 
-#lightgallery a{
-    width: 410px;
-    text-align: center;
-  position: relative;
-overflow: hidden;  
-text-decoration: none;
-color: black;
-}
+
 
 /*---------------------modal-----------------------------*/
 #formulaire{

@@ -8,6 +8,7 @@
     <!--lien vers le fichier css-->
     <link rel="stylesheet" href="styles/fe-style-commons.css" />
     <!-- <link rel="stylesheet" href="styles/fe-style-modal.css" /> -->
+    <link rel="stylesheet" href="styles/responsive.css" />
     <!--lien vers les icones google-->
     <link
         href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
@@ -23,9 +24,9 @@
 </head>
 
 <body>
-    <div class="logo">
+   <div class="logo">
         <a href="index.html" class="retour">
-            <img alt="logo" src="photos/logo2.png" />
+            <img alt="FishEye et retour" src="photos/logo2.png" />
         </a>
     </div>
 
@@ -42,7 +43,11 @@
         <div class="trierPar">Trier par</div>
         <div>
             <ul id="filtre">
-                <li><a title="likes"> Popularité <i class="fas fa-chevron-up"></i></a>
+                <li><a title="likes"> Popularité 
+                    <div aria-hidden="true" class="icon material-icons-outlined">
+                        expand_more
+                    </div>
+                    </a>
                     <ul class="choix">
                         <li class="separator"></li>
                         <li title="date"><a title="date">Date</a></li>
@@ -69,16 +74,17 @@
 
                 </div>
 
-                <div class="titleForm"> Contactez-moi</div>
+                
                 <div id="nomPhotographeForm"></div>
 
             </div>
 
-
-            <div class="data">
-                <div class="prenom">
+<div role="group" aria-labelledby="coordonnees">
+  <p id="coordonnees"> vos coordonnées </p>  
+            <div class="data" > 
+                 <div class="prenom">
                     <label for="surname">Prémom</label> <br>
-                    <input type="text" id="surname" />
+                    <input type="text" id="surname" required aria-required="true"/>
                     <div class="textError" id="errorSurname"> Veuillez entrer 2 caractères ou plus pour le champ du
                         Prénom.</div>
                 </div>
@@ -87,7 +93,7 @@
             <div class="data">
                 <div class="nom">
                     <label for="name">Nom</label> <br>
-                    <input type="text" id="name" />
+                    <input type="text" id="name" required aria-required="true"/>
                     <div class="textError" id="errorName"> Veuillez entrer 2 caractères ou plus pour le champ du Nom.
                     </div>
                 </div>
@@ -96,11 +102,12 @@
             <div class="data">
                 <div class="email">
                     <label for="email">Email</label> <br>
-                    <input type="text" id="email" />
+                    <input type="text" id="email" placeholder="toto.titi@gmail.com" aria-labelledby="email" aria-describedby="email-format" aria-required="true" required />
+                    <span id="email-format" class="hidden">toto.titi@gmail.com</span>
                     <div class="textError" id="errorEmail"> Veuillez entrer une adresse mail correcte.</div>
                 </div>
             </div>
-
+        </div>
             <div class="message">
                 <label for="message">Message</label> <br>
                 <input type="text" id="message" />

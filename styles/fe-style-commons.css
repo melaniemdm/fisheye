@@ -1,13 +1,12 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/*------------------------------------index.html--------------------------------------------*/
 body {
   font-family: "Libre Franklin", Arial, sans-serif;
 }
 
-/*------------------------------------index.html--------------------------------------------*/
 .logo {
-  padding-left: 50px;
-  margin-right: 60px;
+  margin-left: 100px;
 }
 
 /*------------------------------------------banner- navTag - title----------------*/
@@ -20,7 +19,6 @@ body {
 
 .navigation_tag {
   font-size: 13px;
-  margin-left: -70px;
   width: 550px;
 }
 
@@ -35,15 +33,14 @@ body {
 }
 
 .title h1 {
+  position: relative;
   font-size: 30px;
   font-weight: 400;
   color: #901c1c;
   display: flex;
-  flex-wrap: wrap;
   justify-content: flex-end;
-  margin-top: -68px;
-  padding-top: 20px;
-  padding-right: 100px;
+  flex-wrap: wrap;
+  margin-top: -55px;
 }
 
 /*----------------------------------card du photographes page index------------------------------------------*/
@@ -66,6 +63,7 @@ body {
 .photoIdDuPhotographe {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .infoDuPhotographe {
@@ -127,10 +125,10 @@ body {
 .bouton {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .boutonContenu {
-  width: 174px;
   text-align: center;
   font-weight: bolder;
   font-size: 15px;
@@ -167,14 +165,14 @@ body {
   background-color: #901c1c;
   color: white;
   width: 170px;
-  padding: 27px;
+  height: 64px;
   display: flex;
+  align-items: center;
   justify-content: center;
   border-radius: 15px;
-  font-size: 15px;
-  font-weight: bold;
-  margin-top: 60px;
-  margin-left: 40px;
+  font-size: 17px;
+  font-weight: 400;
+  margin-top: 35px;
 }
 .btn-contact:hover {
   background-color: #d3573c;
@@ -192,10 +190,10 @@ body {
 /*-----------------------------------------------------------------------------*/
 /*------ menu trier page medias-----------*/
 .trier {
+  font-size: 20px;
   display: flex;
   gap: 10px;
-  margin-left: 60px;
-  font-size: 13px;
+  margin-left: 5.5%;
 }
 .trier a {
   text-decoration: none;
@@ -204,26 +202,28 @@ body {
 }
 
 .trierPar {
-  margin-top: 20px;
-  margin-left: 40px;
-  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 22px;
+  margin-right: 2px;
+}
+
+#filtre {
+  /* on centre le menu dans la page */
+  padding: 0;
+  margin-top: 10px;
+  list-style: none;
+  background-color: #901c1c;
+}
+#filtre:hover {
+  background-color: #d3573c;
 }
 
 #filtre ul {
   padding: 0px;
   margin: 0;
   list-style: none;
-}
-
-#filtre {
-  /* on centre le menu dans la page */
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  background-color: #901c1c;
-}
-#filtre:hover {
-  background-color: #d3573c;
 }
 
 #filtre li {
@@ -281,15 +281,14 @@ body {
 /*------------------------------------contenair large mise en page---------------------*/
 /*---------------------page medias--------------------*/
 .contenairPhotographeLarge {
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 40px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  margin-top: 30px;
-  margin-left: 70px;
-  margin-right: 70px;
   background-color: #fafafa;
   border-radius: 5px;
-  margin-bottom: 10px;
   height: 2;
 }
 
@@ -303,49 +302,42 @@ body {
   text-align: right;
 }
 
-.photoIdDuPhotographeLarge img {
-  width: 260px;
-  margin-top: 45px;
-  margin-right: 15px;
-}
-
 .infoDuPhotographeLarge {
   order: 1;
-  margin-top: 15px;
-  margin-left: 69px;
+  margin-left: 50px;
 }
 
 .nomDuPhotographeLarge {
-  width: 110%;
-  font-size: 40px;
+  font-size: 45px;
   color: #d3573c;
-  padding-top: 45px;
-  padding-bottom: 23px;
+  padding-top: 10%;
+  padding-bottom: 15px;
+  width: 150%;
+  padding-right: 250px;
 }
 
 .localisationLarge {
   color: #901c1c;
-  font-size: 20px;
+  font-size: 25px;
   display: flex;
-  padding-bottom: 20px;
+  padding-bottom: 25px;
 }
 
 .taglineDuPhotographeLarge {
   font-size: 15px;
-  padding-bottom: 15px;
+  padding-bottom: 20px;
 }
 
 .tagsDuPhotographeLarge {
   display: flex;
+  font-size: 11px;
+  padding-bottom: 50px;
 }
 
 .tagsDuPhotographeLarge div {
   color: #901c1c;
   font-weight: bold;
-  padding-left: 3px;
-  padding-right: 3px;
-  padding-top: 3px;
-  padding-bottom: 3px;
+  padding: 3px;
   margin: 2px;
 }
 
@@ -358,7 +350,7 @@ body {
 /*---------- les medias------*/
 .infoContenair {
   height: 350px;
-  width: 380px;
+  width: 370px;
   display: flex;
   justify-content: space-between;
   padding-bottom: 10px;
@@ -369,35 +361,41 @@ body {
   display: flex;
   justify-content: flex-start;
   padding-top: 330px;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .heart {
   color: #901c1c;
-  padding-left: 5px;
-  font-size: 18px;
+  padding-left: 10px;
+  margin-right: 10px;
+  font-size: 16px;
 }
 
 .titleMedias {
   color: #901c1c;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   display: flex;
   justify-content: flex-start;
   right: 0;
   padding-top: 330px;
-  padding-right: 35px;
-  margin-left: 30px;
+  margin-left: 10px;
 }
 
 /*-----------------------------------------------------------------------------------------------------------------*/
 /*------------------------gestion de la gallery--------------*/
 #lightgallery {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
   flex-wrap: wrap;
-  justify-content: left;
-  margin-left: 50px;
+  margin-left: 85px;
+  margin-right: 70px;
+}
+
+#lightgallery a {
+  position: relative;
+  text-decoration: none;
+  color: black;
 }
 
 #lightgallery a img, #lightgallery a video {
@@ -428,15 +426,6 @@ body {
 
 #lg-next-1, #lg-prev-1 {
   background-color: white;
-}
-
-#lightgallery a {
-  width: 410px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  text-decoration: none;
-  color: black;
 }
 
 /*---------------------modal-----------------------------*/

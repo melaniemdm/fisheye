@@ -3,13 +3,15 @@
 /*vue tablette*/
 /*vue desktop*/
 /*création des variables media queries utilisant les breakpoints*/
-@media only screen and (max-width: 768px) {
-  body {
-    margin-top: 40px;
-    margin-left: -35px;
-    margin-right: 20px;
+@media only screen and (max-width: 1024px) {
+  .logo {
+    margin-left: 0px;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
   }
-
+}
+@media only screen and (max-width: 1024px) {
   .banner {
     display: flex;
     flex-direction: column;
@@ -18,33 +20,110 @@
     flex-wrap: wrap;
   }
 
-  .logo {
-    margin-left: -80px;
-  }
-
   .title h1 {
     font-size: 14px;
     display: flex;
     justify-content: flex-end;
-    margin-top: -100px;
+    margin-top: -80px;
     width: 100%;
   }
 
-  .navigation {
-    align-items: center;
-  }
-
   .navigation_tag {
+    width: 370px;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    width: 340px;
-    margin-left: 50px;
+    flex-wrap: wrap;
   }
 
   .boutonContenu {
     position: fixed;
+    display: flex;
     top: 550px;
+  }
+
+  .toto {
+    border: #47cbff 2px solid;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .btn-contact {
+    position: fixed;
+    height: 30px;
+    border-radius: 10px;
+    padding: 3px;
+    font-size: 13px;
+    font-weight: 400;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .contenairPhotographeLarge {
+    display: inline-block;
+    margin-left: 1px;
+    margin-right: 1px;
+    width: 100%;
+  }
+
+  .infoDuPhotographeLarge {
+    max-width: 50%;
+  }
+
+  .photoIdDuPhotographeLarge {
+    width: 100%;
+  }
+
+  .photoIdDuPhotographeLarge img {
+    width: 140px;
+    margin-top: -40px;
+  }
+
+  .nomDuPhotographeLarge {
+    font-size: 23px;
+    margin-top: -150px;
+    margin-bottom: 0px;
+    margin-left: -45px;
+  }
+
+  .localisationLarge {
+    font-size: 15px;
+    margin-bottom: -10px;
+    margin-left: -45px;
+  }
+
+  .taglineDuPhotographeLarge {
+    color: black;
+    font-size: 11px;
+    margin-bottom: -10px;
+    margin-left: -45px;
+  }
+
+  .tagsDuPhotographeLarge {
+    margin-left: -50px;
+  }
+
+  .tags {
+    font-size: 12px;
+  }
+
+  .trier {
+    visibility: hidden;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  #lightgallery {
+    align-items: center;
+    margin-top: -150px;
+  }
+
+  .infoContenair div {
+    font-size: 15px;
+  }
+
+  .heart span {
+    font-size: 20px;
   }
 }/*# sourceMappingURL=responsive.css.map */

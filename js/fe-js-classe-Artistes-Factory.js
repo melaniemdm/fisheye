@@ -57,9 +57,11 @@ class ArtistesFactory {
         <div class="photoIdDuPhotographeLarge">
             <img src=" ` + artiste.photo + `" alt="`+artiste.nom+`">
         </div>
-        <div class="contact">
+        <div class="toto"> 
+        
         <div class="btn-contact" id="btn-contact"> Contactez-moi </div>
         </div>
+        
         <div class="infoDuPhotographeLarge">
         <div class="nomDuPhotographeLarge">` + artiste.nom + ` </div>
         <div class="localisationLarge">        
