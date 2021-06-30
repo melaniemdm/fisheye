@@ -34,6 +34,7 @@ body {
 
 .title h1 {
   position: relative;
+  z-index: -1;
   font-size: 30px;
   font-weight: 400;
   color: #901c1c;
@@ -156,8 +157,11 @@ body {
   color: black;
 }
 
-.contact {
-  order: 2;
+.contact, .toto {
+  grid-column: 2;
+  grid-row: 1;
+  display: flex;
+  justify-content: center;
   align-content: center;
 }
 
@@ -298,12 +302,14 @@ body {
 
 /*------order de la card ----*/
 .photoIdDuPhotographeLarge {
-  order: 3;
+  grid-column: 3;
+  grid-row: 1;
   text-align: right;
 }
 
 .infoDuPhotographeLarge {
-  order: 1;
+  grid-column: 1;
+  grid-row: 1;
   margin-left: 50px;
 }
 
@@ -313,7 +319,6 @@ body {
   padding-top: 10%;
   padding-bottom: 15px;
   width: 150%;
-  padding-right: 250px;
 }
 
 .localisationLarge {

@@ -22,7 +22,7 @@ $large-down: "only screen and (max-width: #{$large})";
 //index
 @media #{$large-down} {
         .banner{
-        display: flex;
+         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -30,6 +30,7 @@ $large-down: "only screen and (max-width: #{$large})";
     }
      
     .title h1{
+      
         font-size:14px ;
         display: flex;
         justify-content: flex-end;
@@ -62,34 +63,33 @@ $large-down: "only screen and (max-width: #{$large})";
 //     top: 450px;
 //    border: tomato 2px solid;
 // }
-.toto{
-   border: rgb(71, 203, 255) 2px solid;
-   //position: fixed;
-   z-index: 1;
-   
 
-display: flex;
-justify-content: center;
-align-items: center;
-text-align: center;
-    
-}
-.btn-contact{
-    position: fixed;
-   //width: 100%;
-   height: 30px;
-    border-radius: 10px;
-    padding: 3px;
-    font-size: 13px;
-    font-weight: 400;
- 
-}
-   
-}
 //media
 @media #{$large-down} {
-    
+    .toto{
+        
+        width: 100%;
+      display: flex;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+         
+     }
+     .btn-contact{
+         position: fixed;
+         z-index: 1;
+         height: 30px;
+         border-radius: 10px;
+         padding: 8px;
+         font-size: 13px;
+         font-weight: 400;
+         top: 495px;
+           
+     }
+        
+     }
     .contenairPhotographeLarge{
+       // background-color: tomato;
         display: inline-block;
        // flex-direction: column;
         margin-left: 1px;
@@ -98,16 +98,21 @@ text-align: center;
         //border: red 2px solid;
     }
     .infoDuPhotographeLarge {
-        max-width: 50%;
+        //background-color: turquoise;
+        max-width: 100%;
     }
     .photoIdDuPhotographeLarge{
+     //   background-color: yellow;
         width: 100%;
     }
     .photoIdDuPhotographeLarge img{
+      //  background-color: yellowgreen;
         width: 140px;
         margin-top: -40px;
     }
     .nomDuPhotographeLarge{
+        //background-color: violet;
+        width: 100%;
         font-size: 23px;
         margin-top: -150px;
          margin-bottom: 0px;
