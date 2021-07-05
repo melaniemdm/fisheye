@@ -92,10 +92,11 @@ export async function addPhotographersMedias(id, sort) {
 }
 //premet au likes d'être cliquable
 function addOneLike(event){
-    console.log(event.target.title);
+
     //recupere l'id
     var nodeLikesId = event.target.title;
     event.preventDefault();
+    
     event.stopImmediatePropagation();
     //recupere le noeud de l'id 
     let nodeLikes = document.querySelector("#" + nodeLikesId);
