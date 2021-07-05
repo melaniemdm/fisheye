@@ -556,7 +556,7 @@ body {
 
 #modalFin {
   margin-top: -1920px;
-  visibility: visible;
+  visibility: hidden;
   position: fixed;
   background-color: #d3573c;
   width: 365px;

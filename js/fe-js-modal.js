@@ -74,7 +74,6 @@ inputMail.addEventListener("change", testMail);
 
 function closeModalFin(){
     modalEndMessage.style.visibility="hidden";
-   
 }
 
 const closeFormFin2=document.querySelectorAll(".closeModalFin");
