@@ -2,11 +2,7 @@
 class Photo {
     constructor(image) {
         this._type = "photo";
-        this.baliseMedia = `<img src="`;
-        this.fermetureBaliseMedia = `"/>`;
         this.medias = image;
-  
-
     }
 }
   

@@ -25,7 +25,7 @@ class MediaFactory {
                 if (type === "photo"){
                     composantElementMedia =
           ` 
-    <a href="` +url+`galeryGrdeTaille/` + media.medias + `" onclick="return false;" class="light-link" data-sub-html=" <h4 class='titleInGallery'>`+ media.title +  `</h4>">`+ media.baliseMedia+ url + media.medias + `" alt="`+ media.title+ media.fermetureBaliseMedia+  `<div class="infoContenair"><div class="titleMedias"> `+ media.title+`</div><div class="likes"><div id="likes_`+ media.id +`"> ` +   media.like + `</div>
+    <a href="` +url+`galeryGrdeTaille/` + media.medias + `" onclick="return false;" class="light-link" data-sub-html=" <h4 class='titleInGallery'>`+ media.title +  `</h4>"> <img src="`+ url + media.medias + `" alt="`+ media.title+  `"/><div class="infoContenair"><div class="titleMedias"> `+ media.title+`</div><div class="likes"><div id="likes_`+ media.id +`"> ` +   media.like + `</div>
           <div class="heart" "> 
           <span  aria-label="likes"class="material-icons-outlined" title="likes_`+ media.id + `">favorite
 </span>
@@ -41,8 +41,8 @@ class MediaFactory {
              ` <a
           data-lg-size="1280-720"
           data-video='{"source": [{"src":"`+ url + media.medias + `", "type":"video/mp4"}], "attributes": {"preload": false, "controls": true}}'
-          data-poster="` + url +media.medias + `.webp" data-sub-html="<h4 class='titleInGallery'>`+media.title +`</h4>" >`+
-      media.baliseMedia + url + media.medias + `.webp" alt="`+ media.title + media.fermetureBaliseMedia+ `<div class="infoContenair"><div class="titleMedias"> `+media.title + `</div><div class="likes"> <div id="likes_`+ media.id +`"> ` + media.like + `  </div>
+          data-poster="` + url +media.medias + `.webp" data-sub-html="<h4 class='titleInGallery'>`+media.title +`</h4>" >
+          <img src="` + url + media.medias + `.webp" alt="`+ media.title +  `"/><div class="infoContenair"><div class="titleMedias"> `+media.title + `</div><div class="likes"> <div id="likes_`+ media.id +`"> ` + media.like + `  </div>
       <div class="heart" "> 
       <span  aria-label="likes"class="material-icons-outlined" title="likes_`+ media.id + `">favorite
 </span>
