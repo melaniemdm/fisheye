@@ -215,6 +215,11 @@ function launchModalFin() {
     
     //affiche la modal de fin
     modalEndMessage.style.visibility="visible";
+    // mise a zero des imput apres envoie du mail de contact
+    document.querySelector("#name").value = "";
+    document.querySelector("#surname").value = "";
+    document.querySelector("#email").value = "";
+    document.querySelector("#message").value = "";
     closeModal();
    
 }
