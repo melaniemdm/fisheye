@@ -1,4 +1,4 @@
-import { ArtistesFactory } from './fe-js-classe-Artistes-Factory.js';
+import { Photographe } from './fe-js-classe-des-photographes.js';
 
 // fonction qui recupere le json
 async function getPhotographersFromJson() {
@@ -61,7 +61,7 @@ export async function displayAllPhotographersTagues (tag){
 //fonction recupere les elements
 async function getPhotographerObjectFromFactory(photographe){
    
-    var lesPhotographes = new ArtistesFactory();
+    var lesPhotographes = new Photographe("photographe", "photos/Sample_Photos/Photographers_ID_Photos/" + photographe.portrait, photographe.id, photographe.name, photographe.city, photographe.country, photographe.tagline, photographe.price+ "€/jour", photographe.tags);
     
-    return lesPhotographes.creatArtistes("photographe", "photos/Sample_Photos/Photographers_ID_Photos/" + photographe.portrait, photographe.id, photographe.name, photographe.city, photographe.country, photographe.tagline, photographe.price+ "€/jour", photographe.tags);}
+    return lesPhotographes;}
 
