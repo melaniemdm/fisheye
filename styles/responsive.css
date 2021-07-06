@@ -6,6 +6,15 @@
 /*création des variables media queries utilisant les breakpoints*/
 /*----------------------------------------------------------vue tablette-------------------------*/
 @media only screen and (max-width: 768px) {
+  .logo {
+    margin-left: 0px;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: -10px;
+  }
+}
+@media only screen and (max-width: 768px) {
   .contenairPhotographeLarge {
     background-color: #fafafa;
     display: block;
@@ -27,12 +36,48 @@
     margin-top: 40px;
   }
 
+  .title h1 {
+    font-size: 18px;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
   .toto {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+  }
+
+  .navigation_tag {
+    width: 370px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .localisationLarge {
+    font-size: 15px;
+    margin-bottom: -10px;
+    margin-left: -45px;
+  }
+
+  .taglineDuPhotographeLarge {
+    color: black;
+    font-size: 11px;
+    margin-bottom: -10px;
+    margin-left: -45px;
+  }
+
+  .tagsDuPhotographeLarge {
+    margin-left: -50px;
+  }
+
+  .tags {
+    font-size: 12px;
   }
 
   .btn-contact {
@@ -59,10 +104,12 @@
 /*-----------------------------------------------------------------*/
 @media only screen and (max-width: 421px) {
   .logo {
-    margin-left: 0px;
-    display: flex;
-    justify-content: flex-start;
-    width: 100%;
+    margin-top: 0px;
+  }
+
+  .title h1 {
+    font-size: 14px;
+    margin-top: -85px;
   }
 }
 /*---------------------------------------index---------------------*/
@@ -72,22 +119,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-  }
-
-  .title h1 {
-    font-size: 14px;
-    display: flex;
-    justify-content: flex-end;
-    margin-top: -80px;
-    width: 100%;
-  }
-
-  .navigation_tag {
-    width: 370px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     flex-wrap: wrap;
   }
 
@@ -135,27 +166,6 @@
     font-size: 23px;
     margin-top: -180px;
     margin-left: -45px;
-  }
-
-  .localisationLarge {
-    font-size: 15px;
-    margin-bottom: -10px;
-    margin-left: -45px;
-  }
-
-  .taglineDuPhotographeLarge {
-    color: black;
-    font-size: 11px;
-    margin-bottom: -10px;
-    margin-left: -45px;
-  }
-
-  .tagsDuPhotographeLarge {
-    margin-left: -50px;
-  }
-
-  .tags {
-    font-size: 12px;
   }
 
   .trier {

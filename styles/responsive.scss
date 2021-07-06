@@ -21,6 +21,18 @@ $hidden: hidden;
 }
 
 /*----------------------------------------------------------vue tablette-------------------------*/
+//logo
+@media #{$medium-down} {
+  .logo {
+    margin-left: 0px;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: -10px;
+  }
+  
+}
+
 @media #{$medium-down} {
   .contenairPhotographeLarge {
   background-color: #fafafa;
@@ -42,12 +54,43 @@ $hidden: hidden;
   width: 200px;
  margin-top: 40px;
 }
+.title h1 {
+  font-size: 18px;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
 .toto {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+.navigation_tag {
+  width: 370px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.localisationLarge {
+  font-size: 15px;
+  margin-bottom: -10px;
+  margin-left: -45px;
+}
+.taglineDuPhotographeLarge {
+  color: black;
+  font-size: 11px;
+  margin-bottom: -10px;
+  margin-left: -45px;
+}
+
+.tagsDuPhotographeLarge {
+  margin-left: -50px;
+}
+.tags {
+  font-size: 12px;
 }
 .btn-contact {
   position: fixed;
@@ -70,17 +113,16 @@ $hidden: hidden;
 /*-----------------------------------------------------------------*/
 /*--------------------------------------vue mobile-----------------*/
 /*-----------------------------------------------------------------*/
-//logo
+
 @media #{$small-down} {
   .logo {
-    margin-left: 0px;
-    display: flex;
-    justify-content: flex-start;
-    width: 100%;
+    margin-top: 0px;
   }
-  
+  .title h1 {
+    font-size: 14px;
+    margin-top: -85px;
+  }
 }
-
 /*---------------------------------------index---------------------*/
 @media #{$small-down} {
   .banner {
@@ -91,21 +133,7 @@ $hidden: hidden;
     flex-wrap: wrap;
   }
 
-  .title h1 {
-    font-size: 14px;
-    display: flex;
-    justify-content: flex-end;
-    margin-top: -80px;
-    width: 100%;
-  }
 
-  .navigation_tag {
-    width: 370px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
   .bouton{
     display: flex;
     justify-content: center;
@@ -149,24 +177,7 @@ $hidden: hidden;
     // margin-bottom: 0px;
     margin-left: -45px;
   }
-  .localisationLarge {
-    font-size: 15px;
-    margin-bottom: -10px;
-    margin-left: -45px;
-  }
-  .taglineDuPhotographeLarge {
-    color: black;
-    font-size: 11px;
-    margin-bottom: -10px;
-    margin-left: -45px;
-  }
 
-  .tagsDuPhotographeLarge {
-    margin-left: -50px;
-  }
-  .tags {
-    font-size: 12px;
-  }
   .trier {
     visibility: hidden;
   }
