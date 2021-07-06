@@ -157,7 +157,8 @@ body {
   color: black;
 }
 
-.contact, .toto {
+.contact,
+.toto {
   grid-column: 2;
   grid-row: 1;
   display: flex;
@@ -206,10 +207,11 @@ body {
 }
 
 .trierPar {
+  background-color: lawngreen;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 22px;
+  margin-left: 25px;
   margin-right: 2px;
 }
 
@@ -312,7 +314,6 @@ body {
   grid-template-rows: 1fr;
   background-color: #fafafa;
   border-radius: 5px;
-  height: 2;
 }
 
 .contenairPhotographeLarge a {
@@ -337,7 +338,6 @@ body {
   color: #d3573c;
   padding-top: 10%;
   padding-bottom: 15px;
-  width: 150%;
 }
 
 .localisationLarge {
@@ -371,7 +371,7 @@ body {
   border-radius: 15px;
 }
 
-/*---------- les medias------*/
+/*-------------------------------------------- les medias------------------------------------*/
 .infoContenair {
   height: 350px;
   width: 370px;
@@ -422,7 +422,8 @@ body {
   color: black;
 }
 
-#lightgallery a img, #lightgallery a video {
+#lightgallery a img,
+#lightgallery a video {
   position: absolute;
   top: -9999px;
   bottom: -9999px;
@@ -443,12 +444,17 @@ body {
   color: black;
 }
 
-#lg-actual-size-1, #lg-close-1, #lg-next-1, #lg-prev-1, #lg-download-1 {
+#lg-actual-size-1,
+#lg-close-1,
+#lg-next-1,
+#lg-prev-1,
+#lg-download-1 {
   color: #901c1c;
   font-size: 35px;
 }
 
-#lg-next-1, #lg-prev-1 {
+#lg-next-1,
+#lg-prev-1 {
   background-color: white;
 }
 
@@ -512,7 +518,9 @@ body {
   border-radius: 5px;
 }
 
-.nom, .email, .message {
+.nom,
+.email,
+.message {
   font-size: 15;
   font-weight: 400;
   margin-top: 15px;

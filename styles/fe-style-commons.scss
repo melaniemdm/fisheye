@@ -1,609 +1,597 @@
 //@import "./responsive.scss";
-@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 // couleurs primary
-$colorPrimaryStatic:#901c1c;
+$colorPrimaryStatic: #901c1c;
 //color secondaire
-$colorSecondFocus:#d3573c;
-$colorSecondGrey:#525252;
+$colorSecondFocus: #d3573c;
+$colorSecondGrey: #525252;
+$colorSecondGreylight: #fafafa;
+
+$border-radius-small: 5px;
+$border-radius-big: 15px;
+
+$widthModalInput: 310px;
+
+$contenairPhotographe: 350px;
+$infoContenair: 370px;
+
+$fontSizeBig: 25px;
+$fontSizeBigModal: 40px;
+$fontSizeSmall: 12px;
+$fontSizeIntermediaire: 15px;
+
+@mixin colorPrimary {
+  background-color: $colorPrimaryStatic;
+  color: white;
+}
+@mixin colorPrimaryHover {
+  background-color: white;
+  color: $colorSecondFocus;
+}
+@mixin colorSecondaire {
+  background-color: $colorSecondFocus;
+  color: #0000;
+}
+@mixin colorsSecondaireGrey {
+  background-color: $colorSecondGreylight;
+  color: #525252;
+}
+@mixin colorSecondaireHover {
+  background-color: white;
+  color: $colorPrimaryStatic;
+}
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /*------------------------------------index.html--------------------------------------------*/
-body{
- font-family: 'Libre Franklin', Arial, sans-serif;    
-//background-color: rgb(228, 228, 158);
+body {
+  font-family: "Libre Franklin", Arial, sans-serif;
 }
-.logo{
-    margin-left: 100px;
+.logo {
+  margin-left: 100px;
 }
 /*------------------------------------------banner- navTag - title----------------*/
-.banner{
-    font-size: 12px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
-     }
-.navigation_tag{
-        font-size: 13px;
-        width: 550px;
- }
-
-.navigation a{
-    text-decoration: none;
-    color:$colorPrimaryStatic;
-    border: solid #525252 1px;
-    border-radius: 15px;
-    padding-left: 3px;
-    padding-right: 3px;
-    margin: 3px;
+.banner {
+  font-size: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
 }
-.title h1{ //nos photographes
-    position: relative;
-    z-index: -1;
-    font-size: 30px;
-    font-weight: 400;
-    color:$colorPrimaryStatic;
-    display: flex;
-    justify-content:flex-end;
-    flex-wrap: wrap;
-    margin-top: -55px;
-   
-  }
+.navigation_tag {
+  font-size: 13px;
+  width: 550px;
+}
 
-
+.navigation a {
+  text-decoration: none;
+  color: $colorPrimaryStatic;
+  border: solid #525252 1px;
+  border-radius: 15px;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin: 3px;
+}
+.title h1 {
+  //nos photographes
+  position: relative;
+  z-index: -1;
+  font-size: 30px;
+  font-weight: 400;
+  color: $colorPrimaryStatic;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  margin-top: -55px;
+}
 /*----------------------------------card du photographes page index------------------------------------------*/
-#listeDesPhotographes{
-    display: flex;
-    flex-wrap:wrap ;
-    justify-content: center;
-    gap: 80px;
-    padding-top: 80px;
+#listeDesPhotographes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 80px;
+  padding-top: 80px;
 }
-#listeDesPhotographes div{
-    text-decoration: none;
-    }
-.contenairPhotographe{
-  width: 350px;  
- }
+#listeDesPhotographes div {
+  text-decoration: none;
+}
+.contenairPhotographe {
+  width: 350px;
+}
 .photoIdDuPhotographe {
- //   border: black 2px solid;
-//background-color: chocolate;
-display: flex;
-justify-content: center;
-align-items: center;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.infoDuPhotographe {
+  text-align: center;
+}
+.infoDuPhotographe a {
+  text-decoration: none;
+  color: $colorPrimaryStatic;
+}
+.nomDuPhotographe {
+  color: $colorSecondFocus;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.localisation {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 3px;
+}
+.taglineDuPhotographe {
+  color: black;
+  font-size: 12px;
+  margin-bottom: 3px;
+}
+.priceDuPhotographe {
+  color: #525252;
+  font-size: 12px;
+  margin-bottom: 3px;
+}
+.tagsDuPhotographe {
+  display: flex;
+  justify-content: center;
+}
+.tagsDuPhotographe div {
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  margin: 3px;
 }
 
-.infoDuPhotographe{
-    //border: black 2px solid;
-    //background-color: rgb(235, 31, 201);
-    text-align: center;
-    
-    }
-  .infoDuPhotographe a{
-    text-decoration: none;
-    color:$colorPrimaryStatic;
-}   
-.nomDuPhotographe{
-    color:$colorSecondFocus ;
-     font-size: 25px;
-     margin-bottom: 10px;
-   }
-   .localisation{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    font-size: 14px; 
-    margin-bottom: 3px;
+.tags {
+  border: #525252 1px solid;
+  font-size: 12px;
+  border-radius: 15px;
 }
-.taglineDuPhotographe{
-   color:  black; 
-   font-size: 12px; 
-   margin-bottom: 3px;
-}
-.priceDuPhotographe{
-    color: #525252; 
-   font-size: 12px; 
-   margin-bottom: 3px;
-}
-.tagsDuPhotographe{
-    display: flex;
-    justify-content: center;
-     }
-     .tagsDuPhotographe div{
-        padding-left: 5px;
-        padding-right: 5px;
-        padding-top: 4px;
-        padding-bottom: 4px;
-        margin: 3px; 
-     }
-
-.tags{
-    border: #525252 1px solid;
-    font-size: 12px;
-    border-radius: 15px;
-   
-}
-
 /*-----*/
-
-.bouton{
-    display: flex;
-    justify-content: center;
-align-items: center;
+.bouton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.boutonContenu{
-   //width: 175px;
-    //background-color:$colorSecondFocus ;
-  
-    text-align: center;
-    font-weight: bolder;
-    font-size: 15px;
-    padding: 8px;
-    border-radius: 5px;
-    border : solid $colorSecondFocus 1px;
-    background-color:$colorSecondFocus ;
-    margin-bottom: 20px;
+.boutonContenu {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 15px;
+  padding: 8px;
+  border-radius: 5px;
+  border: solid $colorSecondFocus 1px;
+  background-color: $colorSecondFocus;
+  margin-bottom: 20px;
 }
-
 
 /*----------------------------------------------boutons----------------------*/
 //style commun des boutons
-.btn{
-    background-color: $colorPrimaryStatic;
-    color: white;
-    width: 170px;
-    padding: 27px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 15px;
-    font-size: 15px;
-    &:hover{
-        background-color: $colorSecondFocus;
-        color: black;  
-    }
+.btn {
+  background-color: $colorPrimaryStatic;
+  color: white;
+  width: 170px;
+  padding: 27px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  font-size: 15px;
+  &:hover {
+    background-color: $colorSecondFocus;
+    color: black;
+  }
 }
 
 //btn contactez moi
-.contact, .toto{
-    grid-column: 2;
-    grid-row: 1;
-    display: flex;
-    justify-content: center;
-    align-content: center;
+.contact,
+.toto {
+  grid-column: 2;
+  grid-row: 1;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 //btn contact
-.btn-contact{
-    background-color: $colorPrimaryStatic;
-    color: white;
-    width: 170px;
-    height: 64px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 15px;
-    font-size: 17px;
-    font-weight: 400;
-    margin-top: 35px;
-      
-   
-
-    &:hover{
-        background-color: $colorSecondFocus;
-        color: black;  
-    }
-}  
-
-
-//tri
-.topBorderRadius{
-border-radius:10px 10px 0 0;
+.btn-contact {
+  background-color: $colorPrimaryStatic;
+  color: white;
+  width: 170px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  font-size: 17px;
+  font-weight: 400;
+  margin-top: 35px;
+  &:hover {
+    background-color: $colorSecondFocus;
+    color: black;
+  }
 }
-.bottomBorderRadius{
-    border-radius: 0 0 10px 10px;  
+//tri
+.topBorderRadius {
+  border-radius: 10px 10px 0 0;
+}
+.bottomBorderRadius {
+  border-radius: 0 0 10px 10px;
 }
 /*-----------------------------------------------------------------------------*/
 /*------ menu trier page medias-----------*/
-.trier{
-    font-size: 20px;
-    display: flex;
-    gap: 10px;
-    margin-left: 5.5%;
-    
-   & a{
+.trier {
+  font-size: 20px;
+  display: flex;
+  gap: 10px;
+  margin-left: 5.5%;
+  & a {
     text-decoration: none;
     padding-right: 5px;
     padding: 20px;
-    } 
+  }
 }
 
- .trierPar{
-    display: flex;
-   justify-content: center;
-   align-items: center;
-    margin-left: 22px;
-    margin-right: 2px;
+.trierPar {
+    background-color: lawngreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 25px;
+  margin-right: 2px;
 }
 #filtre {
-/* on centre le menu dans la page */
-
-    padding: 0;
-    margin-top: 10px;
-    list-style: none;
-    background-color: $colorPrimaryStatic;
-    @extend .topBorderRadius;
-    &:hover{
-        background-color: $colorSecondFocus;
-    }
-    }
+  /* on centre le menu dans la page */
+  padding: 0;
+  margin-top: 10px;
+  list-style: none;
+  background-color: $colorPrimaryStatic;
+  @extend .topBorderRadius;
+  &:hover {
+    background-color: $colorSecondFocus;
+  }
+}
 #filtre ul {
-    padding: 0px;
-    margin: 0;
-    list-style: none;
-    }
-
-
+  padding: 0px;
+  margin: 0;
+  list-style: none;
+}
 #filtre li {
-/* on place les liens du menu horizontalement */
-    display: inline-block;
-    border-radius: 10px;
-
+  /* on place les liens du menu horizontalement */
+  display: inline-block;
+  border-radius: 10px;
 }
 #filtre ul li {
-/* on enlève ce comportement pour les liens du sous menu */
-
-    display: inherit;
-    cursor: pointer;
-       &:hover{
-        background-color: $colorSecondFocus;
-        border-radius: 0;
-    }
-    }
-
-#filtre a {
-    text-decoration: none;
-    display: block;
-	color: white;
-    cursor: pointer;
-    width: 128px;
-        }
-
-#filtre ul {
-    position: absolute;
-/* on cache les sous menus complètement sur la gauche */
-    left: -999em;
-    z-index: 1000;
-     }
-.separator { /* trait de séparation sous chaque item du menu déroulant */
- background-color: white; 
- margin-left: 10px;
-     width: 110px;
-    height: 1px;
+  /* on enlève ce comportement pour les liens du sous menu */
+  display: inherit;
+  cursor: pointer;
+  &:hover {
+    background-color: $colorSecondFocus;
+    border-radius: 0;
+  }
 }
-.choix{
-    background-color: $colorPrimaryStatic;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-   @extend .bottomBorderRadius;
-   }
+#filtre a {
+  text-decoration: none;
+  display: block;
+  color: white;
+  cursor: pointer;
+  width: 128px;
+}
+#filtre ul {
+  position: absolute;
+  /* on cache les sous menus complètement sur la gauche */
+  left: -999em;
+  z-index: 1000;
+}
+.separator {
+  /* trait de séparation sous chaque item du menu déroulant */
+  background-color: white;
+  margin-left: 10px;
+  width: 110px;
+  height: 1px;
+}
+.choix {
+  background-color: $colorPrimaryStatic;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  @extend .bottomBorderRadius;
+}
 
 #filtre li:hover ul {
-/* Au survol des li du menu on replace les sous menus */
-    left: auto;
-   
+  /* Au survol des li du menu on replace les sous menus */
+  left: auto;
 }
-
 /*------------------------------------contenair large mise en page---------------------*/
-/*---------------------page medias--------------------*/    
-#likePriceFooter{
-     display: flex;
-    justify-content: flex-end;
-   
+/*---------------------page medias--------------------*/
+#likePriceFooter {
+  display: flex;
+  justify-content: flex-end;
 }
-.likePriceFooter{
-    background-color: $colorSecondFocus;
-    bottom: 0;
-    position: fixed;
-    z-index: 1;
-    width: 270px;
-    height: 55px;
-text-align: center;
-border-radius: 10px 10px 0 0;
-display: flex;
-justify-content: space-around;
-align-items: center;
+.likePriceFooter {
+  background-color: $colorSecondFocus;
+  bottom: 0;
+  position: fixed;
+  z-index: 1;
+  width: 270px;
+  height: 55px;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
-
-.contenairPhotographeLarge{  
-margin-left: 100px;
-margin-right: 100px;
-margin-top: 40px;
-display: grid;
-grid-template-columns: 1fr 1fr 1fr;
-grid-template-rows: 1fr;
-background-color: #fafafa;
-border-radius: 5px;
-height: 2;
-
-}
-.contenairPhotographeLarge a{
-     text-decoration: none;
-     }
-/*------order de la card ----*/    
-.photoIdDuPhotographeLarge{
-    grid-column: 3;
-    grid-row: 1;
-    text-align: right;
+.contenairPhotographeLarge {
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  background-color: #fafafa;
+  border-radius: 5px;
  }
-
- 
-//btn
-
-.infoDuPhotographeLarge{
-    grid-column: 1;
-    grid-row: 1;
-    margin-left: 50px;
-    
+.contenairPhotographeLarge a {
+  text-decoration: none;
 }
-.nomDuPhotographeLarge{
-    font-size: 45px;
-    color: $colorSecondFocus;
-     padding-top: 10%;
-    padding-bottom: 15px;
-    width: 150%;
-   //padding-right: 250px;
-    }
-
-.localisationLarge{
-    color:$colorPrimaryStatic;
-    font-size: 25px;
-    display: flex;
-    padding-bottom: 25px;
-    }
-.taglineDuPhotographeLarge{
+/*------order de la card ----*/
+.photoIdDuPhotographeLarge {
+  grid-column: 3;
+  grid-row: 1;
+  text-align: right;
+}
+.infoDuPhotographeLarge {
+  grid-column: 1;
+  grid-row: 1;
+  margin-left: 50px;
+}
+.nomDuPhotographeLarge {
+  font-size: 45px;
+  color: $colorSecondFocus;
+  padding-top: 10%;
+  padding-bottom: 15px;
+}
+.localisationLarge {
+  color: $colorPrimaryStatic;
+  font-size: 25px;
+  display: flex;
+  padding-bottom: 25px;
+}
+.taglineDuPhotographeLarge {
   font-size: 15px;
-  padding-bottom: 20px;  
-}       
-.tagsDuPhotographeLarge{
-    display: flex;
-    font-size: 11px;
-    padding-bottom: 50px;
-     }
-     .tagsDuPhotographeLarge div{
-        color:$colorPrimaryStatic;
-        font-weight: bold;
-        padding: 3px;
-        margin: 2px; 
-     }
-     .tags{
-        border:  lightgrey 1px solid;
-        font-size: 12px;
-        border-radius: 15px;
-       
-    }
-
-/*---------- les medias------*/
-
-
+  padding-bottom: 20px;
+}
+.tagsDuPhotographeLarge {
+  display: flex;
+  font-size: 11px;
+  padding-bottom: 50px;
+}
+.tagsDuPhotographeLarge div {
+  color: $colorPrimaryStatic;
+  font-weight: bold;
+  padding: 3px;
+  margin: 2px;
+}
+.tags {
+  border: lightgrey 1px solid;
+  font-size: 12px;
+  border-radius: 15px;
+}
+/*-------------------------------------------- les medias------------------------------------*/
 //cadre sous le media
-.infoContenair{
-      height: 350px;
-   width: 370px;
-   display: flex;
+.infoContenair {
+  height: 350px;
+  width: 370px;
+  display: flex;
   justify-content: space-between;
   padding-bottom: 10px;
 }
-.likes{
-color: $colorPrimaryStatic;
- display: flex;
-justify-content: flex-start;
-padding-top: 330px;
-
-font-size:16px ;
-
-      }
-.heart{
-       color: $colorPrimaryStatic;
-       padding-left: 10px;
-       margin-right: 10px;
-       font-size:16px ;
-       }
-.titleMedias{
-    color:$colorPrimaryStatic ;
-    font-weight: 400;
-    font-size:16px ;
-    display: flex;
-    justify-content: flex-start;
-    right: 0;
-    padding-top: 330px;
-    margin-left: 10px;
-
+.likes {
+  color: $colorPrimaryStatic;
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 330px;
+  font-size: 16px;
+}
+.heart {
+  color: $colorPrimaryStatic;
+  padding-left: 10px;
+  margin-right: 10px;
+  font-size: 16px;
+}
+.titleMedias {
+  color: $colorPrimaryStatic;
+  font-weight: 400;
+  font-size: 16px;
+  display: flex;
+  justify-content: flex-start;
+  right: 0;
+  padding-top: 330px;
+  margin-left: 10px;
 }
 /*-----------------------------------------------------------------------------------------------------------------*/
 /*------------------------gestion de la gallery--------------*/
 #lightgallery {
-   // width: 1240px;
-    display: flex;
-   justify-content: center;
-   flex-wrap: wrap;
-   // background-color: aqua;
-  // gap: 5%;
-    margin-left: 85px;
-   margin-right: 70px;
-     }
-     #lightgallery a{
-position: relative;
-text-decoration: none;
-color: black;
-
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-left: 85px;
+  margin-right: 70px;
 }
-
-#lightgallery a img, #lightgallery a video {
-    position: absolute;
-    top: -9999px;
-    bottom: -9999px;
-    left: -9999px;
-    right: -9999px;
-    margin: auto;
-    width: 350px;
-    height: 300px;
-    border-radius: 5px;
-    background-color: $colorSecondGrey;
+#lightgallery a {
+  position: relative;
+  text-decoration: none;
+  color: black;
+}
+#lightgallery a img,
+#lightgallery a video {
+  position: absolute;
+  top: -9999px;
+  bottom: -9999px;
+  left: -9999px;
+  right: -9999px;
+  margin: auto;
+  width: 350px;
+  height: 300px;
+  border-radius: 5px;
+  background-color: $colorSecondGrey;
 }
 //designe gallery
-#lg-content-1{
-background-color: white;
+#lg-content-1 {
+  background-color: white;
 }
-.titleInGallery{
-       color: black;
+.titleInGallery {
+  color: black;
 }
-#lg-actual-size-1, #lg-close-1, #lg-next-1, #lg-prev-1, #lg-download-1{ 
-   color: $colorPrimaryStatic;
-   font-size: 35px;
+#lg-actual-size-1,
+#lg-close-1,
+#lg-next-1,
+#lg-prev-1,
+#lg-download-1 {
+  color: $colorPrimaryStatic;
+  font-size: 35px;
 }
-#lg-next-1, #lg-prev-1{
-    background-color: white;
+#lg-next-1,
+#lg-prev-1 {
+  background-color: white;
 }
-
-
-
-
 /*---------------------modal-----------------------------*/
-.formul1{
-    display: flex;
-    justify-content: center;
-   }
-   .titleForm{
-       padding-top: 5px;
-   }
-#formulaire{
-margin-top: -1920px;
-z-index: 1;
-   background-color: $colorSecondFocus;
-    width: 365px ;
-    height: 650px;
-    font-size: 17px;
-    border-radius: 5px;
-    visibility: hidden;
+.formul1 {
+  display: flex;
+  justify-content: center;
 }
-.headerForm{
- margin-left: 15px;
+.titleForm {
+  padding-top: 5px;
+}
+#formulaire {
+  margin-top: -1920px;
+  z-index: 1;
+  background-color: $colorSecondFocus;
+  width: 365px;
+  height: 650px;
+  font-size: 17px;
+  border-radius: 5px;
+  visibility: hidden;
+}
+.headerForm {
+  margin-left: 15px;
   font-weight: 400;
-    
-    height: 70px;
-   }
-.close{
-    display: flex;
-   justify-content: flex-end;
-   margin-right: 10px;
-   padding-top: 15px;
-    font-size: 40px;
-    font-weight: 300;
-    color: white;
-    cursor: pointer;
-     }
-   
-.titleForm{
-font-size: 40px;
-margin-top: -45px;
+  height: 70px;
 }
-#nomPhotographeForm{
-    font-size: 40px;
-    margin-bottom: 20px;
+.close {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 10px;
+  padding-top: 15px;
+  font-size: 40px;
+  font-weight: 300;
+  color: white;
+  cursor: pointer;
 }
-.data input{
-   height: 30px;
-   width: 310px;
-   border-radius: 5px;
+
+.titleForm {
+  font-size: 40px;
+  margin-top: -45px;
 }
-.message input{
-    height: 184px;
-    width: 310px;
-    border-radius: 5px;
+#nomPhotographeForm {
+  font-size: 40px;
+  margin-bottom: 20px;
 }
-.nom, .email, .message{
-    font-size: 15;
-    font-weight: 400;
-    margin-top: 15px;
+.data input {
+  height: 30px;
+  width: 310px;
+  border-radius: 5px;
 }
-.prenom{
-    font-size: 15;
-    font-weight: 400; 
+.message input {
+  height: 184px;
+  width: 310px;
+  border-radius: 5px;
 }
-.textError{
-    font-size: 12px;
-    margin-left: 7px;
-    color: white;
-    visibility: hidden;
+.nom,
+.email,
+.message {
+  font-size: 15;
+  font-weight: 400;
+  margin-top: 15px;
 }
-.btn-valide{
-    margin-left: 5px;  
-    padding:5px;
-    border-radius: 15px;
-    border: $colorPrimaryStatic 1px solid;
-    padding: 15px;
-    text-align: center;
-    margin-top: 10px;
-    margin-left: 50px;
-    width: 200px;
-    background-color: $colorPrimaryStatic;
-    color: white;
-  &:hover{
+.prenom {
+  font-size: 15;
+  font-weight: 400;
+}
+.textError {
+  font-size: 12px;
+  margin-left: 7px;
+  color: white;
+  visibility: hidden;
+}
+.btn-valide {
+  margin-left: 5px;
+  padding: 5px;
+  border-radius: 15px;
+  border: $colorPrimaryStatic 1px solid;
+  padding: 15px;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 50px;
+  width: 200px;
+  background-color: $colorPrimaryStatic;
+  color: white;
+  &:hover {
     background-color: $colorSecondFocus;
     color: black;
-   
-    }
-};
+  }
+}
 /*----------------------------------------------------------modal de fin-------------------------*/
-.formulFin{
-    display: flex;
-    justify-content: center;
+.formulFin {
+  display: flex;
+  justify-content: center;
 }
-#modalFin{
-    margin-top: -1920px;
-    visibility: hidden;
-    position: fixed;
-    background-color: $colorSecondFocus;
-    width: 365px ;
-    height: 450px;
-    font-size: 20px;
-    border-radius: 5px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+#modalFin {
+  margin-top: -1920px;
+  visibility: hidden;
+  position: fixed;
+  background-color: $colorSecondFocus;
+  width: 365px;
+  height: 450px;
+  font-size: 20px;
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
-.btn-closeFin{
-    margin-left: 5px;  
-    padding:3px;
-    border-radius: 15px;
-    border: $colorPrimaryStatic 1px solid;
-    padding: 20px;
-    text-align: center;
-    margin-top: 30px;
-    margin-left: 10px;
-    width: 200px;
-    background-color: $colorPrimaryStatic;
-    color: white;
-  &:hover{
+.btn-closeFin {
+  margin-left: 5px;
+  padding: 3px;
+  border-radius: 15px;
+  border: $colorPrimaryStatic 1px solid;
+  padding: 20px;
+  text-align: center;
+  margin-top: 30px;
+  margin-left: 10px;
+  width: 200px;
+  background-color: $colorPrimaryStatic;
+  color: white;
+  &:hover {
     background-color: $colorSecondFocus;
     color: black;
-   
-    }
+  }
 }
-.crossCloseModalFin{
-    margin-top: -160px;
-    margin-right: -300px;
-    font-size: 40px;
-        font-weight: 300;
-        color: white;
-        cursor: pointer;
-         }
-.messageFin{
-    padding-top: 100px;
+.crossCloseModalFin {
+  margin-top: -160px;
+  margin-right: -300px;
+  font-size: 40px;
+  font-weight: 300;
+  color: white;
+  cursor: pointer;
+}
+.messageFin {
+  padding-top: 100px;
 }

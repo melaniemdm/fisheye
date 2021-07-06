@@ -1,9 +1,63 @@
 @charset "UTF-8";
 /*création des breakpoints*/
+/*vue mobile*/
 /*vue tablette*/
 /*vue desktop*/
 /*création des variables media queries utilisant les breakpoints*/
-@media only screen and (max-width: 1024px) {
+/*----------------------------------------------------------vue tablette-------------------------*/
+@media only screen and (max-width: 768px) {
+  .contenairPhotographeLarge {
+    background-color: #fafafa;
+    display: block;
+    height: 260px;
+    margin-bottom: 50px;
+  }
+
+  .nomDuPhotographeLarge {
+    margin-top: -285px;
+    margin-bottom: 0px;
+  }
+
+  .photoIdDuPhotographeLarge {
+    width: 100%;
+  }
+
+  .photoIdDuPhotographeLarge img {
+    width: 200px;
+    margin-top: 40px;
+  }
+
+  .toto {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .btn-contact {
+    position: fixed;
+    z-index: 1;
+    height: 30px;
+    border-radius: 10px;
+    padding: 8px;
+    font-size: 13px;
+    font-weight: 400;
+    top: 495px;
+  }
+
+  .trier {
+    visibility: hidden;
+  }
+
+  #lightgallery {
+    margin-top: -160px;
+  }
+}
+/*-----------------------------------------------------------------*/
+/*--------------------------------------vue mobile-----------------*/
+/*-----------------------------------------------------------------*/
+@media only screen and (max-width: 421px) {
   .logo {
     margin-left: 0px;
     display: flex;
@@ -11,8 +65,8 @@
     width: 100%;
   }
 }
-/*-----------------------------index------------------------------*/
-@media only screen and (max-width: 1024px) {
+/*---------------------------------------index---------------------*/
+@media only screen and (max-width: 421px) {
   .banner {
     display: flex;
     flex-direction: column;
@@ -56,30 +110,12 @@
     visibility: hidden;
   }
 
-  .toto {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-
-  .btn-contact {
-    position: fixed;
-    z-index: 1;
-    height: 30px;
-    border-radius: 10px;
-    padding: 8px;
-    font-size: 13px;
-    font-weight: 400;
-    top: 495px;
-  }
-
   .contenairPhotographeLarge {
     display: inline-block;
     margin-left: 1px;
     margin-right: 1px;
     width: 100%;
+    height: 180px;
   }
 
   .infoDuPhotographeLarge {
@@ -91,15 +127,13 @@
   }
 
   .photoIdDuPhotographeLarge img {
-    width: 140px;
-    margin-top: -40px;
+    width: 150px;
+    margin-top: 3%;
   }
 
   .nomDuPhotographeLarge {
-    width: 100%;
     font-size: 23px;
-    margin-top: -150px;
-    margin-bottom: 0px;
+    margin-top: -180px;
     margin-left: -45px;
   }
 
@@ -129,10 +163,12 @@
   }
 }
 /*------------------lightgallery--------------------------*/
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 421px) {
   #lightgallery {
     align-items: center;
     margin-top: -150px;
+    margin-left: 0px;
+    margin-right: 0px;
   }
 
   .infoContenair div {
@@ -144,7 +180,7 @@
   }
 }
 /*----------------------------------modal-----------------------*/
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 421px) {
   #formulaire, #modalFin {
     margin-top: -4100px;
   }
@@ -160,5 +196,4 @@
   .nom, .email, .message {
     margin-top: 8px;
   }
-}
-/*----------------------------------------------------------modal de fin-------------------------*//*# sourceMappingURL=responsive.css.map */
+}/*# sourceMappingURL=responsive.css.map */
