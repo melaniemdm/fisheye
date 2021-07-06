@@ -27,18 +27,18 @@ class Photographe {
                     </div>
                     <div class="taglineDuPhotographe"> ` + this.tagline + `</div>
                     <div class="priceDuPhotographe">` + this.price + `</div>
-                </div>`;
+                </div></a>`;
             
             strComposant =strComposant +
                 '<div class=""><nav class ="tagsDuPhotographe" tabindex="' + this.index + '3">';
             //  boucle qui permet de mettre le #
             this.tag.forEach((element) => {
                 strComposant = strComposant + 
-                '    <div class="tags"><span aria-label="tag '  + element +'">'  + "#" + element + " </span></div>";
+                `    <div class="tags"><span role="button" onclick="displayAllPhotographersTagues('`+element +`')" aria-label="tag  `  + element +'">'  + "#" + element + " </span></div>";
             });
             strComposant = strComposant +
                 `</nav> </div>  
-            </a>` + 
+            ` + 
         `</div>`;
 
             return strComposant;

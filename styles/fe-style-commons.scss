@@ -147,6 +147,7 @@ body {
 .tagsDuPhotographe {
   display: flex;
   justify-content: center;
+ 
 }
 .tagsDuPhotographe div {
   padding-left: 5px;
@@ -160,6 +161,7 @@ body {
   border: #525252 1px solid;
   font-size: 12px;
   border-radius: 15px;
+  cursor: pointer;
 }
 /*-----*/
 .bouton {

@@ -124,6 +124,7 @@ body {
   border: #525252 1px solid;
   font-size: 12px;
   border-radius: 15px;
+  cursor: pointer;
 }
 
 /*-----*/
