@@ -17,9 +17,11 @@ class Photographe {
         `<div class="contenairPhotographe">
             <a href="medias-des-photographe.html?idPhotographe=` + this.id + `">
         <div class="photoIdDuPhotographe">
-            <img src=" ` + this.photo +`" alt="`+this.nom+`"></div>
+            <img src=" ` + this.photo +`" alt="`+this.nom+`">
+         <h2 class="nomDuPhotographe">` + this.nom + ` </h2>    
+            </div>
         <div class="infoDuPhotographe">
-        <div class="nomDuPhotographe">` + this.nom + ` </div>
+       
         <div class="localisation"> 
         <div class="cityDuPhotographe">` +  this.city + ", "+ ` </div> <div class="countryDuPhotographes">` + this.country + ` </div>
         </div>

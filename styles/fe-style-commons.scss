@@ -101,12 +101,18 @@ body {
 }
 .contenairPhotographe {
   width: 350px;
+  & a{
+    text-decoration: none;
+  }
 }
 .photoIdDuPhotographe {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+
 }
+
 .infoDuPhotographe {
   text-align: center;
 }
@@ -118,6 +124,7 @@ body {
   color: $colorSecondFocus;
   font-size: 25px;
   margin-bottom: 10px;
+  
 }
 .localisation {
   display: flex;

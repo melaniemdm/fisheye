@@ -60,9 +60,13 @@ body {
 .contenairPhotographe {
   width: 350px;
 }
+.contenairPhotographe a {
+  text-decoration: none;
+}
 
 .photoIdDuPhotographe {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
