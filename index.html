@@ -60,7 +60,13 @@
 <!--import fichier js Gestion des Photographes-->
 <script type= "module">  
 import { displayAllPhotographers } from "./js/fe-js-gestion-des-photographes.js" ;
+import { displayAllPhotographersTagues } from "./js/fe-js-gestion-des-photographes.js" ;
+if(sessionStorage.getItem("tag")){
+    displayAllPhotographersTagues(sessionStorage.getItem("tag"))
+    sessionStorage.clear()
+}else{
 displayAllPhotographers ()
+}
 </script> 
 
 <script type="module">

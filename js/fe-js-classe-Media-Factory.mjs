@@ -25,9 +25,9 @@ class MediaFactory {
                 if (type === "photo"){
                     composantElementMedia =
           ` 
-    <a href="` +url+`galeryGrdeTaille/` + media.medias + `" onclick="return false;" class="light-link" data-sub-html=" <h4 class='titleInGallery'>`+ media.title +  `</h4>"> <img src="`+ url + media.medias + `" alt="`+ media.title+  `"/><div class="infoContenair"><div class="titleMedias"> `+ media.title+`</div><div class="likes"><div id="likes_`+ media.id +`"> ` +   media.like + `</div>
-          <div class="heart" "> 
-          <span  aria-label="likes"class="material-icons-outlined" title="likes_`+ media.id + `">favorite
+    <a href="` +url+`galeryGrdeTaille/` + media.medias + `" onclick="return false;" class="light-link" data-sub-html=" <h4 class='titleInGallery'>`+ media.title +  `</h4>"> <img src="`+ url + media.medias + `" alt="`+ media.title+  `"/><div class="infoContenair"><div class="titleMedias"> `+ media.title+`</div><div class="likes"><div aria-label="nombre de likes" id="likes_`+ media.id +`"> ` +   media.like + `</div>
+          <div class="heart" role="button" aria-label="ajouter un like"> 
+          <span  aria-label="likes" class="material-icons-outlined" title="likes_`+ media.id + `">favorite
 </span>
              </div>
     </div>

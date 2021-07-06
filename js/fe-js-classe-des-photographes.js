@@ -49,24 +49,27 @@ class Photographe {
         `<a href="medias-des-photographe.html?idPhotographe=` + this.id + `" ></a>
     <div class="contenairPhotographeLarge">
 
-    <div class="photoIdDuPhotographeLarge">
+    <div class="photoIdDuPhotographeLarge" tabindex="8">
         <img src=" ` + this.photo + `" alt="`+this.nom+`">
     </div>
-    <div class="toto"> 
+
+    <div class="contact" tabindex="7"> 
     
-    <div class="btn-contact" id="btn-contact"> Contactez-moi </div>
+    <div role="button" aria-label="contact me" class="btn-contact" id="btn-contact"> Contactez-moi </div>
     </div>
     
-    <div class="infoDuPhotographeLarge">
-    <div class="nomDuPhotographeLarge">` + this.nom + ` </div>
-    <div class="localisationLarge">        
-    <div class="cityDuPhotographeLarge">` + this.city + ", "+ ` </div> <div class="countryDuPhotographesLarge">` + this.country +` </div> 
+    <div class="infoDuPhotographeLarge" >
+    <h1 class="nomDuPhotographeLarge" tabindex="0">` + this.nom + `  </h1>
+    <div class="localisationLarge" tabindex="1  ">        
+    <div class="cityDuPhotographeLarge" >` + this.city + ", "+ ` </div> <div class="countryDuPhotographesLarge">` + this.country +` </div> 
     </div>
     <div class="taglineDuPhotographeLarge"> ` + this.tagline +  `</div>`;
             strComposant =strComposant +'<div class ="tagsDuPhotographeLarge">';
             //  boucle qui permet de mettre le #
+            let tagIndex = 3;
             this.tag.forEach((element) => {
-                strComposant =  strComposant + ' <div class="tags">'  + "#" + element + " </div>";
+                strComposant =  strComposant + `<div onclick="launchDisplayPhotographersbytags('`+ element +`')" role="button" class="tags" tabindex="`+ tagIndex +'">'  + "#" + element + " </div>";
+                tagIndex++;
             });
             strComposant = strComposant +`</div>  
     </div> 

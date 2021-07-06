@@ -25,9 +25,9 @@
 </head>
 
 <body>
-   <div class="logo">
-        <a href="index.html" class="retour">
-            <img alt="FishEye Home Page" src="photos/logo2.png" />
+   <div class="logo" tabindex="-1">
+        <a href="index.html" class="retour" >
+            <img  alt="FishEye Home Page" src="photos/logo2.png" />
         </a>
     </div>
 
@@ -41,10 +41,10 @@
 
     <!-- tri  -->
     <div class="trier">
-        <div class="trierPar">Trier par</div>
+        <div class="trierPar" id="trierPar" >Trier par</div>
         <div>
             <ul id="filtre">
-                <li><a title="likes"> Popularité 
+                <li><a title="likes" role="listbox" aria-labelledby="trierPar" aria-expanded="false"> Popularité 
                     <div aria-hidden="true" class="icon material-icons-outlined">
                         expand_more
                     </div>
@@ -152,9 +152,12 @@
 
     <!-- chargement photographes, medias et galerie  -->
     <script type="module">
+      
         import { displayOnePhotographer } from "./js/fe-js-gestion-des-photographes.js";
         import { addPhotographersMedias } from "./js/fe-js-gestion-des-medias.js";
         import { loadModalEvent } from "./js/fe-js-modal.js"
+        
+       
         //url
         var urlcourante = document.location.href;
 
@@ -171,7 +174,14 @@
         let addMedia = await addPhotographersMedias(idPhotographe, "title")
 
     </script>
+<script>
+function launchDisplayPhotographersbytags(tag){
+    sessionStorage.setItem("tag",tag);
+    document.location.href="index.html"
+}
 
+
+</script>
 </body>
 
 </html>
