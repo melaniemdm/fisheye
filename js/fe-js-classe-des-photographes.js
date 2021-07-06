@@ -1,7 +1,7 @@
 // creation des types de classes specifiques aux artistes (dans le cas ou ils y auraient d'autres artistes autres que des photographes)
 class Photographe {
     /* class qui peut s'exporter*/
-    constructor(type, photo, id, nom, city, country, tagline, price, tags) {
+    constructor(type, photo, id, nom, city, country, tagline, price, tags, index) {
         this._type = type;
         this.photo = photo;
         this.id = id;
@@ -11,29 +11,35 @@ class Photographe {
         this.tagline = tagline;
         this.price = price;
         this.tag = tags;
+        this.index = index+10 ;
 
         this.createComposant = function () {
             var strComposant =
-        `<div class="contenairPhotographe">
-            <a href="medias-des-photographe.html?idPhotographe=` + this.id + `">
-        <div class="photoIdDuPhotographe">
-            <img src=" ` + this.photo +`" alt="`+this.nom+`">
-         <h2 class="nomDuPhotographe">` + this.nom + ` </h2>    
-            </div>
-        <div class="infoDuPhotographe">
-       
-        <div class="localisation"> 
-        <div class="cityDuPhotographe">` +  this.city + ", "+ ` </div> <div class="countryDuPhotographes">` + this.country + ` </div>
-        </div>
-        <div class="taglineDuPhotographe"> ` + this.tagline + `</div>
-        <div class="priceDuPhotographe">` + this.price + `</div>`;
+        `<div class="contenairPhotographe" >
+            <a href="medias-des-photographe.html?idPhotographe=` + this.id + `" tabindex="-1">
+                <div class="photoIdDuPhotographe" tabindex="` + this.index + `1">
+                    <img src=" ` + this.photo +`" alt="`+this.nom+`">
+                    <h2 class="nomDuPhotographe">` + this.nom + ` </h2>    
+                </div>
+                <div class="infoDuPhotographe" tabindex="` + this.index + `2">
+                    <div class="localisation"> 
+                        <div class="cityDuPhotographe">` +  this.city + ", "+ ` </div> <div class="countryDuPhotographes">` + this.country + ` </div>
+                    </div>
+                    <div class="taglineDuPhotographe"> ` + this.tagline + `</div>
+                    <div class="priceDuPhotographe">` + this.price + `</div>
+                </div>`;
             
-            strComposant =strComposant +'<div class ="tagsDuPhotographe">';
+            strComposant =strComposant +
+                '<div class=""><nav class ="tagsDuPhotographe" tabindex="' + this.index + '3">';
             //  boucle qui permet de mettre le #
             this.tag.forEach((element) => {
-                strComposant = strComposant + ' <div class="tags">'  + "#" + element + " </div>";
+                strComposant = strComposant + 
+                '    <div class="tags"><span aria-label="tag '  + element +'">'  + "#" + element + " </span></div>";
             });
-            strComposant = strComposant +`</div> </a>` + `</div> </div>`;
+            strComposant = strComposant +
+                `</nav> </div>  
+            </a>` + 
+        `</div>`;
 
             return strComposant;
         };

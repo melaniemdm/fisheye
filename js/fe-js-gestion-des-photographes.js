@@ -14,7 +14,7 @@ export async function displayAllPhotographers (){
     var arrayPhotographersFromJson = await getPhotographersFromJson();
     console.log("etape1:", arrayPhotographersFromJson);
     for (let i = 0; i < arrayPhotographersFromJson .length; i++) { 
-        var objetPhotographe = await getPhotographerObjectFromFactory(arrayPhotographersFromJson[i]);
+        var objetPhotographe = await getPhotographerObjectFromClass(arrayPhotographersFromJson[i],i);
         console.log("etape2:", objetPhotographe);
         var nodePhotographersList = document.querySelector("#listeDesPhotographes");
         nodePhotographersList.innerHTML = nodePhotographersList.innerHTML + objetPhotographe.createComposant();
@@ -32,7 +32,7 @@ export async function displayOnePhotographer (id){
             var nodePhotographersList = document.querySelector("#lePhotographe");
             
             //demande a recuperer l'object grace a la factory avec les infos recuperé dans le json
-            var objetPhotographe = await getPhotographerObjectFromFactory(arrayPhotographersFromJson[i]);
+            var objetPhotographe = await getPhotographerObjectFromClass(arrayPhotographersFromJson[i],i);
            
             nodePhotographersList.innerHTML = nodePhotographersList.innerHTML + objetPhotographe.createComposantLarge();
         } 
@@ -53,15 +53,15 @@ export async function displayAllPhotographersTagues (tag){
    
         //verifie si le tableau contient une sous chaine de caractere, renvoie true s'il existe
         if (arrayPhotographersFromJson[i].tags.includes(tag) === true){
-            var objetPhotographe = await getPhotographerObjectFromFactory(arrayPhotographersFromJson[i]);
+            var objetPhotographe = await getPhotographerObjectFromClass(arrayPhotographersFromJson[i],i);
             nodePhotographersList.innerHTML = nodePhotographersList.innerHTML + objetPhotographe.createComposant();
         }
     }}
 
 //fonction recupere les elements
-async function getPhotographerObjectFromFactory(photographe){
-   
-    var lesPhotographes = new Photographe("photographe", "photos/Sample_Photos/Photographers_ID_Photos/" + photographe.portrait, photographe.id, photographe.name, photographe.city, photographe.country, photographe.tagline, photographe.price+ "€/jour", photographe.tags);
+async function getPhotographerObjectFromClass(photographe, index){
+ 
+    var lesPhotographes = new Photographe("photographe", "photos/Sample_Photos/Photographers_ID_Photos/" + photographe.portrait, photographe.id, photographe.name, photographe.city, photographe.country, photographe.tagline, photographe.price+ "€/jour", photographe.tags, index);
     
     return lesPhotographes;}
 
