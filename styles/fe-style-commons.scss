@@ -161,6 +161,9 @@ body {
   align-items: center;
 }
 .boutonContenu {
+  position: fixed;
+  visibility:hidden;
+  margin-top: 60px;
   text-align: center;
   font-weight: bolder;
   font-size: 15px;
@@ -169,6 +172,11 @@ body {
   border: solid $colorSecondFocus 1px;
   background-color: $colorSecondFocus;
   margin-bottom: 20px;
+  & a {
+    text-decoration: none;
+    color: black;
+    
+  }
 }
 
 /*----------------------------------------------boutons----------------------*/
