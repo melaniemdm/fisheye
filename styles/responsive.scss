@@ -1,7 +1,7 @@
 /*création des breakpoints*/
-$small:421px !default;/*vue mobile*/
+$small:767px !default;/*vue mobile*/
 $medium: 1024px !default; /*vue tablette*/
-$large: 1260px !default; /*vue desktop*/
+$large: 1365px !default; /*vue desktop*/
 
 /*création des variables media queries utilisant les breakpoints*/
 $small-up: "only screen and (min-width: #{$small})";
@@ -115,7 +115,26 @@ $hidden: hidden;
  #lightgallery {
    margin-top: -160px
  }
-}
+
+
+/*---------------------------------------modal tablette------------------*/
+
+#formulaire, #modalFin{
+  position: fixed;
+  align-items: center;
+  z-index: 20;
+  top: 0;
+  margin: 0;
+  height: 590px;
+  width: 375px;
+      }
+      .message input {
+        height: 110px;
+        width: 310px;
+        margin-bottom: 5px;
+      }
+     
+  }
 /*-----------------------------------------------------------------*/
 /*--------------------------------------vue mobile-----------------*/
 /*-----------------------------------------------------------------*/
@@ -207,10 +226,7 @@ $hidden: hidden;
 }
 /*----------------------------------modal-----------------------*/
 @media #{$small-down} {
-#formulaire, #modalFin{
-margin-top: -4100px;
 
-    }
 .titleForm, #nomPhotographeForm{
     font-size: 35px;
 }

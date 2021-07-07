@@ -16,6 +16,9 @@ function chargeForm(event){
     //affiche la modal en stoppant le refresh
     event.preventDefault();
     formCharge.style.visibility="visible";
+    //fais disparaitre le btn contactez moi
+    const btnContact= document.querySelector("#btn-contact");
+    btnContact.style.visibility="hidden";
 }
 //btn close
 const close= document.querySelectorAll(".close");
@@ -27,6 +30,8 @@ function closeModal(){
     supprimeError("#errorSurname");
     supprimeError("#errorName");
     supprimeError("#errorEmail");
+    const btnContact= document.querySelector("#btn-contact");
+    btnContact.style.visibility="visible";
 }
 /*---------------------------------envoie du formulaire-------------------------------*/
 const envoiForm=document.querySelector(".btn-valide");
@@ -74,6 +79,8 @@ inputMail.addEventListener("change", testMail);
 
 function closeModalFin(){
     modalEndMessage.style.visibility="hidden";
+    const btnContact= document.querySelector("#btn-contact");
+    btnContact.style.visibility="visible";
 }
 
 const closeFormFin2=document.querySelectorAll(".closeModalFin");
@@ -183,7 +190,7 @@ function submitValid() {
 // }
 /*-------------------------------chargement des infos et envoi par email ---------*/
 function launchModalFin() {
- 
+   
     
       
     //recupere les informations dans le sessionstorage & envoie le mail des infos saisies
@@ -221,6 +228,8 @@ function launchModalFin() {
     document.querySelector("#email").value = "";
     document.querySelector("#message").value = "";
     closeModal();
-   
+    
+    const btnContact= document.querySelector("#btn-contact");
+    btnContact.style.visibility="hidden";
 }
   

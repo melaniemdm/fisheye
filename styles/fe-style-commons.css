@@ -13,13 +13,15 @@ body {
 .banner {
   font-size: 12px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 8fr 12fr 8fr;
   align-items: center;
 }
 
 .navigation_tag {
   font-size: 13px;
   width: 550px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .navigation a {
@@ -471,8 +473,10 @@ body {
 
 /*---------------------modal-----------------------------*/
 .formul1 {
+  position: fixed;
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 .titleForm {
@@ -480,7 +484,7 @@ body {
 }
 
 #formulaire {
-  margin-top: -1920px;
+  margin-top: -2030px;
   z-index: 1;
   background-color: #d3573c;
   width: 365px;
@@ -569,8 +573,10 @@ body {
 
 /*----------------------------------------------------------modal de fin-------------------------*/
 .formulFin {
+  position: fixed;
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 #modalFin {

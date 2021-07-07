@@ -102,11 +102,28 @@
   #lightgallery {
     margin-top: -160px;
   }
+
+  /*---------------------------------------modal tablette------------------*/
+  #formulaire, #modalFin {
+    position: fixed;
+    align-items: center;
+    z-index: 20;
+    top: 0;
+    margin: 0;
+    height: 590px;
+    width: 375px;
+  }
+
+  .message input {
+    height: 110px;
+    width: 310px;
+    margin-bottom: 5px;
+  }
 }
 /*-----------------------------------------------------------------*/
 /*--------------------------------------vue mobile-----------------*/
 /*-----------------------------------------------------------------*/
-@media only screen and (max-width: 421px) {
+@media only screen and (max-width: 767px) {
   .logo {
     margin-top: 15px;
   }
@@ -117,7 +134,7 @@
   }
 }
 /*---------------------------------------index---------------------*/
-@media only screen and (max-width: 421px) {
+@media only screen and (max-width: 767px) {
   .banner {
     display: flex;
     flex-direction: column;
@@ -177,7 +194,7 @@
   }
 }
 /*------------------lightgallery--------------------------*/
-@media only screen and (max-width: 421px) {
+@media only screen and (max-width: 767px) {
   #lightgallery {
     align-items: center;
     margin-top: -150px;
@@ -194,11 +211,7 @@
   }
 }
 /*----------------------------------modal-----------------------*/
-@media only screen and (max-width: 421px) {
-  #formulaire, #modalFin {
-    margin-top: -4100px;
-  }
-
+@media only screen and (max-width: 767px) {
   .titleForm, #nomPhotographeForm {
     font-size: 35px;
   }
