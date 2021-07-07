@@ -11,7 +11,6 @@
     display: flex;
     justify-content: flex-start;
     width: 100%;
-    margin-top: -10px;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -40,7 +39,7 @@
     font-size: 18px;
     display: flex;
     justify-content: flex-end;
-    width: 100%;
+    padding-top: 10px;
   }
 
   .toto {
@@ -52,6 +51,9 @@
   }
 
   .navigation_tag {
+    gap: 5px;
+    margin-top: 25px;
+    margin-left: -12px;
     width: 370px;
     display: flex;
     align-items: center;
@@ -104,12 +106,12 @@
 /*-----------------------------------------------------------------*/
 @media only screen and (max-width: 421px) {
   .logo {
-    margin-top: 0px;
+    margin-top: 15px;
   }
 
   .title h1 {
     font-size: 14px;
-    margin-top: -85px;
+    margin-top: -105px;
   }
 }
 /*---------------------------------------index---------------------*/

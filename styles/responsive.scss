@@ -28,7 +28,7 @@ $hidden: hidden;
     display: flex;
     justify-content: flex-start;
     width: 100%;
-    margin-top: -10px;
+  
   }
   
 }
@@ -58,7 +58,8 @@ $hidden: hidden;
   font-size: 18px;
   display: flex;
   justify-content: flex-end;
-  width: 100%;
+  padding-top:10px
+  //width: 100%;
 }
 .toto {
   width: 100%;
@@ -68,12 +69,16 @@ $hidden: hidden;
   text-align: center;
 }
 .navigation_tag {
+  gap: 5px;
+  margin-top: 25px;
+  margin-left:-12px;
   width: 370px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
 }
+
 .localisationLarge {
   font-size: 15px;
   margin-bottom: -10px;
@@ -116,11 +121,11 @@ $hidden: hidden;
 
 @media #{$small-down} {
   .logo {
-    margin-top: 0px;
+    margin-top: 15px;
   }
   .title h1 {
     font-size: 14px;
-    margin-top: -85px;
+    margin-top: -105px;
   }
 }
 /*---------------------------------------index---------------------*/
