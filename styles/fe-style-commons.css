@@ -35,6 +35,10 @@ body {
   padding-right: 3px;
   margin: 3px;
 }
+.navigation a:hover {
+  background-color: #901c1c;
+  color: white;
+}
 
 .title h1 {
   position: relative;
@@ -129,6 +133,10 @@ body {
   font-size: 12px;
   border-radius: 15px;
   cursor: pointer;
+}
+.tags:hover {
+  background-color: #901c1c;
+  color: white;
 }
 
 /*-----*/

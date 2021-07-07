@@ -21,25 +21,17 @@ $fontSizeBigModal: 40px;
 $fontSizeSmall: 12px;
 $fontSizeIntermediaire: 15px;
 
-@mixin colorPrimary {
+@mixin colorBtn {
   background-color: $colorPrimaryStatic;
   color: white;
 }
-@mixin colorPrimaryHover {
-  background-color: white;
-  color: $colorSecondFocus;
-}
-@mixin colorSecondaire {
-  background-color: $colorSecondFocus;
-  color: #0000;
-}
-@mixin colorsSecondaireGrey {
-  background-color: $colorSecondGreylight;
-  color: #525252;
-}
-@mixin colorSecondaireHover {
+@mixin colorStatic {
   background-color: white;
   color: $colorPrimaryStatic;
+}
+@mixin colorBtnHover {
+  background-color: $colorSecondFocus;
+  color: #0000;
 }
 
 @mixin center {
@@ -63,6 +55,7 @@ body {
   align-items: center;
   
 }
+
 .navigation_tag {
   //background-color: #525252;
   font-size: 13px;
@@ -82,6 +75,9 @@ body {
   padding-left: 3px;
   padding-right: 3px;
   margin: 3px;
+  &:hover{
+    @include colorBtn;
+  }
 }
 .title h1 {
   //nos photographes
@@ -170,6 +166,9 @@ body {
   font-size: 12px;
   border-radius: 15px;
   cursor: pointer;
+  &:hover{
+    @include colorBtn;
+  }
 }
 /*-----*/
 .bouton {
