@@ -5,7 +5,7 @@
 /*vue desktop*/
 /*création des variables media queries utilisant les breakpoints*/
 /*----------------------------------------------------------vue tablette-------------------------*/
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .logo {
     margin-left: 0px;
     display: flex;
@@ -13,7 +13,7 @@
     width: 100%;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .contenairPhotographeLarge {
     background-color: #fafafa;
     display: block;
@@ -36,10 +36,12 @@
   }
 
   .title h1 {
+    position: absolute;
     font-size: 18px;
-    display: flex;
-    justify-content: flex-end;
     padding-top: 10px;
+    left: auto;
+    right: 10px;
+    width: 160px;
   }
 
   .toto {

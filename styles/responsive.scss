@@ -1,7 +1,7 @@
 /*création des breakpoints*/
 $small:421px !default;/*vue mobile*/
-$medium: 768px !default; /*vue tablette*/
-$large: 1024px !default; /*vue desktop*/
+$medium: 1024px !default; /*vue tablette*/
+$large: 1260px !default; /*vue desktop*/
 
 /*création des variables media queries utilisant les breakpoints*/
 $small-up: "only screen and (min-width: #{$small})";
@@ -55,11 +55,12 @@ $hidden: hidden;
  margin-top: 40px;
 }
 .title h1 {
+  position: absolute;
   font-size: 18px;
-  display: flex;
-  justify-content: flex-end;
-  padding-top:10px
-  //width: 100%;
+  padding-top:10px;
+  left: auto;
+  right: 10px;
+  width: 160px;
 }
 .toto {
   width: 100%;
