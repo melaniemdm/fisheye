@@ -64,11 +64,14 @@ body {
   
 }
 .navigation_tag {
+  //background-color: #525252;
   font-size: 13px;
-  width: 550px;
+  //width: calc(100% - 250px);
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
-  
+  gap: 5px;
 }
 
 .navigation a {
@@ -83,6 +86,7 @@ body {
 .title h1 {
   //nos photographes
   position: relative;
+ 
   z-index: -1;
   font-size: 30px;
   font-weight: 400;

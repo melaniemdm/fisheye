@@ -19,9 +19,11 @@ body {
 
 .navigation_tag {
   font-size: 13px;
-  width: 550px;
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
+  gap: 5px;
 }
 
 .navigation a {
