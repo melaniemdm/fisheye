@@ -102,8 +102,7 @@ body {
 .tagsDuPhotographe {
   display: flex;
   justify-content: center;
- 
-}
+ }
 .tagsDuPhotographe div {
   padding-left: 5px;
   padding-right: 5px;
@@ -111,7 +110,6 @@ body {
   padding-bottom: 4px;
   margin: 3px;
 }
-
 .tags {
   border: #525252 1px solid;
   font-size: $fontSizeSmall;
@@ -183,15 +181,16 @@ body {
 }
 //tri
 .topBorderRadius {
-  border-radius: $border-radius-small $border-radius-small 0 0;
+  border-radius: $border-radius-big $border-radius-big 0 0;
 }
 .bottomBorderRadius {
-  border-radius: 0 0 $border-radius-small $border-radius-small;
+  border-radius: 0 0 $border-radius-big $border-radius-big;
 }
 /*------------------------------------------- menu trier page medias---------------------*/
 .trier {
   font-size: $fontSizeIntermediaire;
   display: flex;
+  align-items: center;
   gap: 10px;
   margin-left: 5.5%;
   & a {
@@ -201,8 +200,8 @@ body {
   }
 }
 .trierPar {
-  @include center;
-  margin-top: -30px;
+ @include center;
+ margin-top: 50px;
   margin-left: 35px;
   margin-right: 2px;
 }
@@ -216,11 +215,12 @@ body {
   height: 1px;
 }
 .filtre{
+  height: 65px;
   margin-top: 65px;
 }
 .filtre:hover{
   @include colorBtn();
-  border-radius: $border-radius-small;
+  border-radius: $border-radius-big;
   cursor: pointer;
 }
 ul{
@@ -251,8 +251,8 @@ ul{
 }
 }
 .date, .titre, .popularite{
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 /*------------------------------------contenair large mise en page---------------------*/
 /*-------------------------------------------page medias------------------------------*/
