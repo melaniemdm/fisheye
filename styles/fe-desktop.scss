@@ -9,7 +9,7 @@ body {
   font-family: "Libre Franklin", Arial, sans-serif;
 }
 .logo {
-  margin-left: 100px;
+  margin-left: $marginLeftPage;
 }
 /*----------------------------------------------------banner- navTag - title-----------------*/
 .banner {
@@ -161,7 +161,7 @@ body {
 .contact {
   grid-column: 2;
   grid-row: 1;
-  @include center;
+  margin-top: 40px;
 }
 //btn contact
 .btn-contact {
@@ -201,7 +201,7 @@ body {
 }
 .trierPar {
  @include center;
- margin-top: 50px;
+ margin-top: -37px;
   margin-left: 35px;
   margin-right: 2px;
 }
@@ -215,7 +215,6 @@ body {
   height: 1px;
 }
 .filtre{
-  height: 65px;
   margin-top: 65px;
 }
 .filtre:hover{
@@ -274,11 +273,11 @@ ul{
   align-items: center;
 }
 .contenairPhotographeLarge {
-  margin-left: 100px;
+  margin-left: $marginLeftPage;
   margin-right: 100px;
   margin-top: 40px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 2fr;
   grid-template-rows: 1fr;
   background-color: $colorSecondGreylight;
   border-radius: $border-radius-small;
@@ -295,13 +294,14 @@ ul{
 .infoDuPhotographeLarge {
   grid-column: 1;
   grid-row: 1;
-  margin-left: 50px;
+  margin-left: 5px;
 }
 .nomDuPhotographeLarge {
-  font-size: 45px;
+  font-size: $fontSizeBigModal;
   color: $colorSecondFocus;
   padding-top: 10%;
   padding-bottom: 15px;
+  margin-left: 0px;
 }
 .localisationLarge {
   color: $colorPrimaryStatic;
@@ -479,7 +479,6 @@ ul{
   visibility: $hidden;
 }
 .btn-valide {
-  margin-left: 5px;
   padding: 5px;
   border-radius: $border-radius-big;
   border: $colorPrimaryStatic 1px solid;

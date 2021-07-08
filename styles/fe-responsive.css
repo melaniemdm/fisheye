@@ -27,6 +27,7 @@
   .nomDuPhotographeLarge {
     margin-top: -285px;
     margin-bottom: 0px;
+    margin-left: 0px;
   }
 
   .photoIdDuPhotographeLarge {
@@ -69,18 +70,12 @@
   .localisationLarge {
     font-size: 15px;
     margin-bottom: -10px;
-    margin-left: -45px;
   }
 
   .taglineDuPhotographeLarge {
     color: black;
     font-size: 11px;
     margin-bottom: -10px;
-    margin-left: -45px;
-  }
-
-  .tagsDuPhotographeLarge {
-    margin-left: -50px;
   }
 
   .tags {
@@ -122,6 +117,10 @@
     height: 110px;
     width: 310px;
     margin-bottom: 5px;
+  }
+
+  #lightgallery {
+    margin-top: -250px;
   }
 }
 /*----------------------------------------------------------------------------------------------*/
@@ -189,8 +188,7 @@
 
   .nomDuPhotographeLarge {
     font-size: 23px;
-    margin-top: -180px;
-    margin-left: -45px;
+    padding-top: 65px;
   }
 
   .trier {
@@ -201,7 +199,7 @@
 @media only screen and (max-width: 767px) {
   #lightgallery {
     align-items: center;
-    margin-top: -150px;
+    margin-top: -250px;
     margin-left: 0px;
     margin-right: 0px;
   }
