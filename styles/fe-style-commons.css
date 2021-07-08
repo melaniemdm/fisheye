@@ -208,12 +208,12 @@ body {
   color: black;
 }
 
-.topBorderRadius, #filtre {
-  border-radius: 10px 10px 0 0;
+.topBorderRadius, .filtre li:first-child {
+  border-radius: 5px 5px 0 0;
 }
 
-.bottomBorderRadius, .choix {
-  border-radius: 0 0 10px 10px;
+.bottomBorderRadius, .filtre li:last-child {
+  border-radius: 0 0 5px 5px;
 }
 
 /*-----------------------------------------------------------------------------*/
@@ -234,56 +234,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 25px;
+  margin-top: -30px;
+  margin-left: 35px;
   margin-right: 2px;
-}
-
-#filtre {
-  /* on centre le menu dans la page */
-  padding: 0;
-  margin-top: 10px;
-  list-style: none;
-  background-color: #901c1c;
-}
-#filtre:hover {
-  background-color: #d3573c;
-}
-
-#filtre ul {
-  padding: 0px;
-  margin: 0;
-  list-style: none;
-}
-
-#filtre li {
-  /* on place les liens du menu horizontalement */
-  display: inline-block;
-  border-radius: 10px;
-}
-
-#filtre ul li {
-  /* on enlève ce comportement pour les liens du sous menu */
-  display: inherit;
-  cursor: pointer;
-}
-#filtre ul li:hover {
-  background-color: #d3573c;
-  border-radius: 0;
-}
-
-#filtre a {
-  text-decoration: none;
-  display: block;
-  color: white;
-  cursor: pointer;
-  width: 128px;
-}
-
-#filtre ul {
-  position: absolute;
-  /* on cache les sous menus complètement sur la gauche */
-  left: -999em;
-  z-index: 1000;
 }
 
 .separator {
@@ -294,17 +247,49 @@ body {
   height: 1px;
 }
 
-.choix {
-  background-color: #901c1c;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
+.filtre {
+  margin-top: 65px;
 }
 
-#filtre li:hover ul {
-  /* Au survol des li du menu on replace les sous menus */
-  left: auto;
+.filtre:hover {
+  background-color: #901c1c;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.filtre:hover li {
+  transform: translateY(0px);
+}
+
+.filtre li:first-child {
+  background-color: #901c1c;
+  color: white;
+  transform: translateY(0px);
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.filtre li {
+  transform: translateY(-2000px);
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.filtre li:hover {
+  background-color: #d3573c;
+  color: #0000;
+  color: black;
+}
+
+.date, .titre, .popularite {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 /*------------------------------------contenair large mise en page---------------------*/
