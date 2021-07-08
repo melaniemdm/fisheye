@@ -1,26 +1,10 @@
-/*création des breakpoints*/
-$small:767px !default;/*vue mobile*/
-$medium: 1024px !default; /*vue tablette*/
-$large: 1365px !default; /*vue desktop*/
 
-/*création des variables media queries utilisant les breakpoints*/
-$small-up: "only screen and (min-width: #{$small})";
-$small-down: "only screen and (max-width: #{$small})";
-$medium-up: "only screen and (min-width: #{$medium})";
-$medium-down: "only screen and (max-width: #{$medium})";
-$large-up: "only screen and (min-width: #{$large})";
-$large-down: "only screen and (max-width: #{$large})";
 
-$width: 100%;
-$hidden: hidden;
-
-@mixin center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
+@import "fe-variable-commons.scss";
+@import "fe-variable-responsive.scss";
+/*-----------------------------------------------------------------------------------------------*/
 /*----------------------------------------------------------vue tablette-------------------------*/
+/*-----------------------------------------------------------------------------------------------*/
 //logo
 @media #{$medium-down} {
   .logo {
@@ -28,25 +12,19 @@ $hidden: hidden;
     display: flex;
     justify-content: flex-start;
     width: 100%;
-  
-  }
-  
-}
-
+    }
+ }
 @media #{$medium-down} {
   .contenairPhotographeLarge {
   background-color: #fafafa;
   display: block;
   height: 260px;
   margin-bottom: 50px;
-
 }
 .nomDuPhotographeLarge {
- // background-color: khaki;
   margin-top: -285px;
   margin-bottom: 0px;
- 
-}
+ }
 .photoIdDuPhotographeLarge {
   width: 100%;
 }
@@ -62,7 +40,7 @@ $hidden: hidden;
   right: 10px;
   width: 160px;
 }
-.toto {
+.contact {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -79,7 +57,6 @@ $hidden: hidden;
   justify-content: center;
   flex-wrap: wrap;
 }
-
 .localisationLarge {
   font-size: 15px;
   margin-bottom: -10px;
@@ -91,7 +68,6 @@ $hidden: hidden;
   margin-bottom: -10px;
   margin-left: -45px;
 }
-
 .tagsDuPhotographeLarge {
   margin-left: -50px;
 }
@@ -108,17 +84,15 @@ $hidden: hidden;
   font-weight: 400;
   top: 495px;
 }
-
 .trier{
   visibility: hidden;
  }
  #lightgallery {
    margin-top: -160px
  }
-
-
-/*---------------------------------------modal tablette------------------*/
-
+/*-----------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------modal tablette------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/
 #formulaire, #modalFin{
   position: fixed;
   align-items: center;
@@ -133,12 +107,10 @@ $hidden: hidden;
         width: 310px;
         margin-bottom: 5px;
       }
-     
-  }
-/*-----------------------------------------------------------------*/
-/*--------------------------------------vue mobile-----------------*/
-/*-----------------------------------------------------------------*/
-
+      }
+/*----------------------------------------------------------------------------------------------*/
+/*--------------------------------------vue mobile----------------------------------------------*/
+/*----------------------------------------------------------------------------------------------*/
 @media #{$small-down} {
   .logo {
     margin-top: 15px;
@@ -148,7 +120,7 @@ $hidden: hidden;
     margin-top: -105px;
   }
 }
-/*---------------------------------------index---------------------*/
+/*-------------------------------------------------index-------------------------------------*/
 @media #{$small-down} {
   .banner {
     display: flex;
@@ -157,8 +129,6 @@ $hidden: hidden;
     align-items: center;
     flex-wrap: wrap;
   }
-
-
   .bouton{
     display: flex;
     justify-content: center;
@@ -171,13 +141,11 @@ $hidden: hidden;
     top: 560px;
     visibility: hidden;
   }
-
-  /*---------------------------media---------------------------------------*/
+  /*------------------------------------------media---------------------------------------*/
   #likePriceFooter{
       visibility: hidden;
   }
- 
-  .contenairPhotographeLarge {
+   .contenairPhotographeLarge {
     display: inline-block;
     margin-left: 1px;
     margin-right: 1px;
@@ -189,7 +157,6 @@ $hidden: hidden;
   }
   .photoIdDuPhotographeLarge {
        width: 100%;
-      
   }
   .photoIdDuPhotographeLarge img {
     // background-color: blue;
@@ -202,14 +169,11 @@ $hidden: hidden;
     // margin-bottom: 0px;
     margin-left: -45px;
   }
-
   .trier {
     visibility: hidden;
   }
-
-  
 }
-/*------------------lightgallery--------------------------*/
+/*-------------------------------------------lightgallery--------------------------*/
 @media #{$small-down} {
   #lightgallery {
     align-items: center;
@@ -224,7 +188,7 @@ $hidden: hidden;
     font-size: 20px;
   }
 }
-/*----------------------------------modal-----------------------*/
+/*------------------------------------------------modal mobile-----------------------*/
 @media #{$small-down} {
 
 .titleForm, #nomPhotographeForm{
@@ -238,5 +202,4 @@ margin-bottom:0px;
    
     margin-top: 8px;
 }
-
 }

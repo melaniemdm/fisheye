@@ -1,14 +1,17 @@
 @import "fe-style-commons.scss";
+@import "fe-variable-responsive.scss";
+/*-----------------------------------------------------------------------------------------------*/
+/*--------------------------------------------vue desktop----------------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/
 
-
-/*---------------------------------------index.html--------------------------------*/
+/*---------------------------------------------------index.html---------------------------------*/
 body {
   font-family: "Libre Franklin", Arial, sans-serif;
 }
 .logo {
   margin-left: 100px;
 }
-/*------------------------------------------banner- navTag - title----------------*/
+/*----------------------------------------------------banner- navTag - title-----------------*/
 .banner {
   font-size: $fontSizeSmall;
   display: grid;
@@ -45,7 +48,7 @@ body {
   flex-wrap: wrap;
   margin-top: -55px;
 }
-/*----------------------------------card du photographes page index------------------------------------------*/
+/*----------------------------------card du photographes page index--------------------------*/
 #listeDesPhotographes {
   display: flex;
   flex-wrap: wrap;
@@ -141,7 +144,7 @@ body {
   }
 }
 
-/*----------------------------------------------boutons----------------------*/
+/*----------------------------------------------boutons------------------------------------*/
 //style commun des boutons
 .btn {
   background-color: $colorPrimaryStatic;
@@ -156,10 +159,8 @@ body {
     color: black;
   }
 }
-
 //btn contactez moi
-.contact,
-.toto {
+.contact {
   grid-column: 2;
   grid-row: 1;
   @include center;
@@ -187,8 +188,7 @@ body {
 .bottomBorderRadius {
   border-radius: 0 0 $border-radius-small $border-radius-small;
 }
-/*-----------------------------------------------------------------------------*/
-/*------ menu trier page medias-----------*/
+/*------------------------------------------- menu trier page medias---------------------*/
 .trier {
   font-size: $fontSizeIntermediaire;
   display: flex;
@@ -200,7 +200,6 @@ body {
     padding: 20px;
   }
 }
-
 .trierPar {
   @include center;
   margin-top: -30px;
@@ -210,35 +209,28 @@ body {
 
 
 .separator {
-  /* trait de séparation sous chaque item du menu déroulant */
+  /*---------------------- trait de séparation sous chaque item du menu déroulant------- */
   background-color: white;
   margin-left: 10px;
   width: 110px;
   height: 1px;
 }
-
 .filtre{
   margin-top: 65px;
 }
-
 .filtre:hover{
   @include colorBtn();
   border-radius: $border-radius-small;
   cursor: pointer;
 }
-
 ul{
   list-style:none;
   margin-left:0;
   padding-left: 0;
-  
-}
-
+  }
 .filtre:hover li{
   transform: translateY(0px);
- 
-}
-
+ }
 .filtre li:first-child{
   @include colorBtn();
   transform: translateY(0px); 
@@ -246,11 +238,9 @@ ul{
   padding-left: 20px;
   padding-right: 20px;
 }
-
 .filtre li:last-child{
   @extend .bottomBorderRadius
 }
-
 .filtre li{
   transform: translateY(-2000px);
   padding-left: 20px;
@@ -265,7 +255,7 @@ ul{
   padding-bottom: 10px;
 }
 /*------------------------------------contenair large mise en page---------------------*/
-/*---------------------page medias--------------------*/
+/*-------------------------------------------page medias------------------------------*/
 #likePriceFooter {
   display: flex;
   justify-content: flex-end;
@@ -371,8 +361,7 @@ ul{
   padding-top: 330px;
   margin-left: 10px;
 }
-/*-----------------------------------------------------------------------------------------------------------------*/
-/*------------------------gestion de la gallery--------------*/
+/*------------------------------------------------gestion de la gallery--------------*/
 #lightgallery {
   display: flex;
   justify-content: center;
@@ -417,7 +406,7 @@ ul{
 #lg-prev-1 {
   background-color: white;
 }
-/*---------------------modal-----------------------------*/
+/*--------------------------------------------------modal-----------------------------*/
 .formul1 {
   position: fixed;
   display: flex;
@@ -452,7 +441,6 @@ ul{
   color: white;
   cursor: pointer;
 }
-
 .titleForm {
   font-size: $fontSizeBigModal;
   margin-top: -45px;
@@ -505,7 +493,7 @@ ul{
     color: black;
   }
 }
-/*----------------------------------------------------------modal de fin-------------------------*/
+/*---------------------------------------------------modal de fin-------------------------*/
 .formulFin {
   position: fixed;
   display: flex;
