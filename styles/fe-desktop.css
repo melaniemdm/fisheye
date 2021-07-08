@@ -292,7 +292,9 @@ ul {
   color: black;
 }
 
-.date, .titre, .popularite {
+.date,
+.titre,
+.popularite {
   padding-top: 15px;
   padding-bottom: 15px;
 }
@@ -349,7 +351,6 @@ ul {
 .nomDuPhotographeLarge {
   font-size: 40px;
   color: #d3573c;
-  padding-top: 10%;
   padding-bottom: 15px;
   margin-left: 0px;
 }

@@ -1,4 +1,4 @@
-@import "fe-variable-commons.scss"; 
+@import "fe-variable-commons.scss";
 @import "fe-variable-responsive.scss";
 /*-----------------------------------------------------------------------------------------------*/
 /*--------------------------------------------vue desktop----------------------------------------*/
@@ -32,7 +32,7 @@ body {
   padding-left: 3px;
   padding-right: 3px;
   margin: 3px;
-  &:hover{
+  &:hover {
     @include colorBtn;
   }
 }
@@ -61,14 +61,14 @@ body {
 }
 .contenairPhotographe {
   width: $widthContenairP;
-  & a{
+  & a {
     text-decoration: none;
   }
 }
 .photoIdDuPhotographe {
- @include center;
+  @include center;
   flex-direction: column;
-  }
+}
 
 .infoDuPhotographe {
   text-align: center;
@@ -81,10 +81,9 @@ body {
   color: $colorSecondFocus;
   font-size: $fontSizeBig;
   margin-bottom: 10px;
-  
 }
 .localisation {
-   @include center;
+  @include center;
   text-align: center;
   font-size: $fontSizeIntermediaire;
   margin-bottom: 3px;
@@ -102,7 +101,7 @@ body {
 .tagsDuPhotographe {
   display: flex;
   justify-content: center;
- }
+}
 .tagsDuPhotographe div {
   padding-left: 5px;
   padding-right: 5px;
@@ -115,17 +114,17 @@ body {
   font-size: $fontSizeSmall;
   border-radius: $border-radius-big;
   cursor: pointer;
-  &:hover{
+  &:hover {
     @include colorBtn;
   }
 }
 /*-----*/
 .bouton {
-    @include center;
-  }
+  @include center;
+}
 .boutonContenu {
   position: fixed;
-  visibility:$hidden;
+  visibility: $hidden;
   margin-top: 60px;
   text-align: center;
   font-weight: bolder;
@@ -138,7 +137,6 @@ body {
   & a {
     text-decoration: none;
     color: black;
-    
   }
 }
 
@@ -150,7 +148,7 @@ body {
   width: $widthBtn;
   padding: 27px;
   @include center;
-  border-radius:$border-radius-big;
+  border-radius: $border-radius-big;
   font-size: $fontSizeIntermediaire;
   &:hover {
     background-color: $colorSecondFocus;
@@ -200,12 +198,11 @@ body {
   }
 }
 .trierPar {
- @include center;
- margin-top: -37px;
+  @include center;
+  margin-top: -37px;
   margin-left: 35px;
   margin-right: 2px;
 }
-
 
 .separator {
   /*---------------------- trait de séparation sous chaque item du menu déroulant------- */
@@ -214,42 +211,44 @@ body {
   width: 110px;
   height: 1px;
 }
-.filtre{
+.filtre {
   margin-top: 65px;
 }
-.filtre:hover{
+.filtre:hover {
   @include colorBtn();
   border-radius: $border-radius-big;
   cursor: pointer;
 }
-ul{
-  list-style:none;
-  margin-left:0;
+ul {
+  list-style: none;
+  margin-left: 0;
   padding-left: 0;
-  }
-.filtre:hover li{
+}
+.filtre:hover li {
   transform: translateY(0px);
- }
-.filtre li:first-child{
+}
+.filtre li:first-child {
   @include colorBtn();
-  transform: translateY(0px); 
+  transform: translateY(0px);
   @extend .topBorderRadius;
   padding-left: 20px;
   padding-right: 20px;
 }
-.filtre li:last-child{
-  @extend .bottomBorderRadius
+.filtre li:last-child {
+  @extend .bottomBorderRadius;
 }
-.filtre li{
+.filtre li {
   transform: translateY(-2000px);
   padding-left: 20px;
   padding-right: 20px;
-&:hover{
-  @include colorBtnHover();
-  color: black
+  &:hover {
+    @include colorBtnHover();
+    color: black;
+  }
 }
-}
-.date, .titre, .popularite{
+.date,
+.titre,
+.popularite {
   padding-top: 15px;
   padding-bottom: 15px;
 }
@@ -281,7 +280,7 @@ ul{
   grid-template-rows: 1fr;
   background-color: $colorSecondGreylight;
   border-radius: $border-radius-small;
- }
+}
 .contenairPhotographeLarge a {
   text-decoration: none;
 }
@@ -299,7 +298,6 @@ ul{
 .nomDuPhotographeLarge {
   font-size: $fontSizeBigModal;
   color: $colorSecondFocus;
-  padding-top: 10%;
   padding-bottom: 15px;
   margin-left: 0px;
 }
@@ -327,7 +325,7 @@ ul{
 .tags {
   border: lightgrey 1px solid;
   font-size: $fontSizeSmall;
-  border-radius:$border-radius-big;
+  border-radius: $border-radius-big;
 }
 /*-------------------------------------------- les medias------------------------------------*/
 //cadre sous le media
@@ -514,7 +512,7 @@ ul{
   @include center;
   text-align: center;
   flex-direction: column;
-  }
+}
 .btn-closeFin {
   margin-left: 5px;
   padding: 3px;
