@@ -1,4 +1,4 @@
-@import "fe-style-commons.scss";
+@import "fe-variable-commons.scss"; 
 @import "fe-variable-responsive.scss";
 /*-----------------------------------------------------------------------------------------------*/
 /*--------------------------------------------vue desktop----------------------------------------*/
@@ -60,7 +60,7 @@ body {
   text-decoration: none;
 }
 .contenairPhotographe {
-  width: 350px;
+  width: $widthContenairP;
   & a{
     text-decoration: none;
   }
@@ -127,7 +127,7 @@ body {
   }
 .boutonContenu {
   position: fixed;
-  visibility:hidden;
+  visibility:$hidden;
   margin-top: 60px;
   text-align: center;
   font-weight: bolder;
@@ -149,7 +149,7 @@ body {
 .btn {
   background-color: $colorPrimaryStatic;
   color: white;
-  width: 170px;
+  width: $widthBtn;
   padding: 27px;
   @include center;
   border-radius:$border-radius-big;
@@ -169,7 +169,7 @@ body {
 .btn-contact {
   background-color: $colorPrimaryStatic;
   color: white;
-  width: 170px;
+  width: $widthBtn;
   height: 64px;
   @include center;
   border-radius: $border-radius-big;
@@ -333,7 +333,7 @@ ul{
 //cadre sous le media
 .infoContenair {
   height: 350px;
-  width: 370px;
+  width: $widthInfoC;
   display: flex;
   justify-content: space-between;
   padding-bottom: 10px;
@@ -382,7 +382,7 @@ ul{
   left: -9999px;
   right: -9999px;
   margin: auto;
-  width: 350px;
+  width: $widthContenairP;
   height: 300px;
   border-radius: $border-radius-small;
   background-color: $colorSecondGrey;
@@ -411,20 +411,22 @@ ul{
   position: fixed;
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: $width;
 }
 .titleForm {
   padding-top: 5px;
 }
 #formulaire {
-  margin-top: -2030px;
+  position: fixed;
+  margin-top: 0;
+  top: 0;
   z-index: 1;
   background-color: $colorSecondFocus;
   width: 365px;
   height: 650px;
   font-size: 17px;
   border-radius: $border-radius-small;
-  visibility: hidden;
+  visibility: $hidden;
 }
 .headerForm {
   margin-left: 15px;
@@ -474,7 +476,7 @@ ul{
   font-size: $fontSizeSmall;
   margin-left: 7px;
   color: white;
-  visibility: hidden;
+  visibility: $hidden;
 }
 .btn-valide {
   margin-left: 5px;
@@ -485,7 +487,7 @@ ul{
   text-align: center;
   margin-top: 10px;
   margin-left: 50px;
-  width: 200px;
+  width: $widthBtn;
   background-color: $colorPrimaryStatic;
   color: white;
   &:hover {
@@ -498,12 +500,13 @@ ul{
   position: fixed;
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: $width;
 }
 #modalFin {
-  margin-top: -1920px;
-  visibility: hidden;
+  visibility: $hidden;
   position: fixed;
+  margin-top: 0;
+  top: 0;
   background-color: $colorSecondFocus;
   width: 365px;
   height: 450px;

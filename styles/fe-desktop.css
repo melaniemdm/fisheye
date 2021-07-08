@@ -1,6 +1,14 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-/*---------------------------------------index.html--------------------------------*/
+/*création des breakpoints*/
+/*vue mobile*/
+/*vue tablette*/
+/*vue desktop*/
+/*création des variables media queries utilisant les breakpoints*/
+/*-----------------------------------------------------------------------------------------------*/
+/*--------------------------------------------vue desktop----------------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------index.html---------------------------------*/
 body {
   font-family: "Libre Franklin", Arial, sans-serif;
 }
@@ -9,7 +17,7 @@ body {
   margin-left: 100px;
 }
 
-/*------------------------------------------banner- navTag - title----------------*/
+/*----------------------------------------------------banner- navTag - title-----------------*/
 .banner {
   font-size: 12px;
   display: grid;
@@ -52,7 +60,7 @@ body {
   margin-top: -55px;
 }
 
-/*----------------------------------card du photographes page index------------------------------------------*/
+/*----------------------------------card du photographes page index--------------------------*/
 #listeDesPhotographes {
   display: flex;
   flex-wrap: wrap;
@@ -164,7 +172,7 @@ body {
   color: black;
 }
 
-/*----------------------------------------------boutons----------------------*/
+/*----------------------------------------------boutons------------------------------------*/
 .btn {
   background-color: #901c1c;
   color: white;
@@ -181,8 +189,7 @@ body {
   color: black;
 }
 
-.contact,
-.toto {
+.contact {
   grid-column: 2;
   grid-row: 1;
   display: flex;
@@ -216,8 +223,7 @@ body {
   border-radius: 0 0 5px 5px;
 }
 
-/*-----------------------------------------------------------------------------*/
-/*------ menu trier page medias-----------*/
+/*------------------------------------------- menu trier page medias---------------------*/
 .trier {
   font-size: 15px;
   display: flex;
@@ -240,7 +246,7 @@ body {
 }
 
 .separator {
-  /* trait de séparation sous chaque item du menu déroulant */
+  /*---------------------- trait de séparation sous chaque item du menu déroulant------- */
   background-color: white;
   margin-left: 10px;
   width: 110px;
@@ -293,7 +299,7 @@ ul {
 }
 
 /*------------------------------------contenair large mise en page---------------------*/
-/*---------------------page medias--------------------*/
+/*-------------------------------------------page medias------------------------------*/
 #likePriceFooter {
   display: flex;
   justify-content: flex-end;
@@ -414,8 +420,7 @@ ul {
   margin-left: 10px;
 }
 
-/*-----------------------------------------------------------------------------------------------------------------*/
-/*------------------------gestion de la gallery--------------*/
+/*------------------------------------------------gestion de la gallery--------------*/
 #lightgallery {
   display: flex;
   justify-content: center;
@@ -466,7 +471,7 @@ ul {
   background-color: white;
 }
 
-/*---------------------modal-----------------------------*/
+/*--------------------------------------------------modal-----------------------------*/
 .formul1 {
   position: fixed;
   display: flex;
@@ -479,7 +484,9 @@ ul {
 }
 
 #formulaire {
-  margin-top: -2030px;
+  position: fixed;
+  margin-top: 0;
+  top: 0;
   z-index: 1;
   background-color: #d3573c;
   width: 365px;
@@ -557,7 +564,7 @@ ul {
   text-align: center;
   margin-top: 10px;
   margin-left: 50px;
-  width: 200px;
+  width: 170px;
   background-color: #901c1c;
   color: white;
 }
@@ -566,7 +573,7 @@ ul {
   color: black;
 }
 
-/*----------------------------------------------------------modal de fin-------------------------*/
+/*---------------------------------------------------modal de fin-------------------------*/
 .formulFin {
   position: fixed;
   display: flex;
@@ -575,9 +582,10 @@ ul {
 }
 
 #modalFin {
-  margin-top: -1920px;
   visibility: hidden;
   position: fixed;
+  margin-top: 0;
+  top: 0;
   background-color: #d3573c;
   width: 365px;
   height: 450px;
