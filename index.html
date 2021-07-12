@@ -1,26 +1,19 @@
 <!DOCTYPE html>
 <html lang="fr">
-<!--indique au navigateur que la page est en français-->
 
 <head>
-    <meta charset="utf-8" />
     <!--pour l'encodage, caracteres speciaux-->
-    <!-- <link rel="stylesheet" href="styles/fe-style-commons.css" />-->
-   
-    <link rel="stylesheet" href="styles/fe-desktop.css" />
-    <link rel="stylesheet" href="styles/fe-responsive.css" /> 
-    <!-- <link rel="stylesheet" href="styles/fe-style-modal.css" /> -->
+    <meta charset="utf-8" />
     <!--lien vers le fichier css-->
-
+    <link rel="stylesheet" href="styles/fe-desktop.css" />
+    <link rel="stylesheet" href="styles/fe-responsive.css" />
     <!--lien vers les icones font awesome-->
     <script src="https://kit.fontawesome.com/08a19f859e.js" crossorigin="anonymous">
     </script>
-
-    <!--pour inspection-->
+    <!--pour devtool et responsive-->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <title>FishEye</title>
     <!--titre de l'onglet-->
+    <title>FishEye</title>
 </head>
 
 <body>
@@ -28,58 +21,54 @@
         <div class="boutonContenu"><a href="#main">Passer au contenu</a></div>
     </div>
     <header class="banner">
-        <div class="logo" tabindex="1" ><a href="index.html">
-            <img alt="FishEye Home Page" src="photos/logo2.png" /></a>
+        <div class="logo" tabindex="1"><a href="index.html">
+                <img alt="FishEye Home Page" src="photos/logo2.png" /></a>
         </div>
-        <div class="navigation"     >      
+        <div class="navigation">
             <nav class="navigation_tag" aria-label="photographer categories" lang="en">
-                <!--appel de function displayAPT avec le onclick avec passage de parametre du tag -->
-               <span aria-label="tag portrait" tabindex="2"><a  onclick="displayAllPhotographersTagues('portrait')" href="#portrait">#Portrait</a></span> 
-               <span aria-label="tag art" tabindex="3"><a  onclick="displayAllPhotographersTagues('art')" href="#art">#Art</a></span>
-               <span aria-label="tag fashion" tabindex="4"><a  onclick="displayAllPhotographersTagues('fashion')" href="#fashion">#Fashion</a></span>
-               <span aria-label="tag architecture" tabindex="5"> <a  onclick="displayAllPhotographersTagues('architecture')" href="#architecture" >#Architecture</a></span>
-               <span aria-label="tag travel" tabindex="6"> <a  onclick="displayAllPhotographersTagues('travel')" href="#travel">#Travel</a></span>
-               <span aria-label="tag sport" tabindex="7"><a  onclick="displayAllPhotographersTagues('sport')" href="#sport">#Sport</a></span>
-               <span aria-label="tag animals" tabindex="8"><a  onclick="displayAllPhotographersTagues('animals')" href="#animals">#Animals</a></span>
-               <span aria-label="tag events" tabindex="9"> <a  onclick="displayAllPhotographersTagues('events')" href="#events">#Events</a></span>
+                <!--appel de function AllPhotographersTagues  -->
+                <span aria-label="tag portrait" tabindex="2"><a onclick="displayAllPhotographersTagues('portrait')"
+                        href="#portrait">#Portrait</a></span>
+                <span aria-label="tag art" tabindex="3"><a onclick="displayAllPhotographersTagues('art')"
+                        href="#art">#Art</a></span>
+                <span aria-label="tag fashion" tabindex="4"><a onclick="displayAllPhotographersTagues('fashion')"
+                        href="#fashion">#Fashion</a></span>
+                <span aria-label="tag architecture" tabindex="5"> <a
+                        onclick="displayAllPhotographersTagues('architecture')"
+                        href="#architecture">#Architecture</a></span>
+                <span aria-label="tag travel" tabindex="6"> <a onclick="displayAllPhotographersTagues('travel')"
+                        href="#travel">#Travel</a></span>
+                <span aria-label="tag sport" tabindex="7"><a onclick="displayAllPhotographersTagues('sport')"
+                        href="#sport">#Sport</a></span>
+                <span aria-label="tag animals" tabindex="8"><a onclick="displayAllPhotographersTagues('animals')"
+                        href="#animals">#Animals</a></span>
+                <span aria-label="tag events" tabindex="9"> <a onclick="displayAllPhotographersTagues('events')"
+                        href="#events">#Events</a></span>
             </nav>
         </div>
     </header>
-
     <main id="main">
-
         <div class="title">
             <h1> Nos photographes </h1>
         </div>
-   
-
-<!-- presentation de tous les photographes  -->
- <div id="listeDesPhotographes"></div>    
-
+        <!-- presentation de tous les photographes  -->
+        <div id="listeDesPhotographes"></div>
     </main>
+    <!--import fichier js Gestion des Photographes-->
+    <script type="module">
+        import { displayAllPhotographers } from "./js/fe-js-gestion-des-photographes.js";
+        import { displayAllPhotographersTagues } from "./js/fe-js-gestion-des-photographes.js";
+        window.displayAllPhotographersTagues = displayAllPhotographersTagues;
+        // session storage pour filter par tags depuis une page de photographe   
+        if (sessionStorage.getItem("tag")) {
+            displayAllPhotographersTagues(sessionStorage.getItem("tag"))
+            sessionStorage.clear()
+        } else {
+            displayAllPhotographers()
+        }
+    </script>
+    <!-- fichier js navigation & keycode---->
+    <script type="module" src="js/fe-js-navigation.js"></script>
+</body>
 
-
-<!--import fichier js Gestion des Photographes-->
-<script type= "module">  
-import { displayAllPhotographers } from "./js/fe-js-gestion-des-photographes.js" ;
-import { displayAllPhotographersTagues } from "./js/fe-js-gestion-des-photographes.js" ;
-if(sessionStorage.getItem("tag")){
-    displayAllPhotographersTagues(sessionStorage.getItem("tag"))
-    sessionStorage.clear()
-}else{
-displayAllPhotographers ()
-}
-</script> 
-
-<script type="module">
- import { displayAllPhotographersTagues } from "./js/fe-js-gestion-des-photographes.js" ;
- // permet de referencer l'existance de la function dans toute la fenetre
- window.displayAllPhotographersTagues = displayAllPhotographersTagues;
- </script>
-
-  <!-- fichier js navigation & keycode---->
-  <script type="module" src="js/fe-js-navigation.js"></script>
-
-
-</body>    
 </html>
