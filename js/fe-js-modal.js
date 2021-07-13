@@ -1,5 +1,11 @@
 import{sendEmail}from './fe-js-emailJs.js';
 /*---------------------------------chargement de l'event modal--------------------------*/
+//page du formulaire
+const formCharge= document.querySelector("#formulaire");
+//btn close
+const close= document.querySelectorAll(".close");
+close.forEach((btn) => btn.addEventListener("click", closeModal));
+
 export function loadModalEvent(){
     //affiche le nom dans la modal
     const nomPhotographeForm = document.querySelector("#nomPhotographeForm");
@@ -9,9 +15,6 @@ export function loadModalEvent(){
     const btnContact= document.querySelector("#btn-contact");
     btnContact.addEventListener("click", chargeForm);
 }
-//page du formulaire
-const formCharge= document.querySelector("#formulaire");
-
 function chargeForm(event){
     //affiche la modal en stoppant le refresh
     event.preventDefault();
@@ -20,10 +23,6 @@ function chargeForm(event){
     const btnContact= document.querySelector("#btn-contact");
     btnContact.style.visibility="hidden";
 }
-//btn close
-const close= document.querySelectorAll(".close");
-close.forEach((btn) => btn.addEventListener("click", closeModal));
-
 function closeModal(){
     formCharge.style.visibility="hidden";  
     //supprime les errors au close
@@ -76,6 +75,8 @@ inputMail.addEventListener("change", testMail);
 
 
 /*---------------------------------chargement de l'event modal de Fin-----------------*/
+const closeFormFin2=document.querySelectorAll(".closeModalFin");
+closeFormFin2.forEach((btn) => btn.addEventListener("click", closeModalFin ));
 
 function closeModalFin(){
     modalEndMessage.style.visibility="hidden";
@@ -83,10 +84,7 @@ function closeModalFin(){
     btnContact.style.visibility="visible";
 }
 
-const closeFormFin2=document.querySelectorAll(".closeModalFin");
-closeFormFin2.forEach((btn) => btn.addEventListener("click", closeModalFin ));
 /*----------------------------Fonctions - gestion tests------------------------------*/
-
 //color error
 var colorError = "#901c1c";
 //function test
@@ -111,12 +109,10 @@ function testInput(textID, errorId){
 function testSurname() {
     return testInput("#surname","#errorSurname");
 }
-  
 // fonction de test validité du Name & affichage de l'erreur si necessaire
 function testName() {
     return testInput("#name","#errorName");
 }
-  
 // fonction de test validité du mail & affichage de l'erreur si necessaire
 function testMail() {
     const elementHtml = document.querySelector("#email");
@@ -144,12 +140,10 @@ function afficheError(errorId) {
     const elementError = document.querySelector(errorId);
     elementError.style.visibility = "visible";
 }
-
 function supprimeError(errorId) {
     const elementError = document.querySelector(errorId);
     elementError.style.visibility = "hidden";
 }
-
 
 /*-----------------------------------------Validation du formulaire-----------------------*/
 function submitValid() {
@@ -181,13 +175,7 @@ function submitValid() {
     }
   
 }
-    
-/*------Affiche le formulaire & recupere les informations a mettre dans le formulaire--------*/
-// function displayModal() {
-//     modalbg.style.display = "block";
   
-   
-// }
 /*-------------------------------chargement des infos et envoi par email ---------*/
 function launchModalFin() {
     //recupere les informations dans le sessionstorage & envoie le mail des infos saisies
