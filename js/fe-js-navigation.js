@@ -1,4 +1,5 @@
 
+document.addEventListener("scroll",displayBtnContenu);
 //btn navigation
 function displayBtnContenu(){
     let btnContenu = document.querySelector(".boutonContenu");
@@ -8,5 +9,5 @@ function displayBtnContenu(){
         btnContenu.style.visibility = 'hidden';
     }
 }
-document.addEventListener("scroll",displayBtnContenu);
+
 
