@@ -52,7 +52,7 @@ formData.forEach((form) => {
     );
 });
 
-/*-----------------------------------keyCode------------------------------*/
+/*-----------------------------------keyCode- navigation clavier pour modal--------------*/
 document.addEventListener("keyup", function (e) {
     if (e.keyCode === 27) {
         closeModal();
