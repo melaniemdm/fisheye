@@ -1,4 +1,4 @@
-let emailjs = window.emailjs;
+import{sendEmail}from './fe-js-emailJs.js';
 /*---------------------------------chargement de l'event modal--------------------------*/
 export function loadModalEvent(){
     //affiche le nom dans la modal
@@ -190,13 +190,9 @@ function submitValid() {
 // }
 /*-------------------------------chargement des infos et envoi par email ---------*/
 function launchModalFin() {
-   
-    
-      
     //recupere les informations dans le sessionstorage & envoie le mail des infos saisies
     let fullName = document.querySelector("#surname").value;
     let userEmail = document.querySelector("#email").value;
-  
     let userMessage =
       "launchModalFin:" +
       document.querySelector("#name").value +
@@ -206,19 +202,8 @@ function launchModalFin() {
       document.querySelector("#message").value +
       "/"
       ;
-      
-  
-    var contactParams = {
-        from_name: fullName,
-        reply_to: userEmail,
-        message: userMessage,
-    };
-
-    emailjs.init("user_7tR9LJzR8U8F0vQka347x");
-
-    //permet d'envoyer le mail
-    console.log(contactParams);
-    //emailjs.send("service_ahy6xbq", "template_ylvldvg", contactParams)
+    /* appel de fonction fonctionnement emailjs*/ 
+    sendEmail(fullName, userEmail, userMessage);
     
     //affiche la modal de fin
     modalEndMessage.style.visibility="visible";
