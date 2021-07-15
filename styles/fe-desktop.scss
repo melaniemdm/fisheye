@@ -5,10 +5,10 @@
 /*-----------------------------------------------------------------------------------------------*/
 
 /*---------------------------------------------------index.html---------------------------------*/
-body {
+body, .titleForm, #nomPhotographeForm {
   font-family: "Montserrat", Arial, sans-serif;
 }
-h1{
+h1, .formul1, .formulFin{
   font-family: "Libre Franklin", Arial, sans-serif;
 }
 .logo {
@@ -86,6 +86,8 @@ h1{
   margin-bottom: 10px;
 }
 .localisation {
+  color: $colorPrimaryStatic;
+  font-weight: bold;
   @include center;
   text-align: center;
   font-size: $fontSizeIntermediaire;
@@ -413,7 +415,7 @@ ul {
   display: flex;
   justify-content: center;
   width: $width;
-}
+ }
 .titleForm {
   padding-top: 5px;
 }
@@ -425,7 +427,6 @@ ul {
   background-color: $colorSecondFocus;
   width: 365px;
   height: 650px;
-  font-size: 17px;
   border-radius: $border-radius-small;
   visibility: $hidden;
 }

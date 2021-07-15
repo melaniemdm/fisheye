@@ -24,7 +24,7 @@ class Photographe {
             </div>
             <div class="infoDuPhotographe" tabindex="` + this.index + `2">
                 <div class="localisation"> 
-                    <div class="cityDuPhotographe">` +  this.city + ", "+ ` </div> <div class="countryDuPhotographes">` + this.country + ` </div>
+                    <div class="cityDuPhotographe">` +  this.city + ",&nbsp; "+ ` </div> <div class="countryDuPhotographes">` + this.country + ` </div>
                 </div>
                 <div class="taglineDuPhotographe"> ` + this.tagline + `</div>
                 <div class="priceDuPhotographe">` + this.price + `</div>
@@ -58,7 +58,7 @@ class Photographe {
 <div class="infoDuPhotographeLarge" >
 <h1 class="nomDuPhotographeLarge" tabindex="0">` + this.nom + `  </h1>
 <div class="localisationLarge" tabindex="1  ">        
-<div class="cityDuPhotographeLarge" >` + this.city + ", "+ ` </div> <div class="countryDuPhotographesLarge">` + this.country +` </div> 
+<div class="cityDuPhotographeLarge" >` + this.city + ",&nbsp "+ ` </div> <div class="countryDuPhotographesLarge">` + this.country +` </div> 
 </div>
 <div class="taglineDuPhotographeLarge"> ` + this.tagline +  `</div>`;
         strComposant =strComposant +'<div class ="tagsDuPhotographeLarge">';

@@ -24,7 +24,7 @@ async function getPhotographersFromJson() {
 /*fonction qui créé un objet photographe grâce aux données d'un photographe dans le json*/
 async function getPhotographerObjectFromClass(photographe, index){
     //utilisation de new pour la création d'un nouveau photographe
-    var lesPhotographes = new Photographe("photographe", "photos/Sample_Photos/Photographers_ID_Photos/" + photographe.portrait, photographe.id, photographe.name, photographe.city, photographe.country, photographe.tagline, photographe.price+ "€/jour", photographe.tags, index);
+    var lesPhotographes = new Photographe("photographe", "photos/Sample_Photos/Photographers_ID_Photos/" + photographe.portrait, photographe.id, photographe.name, photographe.city, photographe.country, photographe.tagline, photographe.price+ "€&nbsp/jour", photographe.tags, index);
     return lesPhotographes;}
 
 /*fonction qui affiche UN photographe dans la page Media*/
