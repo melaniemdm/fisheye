@@ -21,7 +21,7 @@ async function getPhotographersFromJson() {
     let arrayPhotographers = reponse["photographers"];
     return arrayPhotographers;}
 
-/*fonction qui créé un objet photographe fr$ace aux données d'un photographe dans le json*/
+/*fonction qui créé un objet photographe grâce aux données d'un photographe dans le json*/
 async function getPhotographerObjectFromClass(photographe, index){
     //utilisation de new pour la création d'un nouveau photographe
     var lesPhotographes = new Photographe("photographe", "photos/Sample_Photos/Photographers_ID_Photos/" + photographe.portrait, photographe.id, photographe.name, photographe.city, photographe.country, photographe.tagline, photographe.price+ "€/jour", photographe.tags, index);
@@ -36,7 +36,7 @@ export async function displayOnePhotographer (id){
             var nodePhotographersList = document.querySelector("#lePhotographe");
             //demande a recuperer l'object grace a la class des photographes avec les infos recuperé dans le json
             var objetPhotographe = await getPhotographerObjectFromClass(arrayPhotographersFromJson[i],i);
-            nodePhotographersList.innerHTML = nodePhotographersList.innerHTML + objetPhotographe.createComposantLarge();
+            nodePhotographersList.innerHTML = objetPhotographe.createComposantLarge();
         } 
     }
     return 0;
