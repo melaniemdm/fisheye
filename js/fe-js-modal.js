@@ -14,6 +14,7 @@ export function loadModalEvent(){
     //event sur le btn contactez moi
     const btnContact= document.querySelector("#btn-contact");
     btnContact.addEventListener("click", chargeForm);
+    return 0;
 }
 function chargeForm(event){
     //affiche la modal en stoppant le refresh
@@ -22,6 +23,7 @@ function chargeForm(event){
     //fais disparaitre le btn contactez moi
     const btnContact= document.querySelector("#btn-contact");
     btnContact.style.visibility="hidden";
+    return 0;
 }
 function closeModal(){
     formCharge.style.visibility="hidden";  
@@ -31,6 +33,7 @@ function closeModal(){
     supprimeError("#errorEmail");
     const btnContact= document.querySelector("#btn-contact");
     btnContact.style.visibility="visible";
+    return 0;
 }
 /*---------------------------------envoie du formulaire-------------------------------*/
 const envoiForm=document.querySelector(".btn-valide");
@@ -82,6 +85,7 @@ function closeModalFin(){
     modalEndMessage.style.visibility="hidden";
     const btnContact= document.querySelector("#btn-contact");
     btnContact.style.visibility="visible";
+    return 0;
 }
 
 /*----------------------------Fonctions - gestion tests------------------------------*/
@@ -139,10 +143,12 @@ function checkEmail(email) {
 function afficheError(errorId) {
     const elementError = document.querySelector(errorId);
     elementError.style.visibility = "visible";
+    return 0;
 }
 function supprimeError(errorId) {
     const elementError = document.querySelector(errorId);
     elementError.style.visibility = "hidden";
+    return 0;
 }
 
 /*-----------------------------------------Validation du formulaire-----------------------*/
@@ -173,7 +179,7 @@ function submitValid() {
     if (formValid === true) {
         launchModalFin();
     }
-  
+    return 0; 
 }
   
 /*-------------------------------chargement des infos et envoi par email ---------*/
@@ -204,5 +210,6 @@ function launchModalFin() {
     
     const btnContact= document.querySelector("#btn-contact");
     btnContact.style.visibility="hidden";
+    return 0;
 }
   

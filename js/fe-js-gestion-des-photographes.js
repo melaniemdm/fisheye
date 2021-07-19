@@ -12,6 +12,7 @@ export async function displayAllPhotographers (){
         //créer le composdant html du photographe et l'ajoute a la page html
         nodePhotographersList.innerHTML = nodePhotographersList.innerHTML + objetPhotographe.createComposant();
     }
+    return 0;
 }
 /* fonction qui recupere le json*/
 async function getPhotographersFromJson() {
@@ -54,5 +55,7 @@ export async function displayAllPhotographersTagues (tag){
             var objetPhotographe = await getPhotographerObjectFromClass(arrayPhotographersFromJson[i],i);
             nodePhotographersList.innerHTML = nodePhotographersList.innerHTML + objetPhotographe.createComposant();
         }
-    }}
+    }
+    return 0;
+}
 

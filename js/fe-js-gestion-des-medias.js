@@ -104,6 +104,7 @@ function addOneLike(event){
     //fonctionnement du total like
     let nodetotalLike = document.querySelector ("#totalLikesPage");
     nodetotalLike.innerHTML =  parseInt(nodetotalLike.innerHTML) +1;
+    return 0;
 }
 /*fonction de chargement de la gallery*/
 function launchGallery(){
@@ -113,6 +114,7 @@ function launchGallery(){
         speed: 500,
         addClass:".fe-galery",
         videojs: true });
+    return 0;
 }
 /*fonction qui recupere la valeur du tri*/
 function changePhotoOrder(event) {
@@ -120,6 +122,7 @@ function changePhotoOrder(event) {
     var id = idPhotographe;
     document.querySelector("#lightgallery").innerHTML = ""; // pour vider et recréer
     addPhotographersMedias(id, sort);
+    return 0;
 }
 /*fonction de sort*/
 async function sortByProperty(objArray, prop, direction) {
