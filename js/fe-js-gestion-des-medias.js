@@ -13,6 +13,8 @@ export async function addPhotographersMedias(id, sort) {
     idPhotographe=id;
     //recupere le tableau media dans le json
     var arrayMedias = await getMediaFromJson(sort);
+    //initialisation du session storage du compteur
+    sessionStorage.setItem ("totalLikes", 0);
     //boucle
     for (let i = 0; i < arrayMedias.length; i++) {
         //pour tout les medias recuperé dans le json on créait un objet media grâce a la factory 
@@ -20,11 +22,16 @@ export async function addPhotographersMedias(id, sort) {
         if (arrayMedias[i].photographerId === parseInt(id)){
             //affiche les medias
             displaysPhotographersMedias(media);
+            //calcul du total de like de la page
+            sessionStorage.setItem("totalLikes",parseInt(sessionStorage.getItem("totalLikes"))+ media.like)
         }}
     /*parametre du click sur le heart*/    
     addClickHeart();
     /*appel fonction chargement gallery */
     launchGallery();
+    //afficher nbre total de like
+    let compteurLike = document.querySelector("#totalLikesPage");
+    compteurLike.innerHTML = sessionStorage.getItem("totalLikes");
     //une fonction async appelée doit toujours renvoyer quelque chose
     return 0;
 }
@@ -93,6 +100,9 @@ function addOneLike(event){
     let nodeLikes = document.querySelector("#" + nodeLikesId);
     //agremente de compteur des likes
     nodeLikes.innerHTML =  parseInt(nodeLikes.innerHTML) +1;
+    //fonctionnement du total like
+    let nodetotalLike = document.querySelector ("#totalLikesPage");
+    nodetotalLike.innerHTML =  parseInt(nodetotalLike.innerHTML) +1;
 }
 /*fonction de chargement de la gallery*/
 function launchGallery(){

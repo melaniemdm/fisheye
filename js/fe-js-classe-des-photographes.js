@@ -47,7 +47,7 @@ class Photographe {
     /*method (fonction dans class) qui permet la création du composant html  avec btn contact a afficher*/
     createComposantLarge() {
         var strComposant =
-    `<a href="medias-des-photographe.html?idPhotographe=` + this.id + `" ></a>
+    `
 <div class="contenairPhotographeLarge">
 <div class="photoIdDuPhotographeLarge" tabindex="8">
     <img src=" ` + this.photo + `" alt="`+this.nom+`">
@@ -72,7 +72,7 @@ class Photographe {
 </div> 
 </div> 
 <div id="likePriceFooter">
-<div class="likePriceFooter"> 297 081 <span  aria-label="likes"class="material-icons-outlined title="likes_">favorite
+<div class="likePriceFooter"> <span id="totalLikesPage"> 0 </span> <span  aria-label="likes"class="material-icons-outlined title="likes_">favorite
 </span> `+this.price +` </div></div>
     </a> `;
         return strComposant;
