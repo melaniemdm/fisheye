@@ -31,17 +31,19 @@ $marginLeftPage: 100px;
 @mixin colorBtn {
   background-color: $colorPrimaryStatic;
   color: white;
-}
-@mixin colorStatic {
-  background-color: white;
-  color: $colorPrimaryStatic;
-}
+};
+
 @mixin colorBtnHover {
   background-color: $colorSecondFocus;
-  color: #0000;
-}
+  color: black;
+};
 @mixin center {
   display: flex;
   justify-content: center;
   align-items: center;
+};
+@mixin formBtn {
+  cursor: pointer;
+  border-radius: $border-radius-big;
+  border: $colorPrimaryStatic 1px solid;
 }

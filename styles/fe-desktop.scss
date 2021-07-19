@@ -148,16 +148,14 @@ h1, .formul1, .formulFin{
 /*----------------------------------------------boutons------------------------------------*/
 //style commun des boutons
 .btn {
-  background-color: $colorPrimaryStatic;
-  color: white;
+  @include colorBtn;
   width: $widthBtn;
   padding: 27px;
   @include center;
   border-radius: $border-radius-big;
   font-size: $fontSizeIntermediaire;
   &:hover {
-    background-color: $colorSecondFocus;
-    color: black;
+    @include  colorBtnHover;
   }
 }
 //btn contactez moi
@@ -168,25 +166,22 @@ h1, .formul1, .formulFin{
 }
 //btn contact
 .btn-contact {
-  cursor: pointer;
-  background-color: $colorPrimaryStatic;
-  color: white;
   width: $widthBtn;
   height: 64px;
-  @include center;
-  border-radius: $border-radius-big;
   font-size: $fontSizeIntermediaire;
   font-weight: 400;
   margin-top: 35px;
-  &:hover {
-    background-color: $colorSecondFocus;
-    color: black;
+  @include formBtn;
+   @include colorBtn;
+  @include center;
+   &:hover {
+    @include colorBtnHover;
   }
-}
+};
 //tri
 .topBorderRadius {
   border-radius: $border-radius-big $border-radius-big 0 0;
-}
+};
 .bottomBorderRadius {
   border-radius: 0 0 $border-radius-big $border-radius-big;
 }
@@ -221,7 +216,7 @@ h1, .formul1, .formulFin{
   margin-top: 65px;
 }
 .filtre:hover {
-  @include colorBtn();
+  @include colorBtn;
   border-radius: $border-radius-big;
   cursor: pointer;
 }
@@ -234,7 +229,7 @@ ul {
   transform: translateY(0px);
 }
 .filtre li:first-child {
-  @include colorBtn();
+  @include colorBtn;
   transform: translateY(0px);
   @extend .topBorderRadius;
   padding-left: 20px;
@@ -248,7 +243,7 @@ ul {
   padding-left: 20px;
   padding-right: 20px;
   &:hover {
-    @include colorBtnHover();
+    @include colorBtnHover;
     color: black;
   }
 }
@@ -482,21 +477,17 @@ ul {
   visibility: $hidden;
 }
 .btn-valide {
-  cursor: pointer;
+  @include formBtn;
   padding: 5px;
-  border-radius: $border-radius-big;
-  border: $colorPrimaryStatic 1px solid;
   padding: 15px;
   text-align: center;
   margin-top: 10px;
   margin-left: 50px;
   width: $widthBtn;
-  background-color: $colorPrimaryStatic;
-  color: white;
+  @include colorBtn;
   &:hover {
-    background-color: $colorSecondFocus;
-    color: black;
-  }
+    @include colorBtnHover;
+    }
 }
 /*---------------------------------------------------modal de fin-------------------------*/
 .formulFin {
@@ -529,11 +520,9 @@ ul {
   margin-top: 30px;
   margin-left: 10px;
   width: 200px;
-  background-color: $colorPrimaryStatic;
-  color: white;
+  @include colorBtn;
   &:hover {
-    background-color: $colorSecondFocus;
-    color: black;
+    @include colorBtnHover;
   }
 }
 .crossCloseModalFin {
