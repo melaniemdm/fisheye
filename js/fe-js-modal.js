@@ -58,11 +58,11 @@ formData.forEach((form) => {
 document.addEventListener("keyup", function (e) {
     if (e.keyCode === 27) {
         closeModal();
-        modalEndMessage();
+        closeModalFin();
     }
     if (e.keyCode === 13) {
         submitValid();
-        modalEndMessage();
+        closeModalFin();
     }
 });
 /*---------------------------------Event sur l'evenement "change"---------------------*/
@@ -155,26 +155,18 @@ function supprimeError(errorId) {
 function submitValid() {
    
     let formValid = true;
-  
-        
-  
     // appel de la function testSurname
     if (testSurname() === false) {
         formValid = false;
     }
-  
-    
-     
     // appel de la function testName
     if (testName() === false) {
         formValid = false;
     }
-  
     // appel de la function testMail
     if (testMail() === false) {
         formValid = false;
     }
-   
     //si pas d'erreur enregistre
     if (formValid === true) {
         launchModalFin();

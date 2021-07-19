@@ -168,6 +168,7 @@ h1, .formul1, .formulFin{
 }
 //btn contact
 .btn-contact {
+  cursor: pointer;
   background-color: $colorPrimaryStatic;
   color: white;
   width: $widthBtn;
@@ -481,6 +482,7 @@ ul {
   visibility: $hidden;
 }
 .btn-valide {
+  cursor: pointer;
   padding: 5px;
   border-radius: $border-radius-big;
   border: $colorPrimaryStatic 1px solid;

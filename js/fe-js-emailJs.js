@@ -9,7 +9,14 @@ export function sendEmail(fullName, userEmail, userMessage){
         message: userMessage,
     };
     emailjs.init("user_7tR9LJzR8U8F0vQka347x");
-    //permet d'envoyer le mail
+   
+    //affiche les infos dansd la console (demandé ds note de réunion)
     console.log(contactParams);
-    //emailjs.send("service_ahy6xbq", "template_ylvldvg", contactParams)
+    //ou
+    console.log(contactParams.from_name);
+    console.log(contactParams.reply_to);
+    console.log(contactParams.message);
+
+    //permet d'envoyer le mail - decommenter la ligne ci dessous pour envopyer le mail
+    // emailjs.send("service_ahy6xbq", "template_ylvldvg", contactParams)
 }

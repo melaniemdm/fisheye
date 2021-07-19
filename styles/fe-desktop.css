@@ -203,6 +203,7 @@ h1, .formul1, .formulFin {
 }
 
 .btn-contact {
+  cursor: pointer;
   background-color: #901c1c;
   color: white;
   width: 170px;
@@ -563,6 +564,7 @@ ul {
 }
 
 .btn-valide {
+  cursor: pointer;
   padding: 5px;
   border-radius: 15px;
   border: #901c1c 1px solid;
