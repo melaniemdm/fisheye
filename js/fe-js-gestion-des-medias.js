@@ -23,7 +23,7 @@ export async function addPhotographersMedias(id, sort) {
             //affiche les medias
             displaysPhotographersMedias(media);
             //calcul du total de like de la page
-            sessionStorage.setItem("totalLikes",parseInt(sessionStorage.getItem("totalLikes"))+ media.like)
+            sessionStorage.setItem("totalLikes",parseInt(sessionStorage.getItem("totalLikes"))+ media.like);
         }}
     /*parametre du click sur le heart*/    
     addClickHeart();
@@ -88,6 +88,7 @@ function addClickHeart(){
     //click du heart
     var nodeHearts = document.querySelectorAll(".heart");
     nodeHearts.forEach(nodeheart => nodeheart.addEventListener("click", addOneLike));
+    return 0;
 }
 /*ajout un like au heart*/
 function addOneLike(event){
