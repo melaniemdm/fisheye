@@ -56,7 +56,7 @@ async function getMediaFromJson(sort) {
 /*fonction qui recupere un objet media grace à la function de creation de la factory*/
 function getMediaObjectFromFactory(numMedia) {
     //création de la factory
-    let lesMedias = new MediaFactory();
+    let newMediasFactory = new MediaFactory();
     //recupere le prenom du phorographe
     let nomSplit = document.querySelector(".nomDuPhotographeLarge").innerHTML.split(" ")[0];
     //definir image ou video
@@ -67,7 +67,7 @@ function getMediaObjectFromFactory(numMedia) {
         choixMedia = "courtmetrage";
     }
     //retourne le resultat de la method createmedia de la factory
-    return lesMedias.createMedia(
+    return newMediasFactory.createMedia(
         // stock le retour de la fonction dans la variable
         choixMedia,"photos/Sample_Photos/" + nomSplit + "/" ,numMedia.image, numMedia.video,  numMedia.title, numMedia.likes, numMedia.id);
 }

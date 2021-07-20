@@ -13,7 +13,7 @@ class Photographe {
         this.tag = tags;
         this.index = index+10 ;
     }
-    /*method (fonction dans class) qui permet la création du composant html a afficher  */
+    /*fonction qui permet de créer le composant html a afficher sous forme de chaine de caractere */
     createComposant() {
         var strComposant =
     `<div class="contenairPhotographe" >
@@ -41,10 +41,10 @@ class Photographe {
             `</nav> </div>  
         ` + 
     `</div>`;
-
+        /* retourne la chaine de caractere créée  */
         return strComposant;
     }
-    /*method (fonction dans class) qui permet la création du composant html  avec btn contact a afficher*/
+    /*fonction qui permet de créer le composant html a afficher sous forme de chaine de caractere */
     createComposantLarge() {
         var strComposant =
     `
