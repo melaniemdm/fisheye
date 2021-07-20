@@ -5,10 +5,14 @@
 /*-----------------------------------------------------------------------------------------------*/
 
 /*---------------------------------------------------index.html---------------------------------*/
-body, .titleForm, #nomPhotographeForm {
+body,
+.titleForm,
+#nomPhotographeForm {
   font-family: "Montserrat", Arial, sans-serif;
 }
-h1, .formul1, .formulFin{
+h1,
+.formul1,
+.formulFin {
   font-family: "Libre Franklin", Arial, sans-serif;
 }
 .logo {
@@ -155,7 +159,7 @@ h1, .formul1, .formulFin{
   border-radius: $border-radius-big;
   font-size: $fontSizeIntermediaire;
   &:hover {
-    @include  colorBtnHover;
+    @include colorBtnHover;
   }
 }
 //btn contactez moi
@@ -172,16 +176,16 @@ h1, .formul1, .formulFin{
   font-weight: 400;
   margin-top: 35px;
   @include formBtn;
-   @include colorBtn;
+  @include colorBtn;
   @include center;
-   &:hover {
+  &:hover {
     @include colorBtnHover;
   }
-};
+}
 //tri
 .topBorderRadius {
   border-radius: $border-radius-big $border-radius-big 0 0;
-};
+}
 .bottomBorderRadius {
   border-radius: 0 0 $border-radius-big $border-radius-big;
 }
@@ -411,7 +415,7 @@ ul {
   display: flex;
   justify-content: center;
   width: $width;
- }
+}
 .titleForm {
   padding-top: 5px;
 }
@@ -487,7 +491,7 @@ ul {
   @include colorBtn;
   &:hover {
     @include colorBtnHover;
-    }
+  }
 }
 /*---------------------------------------------------modal de fin-------------------------*/
 .formulFin {
@@ -535,4 +539,39 @@ ul {
 }
 .messageFin {
   padding-top: 100px;
+}
+/*--------------------------------------------footer---------------------------------------*/
+footer{
+  cursor: pointer;
+  font-size: $fontSizeSmall;
+  background-color: $colorSecondGreylight;
+  border-radius: $border-radius-small;
+  padding-top: 20px;
+  margin-top: 20px;
+  padding-bottom: 30px;
+  padding-left: 3px;
+  margin-left: 50px;
+  margin-right: 50px;
+  & :hover{
+color: $colorSecondFocus;
+  }
+  }
+.logoFooter img{
+  width: 110px;
+}
+.contactNous{
+  margin-top: -0.5px;
+  background-color: $colorSecondGreylight;
+  & :hover{
+    color: $colorSecondFocus;
+      }
+}
+.contactNous a{
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: flex-start;
+}
+.conditions, .devenir, .mentions{
+  margin-bottom: 5px;
 }
