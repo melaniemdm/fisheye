@@ -57,7 +57,7 @@ async function getMediaFromJson(sort) {
 function getMediaObjectFromFactory(numMedia) {
     //création de la factory
     let newMediasFactory = new MediaFactory();
-    //recupere le prenom du phorographe
+    //recupere le prenom du photographe
     let nomSplit = document.querySelector(".nomDuPhotographeLarge").innerHTML.split(" ")[0];
     //definir image ou video
     var choixMedia; 

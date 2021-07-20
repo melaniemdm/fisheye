@@ -5,7 +5,6 @@ import { Courtmetrage } from './fe-js-classe-courtmetrage.mjs';
 class MediaFactory {
     //permet de creer la factory des medias ou appelé objet
     constructor() {
-       
     }
     //fonction avec les paramètre de la création d'un media
     createMedia (type, url, image, video, title, like, id) {
