@@ -55,15 +55,15 @@ formData.forEach((form) => {
 });
 
 /*-----------------------------------keyCode- navigation clavier pour modal--------------*/
-document.addEventListener("keyup", function (e) {
+document.addEventListener("keyup", function (e) {       
     if (e.keyCode === 27) {
         closeModal();
         closeModalFin();
     }
     if (e.keyCode === 13) {
-        submitValid();
+        submitValid();    
         closeModalFin();
-    }
+    } 
 });
 /*---------------------------------Event sur l'evenement "change"---------------------*/
 
