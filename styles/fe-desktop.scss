@@ -220,6 +220,7 @@ h1,
   margin-top: 65px;
 }
 .filtre:hover {
+  z-index: 1;
   @include colorBtn;
   border-radius: $border-radius-big;
   cursor: pointer;
@@ -366,6 +367,7 @@ ul {
 }
 /*------------------------------------------------gestion de la gallery--------------*/
 #lightgallery {
+  margin-top: -90px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -391,24 +393,26 @@ ul {
   background-color: $colorSecondGrey;
 }
 //designe gallery
-#lg-content-1 {
-  background-color: white;
-}
 .titleInGallery {
   color: black;
 }
-#lg-actual-size-1,
-#lg-close-1,
-#lg-next-1,
-#lg-prev-1,
-#lg-download-1 {
-  color: $colorPrimaryStatic;
-  font-size: 35px;
-}
-#lg-next-1,
-#lg-prev-1 {
-  background-color: white;
-}
+
+div [class*="lg-" ] 
+{
+     color: $colorPrimaryStatic;
+     font-size: 35px;
+     background-color: white;
+  }
+
+ .lg-toolbar .lg-icon
+  {
+       color: $colorPrimaryStatic;
+       font-size: 35px;
+       &:hover{
+         color: $colorSecondGrey;
+       }
+    }
+
 /*--------------------------------------------------modal-----------------------------*/
 .formul1 {
   position: fixed;

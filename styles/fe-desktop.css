@@ -270,6 +270,7 @@ h1,
 }
 
 .filtre:hover {
+  z-index: 1;
   background-color: #901c1c;
   color: white;
   border-radius: 15px;
@@ -436,6 +437,7 @@ ul {
 
 /*------------------------------------------------gestion de la gallery--------------*/
 #lightgallery {
+  margin-top: -90px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -463,26 +465,22 @@ ul {
   background-color: #525252;
 }
 
-#lg-content-1 {
-  background-color: white;
-}
-
 .titleInGallery {
   color: black;
 }
 
-#lg-actual-size-1,
-#lg-close-1,
-#lg-next-1,
-#lg-prev-1,
-#lg-download-1 {
+div [class*=lg-] {
+  color: #901c1c;
+  font-size: 35px;
+  background-color: white;
+}
+
+.lg-toolbar .lg-icon {
   color: #901c1c;
   font-size: 35px;
 }
-
-#lg-next-1,
-#lg-prev-1 {
-  background-color: white;
+.lg-toolbar .lg-icon:hover {
+  color: #525252;
 }
 
 /*--------------------------------------------------modal-----------------------------*/
