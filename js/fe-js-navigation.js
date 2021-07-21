@@ -12,8 +12,10 @@ function displayBtnContenu(){
 }
 /* navigation au clavier*/
 window.addEventListener("keydown", function(event) {
-    if (event.keyCode === 32) { /* espace pour faire selectionner*/
-        event.target.click();  
+    if (event.keyCode === 32) { /* espace pour clicker*/
+        event.preventDefault(); /* empecher le comportement par défaut*/
+        event.target.click();
+        event.target.firstChild.click();    
     }
     if (event.keyCode === 8) {
         window.history.back();
