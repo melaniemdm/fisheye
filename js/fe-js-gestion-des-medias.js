@@ -69,7 +69,7 @@ function getMediaObjectFromFactory(numMedia) {
     //retourne le resultat de la method createmedia de la factory
     return newMediasFactory.createMedia(
         // stock le retour de la fonction dans la variable
-        choixMedia,"photos/Sample_Photos/" + nomSplit + "/" ,numMedia.image, numMedia.video,  numMedia.title, numMedia.likes, numMedia.id, numMedia.alt_text);
+        choixMedia,"photos/Sample_Photos/" + nomSplit + "/" ,numMedia.image, numMedia.video,  numMedia.title, numMedia.likes, numMedia.id, numMedia.alt_text, numMedia.price );
 }
 /*Affiche le media en ajoutant le composant et le contenu dans la page html*/
 function displaysPhotographersMedias(media) {

@@ -7,7 +7,7 @@ class MediaFactory {
     constructor() {
     }
     //fonction avec les paramètre de la création d'un media
-    createMedia (type, url, image, video, title, like, id, alt_text) {
+    createMedia (type, url, image, video, title, like, id, alt_text, price) {
         let media;
        
         //conditions qui permetent de gerer la création des medias specifiques
@@ -23,6 +23,7 @@ class MediaFactory {
         media.id = id;
         media.url = url;
         media.alt_text = alt_text;
+        media.price =price;
         return media;
     }
 }
