@@ -469,17 +469,12 @@ ul {
   color: black;
 }
 
-div [class*=lg-] {
+div [class*=lg-next], div [class*=lg-prev], div [class*=lg-counter], div [class*=lg-toolbar], div [class*=lg-inner], .lg-toolbar .lg-icon {
   color: #901c1c;
-  font-size: 35px;
+  font-size: 25px;
   background-color: white;
 }
-
-.lg-toolbar .lg-icon {
-  color: #901c1c;
-  font-size: 35px;
-}
-.lg-toolbar .lg-icon:hover {
+div [class*=lg-next]:hover, div [class*=lg-prev]:hover, div [class*=lg-counter]:hover, div [class*=lg-toolbar]:hover, div [class*=lg-inner]:hover, .lg-toolbar .lg-icon:hover {
   color: #525252;
 }
 

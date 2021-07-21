@@ -397,20 +397,14 @@ ul {
   color: black;
 }
 
-div [class*="lg-" ] 
+div [class*="lg-next" ], div [class*="lg-prev" ], div [class*="lg-counter" ], div [class*="lg-toolbar" ], div [class*="lg-inner" ], .lg-toolbar .lg-icon  
 {
      color: $colorPrimaryStatic;
-     font-size: 35px;
+     font-size: 25px;
      background-color: white;
+  &:hover{
+    color:$colorSecondGrey
   }
-
- .lg-toolbar .lg-icon
-  {
-       color: $colorPrimaryStatic;
-       font-size: 35px;
-       &:hover{
-         color: $colorSecondGrey;
-       }
     }
 
 /*--------------------------------------------------modal-----------------------------*/
