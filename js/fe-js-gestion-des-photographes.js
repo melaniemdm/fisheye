@@ -44,14 +44,14 @@ export async function displayOnePhotographer (id){
 export async function displayAllPhotographersTagues (tag){
     var arrayPhotographersFromJson = await getPhotographersFromJson();
     var nodePhotographersList = document.querySelector("#listeDesPhotographes");
-    nodePhotographersList.innerHTML = ""; // pour vider et recréer
+    nodePhotographersList.innerHTML = ""; // pour vider et recréer afin d'éviter d'ajouter la liste complete
     for (let i = 0; i < arrayPhotographersFromJson .length; i++) { 
         //verifie si le tableau contient une sous chaine de caractere, renvoie true s'il existe
         if (arrayPhotographersFromJson[i].tags.includes(tag) === true){
             //demande a recuperer l'object grace a la class des photographes avec les infos recuperé dans le json
             let photographe = arrayPhotographersFromJson[i];
             var objetPhotographe = new Photographe("photographe", "photos/Sample_Photos/Photographers_ID_Photos/" + photographe.portrait, photographe.id, photographe.name, photographe.city, photographe.country, photographe.tagline, photographe.price+ "€&nbsp/jour", photographe.tags, i);
-            nodePhotographersList.innerHTML = nodePhotographersList.innerHTML + objetPhotographe.getComposantHtml();
+            nodePhotographersList.innerHTML = nodePhotographersList.innerHTML + objetPhotographe.getComposantHtml(); //  ajoute le composant html du photographe dans le <div "liste des photographes"
         }
     }
     return 0;
