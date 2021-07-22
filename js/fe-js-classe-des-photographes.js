@@ -14,7 +14,7 @@ class Photographe {
         this.index = index+10 ;
     }
     /*fonction qui permet de créer le composant html a afficher sous forme de chaine de caractere */
-    createComposant() {
+    getComposantHtml() {
         var strComposant =
     `<div class="contenairPhotographe" >
         <a href="medias-des-photographe.html?idPhotographe=` + this.id + `" tabindex="-1">
@@ -45,7 +45,7 @@ class Photographe {
         return strComposant;
     }
     /*fonction qui permet de créer le composant html a afficher sous forme de chaine de caractere */
-    createComposantLarge() {
+    getComposantHtmlLarge() {
         var strComposant =
     `
 <div class="contenairPhotographeLarge">

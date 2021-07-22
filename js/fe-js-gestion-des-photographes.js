@@ -6,11 +6,12 @@ export async function displayAllPhotographers (){
     //boucle
     for (let i = 0; i < arrayPhotographersFromJson .length; i++) { 
         //recupere l'objet photographe  créé grâce à la class
-        var objetPhotographe = await getPhotographerObjectFromClass(arrayPhotographersFromJson[i],i);
-        //recupere le noeudf de la liste des photographes
+        let photographe = arrayPhotographersFromJson[i]; // i ème photgraphe du tableau
+        var newPhotographe = new Photographe("photographe", "photos/Sample_Photos/Photographers_ID_Photos/" + photographe.portrait, photographe.id, photographe.name, photographe.city, photographe.country, photographe.tagline, photographe.price+ "€&nbsp/jour", photographe.tags, i);
+        //recupere le noeud de la liste des photographes
         var nodePhotographersList = document.querySelector("#listeDesPhotographes");
         //créer le composdant html du photographe et l'ajoute a la page html
-        nodePhotographersList.innerHTML = nodePhotographersList.innerHTML + objetPhotographe.createComposant();
+        nodePhotographersList.innerHTML = nodePhotographersList.innerHTML + newPhotographe.getComposantHtml(); // appel de la method et la method renvoie le code html qui correspond aux photographes
     }
     return 0;
 }
@@ -22,11 +23,6 @@ async function getPhotographersFromJson() {
     let arrayPhotographers = reponse["photographers"];
     return arrayPhotographers;}
 
-/*fonction qui créé un objet photographe grâce aux données d'un photographe dans le json*/
-async function getPhotographerObjectFromClass(photographe, index){
-    //utilisation de new pour la création d'un nouveau photographe
-    var newPhotographe = new Photographe("photographe", "photos/Sample_Photos/Photographers_ID_Photos/" + photographe.portrait, photographe.id, photographe.name, photographe.city, photographe.country, photographe.tagline, photographe.price+ "€&nbsp/jour", photographe.tags, index);
-    return newPhotographe;}
 
 /*fonction qui affiche UN photographe dans la page Media*/
 export async function displayOnePhotographer (id){
@@ -36,8 +32,9 @@ export async function displayOnePhotographer (id){
         if (arrayPhotographersFromJson[i].id === parseInt(id)){
             var nodePhotographersList = document.querySelector("#lePhotographe");
             //demande a recuperer l'object grace a la class des photographes avec les infos recuperé dans le json
-            var objetPhotographe = await getPhotographerObjectFromClass(arrayPhotographersFromJson[i],i);
-            nodePhotographersList.innerHTML = objetPhotographe.createComposantLarge();
+            let photographe = arrayPhotographersFromJson[i];
+            var objetPhotographe = new Photographe("photographe", "photos/Sample_Photos/Photographers_ID_Photos/" + photographe.portrait, photographe.id, photographe.name, photographe.city, photographe.country, photographe.tagline, photographe.price+ "€&nbsp/jour", photographe.tags, i);
+            nodePhotographersList.innerHTML = objetPhotographe.getComposantHtmlLarge();
         } 
     }
     return 0;
@@ -52,8 +49,9 @@ export async function displayAllPhotographersTagues (tag){
         //verifie si le tableau contient une sous chaine de caractere, renvoie true s'il existe
         if (arrayPhotographersFromJson[i].tags.includes(tag) === true){
             //demande a recuperer l'object grace a la class des photographes avec les infos recuperé dans le json
-            var objetPhotographe = await getPhotographerObjectFromClass(arrayPhotographersFromJson[i],i);
-            nodePhotographersList.innerHTML = nodePhotographersList.innerHTML + objetPhotographe.createComposant();
+            let photographe = arrayPhotographersFromJson[i];
+            var objetPhotographe = new Photographe("photographe", "photos/Sample_Photos/Photographers_ID_Photos/" + photographe.portrait, photographe.id, photographe.name, photographe.city, photographe.country, photographe.tagline, photographe.price+ "€&nbsp/jour", photographe.tags, i);
+            nodePhotographersList.innerHTML = nodePhotographersList.innerHTML + objetPhotographe.getComposantHtml();
         }
     }
     return 0;
