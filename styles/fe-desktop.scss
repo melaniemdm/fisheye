@@ -538,38 +538,3 @@ div [class*="lg-next" ], div [class*="lg-prev" ], div [class*="lg-counter" ], di
 .messageFin {
   padding-top: 100px;
 }
-/*--------------------------------------------footer---------------------------------------*/
-footer{
-  cursor: pointer;
-  font-size: $fontSizeSmall;
-  background-color: $colorSecondGreylight;
-  border-radius: $border-radius-small;
-  padding-top: 20px;
-  margin-top: 20px;
-  padding-bottom: 30px;
-  padding-left: 3px;
-  margin-left: 50px;
-  margin-right: 50px;
-  & :hover{
-color: $colorSecondFocus;
-  }
-  }
-.logoFooter img{
-  width: 110px;
-}
-.contactNous{
-  margin-top: -0.5px;
-  background-color: $colorSecondGreylight;
-  & :hover{
-    color: $colorSecondFocus;
-      }
-}
-.contactNous a{
-  text-decoration: none;
-  color: black;
-  display: flex;
-  align-items: flex-start;
-}
-.conditions, .devenir, .mentions{
-  margin-bottom: 5px;
-}

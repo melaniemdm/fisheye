@@ -26,7 +26,7 @@ async function getPhotographersFromJson() {
 
 /*fonction qui affiche UN photographe dans la page Media*/
 export async function displayOnePhotographer (id){
-    //recupere les photrographes dans le json
+    //recupere les photographes dans le json
     var arrayPhotographersFromJson = await getPhotographersFromJson();
     for (let i = 0; i < arrayPhotographersFromJson .length; i++) { 
         if (arrayPhotographersFromJson[i].id === parseInt(id)){

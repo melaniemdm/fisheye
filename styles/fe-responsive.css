@@ -220,15 +220,4 @@
 .message {
     margin-top: 8px;
   }
-}
-/*------------------------------------------------footer-------------------------------------*/
-@media only screen and (max-width: 767px) {
-  footer {
-    margin-left: 2px;
-    margin-right: 2px;
-  }
-
-  .logoFooter img {
-    width: 80px;
-  }
 }/*# sourceMappingURL=fe-responsive.css.map */

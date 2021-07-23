@@ -633,44 +633,4 @@ div [class*=lg-next]:hover, div [class*=lg-prev]:hover, div [class*=lg-counter]:
 
 .messageFin {
   padding-top: 100px;
-}
-
-/*--------------------------------------------footer---------------------------------------*/
-footer {
-  cursor: pointer;
-  font-size: 12px;
-  background-color: #fafafa;
-  border-radius: 5px;
-  padding-top: 20px;
-  margin-top: 20px;
-  padding-bottom: 30px;
-  padding-left: 3px;
-  margin-left: 50px;
-  margin-right: 50px;
-}
-footer :hover {
-  color: #d3573c;
-}
-
-.logoFooter img {
-  width: 110px;
-}
-
-.contactNous {
-  margin-top: -0.5px;
-  background-color: #fafafa;
-}
-.contactNous :hover {
-  color: #d3573c;
-}
-
-.contactNous a {
-  text-decoration: none;
-  color: black;
-  display: flex;
-  align-items: flex-start;
-}
-
-.conditions, .devenir, .mentions {
-  margin-bottom: 5px;
 }/*# sourceMappingURL=fe-desktop.css.map */
