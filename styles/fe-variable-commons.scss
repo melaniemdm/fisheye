@@ -23,7 +23,7 @@ $widthBtn: 170px;
 
 $fontSizeBig: 25px;
 $fontSizeBigModal: 35px;
-$fontSizeSmall: 12px;
+$fontSizeSmall: 11px;
 $fontSizeIntermediaire: 15px;
 
 $marginLeftPage: 100px;
@@ -46,4 +46,23 @@ $marginLeftPage: 100px;
   cursor: pointer;
   border-radius: $border-radius-big;
   border: $colorPrimaryStatic 1px solid;
+}
+@mixin tags {
+  color: $colorPrimaryStatic;
+  border: #525252 1px solid;
+  font-size: $fontSizeSmall;
+  font-weight: bold;
+  border-radius: $border-radius-big;
+  cursor: pointer;
+  &:hover {
+    @include colorBtn;
+  }
+
+}
+@mixin tagForme {
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  margin: 3px;
 }

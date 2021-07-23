@@ -28,28 +28,32 @@ h1,
 
 /*----------------------------------------------------banner- navTag - title-----------------*/
 .banner {
-  font-size: 12px;
+  font-size: 11px;
   display: grid;
   grid-template-columns: 8fr 12fr 8fr;
   align-items: center;
 }
 
 .navigation_tag {
-  font-size: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 5px;
+  font-size: 20px;
 }
 
 .navigation a {
   text-decoration: none;
   color: #901c1c;
-  border: solid #525252 1px;
+  border: #525252 1px solid;
+  font-size: 11px;
+  font-weight: bold;
   border-radius: 15px;
-  padding-left: 3px;
-  padding-right: 3px;
+  cursor: pointer;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 4px;
+  padding-bottom: 4px;
   margin: 3px;
 }
 .navigation a:hover {
@@ -124,13 +128,13 @@ h1,
 
 .taglineDuPhotographe {
   color: black;
-  font-size: 12px;
+  font-size: 11px;
   margin-bottom: 3px;
 }
 
 .priceDuPhotographe {
   color: #525252;
-  font-size: 12px;
+  font-size: 11px;
   margin-bottom: 3px;
 }
 
@@ -148,8 +152,10 @@ h1,
 }
 
 .tags {
+  color: #901c1c;
   border: #525252 1px solid;
-  font-size: 12px;
+  font-size: 11px;
+  font-weight: bold;
   border-radius: 15px;
   cursor: pointer;
 }
@@ -383,7 +389,7 @@ ul {
 
 .tagsDuPhotographeLarge {
   display: flex;
-  font-size: 12px;
+  font-size: 11px;
   padding-bottom: 50px;
 }
 
@@ -395,9 +401,16 @@ ul {
 }
 
 .tags {
-  border: lightgrey 1px solid;
-  font-size: 12px;
+  color: #901c1c;
+  border: #525252 1px solid;
+  font-size: 11px;
+  font-weight: bold;
   border-radius: 15px;
+  cursor: pointer;
+}
+.tags:hover {
+  background-color: #901c1c;
+  color: white;
 }
 
 /*-------------------------------------------- les medias------------------------------------*/
@@ -555,7 +568,7 @@ div [class*=lg-next]:hover, div [class*=lg-prev]:hover, div [class*=lg-counter]:
 }
 
 .textError {
-  font-size: 12px;
+  font-size: 11px;
   margin-left: 7px;
   color: white;
   visibility: hidden;

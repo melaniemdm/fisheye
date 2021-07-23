@@ -26,22 +26,15 @@ h1,
   align-items: center;
 }
 .navigation_tag {
-  font-size: $fontSizeSmall;
-  @include center;
-  flex-wrap: wrap;
-  gap: 5px;
+ @include center;
+ flex-wrap: wrap;
+ font-size: 20px;
 }
+
 .navigation a {
   text-decoration: none;
-  color: $colorPrimaryStatic;
-  border: solid $colorSecondGrey 1px;
-  border-radius: $border-radius-big;
-  padding-left: 3px;
-  padding-right: 3px;
-  margin: 3px;
-  &:hover {
-    @include colorBtn;
-  }
+  @include tags;
+  @include tagForme;
 }
 //nos photographes
 .title h1 {
@@ -112,21 +105,12 @@ h1,
   justify-content: center;
 }
 .tagsDuPhotographe div {
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  margin: 3px;
+  @include tagForme;
 }
 .tags {
-  border: #525252 1px solid;
-  font-size: $fontSizeSmall;
-  border-radius: $border-radius-big;
-  cursor: pointer;
-  &:hover {
-    @include colorBtn;
+  @include tags;
   }
-}
+
 /*-----*/
 .bouton {
   @include center;
@@ -329,9 +313,7 @@ ul {
   margin: 2px;
 }
 .tags {
-  border: lightgrey 1px solid;
-  font-size: $fontSizeSmall;
-  border-radius: $border-radius-big;
+  @include tags
 }
 /*-------------------------------------------- les medias------------------------------------*/
 //cadre sous le media
