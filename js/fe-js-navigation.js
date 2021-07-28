@@ -17,7 +17,8 @@ window.addEventListener("keydown", function(event) {
         if (event.keyCode === 13) { /* entrée pour clicker*/
             event.preventDefault(); /* empecher le comportement par défaut*/
             event.target.click(); // on click sur la cible de l'event (simule le click de la sourie)
-            event.target.firstChild.click();    
+            if(event.target.parentNode.className === "navigation_tag"){
+                event.target.firstChild.click();}    
         }
         if (event.keyCode === 8) { // touche retour arrière - action précédent
             window.history.back(); //retour arriere (precedent)

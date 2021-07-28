@@ -35,7 +35,8 @@ class Photographe {
         //  boucle qui permet de mettre le #
         this.tag.forEach((element) => {
             strComposant = strComposant + 
-                     `<div class="tags"><span role="button" onclick="displayAllPhotographersTagues('`+element +`')" aria-label="tag  `  + element +'">'  + "#" + element + " </span></div>";
+                     `<div class="tags">
+                     <span role="button" onclick="displayAllPhotographersTagues('`+element +`')" aria-label="tag ` + element + '" tabindex="' + this.index + '3">'  + "#" + element +  " </span></div>";
         });
         strComposant = strComposant +
                     `</nav> </div> 
@@ -51,8 +52,8 @@ class Photographe {
                 <div class="photoIdDuPhotographeLarge" tabindex="8">
                     <img src=" ` + this.photo + `" alt="`+this.nom+`">
                 </div>
-                <div class="contact" tabindex="7"> 
-                    <div role="button" aria-label="contact me" class="btn-contact" id="btn-contact"> Contactez-moi </div>
+                <div class="contact" > 
+                    <div tabindex="7" role="button" aria-label="contact me" class="btn-contact" id="btn-contact"> Contactez-moi </div>
                 </div>
                 <div class="infoDuPhotographeLarge" >
                     <h1 class="nomDuPhotographeLarge" tabindex="0">` + this.nom + `  </h1>

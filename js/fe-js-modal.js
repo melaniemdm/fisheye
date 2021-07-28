@@ -98,8 +98,16 @@ document.addEventListener("keyup", function (e) {
         closeModalFin();
     }
     if (e.keyCode === 13) {
-        submitValid();    
-        closeModalFin();
+        let formulaire = document.querySelector(".formul1");
+        console.log(formulaire.style);
+        if(window.isModalOpened){
+            submitValid();    
+            closeModalFin();    
+        }else{
+            e.target.click(); // on click sur la cible de l'event (simule le click de la sourie)
+             
+        }
+       
     } 
 });
 /*---------------------------------Event sur l'evenement "change"---------------------*/
