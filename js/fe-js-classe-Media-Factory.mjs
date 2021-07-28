@@ -17,7 +17,7 @@ class MediaFactory {
         if (type === "photo") {
             media = new Photo(image);
         }
-        //ajout des caracteristiques des medias (sous variables)
+        //ajout des caracteristiques ou attributs des medias (sous variables)
         media.title = title;
         media.like = like;
         media.id = id;

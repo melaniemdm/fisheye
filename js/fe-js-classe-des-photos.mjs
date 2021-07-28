@@ -6,7 +6,7 @@ class Photo {
         this.medias = image;
     }
     //fonction qui crait le composant média
-    creatComposant() {
+    getComposantHtml() {
         let composantElementMedia;
         composantElementMedia =
   ` 

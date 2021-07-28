@@ -1,7 +1,5 @@
 /* import mediafactory*/
 import { MediaFactory } from './fe-js-classe-Media-Factory.mjs';
-
-
 /*ajout event sur tri pour changer l'ordre*/
 var nodeSort = document.querySelector("#filtre");
 nodeSort.addEventListener("click", changePhotoOrder );
@@ -15,11 +13,24 @@ export async function displayMediasForOnePhotographer(id, sort) {
     var arrayMedias = await getMediaFromJson(sort);
     //initialisation du session storage du compteur
     sessionStorage.setItem ("totalLikes", 0);
+    //création de la factory
+    let newMediasFactory = new MediaFactory();
+    //recupere le prenom du photographe
+    let nomSplit = document.querySelector(".nomDuPhotographeLarge").innerHTML.split(" ")[0];
     //boucle
     for (let i = 0; i < arrayMedias.length; i++) {
-        //pour tout les medias recuperé dans le json on créait un objet media grâce a la factory 
-        var media =getMediaObjectFromFactory(arrayMedias[i]);    
+        // initialisation variable     
+        var choixMedia; 
+        //definir image ou video
+        if(arrayMedias[i].image){
+            choixMedia = "photo";
+        }else{
+            choixMedia = "courtmetrage";
+        }
         if (arrayMedias[i].photographerId === parseInt(id)){
+            let media = newMediasFactory.createMedia(
+                // stock le retour de la fonction dans la variable
+                choixMedia,"photos/Sample_Photos/" + nomSplit + "/" ,arrayMedias[i].image, arrayMedias[i].video,  arrayMedias[i].title, arrayMedias[i].likes, arrayMedias[i].id, arrayMedias[i].alt_text, arrayMedias[i].price );
             //affiche les medias
             displaysPhotographersMedias(media);
             //calcul du total de like de la page
@@ -53,36 +64,13 @@ async function getMediaFromJson(sort) {
     return arrayMediasSort;
 }
 
-/*fonction qui recupere un objet media grace à la function de creation de la factory*/
-function getMediaObjectFromFactory(numMedia) {
-    //création de la factory
-    let newMediasFactory = new MediaFactory();
-    //recupere le prenom du photographe
-    let nomSplit = document.querySelector(".nomDuPhotographeLarge").innerHTML.split(" ")[0];
-    //definir image ou video
-    var choixMedia; 
-    if(numMedia.image){
-        choixMedia = "photo";
-    }else{
-        choixMedia = "courtmetrage";
-    }
-    //retourne le resultat de la method createmedia de la factory
-    return newMediasFactory.createMedia(
-        // stock le retour de la fonction dans la variable
-        choixMedia,"photos/Sample_Photos/" + nomSplit + "/" ,numMedia.image, numMedia.video,  numMedia.title, numMedia.likes, numMedia.id, numMedia.alt_text, numMedia.price );
-}
 /*Affiche le media en ajoutant le composant et le contenu dans la page html*/
 function displaysPhotographersMedias(media) {
     var nodeMediaList = document.querySelector("#lightgallery");
-    var mediaComponent = createPhotographersMedia(media);
-    nodeMediaList.innerHTML = nodeMediaList.innerHTML + mediaComponent;
+    nodeMediaList.innerHTML = nodeMediaList.innerHTML + media.getComposantHtml();
     return 0;
 }
-/*fonction qui permet de creer le composant html*/
-function createPhotographersMedia(media) {
-    var composantElementMedia = media.creatComposant();
-    return composantElementMedia;
-}
+
 /*function parametre du click sur le heart*/
 function addClickHeart(){
     //click du heart
@@ -92,7 +80,7 @@ function addClickHeart(){
 }
 /*ajout un like au heart*/
 function addOneLike(event){
-    //recupere l'id
+    //recupere l'id - le title de la cible
     var nodeLikesId = event.target.title;
     //empeche le rechargement de la page
     event.preventDefault();

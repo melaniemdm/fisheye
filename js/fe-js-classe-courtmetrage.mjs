@@ -6,7 +6,7 @@ class Courtmetrage {
         this.medias = video;
     }
     //fonction qui crait le composant média
-    creatComposant() {
+    getComposantHtml() {
         let composantElementMedia;
         composantElementMedia = 
      ` <a
