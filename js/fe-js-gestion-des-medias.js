@@ -9,7 +9,7 @@ nodeSort.addEventListener("click", changePhotoOrder );
 var idPhotographe = 0;
 
 /* fonction qui affiche tous les medias*/
-export async function addPhotographersMedias(id, sort) {
+export async function displayMediasForOnePhotographer(id, sort) {
     idPhotographe=id;
     //recupere le tableau media dans le json
     var arrayMedias = await getMediaFromJson(sort);
@@ -121,7 +121,7 @@ function changePhotoOrder(event) {
     var sort = event.target.title;
     var id = idPhotographe;
     document.querySelector("#lightgallery").innerHTML = ""; // pour vider et recréer
-    addPhotographersMedias(id, sort);
+    displayMediasForOnePhotographer(id, sort);
     return 0;
 }
 /*fonction de sort*/

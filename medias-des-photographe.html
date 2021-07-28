@@ -144,7 +144,7 @@
     <script type="module">
         //import des fontions des fichiers js 
         import { displayOnePhotographer } from "./js/fe-js-gestion-des-photographes.js";
-        import { addPhotographersMedias } from "./js/fe-js-gestion-des-medias.js";
+        import { displayMediasForOnePhotographer } from "./js/fe-js-gestion-des-medias.js";
         import { loadModalEvent } from "./js/fe-js-modal.js"
         //url
         var urlcourante = document.location.href;
@@ -155,8 +155,8 @@
         let addPhotographer = await displayOnePhotographer(idPhotographe)
         //function qui met un event sur btn contact
         loadModalEvent();
-        //ajout medias dans la galery
-        let addMedia = await addPhotographersMedias(idPhotographe, "title")
+        //ajout medias dans la galery trié par titre
+        let addMedia = await displayMediasForOnePhotographer(idPhotographe, "title")
     </script>
     <!-- lien vers la page index quand click sur un tag  -->
     <script>
