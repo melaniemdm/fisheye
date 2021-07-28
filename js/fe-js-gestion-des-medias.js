@@ -150,3 +150,17 @@ async function sortByProperty(objArray, prop, direction) {
     });
     return clone;
 }
+
+/*Gestion de l'expended de trier par*/
+let nodefiltre = document.querySelector("#filtre");
+
+nodefiltre.addEventListener("mouseover", changeAria );
+function changeAria(){
+    nodefiltre.setAttribute("aria-expanded", true);
+}
+
+
+nodefiltre.addEventListener("mouseout", removeChangeAria );
+function removeChangeAria(){
+    nodefiltre.setAttribute("aria-expanded", false);
+}
