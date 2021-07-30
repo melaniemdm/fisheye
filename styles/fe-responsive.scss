@@ -6,6 +6,7 @@
 //logo
 @media #{$medium-down} {
   .logo {
+    z-index: 3  ;
     margin-left: 0px;
     display: flex;
     justify-content: flex-start;
