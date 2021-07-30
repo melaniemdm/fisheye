@@ -11,7 +11,6 @@
 /*-----------------------------------------------------------------------------------------------*/
 @media only screen and (max-width: 1024px) {
   .logo {
-    z-index: 3;
     margin-left: 0px;
     display: flex;
     justify-content: flex-start;
@@ -130,6 +129,7 @@
 /*----------------------------------------------------------------------------------------------*/
 @media only screen and (max-width: 767px) {
   .logo {
+    z-index: 3;
     margin-top: 15px;
     margin-left: -10px;
   }
