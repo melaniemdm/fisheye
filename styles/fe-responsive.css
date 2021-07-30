@@ -44,7 +44,6 @@
   .title h1 {
     position: absolute;
     font-size: 18px;
-    padding-top: 10px;
     left: auto;
     right: 10px;
     width: 160px;
@@ -132,11 +131,12 @@
 @media only screen and (max-width: 767px) {
   .logo {
     margin-top: 15px;
+    margin-left: -10px;
   }
 
   .title h1 {
     font-size: 15px;
-    margin-top: -105px;
+    margin-top: -112px;
   }
 }
 /*-------------------------------------------------index----------------------------------------*/

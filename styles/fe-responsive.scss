@@ -11,7 +11,7 @@
     display: flex;
     justify-content: flex-start;
     width: $width;
-  }
+    }
 }
 @media #{$medium-down} {
   .contenairPhotographeLarge {
@@ -35,12 +35,12 @@
   .title h1 {
     position: absolute;
     font-size: 18px;
-    padding-top: 10px;
     left: auto;
     right: 10px;
     width: 160px;
+    
   }
-  .contact {
+    .contact {
     width: $width;
     display: flex;
     justify-content: center;
@@ -112,10 +112,11 @@
 @media #{$small-down} {
   .logo {
     margin-top: 15px;
+    margin-left: -10px;
   }
   .title h1 {
     font-size: $fontSizeIntermediaireR;
-    margin-top: -105px;
+    margin-top: -112px;
   }
 }
 /*-------------------------------------------------index----------------------------------------*/
