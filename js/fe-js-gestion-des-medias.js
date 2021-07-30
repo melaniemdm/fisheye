@@ -10,39 +10,41 @@ var idPhotographe = 0;
 export async function displayMediasForOnePhotographer(id, sort) {
     idPhotographe=id;
     //recupere le tableau media dans le json
-    var arrayMedias = await getMediaFromJson(sort);
+    var arrayMediasSort = await getMediaFromJson(sort);
     //initialisation du session storage du compteur
-    sessionStorage.setItem ("totalLikes", 0);
+    let totalLikes =  0;
     //création de la factory
     let newMediasFactory = new MediaFactory();
     //recupere le prenom du photographe
-    let nomSplit = document.querySelector(".nomDuPhotographeLarge").innerHTML.split(" ")[0];
+    let prenomDossierPhoto = document.querySelector(".nomDuPhotographeLarge").innerHTML.split(" ")[0];
     //boucle
-    for (let i = 0; i < arrayMedias.length; i++) {
+    for (let i = 0; i < arrayMediasSort.length; i++) {
         // initialisation variable     
         var choixMedia; 
         //definir image ou video
-        if(arrayMedias[i].image){
+        if(arrayMediasSort[i].image){
             choixMedia = "photo";
         }else{
             choixMedia = "courtmetrage";
         }
-        if (arrayMedias[i].photographerId === parseInt(id)){
+        if (arrayMediasSort[i].photographerId === parseInt(idPhotographe)){
             let media = newMediasFactory.createMedia(
-                // stock le retour de la fonction dans la variable
-                choixMedia,"photos/Sample_Photos/" + nomSplit + "/" ,arrayMedias[i].image, arrayMedias[i].video,  arrayMedias[i].title, arrayMedias[i].likes, arrayMedias[i].id, arrayMedias[i].alt_text, arrayMedias[i].price );
+                // stock le retour de la fonction dans la variable - doit avoir le même orthographe
+                choixMedia,"photos/Sample_Photos/" + prenomDossierPhoto + "/" ,arrayMediasSort[i].image, arrayMediasSort[i].video,  arrayMediasSort[i].title, arrayMediasSort[i].likes, arrayMediasSort[i].id, arrayMediasSort[i].alt_text, arrayMediasSort[i].price );
             //affiche les medias
-            displaysPhotographersMedias(media);
+            var nodeMediaList = document.querySelector("#lightgallery");
+            nodeMediaList.innerHTML = nodeMediaList.innerHTML + media.getComposantHtml();
             //calcul du total de like de la page
-            sessionStorage.setItem("totalLikes",parseInt(sessionStorage.getItem("totalLikes"))+ media.like);
-        }}
+            totalLikes = totalLikes+ media.like;
+        }
+    }
     /*parametre du click sur le heart*/    
     addClickHeart();
     /*appel fonction chargement gallery */
     launchGallery();
     //afficher nbre total de like
     let compteurLike = document.querySelector("#totalLikesPage");
-    compteurLike.innerHTML = sessionStorage.getItem("totalLikes");
+    compteurLike.innerHTML = totalLikes;
     //une fonction async appelée doit toujours renvoyer quelque chose
     return 0;
 }
@@ -63,14 +65,6 @@ async function getMediaFromJson(sort) {
     var arrayMediasSort = await sortByProperty(arrayMedias, sort, direction); // appel de la fonction sort
     return arrayMediasSort;
 }
-
-/*Affiche le media en ajoutant le composant et le contenu dans la page html*/
-function displaysPhotographersMedias(media) {
-    var nodeMediaList = document.querySelector("#lightgallery");
-    nodeMediaList.innerHTML = nodeMediaList.innerHTML + media.getComposantHtml();
-    return 0;
-}
-
 /*function parametre du click sur le heart*/
 function addClickHeart(){
     //click du heart

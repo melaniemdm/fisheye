@@ -45,7 +45,7 @@ h1,
 .navigation a {
   text-decoration: none;
   color: #901c1c;
-  border: #525252 1px solid;
+  border: #c4c4c4 1px solid;
   font-size: 11px;
   font-weight: bold;
   border-radius: 15px;
@@ -153,7 +153,7 @@ h1,
 
 .tags {
   color: #901c1c;
-  border: #525252 1px solid;
+  border: #c4c4c4 1px solid;
   font-size: 11px;
   font-weight: bold;
   border-radius: 15px;
@@ -402,7 +402,7 @@ ul {
 
 .tags {
   color: #901c1c;
-  border: #525252 1px solid;
+  border: #c4c4c4 1px solid;
   font-size: 11px;
   font-weight: bold;
   border-radius: 15px;

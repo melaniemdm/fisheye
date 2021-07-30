@@ -149,14 +149,14 @@
         //url
         var urlcourante = document.location.href;
         //recuperation id du photographe
-        var numeroPhotographeUrlCourante = urlcourante.split("?")[1]
-        let idPhotographe = numeroPhotographeUrlCourante.split("=")[1]
+        let idPhotographe = urlcourante.split("=")[1]
+        let sort = "title";
         //affiche le photographe
         let addPhotographer = await displayOnePhotographer(idPhotographe)
         //function qui met un event sur btn contact
         loadModalEvent();
         //ajout medias dans la galery trié par titre
-        let addMedia = await displayMediasForOnePhotographer(idPhotographe, "title")
+        let addMedia = await displayMediasForOnePhotographer(idPhotographe, sort)
     </script>
     <!-- lien vers la page index quand click sur un tag  -->
     <script>
