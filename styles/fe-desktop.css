@@ -182,11 +182,22 @@ h1,
   border-radius: 5px;
   border: solid #d3573c 1px;
   background-color: #d3573c;
+  color: black;
   margin-bottom: 20px;
 }
 .boutonContenu a {
   text-decoration: none;
+  background-color: #d3573c;
   color: black;
+}
+
+.boutonContenu:hover {
+  background-color: #901c1c;
+  color: white;
+}
+.boutonContenu:hover a {
+  background-color: #901c1c;
+  color: white;
 }
 
 /*----------------------------------------------boutons------------------------------------*/

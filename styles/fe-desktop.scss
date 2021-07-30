@@ -125,13 +125,19 @@ h1,
   padding: 8px;
   border-radius: $border-radius-small;
   border: solid $colorSecondFocus 1px;
-  background-color: $colorSecondFocus;
+ @include colorBtnHover;
   margin-bottom: 20px;
   & a {
     text-decoration: none;
-    color: black;
+    @include colorBtnHover;
   }
 }
+.boutonContenu:hover{
+  @include colorBtn;
+  & a{
+@include colorBtn;
+}
+} 
 
 /*----------------------------------------------boutons------------------------------------*/
 //style commun des boutons
