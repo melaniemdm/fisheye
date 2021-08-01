@@ -28,7 +28,6 @@ h1,
   align-items: center;
 }
 .navigation{
-  background-color: rgb(184, 230, 184);
   margin-left: -10px;
 }
 .navigation_tag {
@@ -46,8 +45,7 @@ h1,
 }
 //nos photographes
 .title h1 {
-  background-color: green;
-  position: relative;
+    position: relative;
   z-index: -1;
   font-size: 35px;
   font-weight: 400;

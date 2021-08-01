@@ -5,6 +5,11 @@
 /*-----------------------------------------------------------------------------------------------*/
 //logo
 @media #{$medium-down} {
+  .banner {
+    @include center;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
   .logo {
     margin-left: 0px;
     display: flex;
@@ -37,6 +42,7 @@
     left: auto;
     right: 10px;
     width: 160px;
+    top:125px;
     
   }
     .contact {
@@ -47,14 +53,18 @@
     text-align: center;
   }
   .navigation_tag {
-    gap: 5px;
-    margin-top: 25px;
     margin-left: -12px;
-    width: 370px;
+    width: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    height: 50px;
+  }
+  .navigation a {
+    margin: 2px;
+  
+
   }
   .localisationLarge {
     font-size: $fontSizeIntermediaireR;
@@ -113,10 +123,23 @@
     z-index: 3  ;
     margin-top: 15px;
     margin-left: -10px;
+    & img{
+      width: 150px;
+    }
+  }
+  .navigation_tag {
+    margin-left: 0;
   }
   .title h1 {
     font-size: $fontSizeIntermediaireR;
-    margin-top: -112px;
+   position: absolute;
+   top: 75px;
+   left: auto;
+   right: 30px;
+   margin: 0;
+   margin-right: 10px;
+   padding: 0;
+   width: auto;
   }
 }
 /*-------------------------------------------------index----------------------------------------*/
