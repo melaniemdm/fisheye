@@ -14,6 +14,7 @@ class Photographe {
         this.index = index+10 ;
     }
     /*fonction qui permet de créer le composant html a afficher sous forme de chaine de caractere */
+    // halo id du photograhe class photo2
     getComposantHtml() {
         var strComposant =
             `<div class="contenairPhotographe" >
