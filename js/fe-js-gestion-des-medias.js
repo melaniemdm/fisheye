@@ -91,12 +91,13 @@ function addOneLike(event){
 /*fonction de chargement de la gallery*/
 function launchGallery(){
     //chargement de la galery 
-    window.lightGallery(document.getElementById('lightgallery'), {
-        plugins: [window.lgZoom, window.lgThumbnail, window.lgVideo],
-        speed: 500,
-        addClass:".fe-galery",
-        videojs: true });
-    return 0;
+    // window.lightGallery(document.getElementById('lightgallery'), {
+    //     plugins: [window.lgZoom, window.lgThumbnail, window.lgVideo],
+    //     speed: 500,
+    //     addClass:".fe-galery",
+    //     videojs: true });
+    // return 0;
+    window.chargeGallery(document.getElementById('lightgallery'));
 }
 /*fonction qui recupere la valeur du tri*/
 function changePhotoOrder(event) {
