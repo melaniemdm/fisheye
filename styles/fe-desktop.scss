@@ -17,18 +17,26 @@ h1,
 }
 .logo {
   margin-left: 90px;
-  margin-right: 65px;
+  //margin-right: 65px;
 }
 /*----------------------------------------------------banner- navTag - title-----------------*/
 .banner {
   margin-top: 40px;
   font-size: $fontSizeSmall;
   display: grid;
-  grid-template-columns: 1fr 10fr 9fr;
+  grid-template-columns: 300px calc(100% - 700px) 300px;
   align-items: center;
 }
+.navigation{
+  background-color: rgb(184, 230, 184);
+  margin-left: -10px;
+}
 .navigation_tag {
+
+  @include center;
  flex-wrap: wrap;
+
+ height: 90px;
 }
 
 .navigation a {
@@ -38,6 +46,7 @@ h1,
 }
 //nos photographes
 .title h1 {
+  background-color: green;
   position: relative;
   z-index: -1;
   font-size: 35px;
@@ -47,7 +56,8 @@ h1,
   justify-content: flex-end;
   flex-wrap: wrap;
   margin-top: -55px;
-  margin-right: 75px;
+  margin-right: 100px;
+  margin-left: 90px;
 }
 /*----------------------------------card du photographes page index--------------------------*/
 #listeDesPhotographes {
