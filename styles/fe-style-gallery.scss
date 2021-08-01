@@ -1,0 +1,86 @@
+@import "fe-variable-commons.scss";
+@import "fe-variable-responsive.scss";
+
+@mixin fleche{
+    position:fixed;
+    top:calc(50%-10px);
+}
+@mixin icons {
+    color: $colorPrimaryStatic;
+    cursor: pointer;
+}
+
+#gallery{
+    position:fixed;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#closeCross{
+    position:fixed;
+    top:10px;
+    width: 98%;
+    height: 30px;
+    display: flex;
+    justify-content: flex-end;
+    @include icons;
+}
+
+#media{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 80%;
+    background-color: $colorSecondGreylight;
+    
+    & img{
+        max-width:100%;
+        max-height:100%;
+        width:auto;
+        height:auto;
+        border-radius: $border-radius-small;
+        box-shadow: 2px 5px 5px 2px $colorSecondGrey;
+    }
+}
+
+#miniature{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    height: 10%;
+    width: 100%;
+    min-height: 60px;
+    background-color: purple;
+}
+
+#leftArrow{
+    @include fleche;
+    left: 30px;
+    @include icons;
+    z-index: 3;
+}
+
+#rightArrow{
+    @include fleche;
+    left: auto;
+    right:30px;
+    display: flex;
+    justify-content: flex-end;
+    width: 98%;
+    height: 30px;
+    & span{
+        @include icons;
+        width: 30px;
+    }
+}
