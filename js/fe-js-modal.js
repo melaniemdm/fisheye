@@ -102,7 +102,7 @@ document.addEventListener("keyup", function (e) {
         console.log(formulaire.style);
         if(window.isModalOpened){ // Utilisation fonction dans la fenetre
             submitValid();    
-            closeModalFin();    
+            //closeModalFin();    
         }else{
             e.target.click(); // on click sur la cible de l'event (simule le click de la sourie)
              
@@ -114,13 +114,13 @@ document.addEventListener("keyup", function (e) {
 
 const inputSurname = document.querySelector("#surname");
 inputSurname.addEventListener("change", testSurname);
-
+inputSurname.addEventListener("keyup", testSurname);
 const inputName = document.querySelector("#name");
 inputName.addEventListener("change", testName);
-
+inputName.addEventListener("keyup", testName);
 const inputMail = document.querySelector("#email");
 inputMail.addEventListener("change", testMail);
-
+inputMail.addEventListener("keyup", testMail);
 
 /*---------------------------------chargement de l'event modal de Fin-----------------*/
 const closeFormFin2=document.querySelectorAll(".closeModalFin");
@@ -150,6 +150,7 @@ function testInput(textID, errorId){
     } else {
         resultatTest = true;
         elementHtml.style.border = colorError + " 0px solid";
+        elementHtml.style.background = "#ffffff" ;
         supprimeError(errorId);
     }
     return resultatTest;
@@ -193,6 +194,7 @@ function afficheError(errorId) {
 function supprimeError(errorId) {
     const elementError = document.querySelector(errorId);
     elementError.style.visibility = "hidden";
+
     return 0;
 }
 
