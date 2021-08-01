@@ -16,19 +16,19 @@ h1,
   font-family: "Libre Franklin", Arial, sans-serif;
 }
 .logo {
-  margin-left: $marginLeftPage;
+  margin-left: 90px;
+  margin-right: 65px;
 }
 /*----------------------------------------------------banner- navTag - title-----------------*/
 .banner {
+  margin-top: 40px;
   font-size: $fontSizeSmall;
   display: grid;
-  grid-template-columns: 8fr 12fr 8fr;
+  grid-template-columns: 1fr 10fr 9fr;
   align-items: center;
 }
 .navigation_tag {
- @include center;
  flex-wrap: wrap;
- font-size: 20px;
 }
 
 .navigation a {
@@ -40,13 +40,14 @@ h1,
 .title h1 {
   position: relative;
   z-index: -1;
-  font-size: 30px;
+  font-size: 35px;
   font-weight: 400;
   color: $colorPrimaryStatic;
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
   margin-top: -55px;
+  margin-right: 75px;
 }
 /*----------------------------------card du photographes page index--------------------------*/
 #listeDesPhotographes {
