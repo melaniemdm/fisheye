@@ -98,8 +98,6 @@ document.addEventListener("keyup", function (e) {
         closeModalFin();
     }
     if (e.keyCode === 13) {
-        let formulaire = document.querySelector(".formul1");
-        console.log(formulaire.style);
         if(window.isModalOpened){ // Utilisation fonction dans la fenetre
             submitValid();    
             //closeModalFin();    
