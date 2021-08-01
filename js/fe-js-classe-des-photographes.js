@@ -20,6 +20,7 @@ class Photographe {
                 <a href="medias-des-photographe.html?idPhotographe=` + this.id + `" tabindex="-1">
                     <div class="photoIdDuPhotographe" tabindex="` + this.index + `1">
                         <img src=" ` + this.photo +`" alt="`+this.nom+`">
+                        <img class="photo2" src=" ` + this.photo +`" alt="`+this.nom+`">
                         <h2 class="nomDuPhotographe">` + this.nom + ` </h2>    
                     </div>
                     <div class="infoDuPhotographe" tabindex="` + this.index + `2">

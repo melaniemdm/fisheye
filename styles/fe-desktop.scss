@@ -77,7 +77,11 @@ h1,
 .photoIdDuPhotographe {
   @include center;
   flex-direction: column;
-}
+  }
+  .photo2 {
+    opacity: 0.1;
+    margin-top: -190px;
+  }
 
 .infoDuPhotographe {
   text-align: center;
