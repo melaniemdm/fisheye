@@ -104,8 +104,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: calc(100% - 30px);
-    height: 85%;
+    width: calc(100% - 80px);
+    max-height: 85%;
+    height:auto;
   }
   #leftArrow{
     left:0px;

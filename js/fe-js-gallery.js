@@ -98,8 +98,6 @@ function displayGallery(noeudHTML){
     if (mediaEnCours.parentNode.classList.contains("miniature")===true){
         if (mediaEnCours.parentNode.classList.contains("courtmetrage")===true){
             let titre = mediaEnCours.parentNode.getAttribute("data-sub-html");
-            console.log(titre);
-            document.querySelector("#titreMedia").innerHTML = titre;
             document.querySelector("#media").innerHTML = `
                 <video
                 controls
@@ -109,17 +107,22 @@ function displayGallery(noeudHTML){
                     <source src="` + mediaEnCours.parentNode.children[0].getAttribute("data-src")  + `" type="video/mp4"/>
                     Your browser does not support HTML5 video.
                 </video>`;
+            //position du titre
+            document.querySelector("#titreMedia").style.width = "80%";
+            document.querySelector("#titreMedia").innerHTML = titre;
         }else{
             let titre = mediaEnCours.parentNode.getAttribute("data-sub-html");
             console.log(mediaEnCours.parentNode);
-            document.querySelector("#titreMedia").innerHTML = titre;
             document.querySelector("#media").innerHTML = `<img src="` + mediaEnCours.parentNode.children[0].src + `"/>`;
+            //position du titre
+            document.querySelector("#titreMedia").style.width = document.querySelector("#media").getBoundingClientRect().width + "px";
+            document.querySelector("#titreMedia").innerHTML = titre;
+            
+            
         }
     }else{
         if (mediaEnCours.parentNode.classList.contains("courtmetrage")===true){
             let titre = mediaEnCours.parentNode.getAttribute("data-sub-html");
-            console.log(titre);
-            document.querySelector("#titreMedia").innerHTML = titre;
             document.querySelector("#media").innerHTML = `
                 <video
                 controls
@@ -129,12 +132,20 @@ function displayGallery(noeudHTML){
                     <source src="` + mediaEnCours.parentNode.children[0].getAttribute("data-src")  + `" type="video/mp4"/>
                     Your browser does not support HTML5 video.
                 </video>`;
+            //position du titre
+            document.querySelector("#titreMedia").style.width = "80%";
+            document.querySelector("#titreMedia").innerHTML = titre;
         }else{
             let titre = mediaEnCours.parentNode.getAttribute("data-sub-html");
             console.log(mediaEnCours.parentNode);
-            document.querySelector("#titreMedia").innerHTML = titre;
             document.querySelector("#media").innerHTML = `<img src="` + noeudHTML.parentNode.href + `"/>`;
+            //position du titre
+            document.querySelector("#titreMedia").style.width = document.querySelector("#media").getBoundingClientRect().width + "px";
+            document.querySelector("#titreMedia").innerHTML = titre;
+            
+            
         }
+        
     }
     
 }
