@@ -42,11 +42,11 @@ export async function displayMediasForOnePhotographer(id, sort) {
             totalLikes = totalLikes+ media.like;
         }
     }
-    
+
+    /*appel fonction chargement gallery */
+    launchGallery(); 
     /*parametre du click sur le heart*/    
     addClickHeart();
-    /*appel fonction chargement gallery */
-    launchGallery();
     //afficher nbre total de like
     let compteurLike = document.querySelector("#totalLikesPage");
     compteurLike.innerHTML = totalLikes;
