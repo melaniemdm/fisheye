@@ -4,19 +4,20 @@ let mediaEnCours;
 export function chargeGallery(noeudHTML){
     let composantGalleryHTML = `
         <div id="gallery">
-            <div id="titreMedia"></div>
+            
             <div id="media">
             </div>
+            <div id="titreMedia"></div>
             <div id="miniature">
             </div>
             <div id="closeCross"><span class="material-icons-outlined">
             close
             </span></div>
-            <div id="leftArrow"><span class="material-icons-outlined">
-            chevron_left
+            <div id="leftArrow" aria-label="image précédente"><span class="material-icons-outlined">
+            arrow_back_ios
             </span></div>
-            <div id="rightArrow"><span class="material-icons-outlined">
-            chevron_right
+            <div id="rightArrow" aria-label="image suivante"><span class="material-icons-outlined">
+            arrow_forward_ios
             </span></div>            
         </div>`;
 
