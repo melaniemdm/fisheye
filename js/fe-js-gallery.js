@@ -67,7 +67,7 @@ function displayMediaPrecedent(){
 
 function displayMediaSuivant(){
 
-    if (mediaEnCours.parentNode.nextElementSibling && (mediaEnCours.parentNode.nextElementSibling.className === "light-link" ||mediaEnCours.parentNode.nextElementSibling.className === "miniature")){
+    if (mediaEnCours.parentNode.nextElementSibling && (mediaEnCours.parentNode.nextElementSibling.classList.contains("light-link") ||mediaEnCours.parentNode.nextElementSibling.classList.contains("miniature"))){
         mediaEnCours = mediaEnCours.parentNode.nextElementSibling.firstChild;
         displayGallery(mediaEnCours);
     }
@@ -80,25 +80,36 @@ function closeGallery(){
 
 function displayGallery(noeudHTML){
     mediaEnCours = noeudHTML;
-    
+
     document.querySelector("#gallery").style.visibility = "visible";
     if (mediaEnCours.parentNode.classList.contains("miniature")===true){
         if (mediaEnCours.parentNode.classList.contains("courtmetrage")===true){
-            console.log(mediaEnCours.getAttribute("data-src"));
             document.querySelector("#media").innerHTML = `
                 <video
                 controls
                 autoplay
                 preload="auto"
-                data-setup="{}"src="` + mediaEnCours.getAttribute("data-src")  + `">
-                    <source src="` + mediaEnCours.getAttribute("data-src")  + `" type="video/mp4"/>
+                data-setup="{}"src="` + mediaEnCours.parentNode.children[0].getAttribute("data-src")  + `">
+                    <source src="` + mediaEnCours.parentNode.children[0].getAttribute("data-src")  + `" type="video/mp4"/>
                     Your browser does not support HTML5 video.
                 </video>`;
         }else{
             document.querySelector("#media").innerHTML = `<img src="` + mediaEnCours.parentNode.children[0].src + `"/>`;
         }
     }else{
-        document.querySelector("#media").innerHTML = `<img src="` + noeudHTML.parentNode.href + `"/>`;
+        if (mediaEnCours.parentNode.classList.contains("courtmetrage")===true){
+            document.querySelector("#media").innerHTML = `
+                <video
+                controls
+                autoplay
+                preload="auto"
+                data-setup="{}"src="` + mediaEnCours.parentNode.children[0].getAttribute("data-src")  + `">
+                    <source src="` + mediaEnCours.parentNode.children[0].getAttribute("data-src")  + `" type="video/mp4"/>
+                    Your browser does not support HTML5 video.
+                </video>`;
+        }else{
+            document.querySelector("#media").innerHTML = `<img src="` + noeudHTML.parentNode.href + `"/>`;
+        }
     }
     
 }
