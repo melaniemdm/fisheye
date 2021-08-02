@@ -82,7 +82,7 @@
 
 #leftArrow {
   position: fixed;
-  top: calc(50%-10px);
+  top: calc(50% - 10px);
   left: 30px;
   z-index: 3;
 }
@@ -94,7 +94,7 @@
 
 #rightArrow {
   position: fixed;
-  top: calc(50%-10px);
+  top: calc(50% - 10px);
   left: auto;
   right: 30px;
 }
