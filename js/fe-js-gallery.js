@@ -10,13 +10,13 @@ export function chargeGallery(noeudHTML){
             <div id="titreMedia"></div>
             <div id="miniature">
             </div>
-            <div id="closeCross"><span class="material-icons-outlined">
+            <div id="closeCross"><span aria-label="fermer la gallery" class="material-icons-outlined">
             close
             </span></div>
-            <div id="leftArrow" aria-label="image précédente"><span class="material-icons-outlined">
+            <div id="leftArrow" ><span aria-label="image précédente" class="material-icons-outlined">
             arrow_back_ios
             </span></div>
-            <div id="rightArrow" aria-label="image suivante"><span class="material-icons-outlined">
+            <div id="rightArrow" ><span aria-label="image suivante" class="material-icons-outlined">
             arrow_forward_ios
             </span></div>            
         </div>`;
