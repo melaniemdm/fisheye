@@ -223,6 +223,10 @@
   .heart span {
     font-size: 20px;
   }
+  #titreMedia{
+   & h4{
+    font-size: 12px;
+  }}
 }
 /*---------------------------------------------------------modal mobile-----------------------*/
 @media #{$small-down} {
