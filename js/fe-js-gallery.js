@@ -38,6 +38,10 @@ function openGallery(e){
     if(e.target.parentNode.id === "rightArrow"){
         goRight();
     }
+    if(e.target.className === "miniatureItem"){
+        console.log(e.target.src);
+        document.querySelector("#media").innerHTML = `<img src="` + e.target.src + `"/>`;
+    }
 }
 
 function navigationGallery(event){

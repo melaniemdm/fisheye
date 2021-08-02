@@ -13,6 +13,8 @@ export async function displayMediasForOnePhotographer(id, sort) {
     var arrayMediasSort = await getMediaFromJson(sort);
     //initialisation du session storage du compteur
     let totalLikes =  0;
+
+    let strComposantMiniature = "";
     //création de la factory
     let newMediasFactory = new MediaFactory();
     //recupere le prenom du photographe
@@ -34,10 +36,13 @@ export async function displayMediasForOnePhotographer(id, sort) {
             //affiche les medias
             var nodeMediaList = document.querySelector("#lightgallery");
             nodeMediaList.innerHTML = nodeMediaList.innerHTML + media.getComposantHtml();
+            //ajout du composant miniature
+            strComposantMiniature = strComposantMiniature + media.getComposantMiniatureHTML();
             //calcul du total de like de la page
             totalLikes = totalLikes+ media.like;
         }
     }
+    
     /*parametre du click sur le heart*/    
     addClickHeart();
     /*appel fonction chargement gallery */
@@ -46,6 +51,9 @@ export async function displayMediasForOnePhotographer(id, sort) {
     let compteurLike = document.querySelector("#totalLikesPage");
     compteurLike.innerHTML = totalLikes;
     //une fonction async appelée doit toujours renvoyer quelque chose
+    //Chargement des miniatures
+    document.querySelector("#miniature").innerHTML = "";
+    document.querySelector("#miniature").innerHTML = strComposantMiniature;
     return 0;
 }
 

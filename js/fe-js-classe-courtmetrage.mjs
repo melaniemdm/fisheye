@@ -26,5 +26,16 @@ class Courtmetrage {
         
         return composantElementMedia;
     }
+    //fonction qui crait le composant miniature
+    getComposantMiniatureHTML() {
+        let composantElementMedia;
+        composantElementMedia =
+  ` 
+  <div class="miniature">
+    <img src="` + this.url + this.medias + `.webp" alt="`+ this.alt_text +  `" class="miniatureItem"/>
+  </div>
+  `;
+        return composantElementMedia;
+    }
 }
 export { Courtmetrage };
