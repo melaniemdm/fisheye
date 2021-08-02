@@ -37,6 +37,7 @@
   width: 80%;
   height: 80%;
   background-color: #fafafa;
+  padding-bottom: 20px;
 }
 #media img {
   max-width: 100%;
@@ -58,11 +59,12 @@
   height: 10%;
   width: 100%;
   min-height: 60px;
-  background-color: purple;
 }
 #miniature img {
   min-height: 60px;
   height: 100px;
+  margin-right: 1px;
+  margin-left: 1px;
 }
 
 #leftArrow {

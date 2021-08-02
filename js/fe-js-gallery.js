@@ -1,3 +1,6 @@
+// variable globale pour gérer suivant et précédent
+let mediaEnCours;
+
 export function chargeGallery(noeudHTML){
     let composantGalleryHTML = `
         <div id="gallery">
@@ -24,47 +27,65 @@ document.addEventListener("click",openGallery);
 
 function openGallery(e){
     window.addEventListener("keydown",navigationGallery);
-    console.log(e.target);
+    
     if(e.target.className === "galleryItem"){
-        document.querySelector("#gallery").style.visibility = "visible";
-        document.querySelector("#media").innerHTML = `<img src="` + e.target.parentNode.href + `"/>`;
+        displayGallery(e.target);
     }
     if (e.target.id === "gallery" || e.target.parentNode.id === "closeCross"){
         closeGallery();
     }
     if(e.target.parentNode.id === "leftArrow"){
-        goLeft();
+        displayMediaPrecedent();
     }
     if(e.target.parentNode.id === "rightArrow"){
-        goRight();
+        displayMediaSuivant();
     }
     if(e.target.className === "miniatureItem"){
-        console.log(e.target.src);
-        document.querySelector("#media").innerHTML = `<img src="` + e.target.src + `"/>`;
+        mediaEnCours = e.target;
+        displayGallery(mediaEnCours);
     }
 }
 
 function navigationGallery(event){
     if(event.keyCode === 37){
-        goLeft();
+        displayMediaPrecedent();
     }
     if(event.keyCode === 39){
-        goRight();
+        displayMediaSuivant();
     }
     if(event.keyCode === 27){
         closeGallery();
     }       
 }
 
-function goLeft(){
-    alert("image précédente");
+function displayMediaPrecedent(){
+    if (mediaEnCours.parentNode.previousElementSibling !== null){
+        mediaEnCours = mediaEnCours.parentNode.previousElementSibling.firstChild;
+        displayGallery(mediaEnCours);
+    }
 }
 
-function goRight(){
-    alert("image suivante");
+function displayMediaSuivant(){
+
+    if (mediaEnCours.parentNode.nextElementSibling && (mediaEnCours.parentNode.nextElementSibling.className === "light-link" ||mediaEnCours.parentNode.nextElementSibling.className === "miniature")){
+        mediaEnCours = mediaEnCours.parentNode.nextElementSibling.firstChild;
+        displayGallery(mediaEnCours);
+    }
 }
 
 function closeGallery(){
     document.querySelector("#gallery").style.visibility = "hidden";
     window.removeEventListener("keydown",navigationGallery);
+}
+
+function displayGallery(noeudHTML){
+    mediaEnCours = noeudHTML;
+    document.querySelector("#gallery").style.visibility = "visible";
+    if (mediaEnCours.parentNode.className ==="miniature"){
+        
+        document.querySelector("#media").innerHTML = `<img src="` + mediaEnCours.parentNode.children[0].src + `"/>`;
+    }else{
+        document.querySelector("#media").innerHTML = `<img src="` + noeudHTML.parentNode.href + `"/>`;
+    }
+    
 }
