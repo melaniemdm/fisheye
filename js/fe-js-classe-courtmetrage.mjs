@@ -31,8 +31,8 @@ class Courtmetrage {
         let composantElementMedia;
         composantElementMedia =
   ` 
-  <div class="miniature">
-    <img src="` + this.url + this.medias + `.webp" alt="`+ this.alt_text +  `" class="miniatureItem"/>
+  <div class="miniature courtmetrage">
+    <img src="` + this.url + this.medias + `.webp" alt="`+ this.alt_text +  `" class="miniatureItem" data-src="` + this.url + this.medias + `"/>
   </div>
   `;
         return composantElementMedia;

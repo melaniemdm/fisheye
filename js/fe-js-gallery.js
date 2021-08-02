@@ -59,7 +59,7 @@ function navigationGallery(event){
 }
 
 function displayMediaPrecedent(){
-    if (mediaEnCours.parentNode.previousElementSibling !== null){
+    if (mediaEnCours.parentNode.previousElementSibling!==null){
         mediaEnCours = mediaEnCours.parentNode.previousElementSibling.firstChild;
         displayGallery(mediaEnCours);
     }
@@ -80,10 +80,23 @@ function closeGallery(){
 
 function displayGallery(noeudHTML){
     mediaEnCours = noeudHTML;
+    
     document.querySelector("#gallery").style.visibility = "visible";
-    if (mediaEnCours.parentNode.className ==="miniature"){
-        
-        document.querySelector("#media").innerHTML = `<img src="` + mediaEnCours.parentNode.children[0].src + `"/>`;
+    if (mediaEnCours.parentNode.classList.contains("miniature")===true){
+        if (mediaEnCours.parentNode.classList.contains("courtmetrage")===true){
+            console.log(mediaEnCours.getAttribute("data-src"));
+            document.querySelector("#media").innerHTML = `
+                <video
+                controls
+                autoplay
+                preload="auto"
+                data-setup="{}"src="` + mediaEnCours.getAttribute("data-src")  + `">
+                    <source src="` + mediaEnCours.getAttribute("data-src")  + `" type="video/mp4"/>
+                    Your browser does not support HTML5 video.
+                </video>`;
+        }else{
+            document.querySelector("#media").innerHTML = `<img src="` + mediaEnCours.parentNode.children[0].src + `"/>`;
+        }
     }else{
         document.querySelector("#media").innerHTML = `<img src="` + noeudHTML.parentNode.href + `"/>`;
     }
