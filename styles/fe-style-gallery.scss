@@ -40,7 +40,7 @@
     width: 80%;
     height: 80%;
     background-color: $colorSecondGreylight;
-    padding-bottom: 20px;
+    padding-bottom: 100px;
     & img{
         max-width:100%;
         max-height:100%;
@@ -97,4 +97,9 @@
         @include icons;
         width: 30px;
     }
+}
+
+#titreMedia h4{
+    color: $colorSecondGrey;
+    font-family: "Montserrat", Arial, sans-serif;
 }

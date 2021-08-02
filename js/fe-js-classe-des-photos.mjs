@@ -32,8 +32,8 @@ class Photo {
         composantElementMedia =
 ` 
 
-<div class="miniature">
-  <img src="`+ this.url+`galeryGrdeTaille/` + this.medias + `" alt="`+ this.alt_text+  `" class="miniatureItem"/>
+<div class="miniature" data-sub-html=" <h4 class='titleInGallery'>`+ this.title + ` - `+ this.price+`€</h4>">
+  <img src="`+ this.url+`galeryGrdeTaille/` + this.medias + `" alt="`+ this.alt_text+  `" class="miniatureItem" />
 </div>
 `;
         return composantElementMedia;

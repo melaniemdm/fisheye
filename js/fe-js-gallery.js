@@ -4,6 +4,7 @@ let mediaEnCours;
 export function chargeGallery(noeudHTML){
     let composantGalleryHTML = `
         <div id="gallery">
+            <div id="titreMedia"></div>
             <div id="media">
             </div>
             <div id="miniature">
@@ -20,16 +21,26 @@ export function chargeGallery(noeudHTML){
         </div>`;
 
     noeudHTML.innerHTML =  noeudHTML.innerHTML + composantGalleryHTML;
-  
+    let mediasInfos = document.querySelectorAll(".titleMedias");
+    mediasInfos.forEach(mediasInfo => {
+        mediasInfo.addEventListener("click",openGallery);
+    });
+    let medias = document.querySelectorAll(".galleryItem");
+    medias.forEach(media => {
+        media.addEventListener("click",openGallery);
+    });
+
 }
 
-document.addEventListener("click",openGallery);
 
 function openGallery(e){
     window.addEventListener("keydown",navigationGallery);
-    
+    document.addEventListener("click",openGallery);
     if(e.target.className === "galleryItem"){
         displayGallery(e.target);
+    }
+    if(e.target.className === "titleMedias"){
+        displayGallery(e.target.parentElement);
     }
     if (e.target.id === "gallery" || e.target.parentNode.id === "closeCross"){
         closeGallery();
@@ -76,6 +87,7 @@ function displayMediaSuivant(){
 function closeGallery(){
     document.querySelector("#gallery").style.visibility = "hidden";
     window.removeEventListener("keydown",navigationGallery);
+    document.removeEventListener("click",openGallery);
 }
 
 function displayGallery(noeudHTML){
@@ -84,6 +96,9 @@ function displayGallery(noeudHTML){
     document.querySelector("#gallery").style.visibility = "visible";
     if (mediaEnCours.parentNode.classList.contains("miniature")===true){
         if (mediaEnCours.parentNode.classList.contains("courtmetrage")===true){
+            let titre = mediaEnCours.parentNode.getAttribute("data-sub-html");
+            console.log(titre);
+            document.querySelector("#titreMedia").innerHTML = titre;
             document.querySelector("#media").innerHTML = `
                 <video
                 controls
@@ -94,10 +109,16 @@ function displayGallery(noeudHTML){
                     Your browser does not support HTML5 video.
                 </video>`;
         }else{
+            let titre = mediaEnCours.parentNode.getAttribute("data-sub-html");
+            console.log(mediaEnCours.parentNode);
+            document.querySelector("#titreMedia").innerHTML = titre;
             document.querySelector("#media").innerHTML = `<img src="` + mediaEnCours.parentNode.children[0].src + `"/>`;
         }
     }else{
         if (mediaEnCours.parentNode.classList.contains("courtmetrage")===true){
+            let titre = mediaEnCours.parentNode.getAttribute("data-sub-html");
+            console.log(titre);
+            document.querySelector("#titreMedia").innerHTML = titre;
             document.querySelector("#media").innerHTML = `
                 <video
                 controls
@@ -108,6 +129,9 @@ function displayGallery(noeudHTML){
                     Your browser does not support HTML5 video.
                 </video>`;
         }else{
+            let titre = mediaEnCours.parentNode.getAttribute("data-sub-html");
+            console.log(mediaEnCours.parentNode);
+            document.querySelector("#titreMedia").innerHTML = titre;
             document.querySelector("#media").innerHTML = `<img src="` + noeudHTML.parentNode.href + `"/>`;
         }
     }

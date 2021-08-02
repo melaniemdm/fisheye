@@ -37,7 +37,7 @@
   width: 80%;
   height: 80%;
   background-color: #fafafa;
-  padding-bottom: 20px;
+  padding-bottom: 100px;
 }
 #media img {
   max-width: 100%;
@@ -98,4 +98,9 @@
   color: #901c1c;
   cursor: pointer;
   width: 30px;
+}
+
+#titreMedia h4 {
+  color: #525252;
+  font-family: "Montserrat", Arial, sans-serif;
 }/*# sourceMappingURL=fe-style-gallery.css.map */
